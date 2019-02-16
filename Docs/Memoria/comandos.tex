@@ -1,0 +1,260 @@
+
+\usepackage{listings}
+%\usepackage[usenames,dvipsnames]{xcolor}
+
+\definecolor{gray97}{gray}{.97}
+\definecolor{gray75}{gray}{.94}
+\definecolor{gray45}{gray}{.45}
+\definecolor{verde}{RGB}{230,255,204}
+
+\usepackage{listings}
+
+\newcommand\Tstrut{\rule{0pt}{2.6ex}}       % "top" strut
+\newcommand\Bstrut{\rule[-0.9ex]{0pt}{0pt}} % "bottom" strut
+\newcommand{\TBstrut}{\Tstrut\Bstrut} % top&bottom struts
+
+
+\newenvironment{filecode}[1][]
+  {\minipage{\linewidth}% \begin{filecode}[#1]
+   \lstset{basicstyle=\ttfamily\footnotesize,frame=single,#1}}
+  {\endminipage}% \end{filecode}
+
+
+%\DeclareInputText{128}{\euro}
+
+\definecolor{azulillo}{rgb}{0.8,0.85,1}
+\definecolor{marronrp3}{rgb}{.9,.9,.7}
+\definecolor{salmon}{rgb}{1,.9,.8}
+\definecolor{rojo}{rgb}{.8,0.1,.0}
+\definecolor{rojo2}{rgb}{.6,0.3,.2}
+
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  showstringspaces=false,
+  commentstyle=\color{gray}\upshape
+}
+
+\lstdefinelanguage{XML}
+{
+  morestring=[b]",
+  morestring=[s]{>}{<},
+  morecomment=[s]{<?}{?>},
+  stringstyle=\color{black},
+  identifierstyle=\color{darkblue},
+  keywordstyle=\color{cyan},
+  morekeywords={xmlns,version,type}% list your attributes here
+}
+
+\lstdefinestyle{BashInputStyle}{
+  language=bash,
+  basicstyle=\small\sffamily,
+  numbers=left,
+  numberstyle=\tiny,
+  numbersep=3pt,
+  frame=tb,
+  columns=fullflexible,
+  linewidth=0.9\linewidth,
+  xleftmargin=0.1\linewidth,
+  commentstyle=\color{dkgreen},
+}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true
+  tabsize=3
+}
+
+
+\def\changemargin#1#2#3{\list{}{\rightmargin#2\leftmargin#1\headsep#3}\item[]}
+\let\endchangemargin=\endlist
+
+
+%\configuracion{TituloDocumento}{TextoEncabezadoIzdo}
+\newcommand{\configuracion}[2]{
+	\renewcommand{\shorthandsspanish}{}
+	\title{#1}
+	\date{}
+	\evensidemargin -6mm  \oddsidemargin -0.4cm \textwidth 16.7cm
+	\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+	\textheight 24cm \topmargin -0.65cm
+	\pagestyle{fancy}
+	\lhead{#2}
+	\rhead{\thepage}
+	\cfoot{}
+}
+
+\newcommand{\escudos}{
+	\begin{changemargin}{-1.0cm}{-3cm}{0cm}
+		\begin{flushleft}
+  			\begin{figure}
+    			\includegraphics[scale=0.2]{escudo.jpg}
+    			\hspace*{8cm}
+    			\includegraphics[scale=0.45]{informatica.png}
+    		\end{figure}
+		\end{flushleft}
+	\end{changemargin}
+}
+
+\newcommand{\asignatura}[1]{
+	\begin{center}
+#1
+	
+	\end{center}
+}
+
+\newcommand{\titulacion}[1]{
+	\begin{center} 
+	#1
+	\end{center} 
+}
+
+\newcommand{\cursiva}[1]{
+	\textit{#1}
+}
+
+\renewcommand{\bibname}{References}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \shadowbox{Texto}: Marco sombreado. 
+%\ovalbox{Texto}: Marco ovalado. 
+%\doublebox{Texto}: Marco doble. 
+% \Ovalbox{Texto}. Marco ovalado. 
+
+
+% \cajaBorde {texto}{color letra}{color fondo}
+\newcommand{\cajaBorde}[3]{
+	\noindent
+	\fcolorbox{#2}{#3}{
+  		\begin{minipage}[t]{.96\linewidth}
+   			 \vspace{.05cm}
+    		\begin{center}
+     			 \vspace{.1cm}
+     			#1
+   			 \end{center}
+ 		 \end{minipage}
+	}
+}
+
+%caja{texto}{color caja}{espacio superior}{espacio inferior}
+\newcommand{\caja}[4]{
+	\colorbox{#2}{
+ 	 \begin{minipage}[t]{.96\linewidth}
+ 	 \vspace{#3}
+  		
+			#1
+		
+   	 \vspace{#4}
+ 	 \end{minipage}
+	}
+}
+
+\newcommand{\borde}[1]{\framebox{#1}}
+
+%\portada{asignatura}{pratica}{tituloCaja}{titulacion}{autores}
+\newcommand{\portada}[5]{
+	%PORTADA
+	\thispagestyle{empty}
+
+	%Escudo universidad
+	\escudos
+
+	\LARGE
+
+	\asignatura{#1}
+
+	\vspace*{0.8cm}
+
+	\begin{center}
+		\textbf{#2} %Práctica 1\\
+	\end{center}
+
+
+	\begin{center}
+
+		
+	\colorbox{azulillo}{
+ 	 	\begin{minipage}[t]{.96\linewidth}
+ 	 		\vspace{.5cm}
+  		
+			\begin{center}
+				\textbf{#3}
+			\end{center}
+		
+   	 		\vspace{.02cm}
+ 		\end{minipage}
+	}		
+		
+	\end{center}
+
+	\Large
+	\vspace {3cm}
+
+	\titulacion{#4}
+
+	%Fecha
+	\begin{center}
+		\today
+	\end{center}
+	\normalsize
+	\vspace*{2cm}
+
+	\begin{flushright}
+		#5
+	\end{flushright}
+
+}
+
+%\portada{asignatura}{pratica}{tituloCaja}{titulacion}{autores}
+\newcommand{\portadaumu}[5]{
+	%PORTADA
+	\thispagestyle{empty}
+\setlength{\unitlength}{1 cm} %Especificar unidad de trabajo
+\thispagestyle{empty}
+\begin{picture}(18,4)
+\put(0,0){\includegraphics[scale=0.33]{escudo.jpg}}
+\put(11.5,0){\includegraphics[scale=0.43]{informatica.png}}
+\end{picture}
+\\
+\\
+\begin{center}
+\textbf{{\Huge University Charles III}\\[0.5cm]
+{\LARGE Faculty of Computer Science}}\\[1.25cm]
+\Large #1\\[2cm]
+
+
+\LARGE \textbf{#3}\\[0.3cm]
+
+{\large #5}\\[1.6cm]
+#4\\[1cm]
+Madrid - \today
+\end{center}
+
+}
+
+\newcommand{\indice}{
+
+	\newpage
+	\setcounter{page}{1}
+	\renewcommand{\thepage}{\roman{page}}
+	\tableofcontents
+	\newpage
+	\clearpage
+	\setcounter{page}{1}
+	\renewcommand{\thepage}{\arabic{page}}
+}

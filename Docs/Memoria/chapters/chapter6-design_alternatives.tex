@@ -1,0 +1,17 @@
+\chapter{Design Alternatives}\label{chap:6}
+
+\section{CROWD Controller hardware}\label{sec:chap6_ctrl}
+
+The CROWD Local Controllers and the CROWD Regional Controllers were originally Linux personal computers. These were replaced by single-board computers called Minnowboard. The Minnowboard offered the possibility of having its higher processing resources dedicated exclusively to the Controller functions. Being much smaller in size, they are much easier to transport and to set up. On top of this, they offered HDMI capabilities, contrary to their pc counterpart. More information about the Minnowboard can be found in Chapter \ref{sec:chap4_arch_hard}.
+
+\section{LTE emulation tool}\label{sec:chap6_lte}
+
+LTE emulation could be perfomed with either ns-3, a discrete event network simulator used to create an open simulation environment for computer networking research, or with a combination with ns3 and NI PXIe systems (a detailed description of each solution can be found in Chapter \ref{sec:chap2_lte_emu}. While ns-3 + NI PXIe systems offered the most realistic results, due to using real non-emulated transceivers for data transmission and reception, the NI PXIe systems are very expensive, hard to transport, hard to set-up, and not always available to use.
+
+\section{On-demand infrastructure switch off mechanism}\label{sec:chap6_switch}
+
+The mechanism used for switching off Access Points has the drawback of doing so in an aggresive manner, meaning the Access Points are switched off directly cutting the electric power. This is a solution limitation that does not have a major impact, so an alternative has not been taken into consideration.
+
+\section{Access point hardware}\label{sec:chap6_ap}
+
+The options at hand were either using Linksys routers for the Access Points, or using an Alix board. The decision of choosing the Alix board instead of the Lynksis router was weighing the limitation of the Linksys router which is that it can't run the linux distribution needed, against the drawback of the Alix board that is the long time it takes to start up when switched off.

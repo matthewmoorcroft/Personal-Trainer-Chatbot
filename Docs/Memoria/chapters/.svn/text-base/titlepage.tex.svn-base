@@ -1,0 +1,41 @@
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\begin{titlingpage}
+\begin{center}
+ 
+% Upper part of the page
+\vfill
+\includegraphics[scale=1.2]{./images/escudo}\\[3em]
+\textsc{\LARGE Universidad Carlos III de Madrid}\\[0.5cm]
+\textsc{\Large Trabajo de Fin de Grado}\\[0.5cm]
+  
+% Title
+\HRule \\[0.4cm]
+{ \huge \bfseries SDN Mobility on IPv6 Networks}\\[0.4cm]
+ 
+\HRule \\[1.5cm]
+ 
+% Author and supervisor
+\begin{minipage}{0.45\textwidth}
+\begin{flushleft} \large
+\emph{Student:}\\
+Pablo \textsc{Castellanos Santamaría}\\
+100276330@alumnos.uc3m.es
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\begin{flushright} \large
+\emph{Tutor:} \\
+Antonio \textsc{De la Oliva}\\
+aoliva@it.uc3m.es
+\end{flushright}
+\end{minipage}
+ 
+\vfill
+ 
+% Bottom of the page
+{\large \today}
+ 
+\end{center}
+
+\end{titlingpage}

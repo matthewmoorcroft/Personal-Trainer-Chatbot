@@ -1,0 +1,43 @@
+\chapter{Solution Proposed}\label{chap:3}
+
+\section{Network Based Mobility}\label{sec:chap3_network_based}
+	
+\section{Host Based Mobility}\label{sec:chap3_host_based}
+
+\section{Hardware}\label{sec:chap3_actors}
+
+\begin{itemize}
+\item \textbf{CROWD Regional Controller (CRC)}:
+ Top level controller. Manages mobility inter-district on its regional network. For that,it has a cache containing tuples of: Mobile Nodes attached to the network – DMM Gateway of the district they are attached to. It also has a cache of tunnels created during all the inter-districts handover. For this element we have chosen to use a Linux computer running Python 2.7.3 with the following specs: OS: Debian 7.4	Wheezy - CPU: Intel(R) Pentium(R) 4 CPU 2.80GHz - RAM: 1 GB
+ 
+\item \textbf{CROWD Local Controller (CLC)}:
+ Middle level. Manages its local district. For this element we have chosen to use another computer running Ubuntu for each one of the two CLC of the test bed and the Ryu OpenFlow controller. For this element we have chosen to use a Linux computer running Python 2.7.3 with the following specs: OS: Debian 7.4	Wheezy - CPU: Intel(R) Pentium(R) D CPU 3.20GHz - RAM: 1 GB
+
+\item \textbf{Mobile Node}:
+It is the host of the OpenFlow network. It doesn’t have any kind of OpenFlow knowledge; its only requirement is to have wireless connection and an IPv6 neighbor discovery (ICMPv6) protocol running. For this element we have chosen to use a laptop computer with Linux running Python 2.7.5 with the following specs: OS: Ubuntu 13.10 Saucy - CPU: Intel(R) Core(TM) i5-4300 CPU @  1.90GHz - RAM: 8 GB
+
+\item \textbf{DMM Gateway}:
+It’s a non OpenFlow device. It is a normal router providing the OpenFlow network of internet connection. It is linked to the Local Controller to be remotely configured.
+There is one per district, and it will be an Alix PC (BIB-http://www.pcengines.ch/alix2d3.htm) device running Ubuntu 12.04.4 LTS - CPU: AMD Geode LX800 500 MHz - RAM: 250 MB
+
+\item \textbf{Access Point}:
+An OpenFlow switch with the traditional behavior of a wireless access point. Provides connection to the Mobile Node. We will use two Alix PC as access point per each district and they it will be an Alix PC (BIB-http://www.pcengines.ch/alix2d3.htm) device running Ubuntu 12.04.4 LTS - CPU: AMD Geode LX800 500 MHz - RAM: 250 MB with Open vSwitch. 
+
+\item \textbf{Node}:
+An OpenFlow switch with its wireless connection disabled. It has the same behavior of the Access points, with the only difference of the wireless connection. When a Node is directly connected to a Gateway/DMM Gateway is considered as an OpenFlow Edge node. There is one per district, and it will be a Linksys WRT54GL running OpenFlow Pantou.
+
+\end{itemize}
+ 
+\section{Software}\label{sec:chap3_software}
+
+\begin{itemize}
+
+\item \textbf{Scappy}:
+
+\item \textbf{Ryu}:
+
+\item \textbf{Open vSwitch}:
+
+\item \textbf{Pantou}:
+
+\end{itemize}

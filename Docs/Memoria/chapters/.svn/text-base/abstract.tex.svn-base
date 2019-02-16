@@ -1,0 +1,11 @@
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+
+\first{D}{ue} to the complex scene of the growing networks infrastructure in the big cities, and because of the increasing amount of the mobile devices, the management of the  user flow has become into a big challenge for the network operators. 
+Taking these into consideration the European union, has developed one line of  research inside the framework of the CROWD project to develop a solution for high density networks and the issue of the users mobility inside these kind of networks.
+
+The main goal of this final degree project is to create a software defined network (SDN) which can manage the movement of a mobile node from within a network. The mobility approach of this project has two different points of view. On one hand we have the network based mobility approach that aims the management of the mobility nodes by the organization of the controllers of the network. In this scenario the actions to ensure the complete connectivity during the transit of the mobile node amongst two districts are leaded by two different actors, the regional controller (CRC) and the local controller (CLC). On the other hand, we have the host based
+mobility approach. This design also includes the participation of the mobile node during the handover interactions.
+
+With this two different approaches, the project aims to create a software solution to flatten out the problem of the future networks infrastructures in which different mobile nodes are included.

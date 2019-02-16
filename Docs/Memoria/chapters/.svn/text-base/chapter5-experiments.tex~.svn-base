@@ -1,0 +1,23 @@
+\chapter{Experiments}\label{chap:5}
+
+% CAMBIAR (solo conservar letra capital)
+%\first{T}{his} chapter contains a global overview of the project. Section \ref{sec:chap1_context} presents a general outlook of current video transmission technologies through Internet, points out its main deficiencies and locates this project as an exploration of new technologies that could improve the transmission performance. Section \ref{sec:chap1_organization} describes the overall structure of the document. Finally, section \ref{sec:chap1_references} presents a brief reference to some related previous work done by the Intelligent Systems and Telematics research group at the University of Murcia, which represents the background of this project.
+%15 cm \footnote{cm = ccm}
+
+\section{Attachment}\label{sec:chap5_attachment}
+	
+\section{Handover INTRA district}\label{sec:chap5_intra}
+
+\section{Handover INTER district}\label{sec:chap5_inter}
+
+\section{Handover LTE}\label{sec:chap5_lte}
+
+\section{Delay}\label{sec:chap5_delay}
+
+\subsection{Network Based}\label{sec:chap5_delay_network_based}
+
+\subsection{Host Based}\label{sec:chap5_delay_host_based}
+
+\subsection{Delay Analysis}\label{sec:chap5_delay_analysis}
+
+\subsection{Delay Characterization}\label{sec:chap5_delay_characterization}

@@ -1,0 +1,10 @@
+\chapter{State of the art}\label{chap:2}
+
+%\first{T}{his} chapter contains a global overview of the project. Section \ref{sec:chap1_context} presents a general outlook of current video transmission technologies through Internet, points out its main deficiencies and locates this project as an exploration of new technologies that could improve the transmission performance. Section \ref{sec:chap1_organization} describes the overall structure of the document. Finally, section \ref{sec:chap1_references} presents a brief reference to some related previous work done by the Intelligent Systems and Telematics research group at the University of Murcia, which represents the background of this project.
+
+\section{Distributed Mobility Management}\label{sec:chap2_dmm}
+\first{D}{istributed Mobility Management (DMM)} is a new architectural paradigm for evolving mobile IP networks
+
+\section{Software Defined Network}\label{sec:chap2_sdn}
+
+\subsection{OpenFlow}\label{sec:chap2_sdn_openflow}

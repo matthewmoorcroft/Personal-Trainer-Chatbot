@@ -1,0 +1,100 @@
+\chapter{Testbed}\label{chap:4}
+
+\section{Objectives}\label{sec:chap4_objectives}
+
+\section{Diagrams}\label{sec:chap4_diagrams}
+
+\section{Installation}\label{sec:chap4_installation}
+
+\subsection{Open vSwitch}\label{sec:chap4_openvswitch_installation}
+
+\subsection{Pantou}\label{sec:chap4_pantou_installation}
+
+\subsection{Ryu}\label{sec:chap4_ryu_installation}
+
+\begin{lstlisting}[style=BashInputStyle]
+	$ sudo apt-get install python-dev 
+	$ sudo apt-get install libxml2-dev libxslt-dev 
+	$ git clone  git://github.com/osrg/ryu.git 
+	$ cd ryu/ 
+	$ sudo python ./setup.py install 
+\end{lstlisting}
+
+\subsection{DMM Gateway}\label{sec:chap4_dmm_gateway_installation}
+\begin{lstlisting}[style=BashInputStyle]
+	$ sudo apt-get update && apt-get dist-upgrade 
+	$ sudo apt-get install linux-headers-generic 
+	$ sudo apt-get install openvswitch-switch 
+	$ sudo apt-get install openvswitch-datapath-source bridge-utils 
+	$ module-assistant auto-install openvswitch-datapath
+\end{lstlisting}
+\subsection{Access Point}\label{sec:chap4_ap_installation}
+\begin{lstlisting}[style=BashInputStyle]
+	#Install the needed librarys to compile hostapd: 
+	$ sudo apt-get install libnl-dev libssl-dev 
+	#Download hostapd script
+	$ wget http://w1.fi/releases/hostapd-2.1.tar.gz 
+	$ tar xzvf hostapd-2.1.tar.gz 
+	$ cd hostapd-2.1/hostapd 
+	$ cp defconfig .config 
+	#Check that CONFIG_DRIVER_NL80211=y is not commented 
+	#Compile hostapd program
+	$ make 
+\end{lstlisting}
+\begin{lstlisting}[style=BashInputStyle]
+	#Create configuration file like this:
+	interface=wlan0
+	ssid=ALIXAP
+	channel=6
+	hw_mode=g
+	macaddr_acl=1
+	accept_mac_file=/root/hostapd-2.1/hostapd/mac_filter
+	#accept_mac_file is a file with the allowed macs	
+\end{lstlisting}
+
+\subsection{Additional Configurations}\label{sec:chap4_additional_configurations}
+To allow ssh access without writting the key in the Alix nodes:
+\begin{lstlisting}[style=BashInputStyle]
+	#On the Computer in charge of the management of the SDN
+	$ ssh-keygen -b 4096 -t rsa 
+	#Press Enter three times
+	#Send the generated key to the Alix
+	ssh-copy-id root@X.Y.Z.W 
+\end{lstlisting}
+
+The same but in the Linksys nodes
+\begin{lstlisting}[style=BashInputStyle]
+	#On the Computer in charge of the management of the SDN
+	$ ssh-keygen -b 4096 -t rsa 
+	#Press Enter three times
+	#Send the generated key to the Alix
+	ssh-copy-id root@X.Y.Z.W 
+ 	#Access the Linksys using telnet and change root password with:
+	passwd 
+	#Set the new password and logout of the Linksys 
+	#Then we send the key created before
+	$ scp ~/.ssh/id_rsa.pub root@X.Y.Z.W:/tmp 
+	$ cd /etc/dropbear 
+	$ cat /tmp/id_*.pub >> authorized_keys 
+	$ chmod 0600 authorized_keys 
+	#Then we remove the telnet init script
+	$ rm /etc/init.d/telnet 
+	#And finally remove the key sent: 
+	$ rm /tmp/id_rsa.pub 
+\end{lstlisting}
+
+\section{Execution}\label{sec:chap4_execution}	
+
+\section{Reset}\label{sec:chap4_reset}	
+
+\section{Software developed}\label{sec:chap4_sw_developed}	
+
+\subsection{CRC}\label{sec:chap4_sw_crc}
+
+\subsection{CRC Flow Diagram}\label{sec:chap4_crc_flow_diagrams}
+
+\subsection{CLC}\label{sec:chap4_sw_crc}
+
+\subsection{CLC Flow Diagram}\label{sec:chap4_crc_flow_diagrams}
+
+\section{Mobile Node Application}\label{sec:chap4_mobile_node_app}	

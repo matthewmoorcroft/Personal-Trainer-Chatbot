@@ -1,0 +1,25 @@
+\BOOKMARK [0][-]{chapter*.1}{Abstract}{}% 1
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 2
+\BOOKMARK [0][-]{chapter.2}{State of the Art}{}% 3
+\BOOKMARK [1][-]{section.2.1}{Software Defined Networking}{chapter.2}% 4
+\BOOKMARK [1][-]{section.2.2}{Distrbuted Mobility Management}{chapter.2}% 5
+\BOOKMARK [1][-]{section.2.3}{LTE}{chapter.2}% 6
+\BOOKMARK [0][-]{chapter.3}{Analysis Of The Problem}{}% 7
+\BOOKMARK [0][-]{chapter.4}{Solution Proposed}{}% 8
+\BOOKMARK [1][-]{section.4.1}{Architecture}{chapter.4}% 9
+\BOOKMARK [1][-]{section.4.2}{Network-Based Mobility Solution}{chapter.4}% 10
+\BOOKMARK [1][-]{section.4.3}{Host-Based Mobility Solution with LTE emulation}{chapter.4}% 11
+\BOOKMARK [1][-]{section.4.4}{On-demand Infrastructure}{chapter.4}% 12
+\BOOKMARK [0][-]{chapter.5}{Implementation}{}% 13
+\BOOKMARK [0][-]{chapter.6}{Design Alternatives}{}% 14
+\BOOKMARK [1][-]{section.6.1}{CROWD Controller hardware}{chapter.6}% 15
+\BOOKMARK [1][-]{section.6.2}{LTE emulation tool}{chapter.6}% 16
+\BOOKMARK [1][-]{section.6.3}{On-demand infrastructure switch off mechanism}{chapter.6}% 17
+\BOOKMARK [1][-]{section.6.4}{Access point hardware}{chapter.6}% 18
+\BOOKMARK [0][-]{chapter.7}{Experiments}{}% 19
+\BOOKMARK [0][-]{chapter.8}{Planning}{}% 20
+\BOOKMARK [0][-]{chapter.9}{Regulatory Framework}{}% 21
+\BOOKMARK [0][-]{chapter.10}{Socio-Economic Environment}{}% 22
+\BOOKMARK [0][-]{chapter.11}{Conclusions}{}% 23
+\BOOKMARK [0][-]{chapter.12}{Summary}{}% 24
+\BOOKMARK [0][-]{chapter*.15}{References}{}% 25

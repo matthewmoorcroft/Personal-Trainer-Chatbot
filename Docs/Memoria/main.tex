@@ -1,0 +1,163 @@
+\documentclass[oneside,12pt,a4paper,headsepline,bibtotocnumbered]{memoir}
+%\documentclass[oneside,12pt,a4paper]{memoir}
+%\documentclass[a4paper,12pt,twoside,headsepline,pointlessnumbers,bibtotocnumbered]{scrbook}
+
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+%\usepackage{lettrine}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{url}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+%\usepackage{psfig}
+%\usepackage{psfrag}
+%\usepackage{epsfig}
+\usepackage{epstopdf}
+% Formato de paquetes de SCTP y NALUs de SVC...
+%\usepackage{bytefield}
+% Algoritmos
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+% Columnas
+\usepackage{multicol}
+\usepackage[labelfont=bf]{caption}
+% Listados
+\usepackage{listings}
+\usepackage{pdfpages}
+\usepackage{indentfirst}
+%euro
+%\usepackage{eurosym}
+
+%\usepackage[bookmarks = true, colorlinks=true, linkcolor = black, citecolor = black, menucolor = black, urlcolor = black]{hyperref}
+
+%\newsubfloat{figure}% Allow subfloats in figure environment
+
+%\usepackage{wrapfig}
+\input{comandos}
+
+\lstset{basicstyle=\small\ttfamily,showstringspaces=false,language=sh,frame=tb,columns=fullflexible}
+
+% Separación entre párrafos
+%\setlength{\parindent}{0pt}
+% %\nonzeroparskip
+
+% Veelo un poco cambiado
+
+\makeatletter
+\newlength{\numberheight}
+\newlength{\barlength}
+\makechapterstyle{myveelo}{%
+\setlength{\beforechapskip}{40pt}
+\setlength{\midchapskip}{25pt}
+\setlength{\afterchapskip}{40pt}
+\renewcommand{\chapnamefont}{\normalfont\LARGE\flushright}
+\renewcommand{\chapnumfont}{\normalfont\HUGE}
+\renewcommand{\chaptitlefont}{\normalfont\HUGE\bfseries\flushright}
+\renewcommand{\printchaptername}{%
+\chapnamefont\MakeUppercase{\@chapapp}}
+\renewcommand{\chapternamenum}{}
+\setlength{\numberheight}{18mm}
+\setlength{\barlength}{\paperwidth}
+\addtolength{\barlength}{-\textwidth}
+\addtolength{\barlength}{-\spinemargin}
+\renewcommand{\printchapternum}{%
+\makebox[0pt][l]{%
+\hspace{.4em}%
+\resizebox{!}{\numberheight}{\chapnumfont \thechapter}%
+%\hspace{.8em}%
+%\rule{\barlength}{\numberheight}
+}}
+\makeoddfoot{plain}{}{}{\thepage}
+}
+\makeatother
+
+% Configuración de márgenes más anchos
+\setmarginnotes{0pt}{0pt}{0pt}
+\settypeblocksize{675pt}{450pt}{*}
+\setlrmarginsandblock{2.7cm}{2.7cm}{*}
+\setulmarginsandblock{2.7cm}{2.7cm}{*}
+\checkandfixthelayout
+\raggedbottom
+
+\chapterstyle{myveelo}
+
+% Numeración de subsecciones
+\setcounter{secnumdepth}{2}
+
+\newcommand{\first}[2]{
+%lhang=1, nindent=0pt, 
+	\lettrine[lines=3]{#1}{#2}%
+}
+
+\newcommand{\figura}[4]{%
+    \begin{figure}[ht]
+    \begin{center}
+	    \includegraphics[#2]{#1}
+	    \caption{#3}
+	    \label{#4}
+    \end{center}
+    \end{figure}
+}
+
+
+\begin{document}
+	
+	\input{./chapters/titlepage}
+	
+	\input{./chapters/acknowledgments}	
+	
+	\clearpage{\cleardoublepage}
+	
+	\makepagestyle{init}
+	   \makeevenfoot{init}{\thepage}{}{}
+	   \makeoddfoot{init}{}{}{\thepage}
+	   \makeevenhead{init}{}{}{}
+	   \makeoddhead{init}{}{}{}
+	   \makeheadrule{init}{0pt}{0pt}
+	
+	\pagestyle{init}
+	  \tableofcontents*\thispagestyle{init}
+	  \clearpage
+	  \listoffigures*\thispagestyle{init}
+	  \clearpage
+	  \listoftables*\thispagestyle{init}
+	
+  	\input{./chapters/abstract}
+
+	\clearpage
+
+	\pagestyle{ruled}
+  
+  	\input{./chapters/chapter1-introduction}
+  	
+	\input{./chapters/chapter2-state_of_the_art}
+
+	\input{./chapters/chapter3-analysis_of_the_problem}
+	
+	\input{./chapters/chapter4-solution_proposed}
+
+	\input{./chapters/chapter5-implementation}
+
+	\input{./chapters/chapter6-design_alternatives}
+	
+	\input{./chapters/chapter7-experiments}
+
+	\input{./chapters/chapter8-planning}
+	
+	\input{./chapters/chapter9-regulatory_framework}
+
+	\input{./chapters/chapter10-socio-economic_environment}
+
+	\input{./chapters/chapter11-conclusions}
+
+	\input{./chapters/chapter12-summary}
+	
+	\input{./chapters/bibliography}
+		
+	\input{./chapters/appendix}
+	
+
+
+\end{document}

@@ -1,6 +1,5 @@
-from database import Database
+from connections import *
 import requests
-from connections import net_manager
 
 def text_normalization(text):
     try:

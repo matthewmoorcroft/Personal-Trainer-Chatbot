@@ -1,7 +1,7 @@
 
 class User:
 
-    def __init__(self, id = -1, name = '', age = 0, gender = '', telegram_id, weight = 0, bodyfatratio = 0,
+    def __init__(self, telegram_id, id = -1, name = '', age = 0, gender = '', weight = 0, bodyfatratio = 0,
                  c_chest = 0, c_leg = 0, c_waist = 0, c_triceps = 0):
 
         self.id = id
