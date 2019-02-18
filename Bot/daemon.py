@@ -2,10 +2,10 @@ import requests
 import uuid
 import time
 from controller import processor
-from database.Database import *
+from connections.database import Database
 BOT_ID = "725490953"
 BOT_TOKEN = "AAF79oRlrKI6SqZNCqjOLRtRwzmOF7A-Yt4"
-URL = "https://api.telegram.org/bot" + BOT_ID + ":" + BOT_TOKEN +"/"
+URL = "https://api.telegram.org/bot" + BOT_ID + ":" + BOT_TOKEN + "/"
 
 
 uid = str(uuid.uuid4())

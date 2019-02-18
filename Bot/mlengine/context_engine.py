@@ -1,11 +1,15 @@
 from flask import Flask
 from model.user import *
 
+"""Message goes to context if it doesn't understand, goes to classifier if it
+doesn't understand sends to user context answer"""
+
 
 def process_message(data):
     log('Context Engine: Context processing started')
     message = text_normalization(data['message'])
     user = data['user']
+
 
 def process_welcome(data):
     log('Context Engine: Welcome process')
@@ -15,11 +19,13 @@ def process_welcome(data):
     context = context_manager.get_context()
     if context:
         if context_manager.check_freshness(context):
+            print()
 
     else:
-        context_manager.create_context(data, welcome_process = True)
+        context_manager.create_context(data, welcome_process=True)
 
-#Structure how to store context and log in interaction log
+# Structure how to store context and log in interaction log
+
 
 app = Flask(__name__)
 @app.route("/process_message")
@@ -27,12 +33,14 @@ def normal_req(request.json):
     res = process_message(request.json)
     return json.dumps(res)
 
+
 @app.route("/process_welcome")
 def welcome_req(request.json):
     res = process_welcome(request.json)
     return json.dumps(res)
 
+
 context_manager = ContextManager()
 
 if __name__ == '__main__':
-    app.run(host = '0.0.0.0', port = 30000, debug = True)
+    app.run(host='0.0.0.0', port=30000, debug=True)
