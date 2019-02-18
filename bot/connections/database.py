@@ -1,4 +1,3 @@
-from model.user import User
 import datetime
 import psycopg2
 import json
@@ -11,8 +10,11 @@ class Database:
     def __init__(self):
         try:
             self.conn = psycopg2.connect(
-                "dbname='pt' user='matthew' host='localhost' password='1245788956'")
-        except:
+                """dbname='pt'
+                  user='matthew'
+                  host='localhost'
+                  password='1245788956'""")
+        except psycopg2.Error:
             print("ERROR: Unable to connect to the database")
 
     @classmethod
@@ -32,7 +34,7 @@ class Database:
             cur = self.conn.cursor()
 
             cur.execute("""SELECT * FROM core.users
-                        WHERE telegram_id = '{telegram_id}'  """)
+                        WHERE telegram_id = f'{telegram_id}'  """)
             rows = cur.fetchall()
 
         except Exception as e:
@@ -54,25 +56,38 @@ class Database:
                     c_waist = row[9]
                     c_triceps = row[10]
 
-                user = User(id, name, age, gender, telegram_id, weight,
-                            bodyfatratio, c_chest, c_leg, c_waist, c_triceps)
+                measurements = {
+                    'weight': weight,
+                    'bodyfatratio': bodyfatratio,
+                    'c_chest': c_chest,
+                    'c_leg': c_leg,
+                    'c_waist': c_waist,
+                    'c_triceps': c_triceps
+                }
+                user = {
+                    'id': id,
+                    'name': name,
+                    'age': age,
+                    'gender': gender,
+                    'telegram_id': telegram_id,
+                    'measurements': measurements
+                }
                 return user
-            except:
+            # except:
                 return None
                 # cache.add_user2cache(user)
 
     def add_user(self, telegram_id):
 
-        user = cache.check_user()
-
-        if user is not None:
-            return user
-
         try:
             cur = self.conn.cursor()
 
-            cur.execute("""SELECT * FROM core.users
-                        WHERE telegram_id = '{telegram_id}'  """)
+            cur.execute("""INSERT INTO core.users (id,
+                                                   name,
+                                                   age,
+                                                   gender,
+                                                   telegram_id)
+                        VALUES(0, 'test', 23, 'male', 0)""")
             rows = cur.fetchall()
 
         except Exception as e:
@@ -101,44 +116,15 @@ class Database:
                 return None
                 # cache.add_user2cache(user)
 
-    def delete_user(self, telegram_id):
+    def delete_user(self, user_id):
 
-        user = cache.check_user()
+        cur = self.conn.cursor()
 
-        if user is not None:
-            return user
+        cur.execute(f"""DELETE FROM core.users WHERE id = {user_id}""")
 
-        try:
-            cur = self.conn.cursor()
-
-            cur.execute('SELECT * FROM core.users WHERE telegram_id = ' + telegram_id)
-            rows = cur.fetchall()
-
-        except:
-
-            print("Error executing query")
-        else:
-
-            try:
-                for row in rows:
-                    id = row[0]
-                    name = row[1]
-                    age = row[2]
-                    gender = row[3]
-                    telegram_id = row[4]
-                    weight = row[5]
-                    bodyfatratio = row[6]
-                    c_chest = row[7]
-                    c_leg = row[8]
-                    c_waist = row[9]
-                    c_triceps = row[10]
-
-                user = User(id, name, age, gender, telegram_id, weight,
-                            bodyfatratio, c_chest, c_leg, c_waist, c_triceps)
-                return user
-            except:
-                return None
-                # cache.add_user2cache(user)
+        self.database.conn.commit()
+        response = {'result': 'ok'}
+        return response
 
     def get_message(self, uid):
         cur = self.conn.cursor()
