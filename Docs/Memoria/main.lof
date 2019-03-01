@@ -1,19 +1,14 @@
 \addvspace {10pt}
 \contentsline {figure}{\numberline {1.1}{\ignorespaces CROWD Architecture\relax }}{7}{figure.caption.2}% 
 \addvspace {10pt}
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Openflow Logical Representation\relax }}{9}{figure.caption.3}% 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces OpenFlow Switch Representation\relax }}{10}{figure.caption.5}% 
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Mobile IP\relax }}{12}{figure.caption.7}% 
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Proxy Mobile IP\relax }}{13}{figure.caption.9}% 
-\contentsline {figure}{\numberline {2.5}{\ignorespaces LTE Architecture\relax }}{14}{figure.caption.10}% 
-\contentsline {figure}{\numberline {2.6}{\ignorespaces LTE emulation with ns-3 and NI PXI\relax }}{14}{figure.caption.11}% 
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Mobile Traffic Data\relax }}{8}{figure.caption.3}% 
 \addvspace {10pt}
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Mobile Traffic Data\relax }}{16}{figure.caption.14}% 
-\addvspace {10pt}
-\addvspace {10pt}
-\addvspace {10pt}
-\addvspace {10pt}
-\addvspace {10pt}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Openflow Logical Representation\relax }}{11}{figure.caption.4}% 
+\contentsline {figure}{\numberline {3.2}{\ignorespaces OpenFlow Switch Representation\relax }}{12}{figure.caption.6}% 
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Mobile IP\relax }}{14}{figure.caption.8}% 
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Proxy Mobile IP\relax }}{15}{figure.caption.10}% 
+\contentsline {figure}{\numberline {3.5}{\ignorespaces LTE Architecture\relax }}{16}{figure.caption.11}% 
+\contentsline {figure}{\numberline {3.6}{\ignorespaces LTE emulation with ns-3 and NI PXI\relax }}{16}{figure.caption.12}% 
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}

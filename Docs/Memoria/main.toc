@@ -1,19 +1,19 @@
 \contentsline {chapter}{Abstract}{5}{chapter*.1}% 
 \contentsline {chapter}{\chapternumberline {1}Introduction}{6}{chapter.1}% 
-\contentsline {chapter}{\chapternumberline {2}State of the Art}{8}{chapter.2}% 
-\contentsline {section}{\numberline {2.1}Software Defined Networking}{8}{section.2.1}% 
-\contentsline {subsection}{\numberline {2.1.1}OpenFlow}{8}{subsection.2.1.1}% 
-\contentsline {subsubsection}{OpenFlow Switch}{9}{section*.4}% 
-\contentsline {section}{\numberline {2.2}Distrbuted Mobility Management}{10}{section.2.2}% 
-\contentsline {subsection}{\numberline {2.2.1}Mobile IPv6}{12}{subsection.2.2.1}% 
-\contentsline {subsubsection}{Basic Operation}{12}{section*.6}% 
-\contentsline {subsection}{\numberline {2.2.2}Proxy Mobile IPv6}{12}{subsection.2.2.2}% 
-\contentsline {subsubsection}{Basic Operation}{13}{section*.8}% 
-\contentsline {section}{\numberline {2.3}LTE}{13}{section.2.3}% 
-\contentsline {subsection}{\numberline {2.3.1}LTE emulation}{14}{subsection.2.3.1}% 
-\contentsline {subsubsection}{NI PXI}{15}{section*.12}% 
-\contentsline {subsubsection}{ns-3}{15}{section*.13}% 
-\contentsline {chapter}{\chapternumberline {3}Analysis Of The Problem}{16}{chapter.3}% 
+\contentsline {chapter}{\chapternumberline {2}Analysis Of The Problem}{8}{chapter.2}% 
+\contentsline {chapter}{\chapternumberline {3}State of the Art}{10}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Software Defined Networking}{10}{section.3.1}% 
+\contentsline {subsection}{\numberline {3.1.1}OpenFlow}{10}{subsection.3.1.1}% 
+\contentsline {subsubsection}{OpenFlow Switch}{11}{section*.5}% 
+\contentsline {section}{\numberline {3.2}Distrbuted Mobility Management}{12}{section.3.2}% 
+\contentsline {subsection}{\numberline {3.2.1}Mobile IPv6}{14}{subsection.3.2.1}% 
+\contentsline {subsubsection}{Basic Operation}{14}{section*.7}% 
+\contentsline {subsection}{\numberline {3.2.2}Proxy Mobile IPv6}{14}{subsection.3.2.2}% 
+\contentsline {subsubsection}{Basic Operation}{15}{section*.9}% 
+\contentsline {section}{\numberline {3.3}LTE}{15}{section.3.3}% 
+\contentsline {subsection}{\numberline {3.3.1}LTE emulation}{16}{subsection.3.3.1}% 
+\contentsline {subsubsection}{NI PXI}{17}{section*.13}% 
+\contentsline {subsubsection}{ns-3}{17}{section*.14}% 
 \contentsline {chapter}{\chapternumberline {4}Solution Proposed}{18}{chapter.4}% 
 \contentsline {section}{\numberline {4.1}Architecture}{18}{section.4.1}% 
 \contentsline {subsection}{\numberline {4.1.1}Hardware}{18}{subsection.4.1.1}% 
@@ -28,16 +28,7 @@
 \contentsline {section}{\numberline {4.4}On-demand Infrastructure}{18}{section.4.4}% 
 \contentsline {subsection}{\numberline {4.4.1}Switching off an Access Point}{18}{subsection.4.4.1}% 
 \contentsline {subsection}{\numberline {4.4.2}Switching on an Access Point}{18}{subsection.4.4.2}% 
-\contentsline {chapter}{\chapternumberline {5}Implementation}{19}{chapter.5}% 
-\contentsline {chapter}{\chapternumberline {6}Design Alternatives}{20}{chapter.6}% 
-\contentsline {section}{\numberline {6.1}CROWD Controller hardware}{20}{section.6.1}% 
-\contentsline {section}{\numberline {6.2}LTE emulation tool}{20}{section.6.2}% 
-\contentsline {section}{\numberline {6.3}On-demand infrastructure switch off mechanism}{20}{section.6.3}% 
-\contentsline {section}{\numberline {6.4}Access point hardware}{21}{section.6.4}% 
-\contentsline {chapter}{\chapternumberline {7}Experiments}{22}{chapter.7}% 
-\contentsline {chapter}{\chapternumberline {8}Planning}{23}{chapter.8}% 
-\contentsline {chapter}{\chapternumberline {9}Regulatory Framework}{24}{chapter.9}% 
-\contentsline {chapter}{\chapternumberline {10}Socio-Economic Environment}{25}{chapter.10}% 
-\contentsline {chapter}{\chapternumberline {11}Conclusions}{26}{chapter.11}% 
-\contentsline {chapter}{\chapternumberline {12}Summary}{27}{chapter.12}% 
-\contentsline {chapter}{References}{28}{chapter*.15}% 
+\contentsline {chapter}{\chapternumberline {5}Planning}{19}{chapter.5}% 
+\contentsline {chapter}{\chapternumberline {6}Conclusions}{20}{chapter.6}% 
+\contentsline {chapter}{\chapternumberline {7}Summary}{21}{chapter.7}% 
+\contentsline {chapter}{References}{22}{chapter*.15}% 
