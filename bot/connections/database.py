@@ -1,7 +1,7 @@
 import datetime
 import psycopg2
 import json
-from model.logger import log
+from model.logger import log, LogTypes
 
 
 class Database:
@@ -47,18 +47,18 @@ class Database:
         else:
 
             try:
-                for row in rows:
-                    id = row[0]
-                    name = row[1]
-                    age = row[2]
-                    gender = row[3]
-                    telegram_id = row[4]
-                    weight = row[5]
-                    bodyfatratio = row[6]
-                    c_chest = row[7]
-                    c_leg = row[8]
-                    c_waist = row[9]
-                    c_triceps = row[10]
+                # for row in rows:
+                id = rows[0][0]
+                name = rows[0][1]
+                age = rows[0][2]
+                gender = rows[0][3]
+                telegram_id = rows[0][4]
+                weight = rows[0][5]
+                bodyfatratio = rows[0][6]
+                c_chest = rows[0][7]
+                c_leg = rows[0][8]
+                c_waist = rows[0][9]
+                c_triceps = rows[0][10]
 
                 measurements = {
                     'weight': weight,
@@ -78,8 +78,8 @@ class Database:
                 }
                 return user
             except Exception as e:
-                log(e, 'LOG_ERROR')
-                return None
+                log(str(e), LogTypes.LOG_ERROR)
+                return {'result': "ERROR"}
                 # cache.add_user2cache(user)
 
     def add_user(self, user):

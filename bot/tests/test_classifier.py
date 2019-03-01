@@ -43,11 +43,11 @@ class TestClassifier(unittest.TestCase):
                 intent = result['intent']
                 self.assertEqual(intent, expected)
 
-    def test_retrain(self):
-
-        answer = json.loads(classifier.retrain())
-        result = answer["result"]
-        self.assertEqual(result, 'ok')
+    # def test_retrain(self):
+    #
+    #     answer = json.loads(classifier.retrain())
+    #     result = answer["result"]
+    #     self.assertEqual(result, 'ok')
 
 
 if __name__ == '__main__':

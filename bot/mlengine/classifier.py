@@ -76,7 +76,6 @@ forest_small_clf = load_from_pickle(
     pickels_dir + 'forest_small_clfmodel.pkl')
 
 
-app = Flask(__name__)
 # CORS(app)
 
 
@@ -236,6 +235,9 @@ def retrain(quit=True, option=""):
             pickels_dir + 'forest_small_clfmodel.pkl')
 
         threadLock.release()
+        # try:
+        #     quit.wait(60)
+        # except:
         if (quit.wait(60)
             or option != "timer"
                 or not threading.main_thread().is_alive()):
@@ -244,6 +246,14 @@ def retrain(quit=True, option=""):
         # thread_unlock
     result = {'result': "ok"}
     return(json.dumps(result))
+
+
+option = "timer"
+train = threading.Thread(name='train',
+                         target=retrain,
+                         args=(quitEvent, option,))
+
+app = Flask(__name__)
 
 
 @app.route('/classify', methods=['POST'])
@@ -260,14 +270,9 @@ def training():
 
 @app.before_first_request
 def before_first_request():
-    global training
-    training.start()
+    global train
+    train.start()
 
-
-option = "timer"
-train = threading.Thread(name='training',
-                         target=retrain,
-                         args=(quitEvent, option,))
 
 if __name__ == '__main__':
 

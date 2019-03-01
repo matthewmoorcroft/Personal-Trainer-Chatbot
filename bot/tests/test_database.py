@@ -47,17 +47,19 @@ class TestDatabase(unittest.TestCase):
             'name': 'test',
             'age': 0,
             'gender': 'male',
-            'telegram_id': 0,
+            'telegram_id': '0',
             'measurements': measurements
         }
+        result_error = {'result': "ERROR"}
         tests = [
-            (1234, None),
+            (1234, result_error),
             (0, test_user)
         ]
         for value, expected in tests:
             with self.subTest(value=value):
                 result = self.database.check_user(value)
-                self.assertEqual(json.dumps(result), json.dumps(expected))
+                for key in result:
+                    self.assertEqual(result[key], expected[key])
 
         def test_add_user(self):
             measurements = {
@@ -89,7 +91,8 @@ class TestDatabase(unittest.TestCase):
             for value, expected in tests:
                 with self.subTest(value=value):
                     result = self.database.add_user(value)
-                    self.assertEqual(result, json.dumps(expected))
+                    for key in result:
+                        self.assertEqual(result[key], expected[key])
 
         def test_delete_user(self):
             result_test1 = {'result': 'ok'}

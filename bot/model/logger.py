@@ -4,6 +4,7 @@ import sys
 import datetime
 import time
 
+
 class bcolors:
     HEADER = '\033[95m'
     INFO = '\033[94m'
@@ -14,27 +15,37 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
-LOG_INFO = 0
-LOG_STEP = 1
-LOG_WARNING = 2
-LOG_ERROR = 3
-LOG_SUCCESS = 4
 
-def log_type(log_type):
-    if log_type == LOG_INFO:
-        return "INFO",bcolors.INFO
-    elif log_type == LOG_STEP:
-        return "STEP PROCESSING",bcolors.INFO
-    elif log_type == LOG_WARNING:
-        return "WARNING",bcolors.WARNING
-    elif log_type == LOG_ERROR:
-        return "ERROR",bcolors.FAILURE
-    elif log_type == LOG_SUCCESS:
-        return "SUCCESS",bcolors.SUCCESS
+class LogTypes:
+    LOG_INFO = 0
+    LOG_STEP = 1
+    LOG_WARNING = 2
+    LOG_ERROR = 3
+    LOG_SUCCESS = 4
 
-def log(log_text, log_type=LOG_INFO):
+
+def log_type(type):
+    if type == LogTypes.LOG_INFO:
+        return "INFO", bcolors.INFO
+    elif type == LogTypes.LOG_STEP:
+        return "STEP PROCESSING", bcolors.INFO
+    elif type == LogTypes.LOG_WARNING:
+        return "WARNING", bcolors.WARNING
+    elif type == LogTypes.LOG_ERROR:
+        return "ERROR", bcolors.FAILURE
+    elif type == LogTypes.LOG_SUCCESS:
+        return "SUCCESS", bcolors.SUCCESS
+
+
+def log(log_text, type=LogTypes.LOG_INFO):
     context_log_structure = "[%s] [%s] %s"
-    log_type_text, log_type_color = log_type(log_type)
-    context_log = log_type_color + bcolors.BOLD + context_log_structure % (log_type_text, datetime.datetime.fromtimestamp(time.time()).strftime('%H:%M:%S'), u' '.join((log_text,)).encode('utf-8').strip()) + bcolors.ENDC
-    print (context_log)
+    log_type_text, log_type_color = log_type(type)
+    date = datetime.datetime.fromtimestamp(time.time()).strftime('%H:%M:%S')
+    text = u' '.join((log_text,)).encode('utf-8').strip()
+    context_log = (log_type_color +
+                   bcolors.BOLD +
+                   context_log_structure % (log_type_text,
+                                            date,
+                                            text) + bcolors.ENDC)
+    print(context_log)
     sys.stdout.flush()

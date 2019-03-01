@@ -51,10 +51,14 @@ tfidf_transformer = TfidfTransformer()
 phrases_train_tfidf = tfidf_transformer.fit_transform(phrases_train_counts)
 
 multinomial_clf = MultinomialNB(alpha=0.01)
-sgdc_clf = SGDClassifier(loss='log', max_iter=1000, tol=1e-4)
-log_reg_clf = LogisticRegression()
-lin_svc_clf = SVC(kernel='linear', probability=True)
-forest_clf = RandomForestClassifier(n_estimators=100, random_state=0)
+sgdc_clf = SGDClassifier(loss='log',
+                         max_iter=1000, tol=1e-4)
+log_reg_clf = LogisticRegression(solver='lbfgs',
+                                 multi_class='auto')
+lin_svc_clf = SVC(kernel='linear',
+                  probability=True)
+forest_clf = RandomForestClassifier(n_estimators=100,
+                                    random_state=0)
 
 multinomial_clf = multinomial_clf.fit(phrases_train_tfidf, intent)
 sgdc_clf = sgdc_clf.fit(phrases_train_tfidf, intent)
