@@ -3,9 +3,6 @@ import uuid
 import time
 from controller import processor
 from connections.database import Database
-BOT_ID = "725490953"
-BOT_TOKEN = "AAF79oRlrKI6SqZNCqjOLRtRwzmOF7A-Yt4"
-URL = "https://api.telegram.org/bot" + BOT_ID + ":" + BOT_TOKEN + "/"
 
 
 uid = str(uuid.uuid4())
@@ -20,8 +17,8 @@ if __name__ == "__main__":
 
     db = Database.get_instance()
     while True:
-        #text = input("Enter a phrase you want Sam to send: ")
-        #message = URL+"sendMessage?chat_id=375033117&text="+text
+        # text = input("Enter a phrase you want Sam to send: ")
+        # message = URL+"sendMessage?chat_id=375033117&text="+text
 
         # cur = conn.cursor()
         #
@@ -40,7 +37,7 @@ if __name__ == "__main__":
         # 		row_id = row[0]
         # 		raw_message = json.loads(row[1])
         row_id, raw_message = db.get_message(uid)
-        if raw_message != None:
+        if raw_message is not None:
             # processor = processor(raw_message['message'])
             processor.process_message(raw_message)
 

@@ -39,7 +39,7 @@ class TestClassifier(unittest.TestCase):
 
             with self.subTest(value=value):
                 # add call to classify funtion
-                result = json.loads(classifier.classify(value))
+                result = json.loads(classifier.classify({'text': value}))
                 intent = result['intent']
                 self.assertEqual(intent, expected)
 

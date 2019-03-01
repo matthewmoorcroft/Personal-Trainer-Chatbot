@@ -240,7 +240,7 @@ class TestContextEngine(unittest.TestCase):
         for value, expected in tests:
             with self.subTest(value=value):
 
-                result = process_message(value)
+                result = process_welcome(value)
 
                 self.assertEqual(result['intent'], expected['intent'])
                 self.assertEqual(result['variables'], expected['variables'])

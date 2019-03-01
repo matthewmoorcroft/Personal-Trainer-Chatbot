@@ -1,7 +1,7 @@
 import unittest
 from controller.processor import text_normalization
 # from unittest.mock import patch
-import requests_mock
+# import requests_mock
 
 
 class TestProcessor(unittest.TestCase):

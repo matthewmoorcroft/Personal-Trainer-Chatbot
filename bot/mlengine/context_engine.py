@@ -1,5 +1,8 @@
 from flask import Flask
-from model.user import *
+# from model.user import *
+from model.logger import log
+import requests
+
 
 """Message goes to context if it doesn't understand, goes to classifier if it
 doesn't understand sends to user context answer"""
@@ -7,13 +10,19 @@ doesn't understand sends to user context answer"""
 
 def process_message(data):
     log('Context Engine: Context processing started')
-    message = text_normalization(data['message'])
+    # message = text_normalization(data['message'])
+    message = data['message']
     user = data['user']
+    json = {'text': message}
+    res = requests.post('http://localhost:30000/classify',
+                        json=json)
+    return res.json['intent']
 
 
 def process_welcome(data):
     log('Context Engine: Welcome process')
-    message = text_normalization(data['message'])
+    # message = text_normalization(data['message'])
+    message = data['message']
     user = data['user']
 
     context = context_manager.get_context()
@@ -29,13 +38,13 @@ def process_welcome(data):
 
 app = Flask(__name__)
 @app.route("/process_message")
-def normal_req(request.json):
+def normal_req():
     res = process_message(request.json)
     return json.dumps(res)
 
 
 @app.route("/process_welcome")
-def welcome_req(request.json):
+def welcome_req():
     res = process_welcome(request.json)
     return json.dumps(res)
 

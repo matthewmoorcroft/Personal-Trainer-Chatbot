@@ -1,6 +1,7 @@
 import datetime
 import psycopg2
 import json
+from model.logger import log
 
 
 class Database:
@@ -33,8 +34,11 @@ class Database:
         try:
             cur = self.conn.cursor()
 
-            cur.execute("""SELECT * FROM core.users
-                        WHERE telegram_id = f'{telegram_id}'  """)
+            cur.execute("""SELECT *
+                           FROM core.users
+                           WHERE telegram_id = '%(telegram_id)s'  """, {
+                'telegram_id': telegram_id
+            })
             rows = cur.fetchall()
 
         except Exception as e:
@@ -73,54 +77,71 @@ class Database:
                     'measurements': measurements
                 }
                 return user
-            # except:
+            except Exception as e:
+                log(e, 'LOG_ERROR')
                 return None
                 # cache.add_user2cache(user)
 
-    def add_user(self, telegram_id):
+    def add_user(self, user):
+
+        name = user['name']
+        age = user['age']
+        gender = user['gender']
+        telegram_id = user['telegram_id']
+        weight = user['measurements']['weight']
+        bodyfatratio = user['measurements']['bodyfatratio']
+        c_chest = user['measurements']['c_chest']
+        c_leg = user['measurements']['c_leg']
+        c_waist = user['measurements']['c_waist']
+        c_triceps = user['measurements']['c_triceps']
 
         try:
             cur = self.conn.cursor()
 
-            cur.execute("""INSERT INTO core.users (id,
-                                                   name,
+            cur.execute("""INSERT INTO core.users (name,
                                                    age,
                                                    gender,
-                                                   telegram_id)
-                        VALUES(0, 'test', 23, 'male', 0)""")
-            rows = cur.fetchall()
-
+                                                   telegram_id,
+                                                   weight,
+                                                   bodyfatratio,
+                                                   c_chest,
+                                                   c_leg,
+                                                   c_waist,
+                                                   c_triceps)
+                        VALUES (%(name)s,
+                               %(age)s,
+                               %(gender)s,
+                               %(telegram_id)s,
+                               %(weight)s,
+                               %(bodyfatratio)s,
+                               %(c_chest)s,
+                               %(c_leg)s,
+                               %(c_waist)s,
+                               %(c_triceps)s)""", {
+                'name': name,
+                'age': age,
+                'gender': gender,
+                'telegram_id': telegram_id,
+                'weight': weight,
+                'bodyfatratio': bodyfatratio,
+                'c_chest': c_chest,
+                'c_leg': c_leg,
+                'c_waist': c_waist,
+                'c_triceps': c_triceps})
+            self.conn.commit()
+            cur.close()
+            return json.dumps({'result': "ok"})
         except Exception as e:
 
             print(e)
-        else:
-
-            try:
-                for row in rows:
-                    id = row[0]
-                    name = row[1]
-                    age = row[2]
-                    gender = row[3]
-                    telegram_id = row[4]
-                    weight = row[5]
-                    bodyfatratio = row[6]
-                    c_chest = row[7]
-                    c_leg = row[8]
-                    c_waist = row[9]
-                    c_triceps = row[10]
-
-                user = User(id, name, age, gender, telegram_id, weight,
-                            bodyfatratio, c_chest, c_leg, c_waist, c_triceps)
-                return user
-            except:
-                return None
-                # cache.add_user2cache(user)
+            return json.dumps({'result': "Error: Not all fields filled"})
 
     def delete_user(self, user_id):
 
         cur = self.conn.cursor()
 
-        cur.execute(f"""DELETE FROM core.users WHERE id = {user_id}""")
+        cur.execute("""DELETE FROM core.users
+                       WHERE id = %(user_id)s""", {'user_id': user_id})
 
         self.database.conn.commit()
         response = {'result': 'ok'}
@@ -129,13 +150,19 @@ class Database:
     def get_message(self, uid):
         cur = self.conn.cursor()
 
-        cur.execute("UPDATE webhook.incoming_messages set assigned_to='" + uid +
-                    "' where id = (SELECT id FROM webhook.incoming_messages where source='Telegram' and assigned_to is null LIMIT 1)")
+        cur.execute("""UPDATE webhook.incoming_messages
+                       SET assigned_to='%(uid)s'
+                       WHERE id = (SELECT id
+                                   FROM webhook.incoming_messages
+                                   WHERE source='Telegram'
+                                   AND assigned_to IS null LIMIT 1)""")
 
         self.conn.commit()
 
-        cur.execute("SELECT id, message from webhook.incoming_messages where assigned_to='" +
-                    uid + "' and processed_on is null LIMIT 1")
+        cur.execute("""SELECT id, message
+                       FROM webhook.incoming_messages
+                       WHERE assigned_to='%(uid)s'
+                       AND processed_on IS null LIMIT 1""", {'uid': uid})
 
         rows = cur.fetchall()
         rowcount = cur.rowcount
@@ -149,15 +176,35 @@ class Database:
         return None
 
     def add_log(self, message, intent, id_to='Sam', id_from='Sam', score=-1):
-        db.update_processed(row_id)
+        cur = self.conn.cursor()
         cur.execute(
-            "INSERT INTO core.interaction_log (id_to, id_from, message, intent, score) VALUES ('{id_to}','{id_from}','{message}','{intent}',{score})")
-        conn.commit()
+            """INSERT INTO core.interaction_log (
+                            id_to,
+                            id_from,
+                            message,
+                            intent,
+                            score) VALUES (%(id_to)s,
+                                           %(id_from)s,
+                                           %(message)s,
+                                           %(intent)s,
+                                           %(score)s)""", {
+                'id_to': id_to,
+                'id_from': id_from,
+                'message': message,
+                'intent': intent,
+                'score': score
+            })
+        self.conn.commit()
         cur.close()
 
     def update_processes(self, row_id):
-        db.update_processed(row_id)
-        cur.execute("UPDATE webhook.incoming_messages SET processed_on='" +
-                    str(datetime.datetime.now()) + "' where id='" + str(row_id) + "'")
-        conn.commit()
+        cur = self.conn.cursor()
+
+        cur.execute("""UPDATE webhook.incoming_messages
+                       SET processed_on='%(date)s'
+                       WHERE id=%(row_id)s""", {
+            'date': datetime.datetime.now(),
+            'row_id': row_id
+        })
+        self.conn.commit()
         cur.close()
