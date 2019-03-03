@@ -36,8 +36,9 @@ if __name__ == "__main__":
         # 	for row in rows:
         # 		row_id = row[0]
         # 		raw_message = json.loads(row[1])
-        row_id, raw_message = db.get_message(uid)
-        if raw_message is not None:
+        try:
+            row_id, raw_message = db.get_message(uid)
+
             # processor = processor(raw_message['message'])
             processor.process_message(raw_message)
 
@@ -47,5 +48,5 @@ if __name__ == "__main__":
             # cur.execute("UPDATE webhook.incoming_messages SET processed_on='" + str(datetime.datetime.now()) + "' where id='" + str(row_id) + "'")
             # conn.commit()
             # cur.close()
-        else:
+        except Exception as e:
             time.sleep(1)
