@@ -104,53 +104,53 @@ def classify(data):
     vote = []
 
     if frases_new_counts.size < 2:
-        pred_multi = multinomial_small_clf.predict(frases_new_tfidf)[0]
+        pred_multi = multinomial_small_clf.predict(frases_new_tfidf)
         prob_multi = (multinomial_small_clf.predict_proba(frases_new_tfidf)
-                      [0][pred_multi])
-        vote.append(pred_multi)
+                      [0][pred_multi[0]])
+        vote.append(pred_multi[0])
 
-        pred_sgdc = sgdc_small_clf.predict(frases_new_tfidf)[0]
+        pred_sgdc = sgdc_small_clf.predict(frases_new_tfidf)
         prob_sgdc = (sgdc_small_clf.predict_proba(frases_new_tfidf)
-                     [0][pred_sgdc])
-        vote.append(pred_sgdc)
+                     [0][pred_sgdc[0]])
+        vote.append(pred_sgdc[0])
 
-        pred_log = log_reg_small_clf.predict(frases_new_tfidf)[0]
+        pred_log = log_reg_small_clf.predict(frases_new_tfidf)
         prob_log = (log_reg_small_clf.predict_proba(frases_new_tfidf)
-                    [0][pred_log])
-        vote.append(pred_log)
+                    [0][pred_log[0]])
+        vote.append(pred_log[0])
 
-        pred_lin = lin_svc_small_clf.predict(frases_new_tfidf)[0]
+        pred_lin = lin_svc_small_clf.predict(frases_new_tfidf)
         prob_lin = (lin_svc_small_clf.predict_proba(frases_new_tfidf)
-                    [0][pred_lin])
-        vote.append(pred_lin)
+                    [0][pred_lin[0]])
+        vote.append(pred_lin[0])
 
-        pred_forest = forest_small_clf.predict(frases_new_tfidf)[0]
+        pred_forest = forest_small_clf.predict(frases_new_tfidf)
         prob_forest = (forest_small_clf.predict_proba(frases_new_tfidf)
-                       [0][pred_forest])
-        vote.append(pred_forest)
+                       [0][pred_forest[0]])
+        vote.append(pred_forest[0])
 
     else:
-        pred_multi = multinomial_clf.predict(frases_new_tfidf)[0]
+        pred_multi = multinomial_clf.predict(frases_new_tfidf)
         prob_multi = (multinomial_clf.predict_proba(frases_new_tfidf)
-                      [0][pred_multi])
-        vote.append(pred_multi)
+                      [0][pred_multi[0]])
+        vote.append(pred_multi[0])
 
-        pred_sgdc = sgdc_clf.predict(frases_new_tfidf)[0]
-        prob_sgdc = sgdc_clf.predict_proba(frases_new_tfidf)[0][pred_sgdc]
-        vote.append(pred_sgdc)
+        pred_sgdc = sgdc_clf.predict(frases_new_tfidf)
+        prob_sgdc = sgdc_clf.predict_proba(frases_new_tfidf)[0][pred_sgdc[0]]
+        vote.append(pred_sgdc[0])
 
-        pred_log = log_reg_clf.predict(frases_new_tfidf)[0]
-        prob_log = log_reg_clf.predict_proba(frases_new_tfidf)[0][pred_log]
-        vote.append(pred_log)
+        pred_log = log_reg_clf.predict(frases_new_tfidf)
+        prob_log = log_reg_clf.predict_proba(frases_new_tfidf)[0][pred_log[0]]
+        vote.append(pred_log[0])
 
-        pred_lin = lin_svc_clf.predict(frases_new_tfidf)[0]
-        prob_lin = lin_svc_clf.predict_proba(frases_new_tfidf)[0][pred_lin]
-        vote.append(pred_lin)
+        pred_lin = lin_svc_clf.predict(frases_new_tfidf)
+        prob_lin = lin_svc_clf.predict_proba(frases_new_tfidf)[0][pred_lin[0]]
+        vote.append(pred_lin[0])
 
-        pred_forest = forest_clf.predict(frases_new_tfidf)[0]
+        pred_forest = forest_clf.predict(frases_new_tfidf)
         prob_forest = (forest_clf.predict_proba(frases_new_tfidf)
-                       [0][pred_forest])
-        vote.append(pred_forest)
+                       [0][pred_forest[0]])
+        vote.append(pred_forest[0])
 
     threadLock.release()
     prob_sum = prob_forest + prob_lin + prob_log + prob_sgdc + prob_multi

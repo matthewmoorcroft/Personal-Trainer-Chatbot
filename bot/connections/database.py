@@ -161,7 +161,7 @@ class Database:
 
         cur.execute("""SELECT id, message
                        FROM webhook.incoming_messages
-                       WHERE assigned_to='%(uid)s'
+                       WHERE assigned_to=%(uid)s
                        AND processed_on IS null LIMIT 1""", {'uid': uid})
 
         rows = cur.fetchall()
