@@ -1,6 +1,6 @@
 from flask import Flask
 # from model.user import *
-from model.logger import log
+from ..model.logger import log
 from mlengine.context_manager import ContextManager
 import requests
 import json
