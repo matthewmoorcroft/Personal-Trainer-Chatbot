@@ -20,9 +20,10 @@ intents = {}
 intents['salute'] = 0
 intents['bye'] = 1
 intents['help'] = 2
-intents['get_measurements'] = 3
-intents['new_table'] = 4
-intents['start_training'] = 5
+intents['unknown'] = 3
+intents['get_measurements'] = 4
+intents['new_table'] = 5
+intents['start_training'] = 6
 codigo_intent = {}
 
 
@@ -33,7 +34,8 @@ snow = SnowballStemmer('english')
 file = Path(os.path.dirname(os.path.abspath(__file__))+"/data/input.data")
 file = str(file.absolute())
 pickels_dir = Path(os.path.dirname(os.path.abspath(__file__))+"/pickels/")
-pickels_dir = str(pickels_dir.absolute())
+
+# pickels_dir = str(pickels_dir.absolute())
 
 
 with open(file, 'r') as inp:
@@ -67,19 +69,19 @@ lin_svc_clf = lin_svc_clf.fit(phrases_train_tfidf, intent)
 forest_clf = forest_clf.fit(phrases_train_tfidf, intent)
 
 save_to_pickle(count_vect,
-               pickels_dir + 'count_vect.pkl')
+               pickels_dir / 'count_vect.pkl')
 save_to_pickle(tfidf_transformer,
-               pickels_dir + 'tfidf_transformer.pkl')
+               pickels_dir / 'tfidf_transformer.pkl')
 save_to_pickle(multinomial_clf,
-               pickels_dir + 'multinomial_model.pkl')
+               pickels_dir / 'multinomial_model.pkl')
 save_to_pickle(sgdc_clf,
-               pickels_dir + 'sgdc_model.pkl')
+               pickels_dir / 'sgdc_model.pkl')
 save_to_pickle(log_reg_clf,
-               pickels_dir + 'log_reg_model.pkl')
+               pickels_dir / 'log_reg_model.pkl')
 save_to_pickle(lin_svc_clf,
-               pickels_dir + 'lin_svc_model.pkl')
+               pickels_dir / 'lin_svc_model.pkl')
 save_to_pickle(forest_clf,
-               pickels_dir + 'forest_model.pkl')
+               pickels_dir / 'forest_model.pkl')
 
 
 # Training with no stop_words
@@ -102,16 +104,16 @@ lin_svc_small_clf = lin_svc_small_clf.fit(phrases_small_tfidf, intent)
 forest_small_clf = forest_small_clf.fit(phrases_small_tfidf, intent)
 
 save_to_pickle(count_small_vect,
-               pickels_dir + 'count_small_vect.pkl')
+               pickels_dir / 'count_small_vect.pkl')
 save_to_pickle(tfidf_small_transformer,
-               pickels_dir + 'tfidf_small_transformer.pkl')
+               pickels_dir / 'tfidf_small_transformer.pkl')
 save_to_pickle(multinomial_small_clf,
-               pickels_dir + 'multinomial_small_model.pkl')
+               pickels_dir / 'multinomial_small_model.pkl')
 save_to_pickle(sgdc_small_clf,
-               pickels_dir + 'sgdc_small_model.pkl')
+               pickels_dir / 'sgdc_small_model.pkl')
 save_to_pickle(log_reg_small_clf,
-               pickels_dir + 'log_reg_small_model.pkl')
+               pickels_dir / 'log_reg_small_model.pkl')
 save_to_pickle(lin_svc_small_clf,
-               pickels_dir + 'lin_svc_small_model.pkl')
+               pickels_dir / 'lin_svc_small_model.pkl')
 save_to_pickle(forest_small_clf,
-               pickels_dir + 'forest_small_clfmodel.pkl')
+               pickels_dir / 'forest_small_clfmodel.pkl')

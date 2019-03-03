@@ -32,48 +32,50 @@ intents = {}
 intents[0] = 'salute'
 intents[1] = 'bye'
 intents[2] = 'help'
-intents[3] = 'get_measurements'
-intents[4] = 'new_table'
-intents[5] = 'start_training'
+intents[3] = 'unknown'
+intents[4] = 'get_measurements'
+intents[5] = 'new_table'
+intents[6] = 'start_training'
 
 snow = SnowballStemmer('english')
 
 file = Path(os.path.dirname(os.path.abspath(__file__))+"/data/input.data")
 file = str(file.absolute())
 pickels_dir = Path(os.path.dirname(os.path.abspath(__file__))+"/pickels/")
-pickels_dir = str(pickels_dir.absolute())
+# pickels_dir = str(pickels_dir.absolute())
 
 # Importing models
 # Models with stop_words
-count_vect = load_from_pickle(pickels_dir + 'count_vect.pkl')
+count_vect = load_from_pickle(
+    pickels_dir / 'count_vect.pkl')
 tfidf_transformer = load_from_pickle(
-    pickels_dir + 'tfidf_transformer.pkl')
+    pickels_dir / 'tfidf_transformer.pkl')
 multinomial_clf = load_from_pickle(
-    pickels_dir + 'multinomial_model.pkl')
+    pickels_dir / 'multinomial_model.pkl')
 sgdc_clf = load_from_pickle(
-    pickels_dir + 'sgdc_model.pkl')
+    pickels_dir / 'sgdc_model.pkl')
 log_reg_clf = load_from_pickle(
-    pickels_dir + 'log_reg_model.pkl')
+    pickels_dir / 'log_reg_model.pkl')
 lin_svc_clf = load_from_pickle(
-    pickels_dir + 'lin_svc_model.pkl')
+    pickels_dir / 'lin_svc_model.pkl')
 forest_clf = load_from_pickle(
-    pickels_dir + 'forest_model.pkl')
+    pickels_dir / 'forest_model.pkl')
 
 # Models with no stop_words
 count_small_vect = load_from_pickle(
-    pickels_dir + 'count_small_vect.pkl')
+    pickels_dir / 'count_small_vect.pkl')
 tfidf_small_transformer = load_from_pickle(
-    pickels_dir + 'tfidf_small_transformer.pkl')
+    pickels_dir / 'tfidf_small_transformer.pkl')
 multinomial_small_clf = load_from_pickle(
-    pickels_dir + 'multinomial_small_model.pkl')
+    pickels_dir / 'multinomial_small_model.pkl')
 sgdc_small_clf = load_from_pickle(
-    pickels_dir + 'sgdc_small_model.pkl')
+    pickels_dir / 'sgdc_small_model.pkl')
 log_reg_small_clf = load_from_pickle(
-    pickels_dir + 'log_reg_small_model.pkl')
+    pickels_dir / 'log_reg_small_model.pkl')
 lin_svc_small_clf = load_from_pickle(
-    pickels_dir + 'lin_svc_small_model.pkl')
+    pickels_dir / 'lin_svc_small_model.pkl')
 forest_small_clf = load_from_pickle(
-    pickels_dir + 'forest_small_clfmodel.pkl')
+    pickels_dir / 'forest_small_clfmodel.pkl')
 
 
 # CORS(app)
@@ -155,11 +157,11 @@ def classify(data):
     prob_clf = (prob_sum)/5 * 100
     # thread unlock
 
-    votes = mode(vote)
+    decission = mode(vote)
 
-    confidence = (vote.count(votes)/len(vote)) * 100
+    confidence = (vote.count(decission)/len(vote)) * 100
     probability = (confidence + prob_clf)/2
-    intent = intents[votes]
+    intent = intents[decission]
     print("Probability: ", probability, file=sys.stderr)
     print("Category: ", intent, file=sys.stderr)
 
@@ -168,7 +170,7 @@ def classify(data):
                     'sentence': data["text"]}
         new_entry(json_msg)
 
-    result = {'intent_id': format(votes),
+    result = {'intent_id': format(decission),
               'intent': intent,
               # 'stem_phrase' : array_statement[0],
               # 'original_phrase': data["text"],
@@ -206,33 +208,33 @@ def retrain(quit=True, option=""):
         # Models with stop_words
         count_vect = load_from_pickle(pickels_dir + 'count_vect.pkl')
         tfidf_transformer = load_from_pickle(
-            pickels_dir + 'tfidf_transformer.pkl')
+            pickels_dir / 'tfidf_transformer.pkl')
         multinomial_clf = load_from_pickle(
-            pickels_dir + 'multinomial_model.pkl')
+            pickels_dir / 'multinomial_model.pkl')
         sgdc_clf = load_from_pickle(
-            pickels_dir + 'sgdc_model.pkl')
+            pickels_dir / 'sgdc_model.pkl')
         log_reg_clf = load_from_pickle(
-            pickels_dir + 'log_reg_model.pkl')
+            pickels_dir / 'log_reg_model.pkl')
         lin_svc_clf = load_from_pickle(
-            pickels_dir + 'lin_svc_model.pkl')
+            pickels_dir / 'lin_svc_model.pkl')
         forest_clf = load_from_pickle(
-            pickels_dir + 'forest_model.pkl')
+            pickels_dir / 'forest_model.pkl')
 
         # Models with no stop_words
         count_small_vect = load_from_pickle(
-            pickels_dir + 'count_small_vect.pkl')
+            pickels_dir / 'count_small_vect.pkl')
         tfidf_small_transformer = load_from_pickle(
-            pickels_dir + 'tfidf_small_transformer.pkl')
+            pickels_dir / 'tfidf_small_transformer.pkl')
         multinomial_small_clf = load_from_pickle(
-            pickels_dir + 'multinomial_small_model.pkl')
+            pickels_dir / 'multinomial_small_model.pkl')
         sgdc_small_clf = load_from_pickle(
-            pickels_dir + 'sgdc_small_model.pkl')
+            pickels_dir / 'sgdc_small_model.pkl')
         log_reg_small_clf = load_from_pickle(
-            pickels_dir + 'log_reg_small_model.pkl')
+            pickels_dir / 'log_reg_small_model.pkl')
         lin_svc_small_clf = load_from_pickle(
-            pickels_dir + 'lin_svc_small_model.pkl')
+            pickels_dir / 'lin_svc_small_model.pkl')
         forest_small_clf = load_from_pickle(
-            pickels_dir + 'forest_small_clfmodel.pkl')
+            pickels_dir / 'forest_small_clfmodel.pkl')
 
         threadLock.release()
         # try:

@@ -8,6 +8,11 @@ that will be all;bye
 i need help;help
 help please;help
 what can i do;help
+what is the weather like?;unknown
+check traffic;unknown
+what time is it;unknown
+check calendar;unknown
+breakfast time;unknown
 i would like to take my measurements;get_measurements
 measure myself;get_measurements
 take measurements;get_measurements
@@ -17,44 +22,75 @@ i want a different table;new_table
 i would like to start my training session;start_training
 let's start training;start_training
 begin training session;start_training
+time to burn some fat;start_training
+time to train;start_training
 hello;salute
 good morning;salute
 hi sam;salute
 good bye;bye
 bye sam;bye
 see you later;bye
+that will be all;bye
 I need help;help
 what can i do;help
 what commands can i say;help
 help;help
+what is the weather;unknown
+where is the closest shop;unknown
 i would like to measure myself;get_measurements
 i want to measure myself;get_measurements
+i want to weigh myself;get_measurements
 new measurements;get_measurements
 configure a new table for me;new_table
 create new table;new_table
 i want a new table;new_table
 let's start training;start_training
-time to train;start_training
 start training session;start_training
 hello;salute
 good morning;salute
 hi sam;salute
-good afternoon;salute
 good bye;bye
 bye sam;bye
 see you later;bye
+that will be all;bye
 I need help;help
 what can i do;help
 what commands can i say;help
 help;help
+what is the weather;unknown
+where is the closest shop;unknown
 i would like to measure myself;get_measurements
 i want to measure myself;get_measurements
+i want to weigh myself;get_measurements
 new measurements;get_measurements
 configure a new table for me;new_table
 create new table;new_table
 i want a new table;new_table
 let's start training;start_training
-time to train;start_training
+i want to train;start_training
+start training session;start_training
+hello;salute
+good morning;salute
+hi sam;salute
+good bye;bye
+bye sam;bye
+see you later;bye
+that will be all;bye
+I need help;help
+what can i do;help
+what commands can i say;help
+help;help
+what is the weather;unknown
+where is the closest shop;unknown
+i would like to measure myself;get_measurements
+i want to measure myself;get_measurements
+i want to weigh myself;get_measurements
+new measurements;get_measurements
+configure a new table for me;new_table
+create new table;new_table
+i want a new table;new_table
+let's start training;start_training
+i want to train;start_training
 start training session;start_training
 hello;salute
 good morning;salute
@@ -68,6 +104,32 @@ I need help;help
 what can i do;help
 what commands can i say;help
 help;help
+what is the weather;unknown
+where is the closest shop;unknown
+i would like to measure myself;get_measurements
+i want to measure myself;get_measurements
+i want to weigh myself;get_measurements
+new measurements;get_measurements
+configure a new table for me;new_table
+create new table;new_table
+i want a new table;new_table
+let's start training;start_training
+i want to train;start_training
+start training session;start_training
+hello;salute
+good morning;salute
+hi sam;salute
+good afternoon;salute
+good bye;bye
+bye sam;bye
+see you later;bye
+that will be all;bye
+I need help;help
+what can i do;help
+what commands can i say;help
+help;help
+what is the weather;unknown
+where is the closest shop;unknown
 i would like to measure myself;get_measurements
 i want to measure myself;get_measurements
 i want to weigh myself;get_measurements
@@ -77,7 +139,7 @@ create new table;new_table
 i want a new table;new_table
 can you send me a new table?;new_table
 let's start training;start_training
-time to train;start_training
+i want to train;start_training
 start training session;start_training
 hello;salute
 good morning;salute
@@ -91,190 +153,9 @@ I need help;help
 what can i do;help
 what commands can i say;help
 help;help
-i would like to measure myself;get_measurements
-i want to measure myself;get_measurements
-i want to weigh myself;get_measurements
-new measurements;get_measurements
-configure a new table for me;new_table
-create new table;new_table
-i want a new table;new_table
-can you send me a new table?;new_table
-let's start training;start_training
-time to train;start_training
-start training session;start_training
-hello;salute
-good morning;salute
-hi sam;salute
-good afternoon;salute
-good bye;bye
-bye sam;bye
-see you later;bye
-that will be all;bye
-I need help;help
-what can i do;help
-what commands can i say;help
-help;help
-i would like to measure myself;get_measurements
-i want to measure myself;get_measurements
-i want to weigh myself;get_measurements
-new measurements;get_measurements
-configure a new table for me;new_table
-create new table;new_table
-i want a new table;new_table
-can you send me a new table?;new_table
-let's start training;start_training
-time to train;start_training
-start training session;start_training
-hello;salute
-good morning;salute
-hi sam;salute
-good afternoon;salute
-good bye;bye
-bye sam;bye
-see you later;bye
-that will be all;bye
-I need help;help
-what can i do;help
-what commands can i say;help
-help;help
-i would like to measure myself;get_measurements
-i want to measure myself;get_measurements
-i want to weigh myself;get_measurements
-new measurements;get_measurements
-configure a new table for me;new_table
-create new table;new_table
-i want a new table;new_table
-can you send me a new table?;new_table
-let's start training;start_training
-time to train;start_training
-start training session;start_training
-hello;salute
-good morning;salute
-hi sam;salute
-good afternoon;salute
-good bye;bye
-bye sam;bye
-see you later;bye
-that will be all;bye
-I need help;help
-what can i do;help
-what commands can i say;help
-help;help
-i would like to measure myself;get_measurements
-i want to measure myself;get_measurements
-i want to weigh myself;get_measurements
-new measurements;get_measurements
-configure a new table for me;new_table
-create new table;new_table
-i want a new table;new_table
-can you send me a new table?;new_table
-let's start training;start_training
-time to train;start_training
-start training session;start_training
-hello;salute
-good morning;salute
-hi sam;salute
-good afternoon;salute
-good bye;bye
-bye sam;bye
-see you later;bye
-that will be all;bye
-I need help;help
-what can i do;help
-what commands can i say;help
-help;help
-i would like to measure myself;get_measurements
-i want to measure myself;get_measurements
-i want to weigh myself;get_measurements
-new measurements;get_measurements
-configure a new table for me;new_table
-create new table;new_table
-i want a new table;new_table
-can you send me a new table?;new_table
-let's start training;start_training
-time to train;start_training
-start training session;start_training
-hello;salute
-good morning;salute
-hi sam;salute
-good afternoon;salute
-good bye;bye
-bye sam;bye
-see you later;bye
-that will be all;bye
-I need help;help
-what can i do;help
-what commands can i say;help
-help;help
-i would like to measure myself;get_measurements
-i want to measure myself;get_measurements
-i want to weigh myself;get_measurements
-new measurements;get_measurements
-configure a new table for me;new_table
-create new table;new_table
-i want a new table;new_table
-can you send me a new table?;new_table
-let's start training;start_training
-time to train;start_training
-start training session;start_training
-hello;salute
-good morning;salute
-hi sam;salute
-good afternoon;salute
-good bye;bye
-bye sam;bye
-see you later;bye
-that will be all;bye
-I need help;help
-what can i do;help
-what commands can i say;help
-help;help
-i would like to measure myself;get_measurements
-i want to measure myself;get_measurements
-i want to weigh myself;get_measurements
-new measurements;get_measurements
-configure a new table for me;new_table
-create new table;new_table
-i want a new table;new_table
-can you send me a new table?;new_table
-let's start training;start_training
-time to train;start_training
-start training session;start_training
-hello;salute
-good morning;salute
-hi sam;salute
-good afternoon;salute
-good bye;bye
-bye sam;bye
-see you later;bye
-that will be all;bye
-I need help;help
-what can i do;help
-what commands can i say;help
-help;help
-i would like to measure myself;get_measurements
-i want to measure myself;get_measurements
-i want to weigh myself;get_measurements
-new measurements;get_measurements
-configure a new table for me;new_table
-create new table;new_table
-i want a new table;new_table
-can you send me a new table?;new_table
-let's start training;start_training
-time to train;start_training
-start training session;start_training
-hello;salute
-good morning;salute
-hi sam;salute
-good afternoon;salute
-good bye;bye
-bye sam;bye
-see you later;bye
-that will be all;bye
-I need help;help
-what can i do;help
-what commands can i say;help
-help;help
+what is the weather;unknown
+where is the closest shop;unknown
+where can i watch the game;unknown
 i would like to measure myself;get_measurements
 i want to measure myself;get_measurements
 i want to weigh myself;get_measurements
@@ -299,6 +180,10 @@ I need help;help
 what can i do;help
 what commands can i say;help
 help;help
+what is the weather;unknown
+breakfast time;unknown
+where is the closest shop;unknown
+where can i watch the game;unknown
 i would like to measure myself;get_measurements
 i want to measure myself;get_measurements
 i want to weigh myself;get_measurements
@@ -323,6 +208,10 @@ I need help;help
 what can i do;help
 what commands can i say;help
 help;help
+what is the weather;unknown
+breakfast time;unknown
+where is the closest shop;unknown
+where can i watch the game;unknown
 i would like to measure myself;get_measurements
 i want to measure myself;get_measurements
 i want to weigh myself;get_measurements
@@ -347,6 +236,10 @@ I need help;help
 what can i do;help
 what commands can i say;help
 help;help
+what is the weather;unknown
+breakfast time;unknown
+where is the closest shop;unknown
+where can i watch the game;unknown
 i would like to measure myself;get_measurements
 i want to measure myself;get_measurements
 i want to weigh myself;get_measurements
@@ -371,6 +264,10 @@ I need help;help
 what can i do;help
 what commands can i say;help
 help;help
+what is the weather;unknown
+breakfast time;unknown
+where is the closest shop;unknown
+where can i watch the game;unknown
 i would like to measure myself;get_measurements
 i want to measure myself;get_measurements
 i want to weigh myself;get_measurements
@@ -395,6 +292,10 @@ I need help;help
 what can i do;help
 what commands can i say;help
 help;help
+what is the weather;unknown
+breakfast time;unknown
+where is the closest shop;unknown
+where can i watch the game;unknown
 i would like to measure myself;get_measurements
 i want to measure myself;get_measurements
 i want to weigh myself;get_measurements
@@ -419,126 +320,10 @@ I need help;help
 what can i do;help
 what commands can i say;help
 help;help
-i would like to measure myself;get_measurements
-i want to measure myself;get_measurements
-i want to weigh myself;get_measurements
-new measurements;get_measurements
-configure a new table for me;new_table
-create new table;new_table
-i want a new table;new_table
-can you send me a new table?;new_table
-let's start training;start_training
-i want to train;start_training
-time to train;start_training
-start training session;start_training
-hello;salute
-good morning;salute
-hi sam;salute
-good afternoon;salute
-good bye;bye
-bye sam;bye
-see you later;bye
-that will be all;bye
-I need help;help
-what can i do;help
-what commands can i say;help
-help;help
-i would like to measure myself;get_measurements
-i want to measure myself;get_measurements
-i want to weigh myself;get_measurements
-new measurements;get_measurements
-configure a new table for me;new_table
-create new table;new_table
-i want a new table;new_table
-can you send me a new table?;new_table
-let's start training;start_training
-i want to train;start_training
-time to train;start_training
-start training session;start_training
-hello;salute
-good morning;salute
-hi sam;salute
-good afternoon;salute
-good bye;bye
-bye sam;bye
-see you later;bye
-that will be all;bye
-I need help;help
-what can i do;help
-what commands can i say;help
-help;help
-i would like to measure myself;get_measurements
-i want to measure myself;get_measurements
-i want to weigh myself;get_measurements
-new measurements;get_measurements
-configure a new table for me;new_table
-create new table;new_table
-i want a new table;new_table
-can you send me a new table?;new_table
-let's start training;start_training
-i want to train;start_training
-time to train;start_training
-start training session;start_training
-hello;salute
-good morning;salute
-hi sam;salute
-good afternoon;salute
-good bye;bye
-bye sam;bye
-see you later;bye
-that will be all;bye
-I need help;help
-what can i do;help
-what commands can i say;help
-help;help
-i would like to measure myself;get_measurements
-i want to measure myself;get_measurements
-i want to weigh myself;get_measurements
-new measurements;get_measurements
-configure a new table for me;new_table
-create new table;new_table
-i want a new table;new_table
-can you send me a new table?;new_table
-let's start training;start_training
-i want to train;start_training
-time to train;start_training
-start training session;start_training
-hello;salute
-good morning;salute
-hi sam;salute
-good afternoon;salute
-good bye;bye
-bye sam;bye
-see you later;bye
-that will be all;bye
-I need help;help
-what can i do;help
-what commands can i say;help
-help;help
-i would like to measure myself;get_measurements
-i want to measure myself;get_measurements
-i want to weigh myself;get_measurements
-new measurements;get_measurements
-configure a new table for me;new_table
-create new table;new_table
-i want a new table;new_table
-can you send me a new table?;new_table
-let's start training;start_training
-i want to train;start_training
-time to train;start_training
-start training session;start_training
-hello;salute
-good morning;salute
-hi sam;salute
-good afternoon;salute
-good bye;bye
-bye sam;bye
-see you later;bye
-that will be all;bye
-I need help;help
-what can i do;help
-what commands can i say;help
-help;help
+what is the weather;unknown
+breakfast time;unknown
+where is the closest shop;unknown
+where can i watch the game;unknown
 i would like to measure myself;get_measurements
 i want to measure myself;get_measurements
 i want to weigh myself;get_measurements
