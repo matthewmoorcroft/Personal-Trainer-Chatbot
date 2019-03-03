@@ -1,4 +1,4 @@
-from flask import Flask, abort, request
+
 # from flask_cors import CORS
 import json
 # from sklearn.feature_extraction.text import CountVectorizer
@@ -79,6 +79,14 @@ forest_small_clf = load_from_pickle(
 
 
 # CORS(app)
+def start_training_thread():
+    global train
+    train.start()
+
+
+def cleanup():
+    quitEvent.set()
+    train.join()
 
 
 def classify(data):
@@ -254,31 +262,3 @@ option = "timer"
 train = threading.Thread(name='train',
                          target=retrain,
                          args=(quitEvent, option,))
-
-app = Flask(__name__)
-
-
-@app.route('/classify', methods=['POST'])
-def process():
-    if not request.json:
-        abort(400)
-    return classify(request.json)
-
-
-@app.route('/retrain', methods=['GET'])
-def training():
-    return retrain()
-
-
-@app.before_first_request
-def before_first_request():
-    global train
-    train.start()
-
-
-if __name__ == '__main__':
-
-    app.run(host='0.0.0.0', port=5089, debug=True)
-
-    quitEvent.set()
-    train.join()
