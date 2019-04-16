@@ -50,7 +50,9 @@ if __name__ == "__main__":
             # cur.execute("UPDATE webhook.incoming_messages SET processed_on='" + str(datetime.datetime.now()) + "' where id='" + str(row_id) + "'")
             # conn.commit()
             # cur.close()
+        except TypeError:
+
+            time.sleep(1)
         except Exception as e:
             print(e)
             traceback.print_exc()
-            time.sleep(1)
