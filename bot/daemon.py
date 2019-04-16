@@ -3,6 +3,7 @@ import uuid
 import time
 from controller import processor
 from connections.database import Database
+from model.logger import log
 
 
 uid = str(uuid.uuid4())
@@ -49,4 +50,5 @@ if __name__ == "__main__":
             # conn.commit()
             # cur.close()
         except Exception as e:
+            e.printStackTrace()
             time.sleep(1)
