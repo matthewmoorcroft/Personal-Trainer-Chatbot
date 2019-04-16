@@ -214,7 +214,7 @@ def retrain(quit=True, option=""):
 
         # Importing models
         # Models with stop_words
-        count_vect = load_from_pickle(pickels_dir + 'count_vect.pkl')
+        count_vect = load_from_pickle(pickels_dir / 'count_vect.pkl')
         tfidf_transformer = load_from_pickle(
             pickels_dir / 'tfidf_transformer.pkl')
         multinomial_clf = load_from_pickle(
