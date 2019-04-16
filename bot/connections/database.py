@@ -40,7 +40,7 @@ class Database:
                 'telegram_id': telegram_id
             })
             rows = cur.fetchall()
-
+            cur.close()
         except Exception as e:
 
             print(e)
@@ -144,6 +144,7 @@ class Database:
                        WHERE id = %(user_id)s""", {'user_id': user_id})
 
         self.database.conn.commit()
+        cur.close()
         response = {'result': 'ok'}
         return response
 
@@ -168,6 +169,7 @@ class Database:
         rows = cur.fetchall()
         rowcount = cur.rowcount
 
+        cur.close()
         if rowcount:
 
             for row in rows:
