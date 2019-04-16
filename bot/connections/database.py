@@ -202,7 +202,7 @@ class Database:
         cur = self.conn.cursor()
 
         cur.execute("""UPDATE webhook.incoming_messages
-                       SET processed_on='%(date)s'
+                       SET processed_on=%(date)s
                        WHERE id=%(row_id)s""", {
             'date': datetime.datetime.now(),
             'row_id': row_id
