@@ -17,9 +17,9 @@ def process_message(raw_message):
     message = text_normalization(raw_message['text'])
 
     # Temporary solution
-    json = {'text': message}
+    json_info = {'text': message}
     res = requests.post('http://localhost:5089/classify',
-                        json=json)
+                        json=json_info)
     # Future functionality
     # try:
     #     user = User()
