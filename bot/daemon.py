@@ -4,6 +4,7 @@ import time
 from controller import processor
 from connections.database import Database
 from model.logger import log
+import traceback
 
 
 uid = str(uuid.uuid4())
@@ -39,7 +40,7 @@ if __name__ == "__main__":
         # 		raw_message = json.loads(row[1])
         try:
             row_id, raw_message = db.get_message(uid)
-            print(raw_message)
+            log(raw_message)
             # processor = processor(raw_message['message'])
             processor.process_message(raw_message)
 
@@ -51,4 +52,5 @@ if __name__ == "__main__":
             # cur.close()
         except Exception as e:
             print(e)
+            traceback.print_exc()
             time.sleep(1)
