@@ -40,7 +40,7 @@ if __name__ == "__main__":
         # 		raw_message = json.loads(row[1])
         try:
             row_id, raw_message = db.get_message(uid)
-            log(raw_message)
+            log(str(raw_message))
             # processor = processor(raw_message['message'])
             processor.process_message(raw_message)
 
