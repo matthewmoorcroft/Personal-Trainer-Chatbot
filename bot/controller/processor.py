@@ -2,6 +2,7 @@ from model.user import User
 from connections import net_manager
 import requests
 from model.logger import log
+import json
 
 
 def text_normalization(text):
