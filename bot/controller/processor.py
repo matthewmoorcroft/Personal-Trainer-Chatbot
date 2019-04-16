@@ -13,8 +13,8 @@ def text_normalization(text):
 
 def process_message(raw_message):
 
-    telegram_id = raw_message['message']['from']['id']
-    message = text_normalization(raw_message['message']['text'])
+    telegram_id = raw_message['from']['id']
+    message = text_normalization(raw_message['text'])
 
     # Temporary solution
     json = {'text': message}
