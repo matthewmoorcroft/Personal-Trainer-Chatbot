@@ -50,5 +50,5 @@ if __name__ == "__main__":
             # conn.commit()
             # cur.close()
         except Exception as e:
-            e.printStackTrace()
+            print(e)
             time.sleep(1)
