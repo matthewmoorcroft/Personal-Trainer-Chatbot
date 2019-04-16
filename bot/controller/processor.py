@@ -18,7 +18,7 @@ def process_message(raw_message):
 
     # Temporary solution
     json = {'text': message}
-    res = requests.post('http://localhost:30000/classify',
+    res = requests.post('http://localhost:5089/classify',
                         json=json)
     # Future functionality
     # try:
