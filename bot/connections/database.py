@@ -151,7 +151,7 @@ class Database:
         cur = self.conn.cursor()
 
         cur.execute("""UPDATE webhook.incoming_messages
-                       SET assigned_to='%(uid)s'
+                       SET assigned_to=%(uid)s
                        WHERE id = (SELECT id
                                    FROM webhook.incoming_messages
                                    WHERE source='Telegram'
