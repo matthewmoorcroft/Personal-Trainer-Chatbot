@@ -18,7 +18,7 @@ import sys
 import os
 from pathlib import Path
 from collections import Counter
-from model.logger import log, LOG_WARNING
+from model.logger import log, LogTypes
 
 
 def load_from_pickle(filename):
@@ -170,7 +170,7 @@ def classify(data):
         decission = mode(vote)
     except Exception as e:
 
-        log("Two intents possible", LOG_WARNING)
+        log("Two intents possible", LogTypes.LOG_WARNING)
         c = Counter([1, 1, 2, 2, 3])
         c.most_common(1)
         decission = c[0]
