@@ -17,6 +17,8 @@ import threading
 import sys
 import os
 from pathlib import Path
+from collections import Counter
+from model.logger import log, LOG_WARNING
 
 
 def load_from_pickle(filename):
@@ -164,8 +166,14 @@ def classify(data):
     prob_sum = prob_forest + prob_lin + prob_log + prob_sgdc + prob_multi
     prob_clf = (prob_sum)/5 * 100
     # thread unlock
+    try:
+        decission = mode(vote)
+    except Exception as e:
 
-    decission = mode(vote)
+        log("Two intents possible", LOG_WARNING)
+        c = Counter([1, 1, 2, 2, 3])
+        c.most_common(1)
+        decission = c[0]
 
     confidence = (vote.count(decission)/len(vote)) * 100
     probability = (confidence + prob_clf)/2

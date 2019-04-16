@@ -38,5 +38,6 @@ def process_message(raw_message):
     # Future functionality
     # res = action()
     # answer = res.json['message']
-    answer = json.loads(res.text)['intent']
+    # answer = json.loads(res.text)['intent']
+    answer = res.json['intent']
     net_manager.send_message(answer,    telegram_id)
