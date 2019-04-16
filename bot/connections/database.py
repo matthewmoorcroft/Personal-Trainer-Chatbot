@@ -198,7 +198,7 @@ class Database:
         self.conn.commit()
         cur.close()
 
-    def update_processes(self, row_id):
+    def update_processed(self, row_id):
         cur = self.conn.cursor()
 
         cur.execute("""UPDATE webhook.incoming_messages
