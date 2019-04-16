@@ -155,7 +155,8 @@ class Database:
                        WHERE id = (SELECT id
                                    FROM webhook.incoming_messages
                                    WHERE source='Telegram'
-                                   AND assigned_to IS null LIMIT 1)""")
+                                   AND assigned_to IS null LIMIT 1)""",
+                    {'uid': uid})
 
         self.conn.commit()
 
