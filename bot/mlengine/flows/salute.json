@@ -1,0 +1,16 @@
+{
+	"id":"salute",
+	"steps":[
+		{
+			"type":"ANSWER",
+			"step_id":"1",
+			"params":{
+				"msg":[
+					"Hey {user}!",
+					"Hi {user}, how can I be of service?",
+					"Good morning, how can I be of help?"
+				]
+			}
+		}
+	]
+}

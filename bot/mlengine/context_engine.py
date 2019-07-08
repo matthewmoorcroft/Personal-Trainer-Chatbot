@@ -13,6 +13,7 @@ def process_message(data):
     # message = text_normalization(data['message'])
     message = data['message']
     user = data['user']
+    check_user_context(user, message)
     json = {'text': message}
     res = requests.post('http://localhost:30000/classify',
                         json=json)

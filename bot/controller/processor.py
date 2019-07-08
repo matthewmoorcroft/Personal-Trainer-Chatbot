@@ -23,7 +23,7 @@ def process_message(raw_message):
                         json=json_info)
     # Future functionality
     # try:
-    #     user = User()
+    #     user = User(telegram_id)
     #
     #     json = {'user': user, 'message': message}
     #
