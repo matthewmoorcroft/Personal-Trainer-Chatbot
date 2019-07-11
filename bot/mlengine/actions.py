@@ -22,6 +22,8 @@ class StartTraining(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        dispatcher.utter_message("Hello World!")
+        dispatcher.utter_message(tracker.get_latest_input_channel())
+        dispatcher.utter_message(tracker.sender_id)
+        dispatcher.utter_message("Let's start training")
 
         return []

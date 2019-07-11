@@ -28,9 +28,9 @@
 
 ## basic new table
 * new_table
-    - utter_give_new_table
+  - utter_give_new_table
 
 
 ## basic start training
 * start_training
-    - action_start_training
+  - action_start_training
