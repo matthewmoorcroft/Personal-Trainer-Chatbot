@@ -175,12 +175,13 @@ class AddUser(Action):
 
         user_name = tracker.get_slot("user_name")
         birthdate = tracker.get_slot("birthdate")
-        gender = tracker.get_slot("user_gender")
+        user_gender = tracker.get_slot("user_gender")
         telegram_id = tracker.sender_id
+        training_type = tracker.get_slot("training_type")
         measure_user = tracker.get_slot("measure_user")
 
         db = Database.get_instance()
-        db.add_user(telegram_id, user_name, birthdate, gender, measure_user)
+        db.add_user(telegram_id, user_name, birthdate, user_gender, training_type, measure_user)
         return []
 
 

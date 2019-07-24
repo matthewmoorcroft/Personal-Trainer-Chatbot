@@ -13,6 +13,7 @@ CREATE TABLE core.users (
 	birthdate date NOT NULL,
 	gender gender NOT NULL,
 	telegram_id varchar NOT NULL,
+	training_type training_type NOT NULL,
 	measure_user bool NOT NULL,
 	CONSTRAINT users_pk PRIMARY KEY (id),
 	CONSTRAINT users_un UNIQUE (id)

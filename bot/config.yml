@@ -9,6 +9,7 @@ pipeline:
 - name: "CRFEntityExtractor"
 - name: "EntitySynonymMapper"
 - name: "SklearnIntentClassifier"
+- name: "SpacyEntityExtractor"
 - name: "DucklingHTTPExtractor"
   url: "http://localhost:8000"
   dimensions: ["time","distance", "number"]

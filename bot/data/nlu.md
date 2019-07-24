@@ -55,11 +55,6 @@
 - [72](number)
 - [20](number) %
 - My body fat ratio is [15](number)%
-- [26](number) June [1995](number)
-- Muscle toning
-
-## intent:name_confirmation
-- Call me [Matthew](PERSON)
 
 ## intent:new_table
 - i want a new table
@@ -90,7 +85,13 @@
 - 20%
 
 ## intent:training_confirmation
-- [Muscle toning](training_type)
+- [Muscle toning](training_type:volume)
+- I want to [gain muscle](training_type:volume)
+- [Muscle gain](training_type:volume)
+- [Loose weight](training_type:weight_loss)
+- I am looking to [burn fat](training_type:weight_loss)
+- I want to [define](training_type:definition) my muscle
+- [Definition](training_type:definition)
 
 ## intent:user_wants_routine
 - /user_wants_routine[{"wants_routine": "true"}](wants_routine:true)

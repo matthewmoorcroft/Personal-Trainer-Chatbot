@@ -115,25 +115,28 @@ class Database:
             return {'result': "ERROR"}
             # cache.add_user2cache(user)
 
-    def add_user(self, telegram_id, user_name, birthdate, gender, measure_user):
+    def add_user(self, telegram_id, user_name, birthdate, user_gender, training_type, measure_user):
 
         try:
             cur = self.conn.cursor()
 
             cur.execute("""INSERT INTO core.users (user_name,
                                                    birthdate,
-                                                   gender,
+                                                   user_gender,
                                                    telegram_id,
+                                                   training_type,
                                                    measure_user)
                         VALUES (%(user_name)s,
                                %(birthdate)s,
-                               %(gender)s,
+                               %(user_gender)s,
                                %(telegram_id)s,
+                               %(training_type)s,
                                %(measure_user)s)""", {
                 'user_name': user_name,
                 'birthdate': birthdate,
-                'gender': gender,
+                'user_gender': gender,
                 'telegram_id': telegram_id,
+                'training_type': training_type,
                 'measure_user': measure_user})
             self.conn.commit()
             cur.close()

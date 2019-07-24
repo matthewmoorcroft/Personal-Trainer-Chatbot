@@ -119,7 +119,7 @@
   * gender_confirmation{"user_gender": "male"}
       - slot{"user_gender": "male"}
       - utter_birthdate
-  * confirm_birthdate{"DATE":"26-6-1995"}
+  * confirm_birthdate{"time":"26-6-1995"}
       - action_set_birthdate
       - slot{"birthdate":"26-6-1995"}
       - utter_training_type
@@ -147,7 +147,7 @@
       - slot{"measurement_hour": "8:00"}
       - utter_welcome
 
-## Generated Story 1767530164987763613
+## New User Happy Path III
 * greet
     - action_check_profile
     - slot{"user_exists": false}
@@ -157,8 +157,6 @@
     - utter_unknown
 * new_user
     - utter_ask_name
-* greet
-    - rewind
 * name_confirmation{"PERSON": "Matthew"}
     - slot{"PERSON": "Matthew"}
     - action_set_name
@@ -168,14 +166,12 @@
 * gender_confirmation{"user_gender": "male"}
     - slot{"user_gender": "male"}
     - utter_birthdate
-* inform{"number": "1995", "time": "1995-06-26T00:00:00.000+02:00"}
+* confirm_birthdate{"number": "1995", "time": "1995-06-26T00:00:00.000+02:00"}
     - slot{"number": "1995"}
     - slot{"time": "1995-06-26T00:00:00.000+02:00"}
     - action_set_birthdate
-    - slot{"birthdate": "1995-06-26T00:00:00.000+02:00"}
+    - slot{"birthdate": "1995-06-26"}
     - utter_training_type
-* inform
-    - rewind
 * training_confirmation{"training_type": "Muscle toning"}
     - slot{"training_type": "Muscle toning"}
     - utter_reinforce_objective
