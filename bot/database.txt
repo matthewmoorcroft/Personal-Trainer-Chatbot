@@ -1,0 +1,92 @@
+
+TYPES:
+
+CREATE type gender as ENUM ('male', 'female');
+
+TABLES:
+
+USERS:
+
+CREATE TABLE core.users (
+	id serial NOT NULL,
+	user_name varchar NOT NULL,
+	birthdate date NOT NULL,
+	gender gender NOT NULL,
+	telegram_id varchar NOT NULL,
+	measure_user bool NOT NULL,
+	CONSTRAINT users_pk PRIMARY KEY (id),
+	CONSTRAINT users_un UNIQUE (id)
+);
+MEASUREMENTS:
+
+CREATE TABLE core.measurements (
+	user_id int4 NOT NULL,
+	weight float4 NULL,
+	bodyfatratio float4 NULL,
+	c_chest float4 NULL,
+	c_leg float4 NULL,
+	c_waist float4 NULL,
+	c_triceps float4 NULL,
+	use_callipers bool NOT NULL,
+	use_tape bool NOT NULL,
+	m_waist float4 NULL,
+	CONSTRAINT measurements_fk FOREIGN KEY (user_id) REFERENCES core.users(id)
+);
+
+WEIGHTS:
+
+CREATE TABLE core.weights (
+	id serial NOT NULL,
+	user_id int4 NOT NULL,
+	measurement_date timestamp NOT NULL,
+	weight float4 NOT NULL,
+	CONSTRAINT weights_pk PRIMARY KEY (id),
+	CONSTRAINT weights_un UNIQUE (id),
+	CONSTRAINT weights_fk FOREIGN KEY (user_id) REFERENCES core.users(id) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+BODYFATRATIO:
+
+CREATE TABLE core.bodyfatratios (
+	id serial NOT NULL,
+	user_id int4 NOT NULL,
+	measurement_date timestamp NOT NULL,
+	bodyfatratio float4 NOT NULL,
+	CONSTRAINT bodyfatratios_pk PRIMARY KEY (id),
+	CONSTRAINT bodyfatratios_un UNIQUE (id),
+	CONSTRAINT bodyfatratios_fk FOREIGN KEY (user_id) REFERENCES core.users(id) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CALLIPERS:
+
+CREATE TABLE core.callipers (
+	id serial NOT NULL,
+	user_id int4 NOT NULL,
+	measurement_date timestamp NOT NULL,
+	c_chest float4 NOT NULL,
+	c_leg float4 NOT NULL,
+	c_waist float4 NOT NULL,
+	c_triceps float4 NOT NULL,
+	CONSTRAINT callipers_pk PRIMARY KEY (id),
+	CONSTRAINT callipers_un UNIQUE (id),
+	CONSTRAINT callipers_fk FOREIGN KEY (user_id) REFERENCES core.users(id) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+TAPE:
+
+CREATE TABLE core.tape_waists (
+	id serial NOT NULL,
+	user_id int4 NOT NULL,
+	measurement_date timestamp NOT NULL,
+	m_waist float4 NOT NULL,
+	CONSTRAINT tape_waists_pk PRIMARY KEY (id),
+	CONSTRAINT tape_waists_un UNIQUE (id),
+	CONSTRAINT tape_waists_fk FOREIGN KEY (user_id) REFERENCES core.users(id) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+
+INSERT Matthew:
+
+INSERT INTO core.users
+(id, user_name, birthdate, gender, telegram_id, measure_user)
+VALUES(1, 'Matthew', '1995-06-26', 'male', '375033117', true);
