@@ -29,8 +29,9 @@ class Database:
         try:
             cur = self.conn.cursor()
 
-            cur.execute("""SELECT user_name,
-                                  gender
+            cur.execute("""SELECT id,
+                                  user_name,
+                                  user_gender
                                   measure_user
                            FROM core.users
                            LEFT JOIN core.measurements
@@ -41,22 +42,22 @@ class Database:
             })
 
             # Local
-            # return True, "Test", "male", True
-            return False, None, None, None
+            # return True, "1", "Test", "male", True
+            return False, None, None, None, False
             ##
             row = cur.fetchone()
 
             if cur.rowcount == 0:
                 cur.close()
-                return False, None, None, None
+                return False, None, None, None, False
             else:
                 cur.close()
-                return True, row[0], row[1], row[2]
+                return True, row[0], row[1], row[2], row[3]
 
         except Exception as e:
 
             print(e)
-            return False, None, None, None
+            return False, None, None, None, False
 
     def check_user(self, telegram_id):
 
@@ -134,7 +135,7 @@ class Database:
                                %(measure_user)s)""", {
                 'user_name': user_name,
                 'birthdate': birthdate,
-                'user_gender': gender,
+                'user_gender': user_gender,
                 'telegram_id': telegram_id,
                 'training_type': training_type,
                 'measure_user': measure_user})
@@ -145,6 +146,77 @@ class Database:
 
             print(e)
             return json.dumps({'result': "Error: Failed to add user"})
+
+    def add_measurements(self, user_id, weight, bodyfatratio):
+
+        try:
+            cur = self.conn.cursor()
+
+            cur.execute("""SELECT *
+                           FROM core.weights
+                           WHERE measurement_date = CURRENT_DATE AND user_id = %(user_id)s
+                            """, {
+                'user_id': user_id
+            })
+            if cur.rowcount == 0:
+                cur.execute("""INSERT INTO core.weights
+                               (user_id, weight)
+                               VALUES(%(user_id)s, %(weight)s);
+                                """, {
+                    'user_id': user_id,
+                    'weight': weight
+                })
+            else:
+                cur.execute("""UPDATE core.weights
+                               SET weight = %(weight)s
+                               WHERE measurement_date = CURRENT_DATE
+                               AND user_id = %(user_id)s
+                                """, {
+                    'user_id': user_id,
+                    'weight': weight
+                })
+
+            self.conn.commit()
+            cur.execute("""SELECT *
+                           FROM core.bodyfatratio
+                           WHERE measurement_date = CURRENT_DATE
+                           AND user_id = %(user_id)s
+                            """, {
+                'user_id': user_id
+            })
+            if cur.rowcount == 0:
+                cur.execute("""INSERT INTO core.bodyfatratio
+                               (user_id, bodyfatratio)
+                               VALUES(%(user_id)s, %(bodyfatratio)s);
+                                """, {
+                    'user_id': user_id,
+                    'bodyfatratio': bodyfatratio
+                })
+            else:
+                cur.execute("""UPDATE core.bodyfatratio
+                               SET bodyfatratio = %(bodyfatratio)s
+                               WHERE measurement_date = CURRENT_DATE
+                               AND user_id = %(user_id)s
+                                """, {
+                    'user_id': user_id,
+                    'bodyfatratio': bodyfatratio
+                })
+            self.conn.commit()
+            cur.execute("""UPDATE core.measurements
+                           SET bodyfatratio = %(bodyfatratio)s, weight = %(weight)s
+                           WHERE user_id = %(user_id)s
+                            """, {
+                'user_id': user_id,
+                'bodyfatratio': bodyfatratio,
+                'weight': weight
+            })
+            self.conn.commit()
+            cur.close()
+            return json.dumps({'result': "ok"})
+        except Exception as e:
+
+            print(e)
+            return json.dumps({'result': "Error: Failed to add measurements"})
 
     def delete_user(self, user_id):
 

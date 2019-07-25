@@ -10,7 +10,7 @@
 from typing import Any, Text, Dict, List, Union
 
 from rasa_sdk import Action, Tracker
-from rasa_sdk.events import SlotSet
+from rasa_sdk.events import SlotSet, ReminderScheduled
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
 
@@ -134,9 +134,13 @@ class MeasurementForm(FormAction):
     ) -> List[Dict]:
         """Define what the form has to do
             after all required slots are filled"""
-
+        print(tracker.get_slot("bodyfatratio"))
+        user_id = tracker.get_slot("user_id")
+        weight = tracker.get_slot("weight")
+        bodyfatratio = tracker.get_slot("bodyfatratio")
+        db = Database.get_instance()
+        db.add_measurements(user_id, weight, bodyfatratio)
         # utter submit template
-        dispatcher.utter_template("utter_slots_values", tracker)
         return []
 
 
@@ -148,8 +152,42 @@ class SetName(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        user_name = tracker.get_slot("PERSON")
+        user_name = tracker.get_slot("PERSON").title()
+
         return [SlotSet("user_name", user_name)]
+
+
+class ConfirmUserWantsRoutine(Action):
+    def name(self):
+        return "action_confirm_user_wants_routine"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        return [SlotSet("wants_routine", True)]
+
+
+class ConfirmUserWantsDiets(Action):
+    def name(self):
+        return "action_confirm_user_wants_diets"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        return [SlotSet("wants_diets", True)]
+
+
+class ConfirmUserWantsMeasurements(Action):
+    def name(self):
+        return "action_confirm_user_wants_measurements"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        return [SlotSet("measure_user", True)]
 
 
 class SetBirthdate(Action):
@@ -182,7 +220,8 @@ class AddUser(Action):
 
         db = Database.get_instance()
         db.add_user(telegram_id, user_name, birthdate, user_gender, training_type, measure_user)
-        return []
+        user_id = db.get_user_id(telegram_id)
+        return [SlotSet("user_id", user_id)]
 
 
 class CheckProfile(Action):
@@ -194,13 +233,30 @@ class CheckProfile(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         db = Database.get_instance()
-        user_exists, user_name, user_gender, measure_user = db.check_user_exists(
+        user_exists, user_id, user_name, user_gender, measure_user = db.check_user_exists(
             tracker.sender_id)
         return [SlotSet("user_exists", user_exists),
                 SlotSet("user_name", user_name),
                 SlotSet("measure_user", measure_user),
-                SlotSet("user_gender", user_gender)]
+                SlotSet("user_gender", user_gender),
+                SlotSet("user_id", user_gender)]
 
+
+# class AddMeasurements(Action):
+#     def name(self):
+#         return "action_add_measurements"
+#
+#     def run(self, dispatcher: CollectingDispatcher,
+#             tracker: Tracker,
+#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+#
+#         user_id = tracker.get_slot("user_id")
+#         weight = tracker.get_slot("weight")
+#         bodyfatratio = tracker.get_slot("bodyfatratio")
+#         db = Database.get_instance()
+#         db.add_measurements(user_id, weight, bodyfatratio)
+#
+#         return []
 
 # class Greet(Action):
 #

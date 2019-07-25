@@ -3,6 +3,9 @@
 actions:
 - action_add_user
 - action_check_profile
+- action_confirm_user_wants_diets
+- action_confirm_user_wants_measurements
+- action_confirm_user_wants_routine
 - action_set_birthdate
 - action_set_name
 - action_start_training
@@ -48,30 +51,26 @@ entities:
 - wants_diets
 - wants_routine
 - weight
+- user_id
 forms:
 - measurement_form
 intents:
-- new_user
-- name_confirmation
+- start
+- deny
 - gender_confirmation
-- greet
-- inform
-- training_confirmation
-- confirm_diets
-- confirm_measurements
-- user_wants_routine
-- get_measurements
+- affirm
+- name_confirmation
+- confirm_birthdate
 - add_weight
+- add_bodyfatratio
+- training_confirmation
+- greet
+- get_measurements
 - start_training
 - new_table
 - goodbye
-- affirm
-- deny
 - not_interested
 - chitchat
-- confirm_birthdate
-- confirm_measuring_now
-- confirm_eaten
 - measurement_reminder
 slots:
   PERSON:
@@ -81,8 +80,6 @@ slots:
   bodyfatratio:
     auto_fill: false
     type: unfeaturized
-  measure_now:
-    type: bool
   measure_user:
     initial_value: 'false'
     type: bool
@@ -106,30 +103,24 @@ slots:
   user_name:
     type: text
   wants_diets:
+    initial_value: 'false'
     type: bool
   wants_routine:
+    initial_value: 'false'
     type: bool
   weight:
     auto_fill: false
     type: unfeaturized
+  user_id:
+    type: text
 templates:
   utter_ask_bodyfatratio:
   - image: resources/{user_gender}_body_fat.png
     text: What is the porcentage of bodyfatratio
   utter_ask_eaten:
-  - buttons:
-    - payload: '/confirm_eaten{"user_eaten": "true"}'
-      title: 'Yes'
-    - payload: '/confirm_eaten{"user_eaten": "false"}'
-      title: 'No'
-    text: Perfect, have you eaten anything yet?
+  - text: Perfect, have you eaten anything yet?
   utter_ask_measure_now:
-  - buttons:
-    - payload: /confirm_measuring_now{"measure_now":"true"}
-      title: 'Yes'
-    - payload: /confirm_measuring_now{"measure_now":"false"}
-      title: 'No'
-    text: Great, do you wish to do your readings now or later?
+  - text: Great, do you wish to do your readings now?
   utter_ask_name:
   - text: By what name do you want me to call you?
   utter_ask_weight:
@@ -140,19 +131,9 @@ templates:
   - text: Great, I will recommend you a diet to follow each week based on what your
       objectives are. You can ask for something different if you want.
   utter_do_you_want_diets:
-  - buttons:
-    - payload: '/confirm_diets{"wants_diets": "true"}'
-      title: 'Yes'
-    - payload: '/confirm_diets{"wants_diets": "false"}'
-      title: 'No'
-    text: Do you want me to help you out with what diets to follow?
+  - text: Do you want me to help you out with what diets to follow?
   utter_do_you_want_routine:
-  - buttons:
-    - payload: '/user_wants_routine{"wants_routine": "true"}'
-      title: 'Yes'
-    - payload: '/user_wants_routine{"wants_routine": "false"}'
-      title: 'No'
-    text: Do you want me to help you out with what routines to follow?
+  - text: Do you want me to help you out with what routines to follow?
   utter_gender_confirmation:
   - buttons:
     - payload: '/gender_confirmation{"user_gender": "male"}'
@@ -180,25 +161,15 @@ templates:
   - text: At what time do you usually wake up, as it is the best time to weigh you
       as you haven't eaten yet
   utter_reminder_routine:
-  - text: Perfect, every month I will provide a rutine for you to follow.
+  - text: Perfect, every month I will provide a routine for you to follow.
   utter_slots_values:
   - text: "I am going to add these measurements:\n - weight: {weight}\n - bodyfatratio:{bodyfatratio}"
   utter_track_progress:
-  - buttons:
-    - payload: '/confirm_measurements{"measure_user": "true"}'
-      title: 'Yes'
-    - payload: '/confirm_measurements{"measure_user": "false"}'
-      title: 'No'
-    text: Do you want me to track your progress?
+  - text: Do you want me to track your progress?
   utter_training_type:
   - text: Before anything what are you looking to do. Muscle toning (Muscle gain),
       Loose Weight or Definition.
   utter_unknown:
-  - buttons:
-    - payload: /new_user
-      title: 'Yes'
-    - payload: /not_interested
-      title: 'No'
-    text: Sorry I don't know who you are. Do you want to join the club?
+  - text: Sorry I don't know who you are. Do you want to join the club?
   utter_welcome:
   - text: That will be all for now {user_name}
