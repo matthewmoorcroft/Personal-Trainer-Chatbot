@@ -25,31 +25,54 @@ class Database:
             cls.instance = Database()
         return cls.instance
 
+    def get_user_id(self, telegram_id):
+        try:
+            cur = self.conn.cursor()
+
+            cur.execute("""SELECT id
+                           FROM core.users
+                           WHERE telegram_id = %(telegram_id)s
+                            """, {
+                'telegram_id': telegram_id
+            })
+
+            row = cur.fetchone()
+
+            if cur.rowcount == 0:
+                cur.close()
+                return 0
+            else:
+                cur.close()
+                return row[0]
+
+        except Exception as e:
+
+            print(e)
+            return 0
+
     def check_user_exists(self, telegram_id):
         try:
             cur = self.conn.cursor()
 
             cur.execute("""SELECT id,
                                   user_name,
-                                  user_gender
+                                  user_gender,
                                   measure_user
                            FROM core.users
-                           LEFT JOIN core.measurements
-                           ON id = core.measurements.user_id
                            WHERE telegram_id = %(telegram_id)s
                             """, {
                 'telegram_id': telegram_id
             })
 
             # Local
-            # return True, "1", "Test", "male", True
-            return False, None, None, None, False
+            return True, "1", "Test", "male", True
+            # return False, 0, None, None, False
             ##
             row = cur.fetchone()
 
             if cur.rowcount == 0:
                 cur.close()
-                return False, None, None, None, False
+                return False, "0", None, None, False
             else:
                 cur.close()
                 return True, row[0], row[1], row[2], row[3]
@@ -57,7 +80,7 @@ class Database:
         except Exception as e:
 
             print(e)
-            return False, None, None, None, False
+            return False, 0, None, None, False
 
     def check_user(self, telegram_id):
 

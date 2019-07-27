@@ -8,6 +8,8 @@ actions:
 - action_confirm_user_wants_routine
 - action_set_birthdate
 - action_set_name
+- action_set_reminder
+- action_show_progress
 - action_start_training
 - action_take_measurements
 - utter_ask_bodyfatratio
@@ -20,6 +22,7 @@ actions:
 - utter_do_you_want_diets
 - utter_do_you_want_routine
 - utter_gender_confirmation
+- utter_give_help
 - utter_give_new_table
 - utter_goodbye
 - utter_greet
@@ -30,6 +33,7 @@ actions:
 - utter_reminder_measurement
 - utter_reminder_routine
 - utter_slots_values
+- utter_table_type
 - utter_track_progress
 - utter_training_type
 - utter_unknown
@@ -42,35 +46,38 @@ entities:
 - measure_user
 - measurement_hour
 - number
+- table_type
 - time
 - training_type
 - user_eaten
 - user_exists
 - user_gender
+- user_id
 - user_name
 - wants_diets
 - wants_routine
 - weight
-- user_id
 forms:
 - measurement_form
 intents:
-- start
-- deny
-- gender_confirmation
+- greet
+- new_table
+- training_confirmation
 - affirm
-- name_confirmation
+- show_my_progress
+- help
+- get_measurements
+- deny
+- chitchat
 - confirm_birthdate
+- gender_confirmation
+- name_confirmation
+- start_training
+- start
 - add_weight
 - add_bodyfatratio
-- training_confirmation
-- greet
-- get_measurements
-- start_training
-- new_table
 - goodbye
 - not_interested
-- chitchat
 - measurement_reminder
 slots:
   PERSON:
@@ -89,16 +96,27 @@ slots:
     type: text
   requested_slot:
     type: unfeaturized
+  table_type:
+    type: categorical
+    values:
+    - exercise
+    - diet
   time:
     type: text
   training_type:
-    type: text
+    type: categorical
+    values:
+    - volume
+    - definition
+    - weight_loss
   user_eaten:
     type: bool
   user_exists:
     initial_value: 'false'
     type: bool
   user_gender:
+    type: text
+  user_id:
     type: text
   user_name:
     type: text
@@ -111,8 +129,6 @@ slots:
   weight:
     auto_fill: false
     type: unfeaturized
-  user_id:
-    type: text
 templates:
   utter_ask_bodyfatratio:
   - image: resources/{user_gender}_body_fat.png
@@ -141,12 +157,18 @@ templates:
     - payload: '/gender_confirmation{"user_gender": "female"}'
       title: Female
     text: What is your gender?
+  utter_give_help:
+  - text: "Sure, this is what I can help you with. \n- Keep a history of your weight\
+      \ and body fat ratio, just ask me about your progress \n- I can create new exercise\
+      \ tables for you to follow \n- I can create diet tables for you to follow as\
+      \ well\n- In the future I am looking to help out during your training sessions\
+      \ but I am still working on the details"
   utter_give_new_table:
-  - text: Here is your new table
+  - text: Here is your new {table_type} table
   utter_goodbye:
   - text: Bye
   utter_greet:
-  - text: Hey {user_name}! How are you?
+  - text: Hey {user_name}! Tell me what you need.
   utter_nice_name:
   - text: So {user_name}, nice name. Let's get started, before anything I'll give
       you a tour of what we are going to be doing.
@@ -164,6 +186,8 @@ templates:
   - text: Perfect, every month I will provide a routine for you to follow.
   utter_slots_values:
   - text: "I am going to add these measurements:\n - weight: {weight}\n - bodyfatratio:{bodyfatratio}"
+  utter_table_type:
+  - text: Do you want a new exercise table or a diet one
   utter_track_progress:
   - text: Do you want me to track your progress?
   utter_training_type:

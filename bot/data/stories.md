@@ -1,17 +1,21 @@
 ## Known user
 * greet
   - action_check_profile
-  - slot{"user_exists": "true"}
+  - slot{"user_exists": true}
   - slot{"user_name": "Matthew"}
-  - slot{"measure_user": "true"}
+  - slot{"measure_user": true}
+  - slot{"user_gender": "male"}
+  - slot{"user_id": "1"}
   - utter_greet
 
 ## Known user II
 * start
   - action_check_profile
-  - slot{"user_exists": "true"}
+  - slot{"user_exists": true}
   - slot{"user_name": "Matthew"}
-  - slot{"measure_user": "true"}
+  - slot{"measure_user": true}
+  - slot{"user_gender": "male"}
+  - slot{"user_id": "1"}
   - utter_greet
 
 ## Unknown user
@@ -30,23 +34,101 @@
 * goodbye
   - utter_goodbye
 
-## basic new table
-* new_table
+## Help
+* help
   - action_check_profile
-  - slot{"user_exists": "true"}
+  - slot{"user_exists": true}
   - slot{"user_name": "Matthew"}
   - slot{"user_gender": "male"}
-  - slot{"measure_user": "true"}
+  - slot{"measure_user": true}
+  - slot{"user_id": "1"}
+  - utter_give_help
+
+## Help Unknown
+* help
+  - action_check_profile
+  - slot{"user_exists": "false"}
+  - utter_unknown
+
+## basic new table
+* new_table{"table_type": "exercise"}
+  - slot{"table_type": "exercise"}
+  - action_check_profile
+  - slot{"user_exists": true}
+  - slot{"user_name": "Matthew"}
+  - slot{"user_gender": "male"}
+  - slot{"measure_user": true}
+  - slot{"user_id": "1"}
   - utter_give_new_table
 
+## New exercise table Unknown
+* new_table{"table_type": "diet"}
+  - slot{"table_type": "diet"}
+  - action_check_profile
+  - slot{"user_exists": "false"}
+  - utter_unknown
+
+## basic new diet table
+* new_table{"table_type": "diet"}
+  - slot{"table_type": "diet"}
+  - action_check_profile
+  - slot{"user_exists": true}
+  - slot{"user_name": "Matthew"}
+  - slot{"user_gender": "male"}
+  - slot{"measure_user": true}
+  - slot{"user_id": "1"}
+  - utter_give_new_table
+
+## New diet table Unknown
+* new_table{"table_type": "diet"}
+  - slot{"table_type": "diet"}
+  - action_check_profile
+  - slot{"user_exists": "false"}
+  - utter_unknown
+
+## basic new table without filling the first slot
+* new_table
+  - action_check_profile
+  - slot{"user_exists": true}
+  - slot{"user_name": "Matthew"}
+  - slot{"user_gender": "male"}
+  - slot{"measure_user": true}
+  - slot{"user_id": "1"}
+  - utter_table_type
+* new_table{"table_type": "diet"}
+  - slot{"table_type": "diet"}
+  - utter_give_new_table
+
+## New exercise table Unknown without slot
+* new_table
+  - action_check_profile
+  - slot{"user_exists": "false"}
+  - utter_unknown
+
+##  show my progress
+* show_my_progress
+  - action_check_profile
+  - slot{"user_exists": true}
+  - slot{"user_name": "Matthew"}
+  - slot{"user_gender": "male"}
+  - slot{"measure_user": true}
+  - slot{"user_id": "1"}
+  - action_show_progress
+
+## show my progress Unknown
+* show_my_progress
+  - action_check_profile
+  - slot{"user_exists": "false"}
+  - utter_unknown
 
 ## basic start training
 * start_training
   - action_check_profile
-  - slot{"user_exists": "true"}
+  - slot{"user_exists": true}
   - slot{"user_name": "Matthew"}
   - slot{"user_gender": "male"}
-  - slot{"measure_user": "true"}
+  - slot{"measure_user": true}
+  - slot{"user_id": "1"}
   - action_start_training
 
 ## Training False
@@ -61,7 +143,8 @@
     - slot{"user_exists": true}
     - slot{"user_name": "Matthew"}
     - slot{"user_gender": "male"}
-    - slot{"measure_user": "true"}
+    - slot{"measure_user": true}
+    - slot{"user_id": "1"}
     - measurement_form
     - form{"name": "measurement_form"}
     - form{"name": null}
@@ -75,12 +158,14 @@
     - slot{"measure_user": "false"}
     - utter_no_measurements_selected
 
+
 ## New user Happy Path
 * greet
     - action_check_profile
     - slot{"user_exists": false}
     - slot{"user_name": null}
     - slot{"measure_user": null}
+    - slot{"user_id": "0"}
     - slot{"user_gender": null}
     - utter_unknown
 * affirm
@@ -95,26 +180,27 @@
     - slot{"user_gender": "male"}
     - utter_birthdate
 * confirm_birthdate{"time":"26-6-1995"}
+    - slot{"time":"26-6-1995"}
     - action_set_birthdate
     - slot{"birthdate":"26-6-1995"}
     - utter_training_type
-* training_confirmation {"training_type": "Muscle toning"}
-    - slot{"training_type": "Muscle toning"}
+* training_confirmation {"training_type": "volume"}
+    - slot{"training_type": "volume"}
     - utter_reinforce_objective
     - utter_do_you_want_routine
 * affirm
     - action_confirm_user_wants_routine
-    - slot{"wants_routine": "true"}
+    - slot{"wants_routine": true}
     - utter_reminder_routine
     - utter_do_you_want_diets
 * affirm
     - action_confirm_user_wants_diets
-    - slot{"wants_diets": "true"}
+    - slot{"wants_diets": true}
     - utter_confirm_diets
     - utter_track_progress
 * affirm
     - action_confirm_user_wants_measurements
-    - slot{"measure_user": "true"}
+    - slot{"measure_user": true}
     - action_add_user
     - slot{"user_id": "1"}
     - utter_ask_measure_now
@@ -132,6 +218,7 @@
     - slot{"user_exists": false}
     - slot{"user_name": null}
     - slot{"measure_user": null}
+    - slot{"user_id": "0"}
     - slot{"user_gender": null}
     - utter_unknown
 * affirm
@@ -146,11 +233,12 @@
     - slot{"user_gender": "male"}
     - utter_birthdate
 * confirm_birthdate{"time":"26-6-1995"}
+    - slot{"time":"26-6-1995"}
     - action_set_birthdate
     - slot{"birthdate":"26-6-1995"}
     - utter_training_type
-* training_confirmation {"training_type": "Muscle toning"}
-    - slot{"training_type": "Muscle toning"}
+* training_confirmation {"training_type": "volume"}
+    - slot{"training_type": "volume"}
     - utter_reinforce_objective
     - utter_do_you_want_routine
 * deny
@@ -159,7 +247,7 @@
     - utter_track_progress
 * affirm
     - action_confirm_user_wants_measurements
-    - slot{"measure_user": "true"}
+    - slot{"measure_user": true}
     - action_add_user
     - slot{"user_id": "1"}
     - utter_ask_measure_now
@@ -169,6 +257,7 @@
     - utter_reminder_measurement
 * measurement_reminder{"measurement_hour": "8:00"}
     - slot{"measurement_hour": "8:00"}
+    - action_set_reminder
     - utter_welcome
 
 ## New User Happy Path III
@@ -177,6 +266,7 @@
     - slot{"user_exists": false}
     - slot{"user_name": null}
     - slot{"measure_user": null}
+    - slot{"user_id": "0"}
     - slot{"user_gender": null}
     - utter_unknown
 * affirm
@@ -196,18 +286,18 @@
     - action_set_birthdate
     - slot{"birthdate": "1995-06-26"}
     - utter_training_type
-* training_confirmation{"training_type": "Muscle toning"}
-    - slot{"training_type": "Muscle toning"}
+* training_confirmation{"training_type": "volume"}
+    - slot{"training_type": "volume"}
     - utter_reinforce_objective
     - utter_do_you_want_routine
 * affirm
     - action_confirm_user_wants_routine
-    - slot{"wants_routine": "true"}
+    - slot{"wants_routine": true}
     - utter_reminder_routine
     - utter_do_you_want_diets
 * affirm
     - action_confirm_user_wants_diets
-    - slot{"wants_diets": "true"}
+    - slot{"wants_diets": true}
     - utter_confirm_diets
     - utter_track_progress
 * deny
@@ -221,6 +311,7 @@
     - slot{"user_exists": false}
     - slot{"user_name": null}
     - slot{"measure_user": null}
+    - slot{"user_id": "0"}
     - slot{"user_gender": null}
     - utter_unknown
 * affirm
@@ -246,17 +337,17 @@
     - utter_do_you_want_routine
 * affirm
     - action_confirm_user_wants_routine
-    - slot{"wants_routine": "true"}
+    - slot{"wants_routine": true}
     - utter_reminder_routine
     - utter_do_you_want_diets
 * affirm
     - action_confirm_user_wants_diets
-    - slot{"wants_diets": "true"}
+    - slot{"wants_diets": true}
     - utter_confirm_diets
     - utter_track_progress
 * affirm
     - action_confirm_user_wants_measurements
-    - slot{"measure_user": "true"}
+    - slot{"measure_user": true}
     - action_add_user
     - slot{"user_id": "1"}
     - utter_ask_measure_now
@@ -285,6 +376,7 @@
     - slot{"user_exists": false}
     - slot{"user_name": null}
     - slot{"measure_user": null}
+    - slot{"user_id": "0"}
     - slot{"user_gender": null}
     - utter_unknown
 * deny
@@ -296,6 +388,7 @@
     - slot{"user_exists": false}
     - slot{"user_name": null}
     - slot{"measure_user": null}
+    - slot{"user_id": "0"}
     - slot{"user_gender": null}
     - utter_unknown
 * affirm
@@ -317,7 +410,6 @@
 * training_confirmation{"training_type": "volume"}
     - slot{"training_type": "volume"}
     - utter_reinforce_objective
-    - undo
     - utter_do_you_want_routine
 * affirm
     - action_confirm_user_wants_routine
@@ -335,8 +427,7 @@
     - action_add_user
     - slot{"user_id": "1"}
     - utter_ask_measure_now
-* affirm{"time": "2019-07-25T13:26:24.000+02:00"}
-    - slot{"time": "2019-07-25T13:26:24.000+02:00"}
+* affirm
     - utter_ask_eaten
 * deny
     - measurement_form
@@ -361,6 +452,7 @@
     - slot{"user_exists": false}
     - slot{"user_name": null}
     - slot{"measure_user": null}
+    - slot{"user_id": "0"}
     - slot{"user_gender": null}
     - utter_unknown
 * affirm
@@ -408,6 +500,7 @@
     - slot{"user_exists": false}
     - slot{"user_name": null}
     - slot{"measure_user": null}
+    - slot{"user_id": "0"}
     - slot{"user_gender": null}
     - utter_unknown
 * affirm
@@ -426,7 +519,7 @@
     - action_set_birthdate
     - slot{"birthdate": "1975-02-12"}
     - utter_training_type
-* get_measurements{"training_type": "weight_loss"}
+* training_confirmation{"training_type": "weight_loss"}
     - slot{"training_type": "weight_loss"}
     - utter_reinforce_objective
     - utter_do_you_want_routine
@@ -436,8 +529,6 @@
     - utter_reminder_routine
     - utter_do_you_want_diets
 * deny
-    - action_confirm_user_wants_diets
-    - slot{"wants_diets": true}
     - utter_track_progress
 * deny
     - action_add_user
@@ -450,12 +541,11 @@
     - slot{"user_exists": false}
     - slot{"user_name": null}
     - slot{"measure_user": null}
+    - slot{"user_id": "0"}
     - slot{"user_gender": null}
     - utter_unknown
 * affirm
     - utter_ask_name
-* name_confirmation{"ORG": "Felipe"}
-    - rewind
 * name_confirmation{"PERSON": "Felipe"}
     - slot{"PERSON": "Felipe"}
     - action_set_name
@@ -477,6 +567,9 @@
 * deny
     - utter_do_you_want_diets
 * affirm
+    - action_confirm_user_wants_diets
+    - slot{"wants_diets": true}
+    - utter_confirm_diets
     - utter_track_progress
 * deny
     - action_add_user
@@ -489,6 +582,7 @@
     - slot{"user_exists": false}
     - slot{"user_name": null}
     - slot{"measure_user": false}
+    - slot{"user_id": "0"}
     - slot{"user_gender": null}
     - utter_unknown
 * affirm
@@ -542,3 +636,205 @@
     - form{"name": null}
     - slot{"requested_slot": null}
     - utter_welcome
+
+## Generated Story 5863214056129049862
+* greet
+    - action_check_profile
+    - slot{"user_exists": false}
+    - slot{"user_name": null}
+    - slot{"measure_user": false}
+    - slot{"user_gender": null}
+    - slot{"user_id": null}
+    - utter_unknown
+* greet
+    - utter_unknown
+* greet
+    - utter_unknown
+* start_training
+    - utter_unknown
+* affirm
+    - utter_ask_name
+* chitchat
+    - utter_ask_name
+* name_confirmation
+    - utter_ask_name
+* name_confirmation{"PERSON": "Matt"}
+    - slot{"PERSON": "Matt"}
+    - action_set_name
+    - slot{"user_name": "Matt"}
+    - utter_nice_name
+    - utter_gender_confirmation
+* gender_confirmation{"user_gender": "male"}
+    - slot{"user_gender": "male"}
+    - utter_birthdate
+* confirm_birthdate{"DATE": "Some day"}
+    - utter_birthdate
+* confirm_birthdate{"time": "1999-03-23T00:00:00.000+01:00", "DATE": "March 23 1999"}
+    - slot{"time": "1999-03-23T00:00:00.000+01:00"}
+    - action_set_birthdate
+    - slot{"birthdate": "1999-03-23"}
+    - utter_training_type
+* training_confirmation
+    - utter_training_type
+* training_confirmation{"training_type": "definition"}
+    - slot{"training_type": "definition"}
+    - utter_reinforce_objective
+    - utter_do_you_want_routine
+* chitchat
+    - utter_do_you_want_routine
+* affirm
+    - action_confirm_user_wants_routine
+    - slot{"wants_routine": true}
+    - utter_reminder_routine
+    - utter_do_you_want_diets
+* deny
+    - utter_track_progress
+* chitchat
+    - utter_track_progress
+* affirm
+    - action_confirm_user_wants_measurements
+    - slot{"measure_user": true}
+    - action_add_user
+    - slot{"user_id": 7}
+    - utter_ask_measure_now
+* deny
+    - utter_welcome
+
+## Generated Story 4998284128767635694
+* start_training
+    - action_check_profile
+    - slot{"user_exists": false}
+    - slot{"user_name": null}
+    - slot{"measure_user": false}
+    - slot{"user_gender": null}
+    - slot{"user_id": null}
+    - utter_unknown
+* greet
+    - utter_unknown
+* affirm
+    - utter_ask_name
+* name_confirmation{"PERSON": "Raul"}
+    - slot{"PERSON": "Raul"}
+    - action_set_name
+    - slot{"user_name": "Raul"}
+    - utter_nice_name
+    - utter_gender_confirmation
+* gender_confirmation{"user_gender": "male"}
+    - slot{"user_gender": "male"}
+    - utter_birthdate
+* chitchat
+    - utter_birthdate
+* confirm_birthdate{"time": "1976-05-24T00:00:00.000+02:00", "DATE": "24 May 1976"}
+    - slot{"time": "1976-05-24T00:00:00.000+02:00"}
+    - action_set_birthdate
+    - slot{"birthdate": "1976-05-24"}
+    - utter_training_type
+* chitchat
+    - utter_training_type
+* training_confirmation{"training_type": "weight_loss"}
+    - slot{"training_type": "weight_loss"}
+    - utter_reinforce_objective
+    - utter_do_you_want_routine
+* greet
+    - utter_do_you_want_routine
+* start_training
+    - utter_do_you_want_routine
+* affirm
+    - action_confirm_user_wants_routine
+    - slot{"wants_routine": true}
+    - utter_reminder_routine
+    - utter_do_you_want_diets
+* affirm
+    - action_confirm_user_wants_diets
+    - slot{"wants_diets": true}
+    - utter_confirm_diets
+    - utter_track_progress
+* deny
+    - action_add_user
+    - slot{"user_id": "1"}
+    - utter_welcome
+
+## Generated Story 5542185230094879419
+* greet{"PERSON": "Sam"}
+    - slot{"PERSON": "Sam"}
+    - action_check_profile
+    - slot{"user_exists": false}
+    - slot{"user_name": null}
+    - slot{"measure_user": false}
+    - slot{"user_gender": null}
+    - slot{"user_id": null}
+    - utter_unknown
+* affirm
+    - utter_ask_name
+* name_confirmation{"PERSON": "matt"}
+    - slot{"PERSON": "matt"}
+    - action_set_name
+    - slot{"user_name": "Matt"}
+    - utter_nice_name
+    - utter_gender_confirmation
+* gender_confirmation{"user_gender": "male"}
+    - slot{"user_gender": "male"}
+    - utter_birthdate
+* confirm_birthdate
+    - utter_birthdate
+* confirm_birthdate{"DATE": "July 25 1946", "time": "1946-07-25T00:00:00.000+02:00"}
+    - slot{"time": "1946-07-25T00:00:00.000+02:00"}
+    - action_set_birthdate
+    - slot{"birthdate": "1946-07-25"}
+    - utter_training_type
+* get_measurements
+    - utter_training_type
+* training_confirmation{"training_type": "volume"}
+    - slot{"training_type": "volume"}
+    - utter_reinforce_objective
+    - utter_do_you_want_routine
+* help
+    - utter_do_you_want_routine
+* deny
+    - utter_do_you_want_diets
+* affirm
+    - action_confirm_user_wants_diets
+    - slot{"wants_diets": true}
+    - utter_confirm_diets
+    - utter_track_progress
+* chitchat
+    - utter_track_progress
+* affirm
+    - action_confirm_user_wants_measurements
+    - slot{"measure_user": true}
+    - action_add_user
+    - slot{"user_id": 8}
+    - utter_ask_measure_now
+* deny
+    - utter_welcome
+
+## Generated Story 7707972771210348425
+* greet
+    - action_check_profile
+    - slot{"user_exists": true}
+    - slot{"user_name": "Test"}
+    - slot{"measure_user": true}
+    - slot{"user_gender": "male"}
+    - slot{"user_id": "1"}
+    - utter_greet
+* new_table{"table_type": "exercise"}
+    - slot{"table_type": "exercise"}
+    - utter_give_new_table
+* new_table{"table_type": "diet"}
+    - slot{"table_type": "diet"}
+    - utter_give_new_table
+
+## Generated Story 245669127735516757
+* greet
+    - action_check_profile
+    - slot{"user_exists": true}
+    - slot{"user_name": "Test"}
+    - slot{"measure_user": true}
+    - slot{"user_gender": "male"}
+    - slot{"user_id": "1"}
+    - utter_greet
+* new_table
+    - utter_table_type
+* new_table{"table_type": "diet"}
+    - slot{"table_type": "diet"}
+    - utter_give_new_table

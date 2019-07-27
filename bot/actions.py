@@ -239,7 +239,31 @@ class CheckProfile(Action):
                 SlotSet("user_name", user_name),
                 SlotSet("measure_user", measure_user),
                 SlotSet("user_gender", user_gender),
-                SlotSet("user_id", user_gender)]
+                SlotSet("user_id", user_id)]
+
+
+class ShowProgress(Action):
+    def name(self):
+        return "action_show_progress"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        dispatcher.utter_message("Working on showing your progress")
+        return []
+
+
+class MeasurementReminder(Action):
+    def name(self):
+        return "action_set_reminder"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        dispatcher.utter_message("Working on setting reminders")
+        return []
 
 
 # class AddMeasurements(Action):

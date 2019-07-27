@@ -35,6 +35,23 @@
 - Yep
 - Great
 - Ok
+- Yes please
+- Yes please
+- Yeah ok
+- Yes
+- Yes Help me out
+- Yes
+- Yeah
+- ok
+- Yes
+
+## intent:chitchat
+- what is going on here
+- I am trying really hard
+- Is that a good time
+- What is the date
+- What is the weather like
+- What watch do you recommend
 
 ## intent:confirm_birthdate
 - [June 26 1995](time:1995-06-26T00:00:00.000+02:00)
@@ -44,7 +61,11 @@
 - [February 12 1975](time:1975-02-12T00:00:00.000+01:00)
 - [September 1 1979](time:september 1 1979)[September 1 1979](time:1979-09-01T00:00:00.000+02:00)
 - [June 21 1993](time:june 21 1993)[June 21 1993](time:1993-06-21T00:00:00.000+02:00)
-- [12](number)[12](number:12) %
+- [12](number)[12](number) %
+- I was born in [March 23 1999](DATE)
+- [24 May 1976](time:24 may 1976)[24 May 1976](time:1976-05-24T00:00:00.000+02:00)
+- A long time ago
+- [July 25 1946](time:1946-07-25T00:00:00.000+02:00)
 
 ## intent:deny
 - Not yet
@@ -63,12 +84,21 @@
 - No thank you
 - No thank you
 - Not yet
+- No thanks
+- No thanks
+- Nope
+- nope
+- nope
+- nope
 
 ## intent:gender_confirmation
 - /gender_confirmation[{"user_gender": "male"}](user_gender:male)
 - /gender_confirmation[{"user_gender": "male"}](user_gender:male)
 - /gender_confirmation[{"user_gender": "male"}](user_gender:male)
 - /gender_confirmation[{"user_gender": "female"}](user_gender:female)
+- /gender_confirmation[{"user_gender": "male"}](user_gender:male)
+- /gender_confirmation[{"user_gender": "male"}](user_gender:male)
+- /gender_confirmation[{"user_gender": "male"}](user_gender:male)
 - /gender_confirmation[{"user_gender": "male"}](user_gender:male)
 - /gender_confirmation[{"user_gender": "male"}](user_gender:male)
 - /gender_confirmation[{"user_gender": "male"}](user_gender:male)
@@ -79,6 +109,7 @@
 - take measurements
 - I would like to measure myself
 - I want to measure myself
+- Get my measurements
 
 ## intent:greet
 - Hello
@@ -103,6 +134,21 @@
 - Hello
 - Hello
 - Hello
+- Hello
+- Hello
+- Hello
+- Hello
+- Hey ya
+- Hello
+- Hey Sam
+- Hello
+- Hello
+
+## intent:help
+- What can you do
+- Help
+- What can I do
+- help me
 
 ## intent:name_confirmation
 - Call me [Carlos](PERSON:carlos))
@@ -116,9 +162,13 @@
 - Call me [Jennifer](PERSON)
 - Call me [Jesus](PERSON)
 - Call me [Matthew](PERSON)
-- Felipe
+- [Felipe](PERSON)
 - [Felipe](PERSON)
 - Call me [Maria](PERSON:maria)
+- My name is [matt](PERSON)
+- My name is [Matt](PERSON)
+- Call me [Raul](PERSON)
+- my name is [matt](PERSON)
 
 ## intent:new_table
 - i want a new table
@@ -127,6 +177,20 @@
 - Give me a new table
 - give new table
 - New Table
+- I want a new [exercise](table_type) table
+- I want new [diets](table_type:diet)
+- Renew my [diet](table_type) table
+- Give me a new [exercise](table_type) table
+- Give me a new [diet](table_type) table
+- Give me a new table
+- A [diet](table_type) table please
+
+## intent:show_my_progress
+- Sam, show me how I am doing
+- What is my progress in the last 6 months
+- How much weight have I lost
+- what is my bodyfatratio
+- A long time ago
 
 ## intent:start
 - /start
@@ -146,6 +210,10 @@
 - Let's start training
 - start training
 - Hey, let's start our training session
+- Let's start training
+- Some day
+- Let's start training
+- Let's start training
 
 ## intent:training_confirmation
 - [Muscle toning](training_type:volume)
@@ -157,25 +225,40 @@
 - [Definition](training_type:definition)
 - [Muscle toning](training_type:volume)
 - I want to [gain some mass](training_type:volume)
-- I want to further define my muscles
 - I want to further [define my muscles](training_type:definition)
 - I want to [loose weight](training_type:weight_loss)
 - I want to [gain some mass](training_type:volume)
 - I want to [gain muscle](training_type:volume)
 - I want to [define](training_type:definition) my body
+- I want to do some [definition](training_type)
+- I want to [burn some fat](training_type)
+- I want to do some [definition](training_type)
+- I want to [get bigger](training_type:volume)
 
 ## synonym:1876-08-29T00:00:00.000-00:15
 - August 29 1876
 
+## synonym:1946-07-25T00:00:00.000+02:00
+- July 25 1946
+
 ## synonym:1975-02-12T00:00:00.000+01:00
 - February 12 1975
+
+## synonym:1976-05-24T00:00:00.000+02:00
+- 24 May 1976
 
 ## synonym:1979-09-01T00:00:00.000+02:00
 - September 1 1979
 
+## synonym:1993-06-21T00:00:00.000+02:00
+- June 21 1993
+
 ## synonym:1995-06-26T00:00:00.000+02:00
 - June 26 1995
 - 1995-06-26
+
+## synonym:1999-03-23T00:00:00.000+01:00
+- in March 23 1999
 
 ## synonym:carlos
 - Carlos
@@ -185,11 +268,17 @@
 - Definition
 - define my muscles
 
+## synonym:diet
+- diets
+
 ## synonym:female
 - {"user_gender": "female"}
 
 ## synonym:male
 - {"user_gender": "male"}
+
+## synonym:maria
+- Maria
 
 ## synonym:matt
 - Matt
@@ -202,9 +291,11 @@
 - gain muscle
 - Muscle gain
 - gain some mass
+- get bigger
 - gain some muscle
 
 ## synonym:weight_loss
 - Loose weight
 - burn fat
 - loose weight
+- burn some fat
