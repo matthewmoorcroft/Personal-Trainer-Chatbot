@@ -166,6 +166,8 @@ class Database:
             cur.close()
             return json.dumps({'result': "ok"})
         except Exception as e:
+            self.conn.rollback()
+            cur.close()
 
             print(e)
             return json.dumps({'result': "Error: Failed to add user"})
@@ -237,7 +239,8 @@ class Database:
             cur.close()
             return json.dumps({'result': "ok"})
         except Exception as e:
-
+            self.conn.rollback()
+            cur.close()
             print(e)
             return json.dumps({'result': "Error: Failed to add measurements"})
 

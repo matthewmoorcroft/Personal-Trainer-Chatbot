@@ -44,6 +44,8 @@
 - Yeah
 - ok
 - Yes
+- Yess
+- Yes, of course
 
 ## intent:chitchat
 - what is going on here
@@ -66,6 +68,8 @@
 - [24 May 1976](time:24 may 1976)[24 May 1976](time:1976-05-24T00:00:00.000+02:00)
 - A long time ago
 - [July 25 1946](time:1946-07-25T00:00:00.000+02:00)
+- [1997](number:1997)
+- [23 November 1997](time:1997-11-23T00:00:00.000+01:00)
 
 ## intent:deny
 - Not yet
@@ -90,12 +94,15 @@
 - nope
 - nope
 - nope
+- Nope
+- No thank you
 
 ## intent:gender_confirmation
 - /gender_confirmation[{"user_gender": "male"}](user_gender:male)
 - /gender_confirmation[{"user_gender": "male"}](user_gender:male)
 - /gender_confirmation[{"user_gender": "male"}](user_gender:male)
 - /gender_confirmation[{"user_gender": "female"}](user_gender:female)
+- /gender_confirmation[{"user_gender": "male"}](user_gender:male)
 - /gender_confirmation[{"user_gender": "male"}](user_gender:male)
 - /gender_confirmation[{"user_gender": "male"}](user_gender:male)
 - /gender_confirmation[{"user_gender": "male"}](user_gender:male)
@@ -143,6 +150,7 @@
 - Hey Sam
 - Hello
 - Hello
+- Hey
 
 ## intent:help
 - What can you do
@@ -169,6 +177,7 @@
 - My name is [Matt](PERSON)
 - Call me [Raul](PERSON)
 - my name is [matt](PERSON)
+- Call me [Maria](PERSON:maria)
 
 ## intent:new_table
 - i want a new table
@@ -231,9 +240,10 @@
 - I want to [gain muscle](training_type:volume)
 - I want to [define](training_type:definition) my body
 - I want to do some [definition](training_type)
-- I want to [burn some fat](training_type)
+- I want to [burn some fat](training_type:weight_loss)
 - I want to do some [definition](training_type)
 - I want to [get bigger](training_type:volume)
+- I would like to [loose some fat](training_type:weight_loss)
 
 ## synonym:1876-08-29T00:00:00.000-00:15
 - August 29 1876
@@ -299,3 +309,4 @@
 - burn fat
 - loose weight
 - burn some fat
+- loose some fat

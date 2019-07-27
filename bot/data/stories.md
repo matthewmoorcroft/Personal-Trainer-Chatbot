@@ -838,3 +838,47 @@
 * new_table{"table_type": "diet"}
     - slot{"table_type": "diet"}
     - utter_give_new_table
+
+## Generated Story -1133157421296206477
+* greet
+    - action_check_profile
+    - slot{"user_exists": false}
+    - slot{"user_name": null}
+    - slot{"measure_user": false}
+    - slot{"user_gender": null}
+    - slot{"user_id": 0}
+    - utter_unknown
+* affirm
+    - utter_ask_name
+* name_confirmation{"PERSON": "Maria"}
+    - slot{"PERSON": "Maria"}
+    - action_set_name
+    - slot{"user_name": "Maria"}
+    - utter_nice_name
+    - utter_gender_confirmation
+* gender_confirmation{"user_gender": "male"}
+    - slot{"user_gender": "male"}
+    - utter_birthdate
+* confirm_birthdate{"DATE": "1997", "number": 1997}
+    - slot{"number": 1997}
+    - utter_birthdate
+* confirm_birthdate{"DATE": "23 November 1997", "time": "1997-11-23T00:00:00.000+01:00"}
+    - slot{"time": "1997-11-23T00:00:00.000+01:00"}
+    - action_set_birthdate
+    - slot{"birthdate": "1997-11-23"}
+    - utter_training_type
+* training_confirmation{"training_type": "weight_loss"}
+    - slot{"training_type": "weight_loss"}
+    - utter_reinforce_objective
+    - utter_do_you_want_routine
+* affirm
+    - action_confirm_user_wants_routine
+    - slot{"wants_routine": true}
+    - utter_reminder_routine
+    - utter_do_you_want_diets
+* deny
+    - utter_track_progress
+* deny
+    - action_add_user
+    - slot{"user_id": 10}
+    - utter_welcome

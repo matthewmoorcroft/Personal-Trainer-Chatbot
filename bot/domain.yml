@@ -60,18 +60,18 @@ entities:
 forms:
 - measurement_form
 intents:
+- confirm_birthdate
 - greet
-- new_table
 - training_confirmation
 - affirm
+- gender_confirmation
+- deny
+- name_confirmation
+- new_table
 - show_my_progress
 - help
 - get_measurements
-- deny
 - chitchat
-- confirm_birthdate
-- gender_confirmation
-- name_confirmation
 - start_training
 - start
 - add_weight
@@ -142,7 +142,7 @@ templates:
   utter_ask_weight:
   - text: How much do you weigh
   utter_birthdate:
-  - text: When were you born?
+  - text: What is you birthdate?
   utter_confirm_diets:
   - text: Great, I will recommend you a diet to follow each week based on what your
       objectives are. You can ask for something different if you want.
