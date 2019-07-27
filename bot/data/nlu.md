@@ -2,6 +2,7 @@
 - [19](number) %
 - [21](number) %
 - [12](number) %
+- My new bodyfatratio is [18](number)%
 
 ## intent:add_weight
 - My weight is [87](number) Kg
@@ -155,6 +156,7 @@
 - Help
 - What can I do
 - help me
+- I need help
 
 ## intent:name_confirmation
 - Call me [Carlos](PERSON:carlos))
@@ -200,6 +202,9 @@
 - A long time ago
 
 ## intent:start
+- /start
+- /start
+- /start
 - /start
 - /start
 
