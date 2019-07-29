@@ -47,6 +47,19 @@
 - Yes
 - Yess
 - Yes, of course
+- YEs
+- Yes
+- I would like that
+- great
+- ok
+- Sure thing!
+- sure
+- Alright
+- ok
+- Great
+- Ok I want to join
+- Yes
+- sure
 
 ## intent:chitchat
 - what is going on here
@@ -55,6 +68,7 @@
 - What is the date
 - What is the weather like
 - What watch do you recommend
+- Tell me a joke
 
 ## intent:confirm_birthdate
 - [June 26 1995](time:1995-06-26T00:00:00.000+02:00)
@@ -67,8 +81,13 @@
 - [24 May 1976](time:1976-05-24T00:00:00.000+02:00)
 - A long time ago
 - [July 25 1946](time:1946-07-25T00:00:00.000+02:00)
-- [1997](number:1997)
+- [1997](number)
 - [23 November 1997](time:1997-11-23T00:00:00.000+01:00)
+- [June 26 1995](time:1995-06-26T00:00:00.000+02:00)[June 26 1995](time:1995-06-26T00:00:00.000+02:00)
+- [june 1995](time)[june 1995](time:1995-06-01T00:00:00.000+02:00)
+- [8](number)[8 am](time:2019-07-30T08:00:00.000+02:00)
+- [8](number)[8 am](time:2019-07-30T08:00:00.000+02:00)
+- [June 26 1995](time:1995-06-26T00:00:00.000+02:00)[June 26 1995](time:1995-06-26T00:00:00.000+02:00)
 
 ## intent:deny
 - Not yet
@@ -95,6 +114,12 @@
 - nope
 - Nope
 - No thank you
+- No
+- No
+- No
+- no
+- Not really
+- No
 
 ## intent:gender_confirmation
 - /gender_confirmation[{"user_gender": "male"}](user_gender:male)
@@ -108,6 +133,10 @@
 - /gender_confirmation[{"user_gender": "male"}](user_gender:male)
 - /gender_confirmation[{"user_gender": "male"}](user_gender:male)
 - /gender_confirmation[{"user_gender": "male"}](user_gender:male)
+- /gender_confirmation[{"user_gender": "male"}](user_gender:male)
+- /gender_confirmation[{"user_gender": "male"}](user_gender:male)
+- /gender_confirmation[{"user_gender": "female"}](user_gender:female)
+- /gender_confirmation[{"user_gender": "male"}](user_gender:male)
 
 ## intent:get_measurements
 - i would like to take my measurements
@@ -116,6 +145,7 @@
 - I would like to measure myself
 - I want to measure myself
 - Get my measurements
+- get my measurements
 
 ## intent:greet
 - Hello
@@ -150,6 +180,10 @@
 - Hello
 - Hello
 - Hey
+- Hello
+- Hello
+- hello
+- Hey
 
 ## intent:help
 - What can you do
@@ -157,6 +191,15 @@
 - What can I do
 - help me
 - I need help
+- help
+
+## intent:meal_eaten
+- my [breakfast](meal_eaten)
+- my [lunch](meal_eaten)
+- my [dinner](meal_eaten)
+
+## intent:measurement_reminder
+- [8](number)[8 am](time:2019-07-30T08:00:00.000+02:00)
 
 ## intent:name_confirmation
 - Call me [Carlos](PERSON:carlos))
@@ -178,6 +221,10 @@
 - Call me [Raul](PERSON)
 - my name is [matt](PERSON)
 - Call me [Maria](PERSON:maria)
+- my name is [maria](PERSON)
+- [Paco](PERSON)
+- [Laura](PERSON)
+- Call me [Matt](PERSON:matt)
 
 ## intent:new_table
 - i want a new table
@@ -199,7 +246,6 @@
 - What is my progress in the last 6 months
 - How much weight have I lost
 - what is my bodyfatratio
-- A long time ago
 
 ## intent:start
 - /start
@@ -247,6 +293,16 @@
 - I want to do some [definition](training_type)
 - I want to [get bigger](training_type:volume)
 - I would like to [loose some fat](training_type:weight_loss)
+- [Muscle toning](training_type:volume)
+- I want to [loose weight](training_type:weight_loss)
+- I want to [weight less](training_type:weight_loss)
+- Muscles
+- [Definition](training_type:definition)
+
+## intent:user_wants_to_join
+- Hey I want to join
+- Ok I want to join
+- Hey I want to join
 
 ## synonym:1876-08-29T00:00:00.000-00:15
 - August 29 1876
@@ -266,12 +322,24 @@
 ## synonym:1993-06-21T00:00:00.000+02:00
 - June 21 1993
 
+## synonym:1995-06-01T00:00:00.000+02:00
+- june 1995
+
 ## synonym:1995-06-26T00:00:00.000+02:00
 - June 26 1995
 - 1995-06-26
 
+## synonym:1997-11-23T00:00:00.000+01:00
+- 23 November 1997
+
 ## synonym:1999-03-23T00:00:00.000+01:00
 - in March 23 1999
+
+## synonym:2019-07-30T08:00:00.000+02:00
+- 8 am
+
+## synonym:2019-11-23T00:00:00.000+01:00
+- on the 23rd of November
 
 ## synonym:carlos
 - Carlos
@@ -313,3 +381,4 @@
 - loose weight
 - burn some fat
 - loose some fat
+- weight less

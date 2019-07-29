@@ -199,6 +199,10 @@ class SetBirthdate(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         birthdate = tracker.get_slot("time")[0:10]
+        year = tracker.get_slot("time")[0:5]
+        print(year)
+        if year == "2019":
+            return []
 
         return [SlotSet("birthdate", birthdate)]
 

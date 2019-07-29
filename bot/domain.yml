@@ -21,6 +21,7 @@ actions:
 - utter_confirm_diets
 - utter_do_you_want_diets
 - utter_do_you_want_routine
+- utter_do_you_want_to_continue
 - utter_gender_confirmation
 - utter_give_help
 - utter_give_new_table
@@ -39,9 +40,12 @@ actions:
 - utter_unknown
 - utter_welcome
 entities:
+- '"training_type"'
+- Loose Weight
 - PERSON
 - birthdate
 - bodyfatratio
+- meal_eaten
 - measure_now
 - measure_user
 - measurement_hour
@@ -60,25 +64,27 @@ entities:
 forms:
 - measurement_form
 intents:
-- confirm_birthdate
-- greet
-- training_confirmation
-- affirm
+- help
 - gender_confirmation
 - deny
+- affirm
 - name_confirmation
-- new_table
-- show_my_progress
-- help
+- user_wants_to_join
+- confirm_birthdate
 - get_measurements
 - chitchat
+- training_confirmation
+- show_my_progress
+- measurement_reminder
+- meal_eaten
+- greet
+- new_table
 - start_training
 - start
 - add_weight
 - add_bodyfatratio
 - goodbye
 - not_interested
-- measurement_reminder
 slots:
   PERSON:
     type: text
@@ -150,6 +156,8 @@ templates:
   - text: Do you want me to help you out with what diets to follow?
   utter_do_you_want_routine:
   - text: Do you want me to help you out with what routines to follow?
+  utter_do_you_want_to_continue:
+  - text: Hey, don't get distracted, do you want to carry on?
   utter_gender_confirmation:
   - buttons:
     - payload: '/gender_confirmation{"user_gender": "male"}'
