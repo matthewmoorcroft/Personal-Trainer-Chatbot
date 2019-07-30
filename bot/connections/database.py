@@ -65,13 +65,14 @@ class Database:
             })
 
             # Local
-            # return True, "1", "Test", "male", True
-            return False, 0, None, None, False
+            return True, "1", "Test", "male", True
+            # return False, 0, None, None, False
             ##
             row = cur.fetchone()
 
             if cur.rowcount == 0:
                 cur.close()
+
                 return False, "0", None, None, False
             else:
                 cur.close()

@@ -12,6 +12,7 @@ actions:
 - action_show_progress
 - action_start_training
 - action_take_measurements
+- utter_already_in
 - utter_ask_bodyfatratio
 - utter_ask_eaten
 - utter_ask_measure_now
@@ -22,11 +23,13 @@ actions:
 - utter_do_you_want_diets
 - utter_do_you_want_routine
 - utter_do_you_want_to_continue
+- utter_dont_understand
 - utter_gender_confirmation
 - utter_give_help
 - utter_give_new_table
 - utter_goodbye
 - utter_greet
+- utter_measurements_taken
 - utter_nice_name
 - utter_no_measurements_selected
 - utter_not_interested
@@ -40,8 +43,6 @@ actions:
 - utter_unknown
 - utter_welcome
 entities:
-- '"training_type"'
-- Loose Weight
 - PERSON
 - birthdate
 - bodyfatratio
@@ -64,23 +65,23 @@ entities:
 forms:
 - measurement_form
 intents:
-- help
+- user_wants_to_join
+- greet
+- confirm_birthdate
 - gender_confirmation
 - deny
 - affirm
 - name_confirmation
-- user_wants_to_join
-- confirm_birthdate
+- start
+- training_confirmation
+- help
 - get_measurements
 - chitchat
-- training_confirmation
 - show_my_progress
 - measurement_reminder
 - meal_eaten
-- greet
 - new_table
 - start_training
-- start
 - add_weight
 - add_bodyfatratio
 - goodbye
@@ -136,6 +137,8 @@ slots:
     auto_fill: false
     type: unfeaturized
 templates:
+  utter_already_in:
+  - text: You are already a part of the club
   utter_ask_bodyfatratio:
   - image: resources/{user_gender}_body_fat.png
     text: What is the porcentage of bodyfatratio
@@ -158,6 +161,8 @@ templates:
   - text: Do you want me to help you out with what routines to follow?
   utter_do_you_want_to_continue:
   - text: Hey, don't get distracted, do you want to carry on?
+  utter_dont_understand:
+  - text: Sorry, I don't understand you
   utter_gender_confirmation:
   - buttons:
     - payload: '/gender_confirmation{"user_gender": "male"}'
@@ -177,6 +182,9 @@ templates:
   - text: Bye
   utter_greet:
   - text: Hey {user_name}! Tell me what you need.
+  utter_measurements_taken:
+  - text: Great, measurements taken. Now you can add your weight and bodyfatratio
+      measurements
   utter_nice_name:
   - text: So {user_name}, nice name. Let's get started, before anything I'll give
       you a tour of what we are going to be doing.

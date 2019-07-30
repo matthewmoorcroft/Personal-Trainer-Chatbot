@@ -60,6 +60,8 @@
 - Ok I want to join
 - Yes
 - sure
+- Yes
+- Ues
 
 ## intent:chitchat
 - what is going on here
@@ -88,6 +90,10 @@
 - [8](number)[8 am](time:2019-07-30T08:00:00.000+02:00)
 - [8](number)[8 am](time:2019-07-30T08:00:00.000+02:00)
 - [June 26 1995](time:1995-06-26T00:00:00.000+02:00)[June 26 1995](time:1995-06-26T00:00:00.000+02:00)
+- [June 26](time:june 26)[June 26](time:2020-06-26T00:00:00.000+02:00)
+- [June 26 1995](time:1995-06-26T00:00:00.000+02:00)[June 26 1995](time:1995-06-26T00:00:00.000+02:00)
+- [November 23](time:2019-11-23T00:00:00.000+01:00)
+- [23 November 1997](time:1997-11-23T00:00:00.000+01:00)[23 November 1997](time:1997-11-23T00:00:00.000+01:00)
 
 ## intent:deny
 - Not yet
@@ -120,6 +126,9 @@
 - no
 - Not really
 - No
+- Nope
+- No thanks
+- No thanks
 
 ## intent:gender_confirmation
 - /gender_confirmation[{"user_gender": "male"}](user_gender:male)
@@ -136,6 +145,8 @@
 - /gender_confirmation[{"user_gender": "male"}](user_gender:male)
 - /gender_confirmation[{"user_gender": "male"}](user_gender:male)
 - /gender_confirmation[{"user_gender": "female"}](user_gender:female)
+- /gender_confirmation[{"user_gender": "male"}](user_gender:male)
+- /gender_confirmation[{"user_gender": "male"}](user_gender:male)
 - /gender_confirmation[{"user_gender": "male"}](user_gender:male)
 
 ## intent:get_measurements
@@ -184,6 +195,8 @@
 - Hello
 - hello
 - Hey
+- hi
+- Hello
 
 ## intent:help
 - What can you do
@@ -225,6 +238,8 @@
 - [Paco](PERSON)
 - [Laura](PERSON)
 - Call me [Matt](PERSON:matt)
+- Call me [matt](PERSON)
+- My name is [Matthew](PERSON:matthew)
 
 ## intent:new_table
 - i want a new table
@@ -253,6 +268,7 @@
 - /start
 - /start
 - /start
+- Ues
 
 ## intent:start_training
 - let's start training
@@ -298,11 +314,13 @@
 - I want to [weight less](training_type:weight_loss)
 - Muscles
 - [Definition](training_type:definition)
+- I want to [define](training_type:definition) my body
 
 ## intent:user_wants_to_join
 - Hey I want to join
-- Ok I want to join
 - Hey I want to join
+- I want to join
+- I want to join the club
 
 ## synonym:1876-08-29T00:00:00.000-00:15
 - August 29 1876
@@ -340,6 +358,9 @@
 
 ## synonym:2019-11-23T00:00:00.000+01:00
 - on the 23rd of November
+
+## synonym:2020-06-26T00:00:00.000+02:00
+- June 26
 
 ## synonym:carlos
 - Carlos

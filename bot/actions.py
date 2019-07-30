@@ -17,6 +17,7 @@ from rasa_sdk.forms import FormAction
 from connections.database import Database
 
 import random
+import datetime
 
 
 class MeasurementForm(FormAction):
@@ -199,9 +200,13 @@ class SetBirthdate(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         birthdate = tracker.get_slot("time")[0:10]
-        year = tracker.get_slot("time")[0:5]
-        print(year)
-        if year == "2019":
+        year = int(tracker.get_slot("time")[0:4])
+
+        now = datetime.datetime.now()
+        current_year = int(now.year)
+        year_difference = 2019 - current_year
+
+        if year_difference < 3:
             return []
 
         return [SlotSet("birthdate", birthdate)]
