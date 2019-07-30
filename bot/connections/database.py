@@ -65,8 +65,8 @@ class Database:
             })
 
             # Local
-            # return True, "1", "Test", "male", True
             # return False, 0, None, None, False
+            return True, "1", "Test", "male", True
             ##
             row = cur.fetchone()
 

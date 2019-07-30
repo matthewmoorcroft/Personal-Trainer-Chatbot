@@ -43,6 +43,7 @@ actions:
 - utter_unknown
 - utter_welcome
 - utter_birthdate_correction
+- utter_ok
 entities:
 - PERSON
 - birthdate
@@ -87,6 +88,7 @@ intents:
 - add_bodyfatratio
 - goodbye
 - not_interested
+- confirm_table
 slots:
   PERSON:
     type: text
@@ -216,3 +218,5 @@ templates:
   - text: That will be all for now {user_name}
   utter_birthdate_correction:
   - text: Didn't get your birthdate {user_name}, try writing it in another way or in this format yyyy-mm-dd
+  utter_ok:
+  - text: Ok, no problem

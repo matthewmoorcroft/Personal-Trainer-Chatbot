@@ -151,8 +151,28 @@
   - slot{"user_id": "1"}
   - utter_dont_understand
 
-## Random deny
+## Random deny Unknown
 * deny
+  - slot{"user_exists": false}
+  - slot{"user_name": null}
+  - slot{"measure_user": null}
+  - slot{"user_id": "0"}
+  - slot{"user_gender": null}
+  - utter_dont_understand
+  - utter_unknown
+
+## Random affirm
+* affirm
+  - action_check_profile
+  - slot{"user_exists": true}
+  - slot{"user_name": "Matthew"}
+  - slot{"measure_user": true}
+  - slot{"user_gender": "male"}
+  - slot{"user_id": "1"}
+  - utter_dont_understand
+
+## Random affirm Unknown
+* affirm
   - slot{"user_exists": false}
   - slot{"user_name": null}
   - slot{"measure_user": null}
@@ -210,6 +230,37 @@
   - slot{"measure_user": true}
   - slot{"user_id": "1"}
   - utter_give_new_table
+
+## weird new table
+* new_table
+  - action_check_profile
+  - slot{"user_exists": true}
+  - slot{"user_name": "Matthew"}
+  - slot{"user_gender": "male"}
+  - slot{"measure_user": true}
+  - slot{"user_id": "1"}
+  - utter_table_type
+* chitchat
+  - utter_do_you_want_to_continue
+* affirm
+  - utter_table_type
+* confirm_table{"table_type": "diet"}
+  - slot{"table_type":"diet"}
+  - utter_give_new_table
+
+## weird new table
+* new_table
+  - action_check_profile
+  - slot{"user_exists": true}
+  - slot{"user_name": "Matthew"}
+  - slot{"user_gender": "male"}
+  - slot{"measure_user": true}
+  - slot{"user_id": "1"}
+  - utter_table_type
+* chitchat
+  - utter_do_you_want_to_continue
+* deny
+  - utter_ok
 
 ## New exercise table Unknown
 * new_table{"table_type": "diet"}

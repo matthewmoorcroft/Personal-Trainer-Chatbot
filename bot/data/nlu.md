@@ -63,6 +63,15 @@
 - sure
 - Yes
 - Ues
+- Oki Dokie
+- please
+
+##intent:confirm_table
+- [diet](table_type)
+- [exercise](table_type)
+- [diet](table_type) table
+- [exercise](table_type) table
+- A [diet](table_type) table please
 
 ## intent:chitchat
 - what is going on here
@@ -72,6 +81,10 @@
 - What is the weather like
 - What watch do you recommend
 - Tell me a joke
+- joke
+- can you answer?
+- you
+- J-O-K-E
 
 ## intent:confirm_birthdate
 - [June 26 1995](time:1995-06-26T00:00:00.000+02:00)
@@ -245,7 +258,6 @@
 - Give me a new [exercise](table_type) table
 - Give me a new [diet](table_type) table
 - Give me a new table
-- A [diet](table_type) table please
 
 ## intent:show_my_progress
 - Sam, show me how I am doing
