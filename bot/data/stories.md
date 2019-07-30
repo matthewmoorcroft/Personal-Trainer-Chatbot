@@ -149,7 +149,7 @@
   - slot{"measure_user": true}
   - slot{"user_gender": "male"}
   - slot{"user_id": "1"}
-  - utter_don't understand
+  - utter_dont_understand
 
 ## Random deny
 * deny
