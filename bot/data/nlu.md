@@ -9,6 +9,7 @@
 - I weigh [83.4](number)  Kg
 - [83](number) kg
 - [84](number) kg
+- I weigh [84](number) kg
 
 ## intent:affirm
 - Yes
@@ -66,13 +67,6 @@
 - Oki Dokie
 - please
 
-##intent:confirm_table
-- [diet](table_type)
-- [exercise](table_type)
-- [diet](table_type) table
-- [exercise](table_type) table
-- A [diet](table_type) table please
-
 ## intent:chitchat
 - what is going on here
 - I am trying really hard
@@ -112,6 +106,17 @@
 - 23-11-1997
 - [1997-11-23](time:1997-11-23T00:00:00.000+01:00)
 - [1997/11/23](time:1997-11-23T00:00:00.000+01:00)
+
+## intent:confirm_table
+- [diet](table_type)
+- [exercise](table_type)
+- [diet](table_type) table
+- [exercise](table_type) table
+- A [diet](table_type) table please
+- [diet](table_type)
+- [exercise](table_type)
+- [diet](table_type)
+- [exercise](table_type)
 
 ## intent:deny
 - Not yet
@@ -198,6 +203,7 @@
 - Hey!!
 - hi
 - Good evening
+- Hello
 - Hello
 
 ## intent:help
@@ -352,6 +358,8 @@
 
 ## synonym:1997-11-23T00:00:00.000+01:00
 - 23 November 1997
+- 1997-11-23
+- 1997/11/23
 
 ## synonym:1999-03-23T00:00:00.000+01:00
 - in March 23 1999

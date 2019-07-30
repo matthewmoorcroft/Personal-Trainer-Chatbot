@@ -1472,3 +1472,41 @@
     - form{"name": null}
     - slot{"requested_slot": null}
     - utter_welcome
+
+## Generated Story 724132224463034230
+* greet
+    - action_check_profile
+    - slot{"user_exists": true}
+    - slot{"user_name": "Test"}
+    - slot{"measure_user": true}
+    - slot{"user_gender": "male"}
+    - slot{"user_id": "1"}
+    - utter_greet
+* confirm_table{"table_type": "diet"}
+    - slot{"table_type": "diet"}
+    - utter_dont_understand
+* confirm_table{"table_type": "exercise"}
+    - slot{"table_type": "exercise"}
+    - utter_dont_understand
+
+## Generated Story 7492174187270707981
+* confirm_table{"table_type": "diet"}
+    - slot{"table_type": "diet"}
+    - action_check_profile
+    - slot{"user_exists": true}
+    - slot{"user_name": "Test"}
+    - slot{"measure_user": true}
+    - slot{"user_gender": "male"}
+    - slot{"user_id": "1"}
+    - utter_dont_understand
+
+## Generated Story -7198040200321581448
+* confirm_table{"table_type": "exercise"}
+    - slot{"table_type": "exercise"}
+    - action_check_profile
+    - slot{"user_exists": true}
+    - slot{"user_name": "Test"}
+    - slot{"measure_user": true}
+    - slot{"user_gender": "male"}
+    - slot{"user_id": "1"}
+    - utter_dont_understand

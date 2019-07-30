@@ -271,6 +271,30 @@ class CheckProfile(Action):
                 SlotSet("user_id", user_id)]
 
 
+class AddWeight(Action):
+    def name(self):
+        return "action_add_weight"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        weight = tracker.get_slot("number")
+        return [SlotSet("weight", weight)]
+
+
+class AddExercise(Action):
+    def name(self):
+        return "action_add_exercise"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        exercise = tracker.get_slot("number")
+        return [SlotSet("exercise", exercise)]
+
+
 class ShowProgress(Action):
     def name(self):
         return "action_show_progress"

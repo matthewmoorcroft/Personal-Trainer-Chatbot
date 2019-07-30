@@ -2,6 +2,7 @@
 ---
 actions:
 - action_add_user
+- action_add_weight
 - action_check_profile
 - action_confirm_user_wants_diets
 - action_confirm_user_wants_measurements
@@ -19,6 +20,7 @@ actions:
 - utter_ask_name
 - utter_ask_weight
 - utter_birthdate
+- utter_birthdate_correction
 - utter_confirm_diets
 - utter_do_you_want_diets
 - utter_do_you_want_routine
@@ -33,6 +35,7 @@ actions:
 - utter_nice_name
 - utter_no_measurements_selected
 - utter_not_interested
+- utter_ok
 - utter_reinforce_objective
 - utter_reminder_measurement
 - utter_reminder_routine
@@ -42,8 +45,6 @@ actions:
 - utter_training_type
 - utter_unknown
 - utter_welcome
-- utter_birthdate_correction
-- utter_ok
 entities:
 - PERSON
 - birthdate
@@ -67,9 +68,11 @@ entities:
 forms:
 - measurement_form
 intents:
+- confirm_table
+- add_weight
+- greet
 - deny
 - help
-- greet
 - user_wants_to_join
 - confirm_birthdate
 - gender_confirmation
@@ -84,11 +87,9 @@ intents:
 - meal_eaten
 - new_table
 - start_training
-- add_weight
 - add_bodyfatratio
 - goodbye
 - not_interested
-- confirm_table
 slots:
   PERSON:
     type: text
@@ -155,6 +156,9 @@ templates:
   - text: How much do you weigh
   utter_birthdate:
   - text: What is you birthdate?
+  utter_birthdate_correction:
+  - text: Didn't get your birthdate {user_name}, try writing it in another way or
+      in this format yyyy-mm-dd
   utter_confirm_diets:
   - text: Great, I will recommend you a diet to follow each week based on what your
       objectives are. You can ask for something different if you want.
@@ -195,6 +199,8 @@ templates:
   - text: Sorry, you have chosen not to take any measurements
   utter_not_interested:
   - text: That is a shame, hope you change your mind
+  utter_ok:
+  - text: Ok, no problem
   utter_reinforce_objective:
   - text: Great to know, I will do everything in my power to assist you in completing
       your objectives
@@ -216,7 +222,3 @@ templates:
   - text: Sorry I don't know who you are. Do you want to join the club?
   utter_welcome:
   - text: That will be all for now {user_name}
-  utter_birthdate_correction:
-  - text: Didn't get your birthdate {user_name}, try writing it in another way or in this format yyyy-mm-dd
-  utter_ok:
-  - text: Ok, no problem
