@@ -55,6 +55,7 @@
 - Sure thing!
 - sure
 - Alright
+- Of course
 - ok
 - Great
 - Ok I want to join
