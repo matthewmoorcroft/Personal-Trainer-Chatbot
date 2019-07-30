@@ -163,45 +163,23 @@
 - get my measurements
 
 ## intent:greet
-- Hello
-- Hello
-- Hello
-- Hello
-- Hello
-- Hello
-- Hello
-- Hello
-- Hello
-- Hello
 - Good morning
 - Hello Sam
-- Hello
-- Hello
-- Hello
 - Good morning Sam
 - Good afternoon Sam
-- Hello
-- Hello
-- Hello
-- Hello
-- Hello
-- Hello
-- Hello
-- Hello
-- Hello
+- Hey there
 - Hey ya
-- Hello
+- How are you
 - Hey Sam
-- Hello
-- Hello
+- What's up
+- What's up!
 - Hey
-- Hello
-- Hello
-- hello
-- Hey
+- How is it going?
+- Hi!
+- Greetings
+- Hey!!
 - hi
-- Hello
-- Hello
+- Good evening
 - Hello
 
 ## intent:help
