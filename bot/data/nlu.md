@@ -129,6 +129,10 @@
 - Nope
 - No thanks
 - No thanks
+- Not at the moment
+- Not right now
+- Maybe later
+- Nope
 
 ## intent:gender_confirmation
 - /gender_confirmation[{"user_gender": "male"}](user_gender:male)
@@ -197,6 +201,8 @@
 - Hey
 - hi
 - Hello
+- Hello
+- Hello
 
 ## intent:help
 - What can you do
@@ -204,6 +210,7 @@
 - What can I do
 - help me
 - I need help
+- help
 - help
 
 ## intent:meal_eaten
@@ -268,7 +275,6 @@
 - /start
 - /start
 - /start
-- Ues
 
 ## intent:start_training
 - let's start training
@@ -321,6 +327,7 @@
 - Hey I want to join
 - I want to join
 - I want to join the club
+- I want to join
 
 ## synonym:1876-08-29T00:00:00.000-00:15
 - August 29 1876
@@ -340,6 +347,9 @@
 ## synonym:1993-06-21T00:00:00.000+02:00
 - June 21 1993
 
+## synonym:1995-06-01T00:00:00.000+02:00
+- june 1995
+
 ## synonym:1995-06-26T00:00:00.000+02:00
 - June 26 1995
 - 1995-06-26
@@ -354,7 +364,11 @@
 - 8 am
 
 ## synonym:2019-11-23T00:00:00.000+01:00
+- November 23
 - on the 23rd of November
+
+## synonym:2020-06-26T00:00:00.000+02:00
+- June 26
 
 ## synonym:carlos
 - Carlos
@@ -378,6 +392,9 @@
 
 ## synonym:matt
 - Matt
+
+## synonym:matthew
+- Matthew
 
 ## synonym:pablo
 - Pablo

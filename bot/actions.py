@@ -135,7 +135,7 @@ class MeasurementForm(FormAction):
     ) -> List[Dict]:
         """Define what the form has to do
             after all required slots are filled"""
-        print(tracker.get_slot("bodyfatratio"))
+
         user_id = tracker.get_slot("user_id")
         weight = tracker.get_slot("weight")
         bodyfatratio = tracker.get_slot("bodyfatratio")
@@ -204,8 +204,7 @@ class SetBirthdate(Action):
 
         now = datetime.datetime.now()
         current_year = int(now.year)
-        year_difference = 2019 - current_year
-        print(year_difference)
+        year_difference = current_year - year
         if year_difference < 3:
             return []
 
@@ -229,6 +228,27 @@ class AddUser(Action):
 
         db = Database.get_instance()
         db.add_user(telegram_id, user_name, birthdate, user_gender, training_type, measure_user)
+        user_id = db.get_user_id(telegram_id)
+        return [SlotSet("user_id", user_id)]
+
+
+class UpdateUser(Action):
+    def name(self):
+        return "action_update_user"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        user_name = tracker.get_slot("user_name")
+        birthdate = tracker.get_slot("birthdate")
+        user_gender = tracker.get_slot("user_gender")
+        telegram_id = tracker.sender_id
+        training_type = tracker.get_slot("training_type")
+        measure_user = tracker.get_slot("measure_user")
+
+        db = Database.get_instance()
+        db.update_user(telegram_id, user_name, birthdate, user_gender, training_type, measure_user)
         user_id = db.get_user_id(telegram_id)
         return [SlotSet("user_id", user_id)]
 

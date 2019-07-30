@@ -1316,7 +1316,86 @@
     - action_add_user
     - slot{"user_id": 0}
     - utter_welcome
-* affirm
-    - rewind
 * user_wants_to_join
     - utter_already_in
+
+## Generated Story 8527159365261095012
+* greet
+    - action_check_profile
+    - slot{"user_exists": true}
+    - slot{"user_name": "Test"}
+    - slot{"measure_user": true}
+    - slot{"user_gender": "male"}
+    - slot{"user_id": "1"}
+    - utter_greet
+* user_wants_to_join
+    - utter_already_in
+
+## not initially join but after yes
+* greet
+    - action_check_profile
+    - slot{"user_exists": false}
+    - slot{"user_name": null}
+    - slot{"measure_user": false}
+    - slot{"user_gender": null}
+    - slot{"user_id": 0}
+    - utter_unknown
+* deny
+    - utter_not_interested
+* help
+    - utter_give_help
+    - utter_unknown
+* affirm
+    - utter_ask_name
+* name_confirmation{"PERSON": "Matt"}
+    - slot{"PERSON": "Matt"}
+    - action_set_name
+    - slot{"user_name": "Matt"}
+    - utter_nice_name
+    - utter_gender_confirmation
+* gender_confirmation{"user_gender": "male"}
+    - slot{"user_gender": "male"}
+    - utter_birthdate
+* confirm_birthdate{"DATE": "1995-06-26", "time": "1995-06-26T00:00:00.000+02:00"}
+    - slot{"time": "1995-06-26T00:00:00.000+02:00"}
+    - action_set_birthdate
+    - slot{"birthdate": "1995-06-26"}
+    - utter_training_type
+* training_confirmation{"training_type": "volume"}
+    - slot{"training_type": "volume"}
+    - utter_reinforce_objective
+    - utter_do_you_want_routine
+* affirm
+    - action_confirm_user_wants_routine
+    - slot{"wants_routine": true}
+    - utter_reminder_routine
+    - utter_do_you_want_diets
+* affirm
+    - action_confirm_user_wants_diets
+    - slot{"wants_diets": true}
+    - utter_confirm_diets
+    - utter_track_progress
+* affirm
+    - action_confirm_user_wants_measurements
+    - slot{"measure_user": true}
+    - action_add_user
+    - slot{"user_id": "1"}
+    - utter_ask_measure_now
+* affirm
+    - utter_ask_eaten
+* deny
+    - measurement_form
+    - form{"name": "measurement_form"}
+    - slot{"requested_slot": "weight"}
+* form: add_weight{"number": "83", "QUANTITY": "83 kg"}
+    - slot{"number": "83"}
+    - form: measurement_form
+    - slot{"weight": "83"}
+    - slot{"requested_slot": "bodyfatratio"}
+* form: add_bodyfatratio{"number": "19", "PERCENT": "19 %"}
+    - slot{"number": "19"}
+    - form: measurement_form
+    - slot{"bodyfatratio": ["19", "19"]}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_welcome

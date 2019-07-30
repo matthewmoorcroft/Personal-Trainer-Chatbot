@@ -66,7 +66,7 @@ class Database:
 
             # Local
             # return True, "1", "Test", "male", True
-            # return False, 0, None, None, False
+            return False, 0, None, None, False
             ##
             row = cur.fetchone()
 
@@ -173,6 +173,36 @@ class Database:
             print(e)
             return json.dumps({'result': "Error: Failed to add user"})
 
+    def update_user(self, telegram_id, user_name, birthdate, user_gender, training_type, measure_user):
+
+        try:
+            cur = self.conn.cursor()
+
+            cur.execute("""UPDATE core.users
+                           SET user_name = %(user_name)s,
+                               birthdate = %(birthdate)s,
+                               user_gender = %(user_gender)s,
+                               training_type = %(training_type)s,
+                               measure_user = %(measure_user)s
+                            WHERE telegram_id = %(telegram_id)s
+                        """, {
+                'user_name': user_name,
+                'birthdate': birthdate,
+                'user_gender': user_gender,
+                'telegram_id': telegram_id,
+                'training_type': training_type,
+                'measure_user': measure_user})
+
+            self.conn.commit()
+            cur.close()
+            return json.dumps({'result': "ok"})
+        except Exception as e:
+            self.conn.rollback()
+            cur.close()
+
+            print(e)
+            return json.dumps({'result': "Error: Failed to add user"})
+
     def add_measurements(self, user_id, weight, bodyfatratio):
 
         try:
@@ -205,7 +235,7 @@ class Database:
             self.conn.commit()
             cur.execute("""SELECT *
                            FROM core.bodyfatratio
-                           WHERE measurement_date = CURRENT_DATE
+                           WHERE x = CURRENT_DATE
                            AND user_id = %(user_id)s
                             """, {
                 'user_id': user_id

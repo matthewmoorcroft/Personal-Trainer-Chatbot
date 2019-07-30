@@ -65,16 +65,16 @@ entities:
 forms:
 - measurement_form
 intents:
-- user_wants_to_join
+- deny
+- help
 - greet
+- user_wants_to_join
 - confirm_birthdate
 - gender_confirmation
-- deny
 - affirm
 - name_confirmation
 - start
 - training_confirmation
-- help
 - get_measurements
 - chitchat
 - show_my_progress
