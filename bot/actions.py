@@ -205,7 +205,7 @@ class SetBirthdate(Action):
         now = datetime.datetime.now()
         current_year = int(now.year)
         year_difference = 2019 - current_year
-
+        print(year_difference)
         if year_difference < 3:
             return []
 

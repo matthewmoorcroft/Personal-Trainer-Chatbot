@@ -1302,6 +1302,7 @@
 * confirm_birthdate{"time": "1997-11-23T00:00:00.000+01:00", "DATE": "23 November 1997"}
     - slot{"time": "1997-11-23T00:00:00.000+01:00"}
     - action_set_birthdate
+    - slot{"birthdate": "1997-11-23"}
     - utter_training_type
 * training_confirmation{"training_type": "definition"}
     - slot{"training_type": "definition"}
