@@ -42,6 +42,7 @@ actions:
 - utter_training_type
 - utter_unknown
 - utter_welcome
+- utter_birthdate_correction
 entities:
 - PERSON
 - birthdate
@@ -213,3 +214,5 @@ templates:
   - text: Sorry I don't know who you are. Do you want to join the club?
   utter_welcome:
   - text: That will be all for now {user_name}
+  utter_birthdate_correction:
+  - text: Didn't get your birthdate {user_name}, try writing it in another way or in this format yyyy-mm-dd

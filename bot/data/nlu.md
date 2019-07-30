@@ -212,6 +212,7 @@
 - I need help
 - help
 - help
+- What can you do?
 
 ## intent:meal_eaten
 - my [breakfast](meal_eaten)

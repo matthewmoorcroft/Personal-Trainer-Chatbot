@@ -140,6 +140,27 @@
   - slot{"user_id": "1"}
   - utter_dont_understand
 
+
+## Random deny
+* deny
+  - action_check_profile
+  - slot{"user_exists": true}
+  - slot{"user_name": "Matthew"}
+  - slot{"measure_user": true}
+  - slot{"user_gender": "male"}
+  - slot{"user_id": "1"}
+  - utter_don't understand
+
+## Random deny
+* deny
+  - slot{"user_exists": false}
+  - slot{"user_name": null}
+  - slot{"measure_user": null}
+  - slot{"user_id": "0"}
+  - slot{"user_gender": null}
+  - utter_dont_understand
+  - utter_unknown
+
 ## Unknown user
 * greet
   - action_check_profile
@@ -196,6 +217,7 @@
   - action_check_profile
   - slot{"user_exists": "false"}
   - utter_unknown
+
 
 ## basic new diet table
 * new_table{"table_type": "diet"}
@@ -799,7 +821,7 @@
     - slot{"user_gender": "male"}
     - utter_birthdate
 * confirm_birthdate{"DATE": "Some day"}
-    - utter_birthdate
+    - utter_birthdate_correction
 * confirm_birthdate{"time": "1999-03-23T00:00:00.000+01:00", "DATE": "March 23 1999"}
     - slot{"time": "1999-03-23T00:00:00.000+01:00"}
     - action_set_birthdate
@@ -919,7 +941,7 @@
     - slot{"user_gender": "male"}
     - utter_birthdate
 * confirm_birthdate
-    - utter_birthdate
+    - utter_birthdate_correction
 * confirm_birthdate{"DATE": "July 25 1946", "time": "1946-07-25T00:00:00.000+02:00"}
     - slot{"time": "1946-07-25T00:00:00.000+02:00"}
     - action_set_birthdate
@@ -1010,7 +1032,7 @@
     - utter_birthdate
 * confirm_birthdate{"DATE": "1997", "number": 1997}
     - slot{"number": 1997}
-    - utter_birthdate
+    - utter_birthdate_correction
 * confirm_birthdate{"DATE": "23 November 1997", "time": "1997-11-23T00:00:00.000+01:00"}
     - slot{"time": "1997-11-23T00:00:00.000+01:00"}
     - action_set_birthdate
@@ -1228,7 +1250,7 @@
 * confirm_birthdate{"time": "2020-06-26T00:00:00.000+02:00", "DATE": "June 26"}
     - slot{"time": "2020-06-26T00:00:00.000+02:00"}
     - action_set_birthdate
-    - utter_birthdate
+    - utter_birthdate_correction
 * confirm_birthdate{"time": "1995-06-26T00:00:00.000+02:00", "DATE": "June 26 1995"}
     - slot{"time": "1995-06-26T00:00:00.000+02:00"}
     - action_set_birthdate
@@ -1298,7 +1320,7 @@
 * confirm_birthdate{"DATE": "November 23", "time": "2019-11-23T00:00:00.000+01:00"}
     - slot{"time": "2019-11-23T00:00:00.000+01:00"}
     - action_set_birthdate
-    - utter_birthdate
+    - utter_birthdate_correction
 * confirm_birthdate{"time": "1997-11-23T00:00:00.000+01:00", "DATE": "23 November 1997"}
     - slot{"time": "1997-11-23T00:00:00.000+01:00"}
     - action_set_birthdate
