@@ -98,6 +98,7 @@
 - [8](number)[8 am](time:2019-07-30T08:00:00.000+02:00)
 - [8](number)[8 am](time:2019-07-30T08:00:00.000+02:00)
 - [June 26 1995](time:1995-06-26T00:00:00.000+02:00)[June 26 1995](time:1995-06-26T00:00:00.000+02:00)
+- My birthday is on [June the 26th](time:2019-06-26T00:00:00.000+02:00)
 - [June 26](time:2020-06-26T00:00:00.000+02:00)
 - [June 26 1995](time:1995-06-26T00:00:00.000+02:00)[June 26 1995](time:1995-06-26T00:00:00.000+02:00)
 - [November 23](time:2019-11-23T00:00:00.000+01:00)
@@ -119,6 +120,18 @@
 - [exercise](table_type)
 - [Exercises](table_type:exercise)
 - [Diets](table_type:diet)
+
+##intent:goodbye
+- See ya
+- Bye
+- Bye Sam
+- Goodbye
+- Nice speaking to you
+- Talk to you later
+- I'm off
+- Take care
+- Bye!
+- Have a nice day
 
 ## intent:deny
 - Not yet
@@ -296,10 +309,6 @@
 - Let's start training
 - start training
 - Hey, let's start our training session
-- Let's start training
-- Some day
-- Let's start training
-- Let's start training
 
 ## intent:training_confirmation
 - [Muscle toning](training_type:volume)
@@ -327,6 +336,7 @@
 - Muscles
 - [Definition](training_type:definition)
 - I want to [define](training_type:definition) my body
+- I want to [tone](training_type:volume) my body
 
 ## intent:user_wants_to_join
 - Hey I want to join

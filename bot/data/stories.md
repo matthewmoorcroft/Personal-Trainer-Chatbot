@@ -748,6 +748,40 @@
   * goodbye
     - utter_goodbye
 
+## Thanks
+* thanks
+    - action_check_profile
+    - slot{"user_exists": true}
+    - slot{"user_name": "Test"}
+    - slot{"measure_user": true}
+    - slot{"user_gender": "male"}
+    - slot{"user_id": "1"}
+    - utter_your_welcome
+
+## Thanks
+* thanks
+    - action_check_profile
+    - slot{"user_exists": true}
+    - slot{"user_name": "Test"}
+    - slot{"measure_user": true}
+    - slot{"user_gender": "male"}
+    - slot{"user_id": "1"}
+    - utter_your_welcome
+* goodbye
+    - utter_goodbye
+
+## Thanks
+* thanks
+    - action_check_profile
+    - slot{"user_exists": false}
+    - slot{"user_name": null}
+    - slot{"measure_user": false}
+    - slot{"user_gender": null}
+    - slot{"user_id": 0}
+    - utter_unknown
+
+
+
 ## New user 4
 * start
     - action_check_profile
