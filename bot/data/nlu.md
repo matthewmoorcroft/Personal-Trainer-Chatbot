@@ -266,6 +266,8 @@
 - Give me a new [exercise](table_type) table
 - Give me a new [diet](table_type) table
 - Give me a new table
+- Can I get an [exercise](table_type) table too?
+- I would like a [diet](table_type) table
 
 ## intent:show_my_progress
 - Sam, show me how I am doing

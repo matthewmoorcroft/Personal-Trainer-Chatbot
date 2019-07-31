@@ -1,22 +1,22 @@
 ## Known user
 * greet
-  - action_check_profile
-  - slot{"user_exists": true}
-  - slot{"user_name": "Matthew"}
-  - slot{"measure_user": true}
-  - slot{"user_gender": "male"}
-  - slot{"user_id": "1"}
-  - utter_greet
+    - action_check_profile
+    - slot{"user_exists": true}
+    - slot{"user_name": "Matthew"}
+    - slot{"measure_user": true}
+    - slot{"user_gender": "male"}
+    - slot{"user_id": "1"}
+    - utter_greet
 
 ## Known user
 * user_wants_to_join
-  - action_check_profile
-  - slot{"user_exists": true}
-  - slot{"user_name": "Matthew"}
-  - slot{"measure_user": true}
-  - slot{"user_gender": "male"}
-  - slot{"user_id": "1"}
-  - utter_already_in
+    - action_check_profile
+    - slot{"user_exists": true}
+    - slot{"user_name": "Matthew"}
+    - slot{"measure_user": true}
+    - slot{"user_gender": "male"}
+    - slot{"user_id": "1"}
+    - utter_already_in
 
 ## New user asks again to join
 * greet
@@ -230,6 +230,8 @@
   - slot{"measure_user": true}
   - slot{"user_id": "1"}
   - utter_give_new_table
+* thanks
+  - utter_your_welcome
 
 ## weird new table
 * new_table
@@ -247,91 +249,96 @@
 * confirm_table{"table_type": "diet"}
   - slot{"table_type":"diet"}
   - utter_give_new_table
+* thanks
+    - utter_your_welcome
+* goodbye
+    - utter_goodbye
+
 
 ## weird new table
 * new_table
-  - action_check_profile
-  - slot{"user_exists": true}
-  - slot{"user_name": "Matthew"}
-  - slot{"user_gender": "male"}
-  - slot{"measure_user": true}
-  - slot{"user_id": "1"}
-  - utter_table_type
+    - action_check_profile
+    - slot{"user_exists": true}
+    - slot{"user_name": "Matthew"}
+    - slot{"user_gender": "male"}
+    - slot{"measure_user": true}
+    - slot{"user_id": "1"}
+    - utter_table_type
 * chitchat
-  - utter_do_you_want_to_continue
+    - utter_do_you_want_to_continue
 * deny
-  - utter_ok
+    - utter_ok
 
 ## New exercise table Unknown
 * new_table{"table_type": "diet"}
-  - slot{"table_type": "diet"}
-  - action_check_profile
-  - slot{"user_exists": "false"}
-  - utter_unknown
+    - slot{"table_type": "diet"}
+    - action_check_profile
+    - slot{"user_exists": "false"}
+    - utter_unknown
 
 
 ## basic new diet table
 * new_table{"table_type": "diet"}
-  - slot{"table_type": "diet"}
-  - action_check_profile
-  - slot{"user_exists": true}
-  - slot{"user_name": "Matthew"}
-  - slot{"user_gender": "male"}
-  - slot{"measure_user": true}
-  - slot{"user_id": "1"}
-  - utter_give_new_table
+    - slot{"table_type": "diet"}
+    - action_check_profile
+    - slot{"user_exists": true}
+    - slot{"user_name": "Matthew"}
+    - slot{"user_gender": "male"}
+    - slot{"measure_user": true}
+    - slot{"user_id": "1"}
+    - utter_give_new_table
 
 ## New diet table Unknown
 * new_table{"table_type": "diet"}
-  - slot{"table_type": "diet"}
-  - action_check_profile
-  - slot{"user_exists": "false"}
-  - utter_unknown
+    - slot{"table_type": "diet"}
+    - action_check_profile
+    - slot{"user_exists": "false"}
+    - utter_unknown
 
 ## basic new table without filling the first slot
 * new_table
-  - action_check_profile
-  - slot{"user_exists": true}
-  - slot{"user_name": "Matthew"}
-  - slot{"user_gender": "male"}
-  - slot{"measure_user": true}
-  - slot{"user_id": "1"}
-  - utter_table_type
+    - action_check_profile
+    - slot{"user_exists": true}
+    - slot{"user_name": "Matthew"}
+    - slot{"user_gender": "male"}
+    - slot{"measure_user": true}
+    - slot{"user_id": "1"}
+    - utter_table_type
 * new_table{"table_type": "diet"}
-  - slot{"table_type": "diet"}
-  - utter_give_new_table
+    - slot{"table_type": "diet"}
+    - utter_give_new_table
 
 ## New exercise table Unknown without slot
 * new_table
-  - action_check_profile
-  - slot{"user_exists": "false"}
-  - utter_unknown
+    - action_check_profile
+    - slot{"user_exists": "false"}
+    - utter_unknown
 
 ##  show my progress
 * show_my_progress
-  - action_check_profile
-  - slot{"user_exists": true}
-  - slot{"user_name": "Matthew"}
-  - slot{"user_gender": "male"}
-  - slot{"measure_user": true}
-  - slot{"user_id": "1"}
-  - action_show_progress
+    - action_check_profile
+    - slot{"user_exists": true}
+    - slot{"user_name": "Matthew"}
+    - slot{"user_gender": "male"}
+    - slot{"measure_user": true}
+    - slot{"user_id": "1"}
+    - action_show_progress
 
 ## show my progress Unknown
 * show_my_progress
-  - action_check_profile
-  - slot{"user_exists": "false"}
-  - utter_unknown
+    - action_check_profile
+    - slot{"user_exists": "false"}
+    - utter_unknown
 
 ## basic start training
 * start_training
-  - action_check_profile
-  - slot{"user_exists": true}
-  - slot{"user_name": "Matthew"}
-  - slot{"user_gender": "male"}
-  - slot{"measure_user": true}
-  - slot{"user_id": "1"}
-  - action_start_training
+    - action_check_profile
+    - slot{"user_exists": true}
+    - slot{"user_name": "Matthew"}
+    - slot{"user_gender": "male"}
+    - slot{"measure_user": true}
+    - slot{"user_id": "1"}
+    - action_start_training
 
 ## Training False
 * start_training
@@ -736,6 +743,10 @@
     - action_add_user
     - slot{"user_id": "1"}
     - utter_welcome
+  * thanks
+    - utter_your_welcome
+  * goodbye
+    - utter_goodbye
 
 ## New user 4
 * start
@@ -1030,7 +1041,7 @@
 * deny
     - utter_welcome
 
-## Generated Story 7707972771210348425
+## New table with confirmation
 * greet
     - action_check_profile
     - slot{"user_exists": true}
@@ -1039,12 +1050,14 @@
     - slot{"user_gender": "male"}
     - slot{"user_id": "1"}
     - utter_greet
-* new_table{"table_type": "exercise"}
+* confirm_table{"table_type": "exercise"}
     - slot{"table_type": "exercise"}
     - utter_give_new_table
 * new_table{"table_type": "diet"}
     - slot{"table_type": "diet"}
     - utter_give_new_table
+* thanks
+    - utter_welcome
 
 ## Generated Story 245669127735516757
 * greet
@@ -1208,6 +1221,8 @@
     - slot{"time": "2019-07-30T08:00:00.000+02:00"}
     - action_set_reminder
     - utter_welcome
+* thanks
+    - utter_your_welcome
 
 ## Generated Story 7592086091383127773
 * help

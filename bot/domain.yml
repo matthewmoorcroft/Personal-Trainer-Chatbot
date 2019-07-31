@@ -45,6 +45,7 @@ actions:
 - utter_training_type
 - utter_unknown
 - utter_welcome
+- utter_your_welcome
 entities:
 - PERSON
 - birthdate
@@ -90,6 +91,7 @@ intents:
 - add_bodyfatratio
 - goodbye
 - not_interested
+- thanks
 slots:
   PERSON:
     type: text
@@ -222,3 +224,5 @@ templates:
   - text: Sorry I don't know who you are. Do you want to join the club?
   utter_welcome:
   - text: That will be all for now {user_name}
+  utter_your_welcome:
+  - text: You are welcome
