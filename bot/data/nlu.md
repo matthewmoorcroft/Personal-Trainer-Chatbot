@@ -117,6 +117,8 @@
 - [exercise](table_type)
 - [diet](table_type)
 - [exercise](table_type)
+- [Exercises](table_type:exercise)
+- [Diets](table_type:diet)
 
 ## intent:deny
 - Not yet

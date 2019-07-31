@@ -518,7 +518,7 @@
     - utter_unknown
 * affirm
     - utter_ask_name
-* name_confirmation{"PERSON": "pablo", "GPE": "Pablo"}
+* name_confirmation{"PERSON": "pablo"}
     - slot{"PERSON": "pablo"}
     - action_set_name
     - slot{"user_name": "pablo"}
@@ -659,7 +659,7 @@
     - utter_unknown
 * affirm
     - utter_ask_name
-* greet{"PERSON": "Jennifer"}
+* name_confirmation{"PERSON": "Jennifer"}
     - slot{"PERSON": "Jennifer"}
     - action_set_name
     - slot{"user_name": "Jennifer"}
@@ -707,7 +707,7 @@
     - utter_unknown
 * affirm
     - utter_ask_name
-* greet{"PERSON": "Jesus"}
+* name_confirmation{"PERSON": "Jesus"}
     - slot{"PERSON": "Jesus"}
     - action_set_name
     - slot{"user_name": "Jesus"}

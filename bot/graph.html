@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Rasa Core Visualisation</title>
+    <script src="https://dagrejs.github.io/project/dagre-d3/latest/dagre-d3.min.js"></script>
+    <script src="https://dagrejs.github.io/project/dagre/latest/dagre.min.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://dagrejs.github.io/project/graphlib-dot/v0.6.3/graphlib-dot.js"></script>
+</head>
+<body>
+<div id="errormsg" style="color: #b00"></div>
+<svg>
+    <style>
+        .node.invisible > rect {
+            display: none;
+        }
+
+        .node.start > rect {
+            fill: #7f7;
+            rx: 30;
+            ry: 18;
+        }
+
+        .node.end > rect {
+            fill: #f77;
+            rx: 30;
+            ry: 18;
+        }
+
+        .node:not(.active) > rect, .node:not(.active) > .label {
+            opacity: 0.4;
+        }
+
+        .edgePath:not(.active) path {
+            opacity: 0.4;
+        }
+
+        .node.ellipsis > rect {
+            fill: #CCC;
+        }
+
+        .node.intent > rect {
+            fill: #7ff;
+        }
+
+        .node.dashed > rect {
+            stroke-dasharray: 5;
+        }
+
+        text {
+            font-weight: 300;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serf, serif;
+            font-size: 14px;
+            color: #1f1d1d;
+        }
+
+        .node rect {
+            stroke: #444;
+            fill: #fff;
+            stroke-width: 1.5px;
+        }
+
+        .edgePath path {
+            stroke: #333;
+            stroke-width: 1.5px;
+        }
+
+        svg {
+            position: fixed;
+            top: 10px;
+            left: 0;
+            height: 100%;
+            width: 100%
+        }
+    </style>
+    <g></g>
+</svg>
+<script>
+
+  function serveGraph() {
+    let oldInputGraphValue;
+
+    const url = 'visualization.dot';
+    const refreshInterval = 500;
+
+    // trigger a refresh by fetching an updated graph
+    setInterval(function () {
+      fetch(url).then(r => r.text()).then(dot => {
+        document.getElementById('errormsg').innerHTML = '';
+        if (oldInputGraphValue === dot) return;
+
+        oldInputGraphValue = dot;
+        drawGraph(dot);
+      }).catch(err => {
+        document.getElementById('errormsg').innerHTML =
+          'Failed to update plot. (' + err.message + ')';
+      });
+    }, refreshInterval);
+  }
+
+  function drawGraph(graph) {
+    let g = graphlibDot.read(graph);
+    // Set margins, if not present
+    if (!g.graph().hasOwnProperty("marginx") &&
+      !g.graph().hasOwnProperty("marginy")) {
+      g.graph().marginx = 20;
+      g.graph().marginy = 20;
+    }
+    g.graph().transition = function (selection) {
+      return selection.transition().duration(300);
+    };
+    // Render the graph into svg g
+    d3.select("svg g").call(render, g);
+  }
+  // Set up zoom support
+  const svg = d3.select("svg"),
+    inner = d3.select("svg g"),
+    zoom = d3.zoom().on("zoom", function () {
+      inner.attr("transform", d3.event.transform);
+    });
+  svg.call(zoom);
+
+  // Create and configure the renderer
+  const render = dagreD3.render();
+
+  let isClient = false;
+  isClient = true;
+
+  if (isClient) {
+    // Mark all nodes and their edges as active
+    cssRules = document.styleSheets[0].cssRules;
+    cssRules[3].style.opacity = 1;
+    cssRules[4].style.opacity = 1;
+
+    let graph;
+    graph = `digraph  {
+0 [class="start active", fillcolor=green, fontsize=12, label=START, style=filled];
+"-1" [class=end, fillcolor=red, fontsize=12, label=END, style=filled];
+1 [class="", fontsize=12, label=action_check_profile];
+2 [class="", fontsize=12, label=utter_unknown];
+3 [class="", fontsize=12, label=utter_dont_understand];
+9 [class="", fontsize=12, label=action_check_profile];
+10 [class="", fontsize=12, label=utter_dont_understand];
+11 [class="", fontsize=12, label=utter_goodbye];
+12 [class="", fontsize=12, label=action_check_profile];
+13 [class="", fontsize=12, label=utter_give_help];
+17 [class="", fontsize=12, label=action_check_profile];
+18 [class="", fontsize=12, label=utter_give_new_table];
+20 [class="", fontsize=12, label=utter_table_type];
+21 [class="", fontsize=12, label=utter_do_you_want_to_continue];
+22 [class="", fontsize=12, label=utter_table_type];
+27 [class="", fontsize=12, label=utter_ok];
+28 [class="", fontsize=12, label=action_check_profile];
+29 [class="", fontsize=12, label=utter_greet];
+39 [class="", fontsize=12, label=action_check_profile];
+40 [class="", fontsize=12, label=action_show_progress];
+43 [class="", fontsize=12, label=action_check_profile];
+44 [class="", fontsize=12, label=action_start_training];
+47 [class="", fontsize=12, label=action_check_profile];
+48 [class="", fontsize=12, label=measurement_form];
+49 [class="", fontsize=12, label=action_check_profile];
+50 [class="", fontsize=12, label=utter_already_in];
+52 [class="", fontsize=12, label=utter_no_measurements_selected];
+54 [class="", fontsize=12, label=utter_unknown];
+55 [class="", fontsize=12, label=utter_ask_name];
+56 [class="", fontsize=12, label=action_set_name];
+57 [class="", fontsize=12, label=utter_nice_name];
+58 [class="", fontsize=12, label=utter_gender_confirmation];
+59 [class="", fontsize=12, label=utter_birthdate];
+60 [class="", fontsize=12, label=action_set_birthdate];
+61 [class="", fontsize=12, label=utter_training_type];
+62 [class="", fontsize=12, label=utter_reinforce_objective];
+63 [class="", fontsize=12, label=utter_do_you_want_routine];
+64 [class="", fontsize=12, label=action_confirm_user_wants_routine];
+65 [class="", fontsize=12, label=utter_reminder_routine];
+66 [class="", fontsize=12, label=utter_do_you_want_diets];
+67 [class="", fontsize=12, label=action_confirm_user_wants_diets];
+68 [class="", fontsize=12, label=utter_confirm_diets];
+69 [class="", fontsize=12, label=utter_track_progress];
+70 [class="", fontsize=12, label=action_confirm_user_wants_measurements];
+71 [class="", fontsize=12, label=action_add_user];
+72 [class="", fontsize=12, label=utter_ask_measure_now];
+73 [class="", fontsize=12, label=utter_ask_eaten];
+74 [class="", fontsize=12, label=measurement_form];
+75 [class="", fontsize=12, label=utter_welcome];
+87 [class="", fontsize=12, label=utter_do_you_want_diets];
+93 [class="", fontsize=12, label=utter_reminder_measurement];
+94 [class="", fontsize=12, label=action_set_reminder];
+112 [class="", fontsize=12, label=utter_track_progress];
+113 [class="", fontsize=12, label=action_add_user];
+140 [class="", fontsize=12, label=utter_not_interested];
+241 [class="", fontsize=12, label=utter_welcome];
+264 [class="", fontsize=12, label=utter_unknown];
+267 [class="", fontsize=12, label=utter_ask_name];
+268 [class="", fontsize=12, label=utter_do_you_want_to_continue];
+275 [class="", fontsize=12, label=utter_birthdate_correction];
+278 [class="", fontsize=12, label=utter_training_type];
+281 [class="", fontsize=12, label=utter_do_you_want_routine];
+285 [class="", fontsize=12, label=utter_do_you_want_to_continue];
+286 [class="", fontsize=12, label=utter_track_progress];
+295 [class="", fontsize=12, label=utter_unknown];
+301 [class="", fontsize=12, label=utter_do_you_want_to_continue];
+302 [class="", fontsize=12, label=utter_birthdate];
+305 [class="", fontsize=12, label=utter_do_you_want_to_continue];
+309 [class="", fontsize=12, label=utter_do_you_want_to_continue];
+310 [class="", fontsize=12, label=utter_do_you_want_routine];
+337 [class="", fontsize=12, label=utter_do_you_want_diets];
+422 [class="", fontsize=12, label=utter_do_you_want_to_continue];
+423 [class="", fontsize=12, label=utter_not_interested];
+424 [class="", fontsize=12, label=action_check_profile];
+456 [class="", fontsize=12, label=utter_measurements_taken];
+464 [class="", fontsize=12, label=action_set_birthdate];
+506 [class="", fontsize=12, label=utter_give_help];
+547 [class=intent, fillcolor=lightblue, label="Hey\ Sam", shape=rect, style=filled];
+548 [class=intent, fillcolor=lightblue, label="\/start", shape=rect, style=filled];
+549 [class=intent, fillcolor=lightblue, label="Renew\ my\ diet\ table", shape=rect, style=filled];
+550 [class=intent, fillcolor=lightblue, label="What\ is\ my\ progress\ in\ the\ last\ 6\ months", shape=rect, style=filled];
+551 [class=intent, fillcolor=lightblue, label="Start\ training", shape=rect, style=filled];
+552 [class=intent, fillcolor=lightblue, label=Yes, shape=rect, style=filled];
+553 [class=intent, fillcolor=lightblue, label=Nope, shape=rect, style=filled];
+554 [class=intent, fillcolor=lightblue, label="What\ is\ the\ weather\ like", shape=rect, style=filled];
+555 [class=intent, fillcolor=lightblue, label=exercise, shape=rect, style=filled];
+556 [class=intent, fillcolor=lightblue, label="Don\'t\ track\ my\ progress", shape=rect, style=filled];
+557 [class=intent, fillcolor=lightblue, label=sure, shape=rect, style=filled];
+558 [class=intent, fillcolor=lightblue, label="\/goodbye", shape=rect, style=filled];
+559 [class=intent, fillcolor=lightblue, label="I\ need\ help", shape=rect, style=filled];
+560 [class=intent, fillcolor=lightblue, label="I\ want\ new\ diets", shape=rect, style=filled];
+561 [class=intent, fillcolor=lightblue, label=Hello, shape=rect, style=filled];
+562 [class=intent, fillcolor=lightblue, label="\/start", shape=rect, style=filled];
+563 [class=intent, fillcolor=lightblue, label="How\ much\ weight\ have\ I\ lost", shape=rect, style=filled];
+564 [class=intent, fillcolor=lightblue, label="start\ training", shape=rect, style=filled];
+565 [class=intent, fillcolor=lightblue, label="Get\ my\ measurements", shape=rect, style=filled];
+566 [class=intent, fillcolor=lightblue, label="Hey\ I\ want\ to\ join", shape=rect, style=filled];
+567 [class=intent, fillcolor=lightblue, label="\/start\{\\"ORG\\"\:\ \\"Ues\\"\}", shape=rect, style=filled];
+568 [class=intent, fillcolor=lightblue, label=Exercises, shape=rect, style=filled];
+569 [class=intent, fillcolor=lightblue, label="I\ want\ new\ diets", shape=rect, style=filled];
+570 [class=intent, fillcolor=lightblue, label="can\ you\ answer\?", shape=rect, style=filled];
+571 [class=intent, fillcolor=lightblue, label="Renew\ my\ diet\ table", shape=rect, style=filled];
+572 [class=intent, fillcolor=lightblue, label="Yes\,\ please", shape=rect, style=filled];
+573 [class=intent, fillcolor=lightblue, label="Maybe\ later", shape=rect, style=filled];
+574 [class=intent, fillcolor=lightblue, label="A\ diet\ table\ please", shape=rect, style=filled];
+575 [class=intent, fillcolor=lightblue, label="I\ want\ new\ diets", shape=rect, style=filled];
+576 [class=intent, fillcolor=lightblue, label="Renew\ my\ diet\ table", shape=rect, style=filled];
+577 [class=intent, fillcolor=lightblue, label="Hey\ I\ want\ to\ join", shape=rect, style=filled];
+578 [class=intent, fillcolor=lightblue, label="I\ would\ like\ to\ measure\ myself", shape=rect, style=filled];
+579 [class=intent, fillcolor=lightblue, label="diet\ table", shape=rect, style=filled];
+580 [class=intent, fillcolor=lightblue, label="I\ want\ a\ new\ exercise\ table", shape=rect, style=filled];
+581 [class=intent, fillcolor=lightblue, label="Yeah\,\ i\ want\ to\ join", shape=rect, style=filled];
+582 [class=intent, fillcolor=lightblue, label=Nope, shape=rect, style=filled];
+583 [class=intent, fillcolor=lightblue, label="Hey\ Sam", shape=rect, style=filled];
+584 [class=intent, fillcolor=lightblue, label="Good\ morning\ Sam", shape=rect, style=filled];
+585 [class=intent, fillcolor=lightblue, label="My\ name\ is\ Matt", shape=rect, style=filled];
+586 [class=intent, fillcolor=lightblue, label="\/greet\{\\"PERSON\\"\:\ \\"Jesus\\"\}", shape=rect, style=filled];
+587 [class=intent, fillcolor=lightblue, label=pablo, shape=rect, style=filled];
+588 [class=intent, fillcolor=lightblue, label="\/gender_confirmation\{\\"user_gender\\"\:\ \\"male\\"\}", shape=rect, style=filled];
+589 [class=intent, fillcolor=lightblue, label="\/confirm_birthdate\{\\"DATE\\"\:\ \\"1995\-06\-26\\"\,\ \\"time\\"\:\ \\"1995\-06\-26T00\:00\:00\.000\+02\:00\\"\}", shape=rect, style=filled];
+590 [class=intent, fillcolor=lightblue, label="\/confirm_birthdate\{\\"DATE\\"\:\ \\"1997\\"\,\ \\"number\\"\:\ 1997\}", shape=rect, style=filled];
+591 [class=intent, fillcolor=lightblue, label="J\-O\-K\-E", shape=rect, style=filled];
+592 [class=intent, fillcolor=lightblue, label="How\ are\ you", shape=rect, style=filled];
+593 [class=intent, fillcolor=lightblue, label="\/confirm_birthdate\{\\"DATE\\"\:\ \\"November\ 23\\"\,\ \\"time\\"\:\ \\"2019\-11\-23T00\:00\:00\.000\+01\:00\\"\}", shape=rect, style=filled];
+594 [class=intent, fillcolor=lightblue, label="Muscle\ toning", shape=rect, style=filled];
+595 [class=intent, fillcolor=lightblue, label="I\ want\ to\ get\ bigger", shape=rect, style=filled];
+596 [class=intent, fillcolor=lightblue, label="what\ is\ going\ on\ here", shape=rect, style=filled];
+597 [class=intent, fillcolor=lightblue, label="get\ my\ measurements", shape=rect, style=filled];
+598 [class=intent, fillcolor=lightblue, label="Hey\ I\ want\ to\ join", shape=rect, style=filled];
+599 [class=intent, fillcolor=lightblue, label=Yes, shape=rect, style=filled];
+600 [class=intent, fillcolor=lightblue, label=Nope, shape=rect, style=filled];
+601 [class=intent, fillcolor=lightblue, label="J\-O\-K\-E", shape=rect, style=filled];
+602 [class=intent, fillcolor=lightblue, label="What\'s\ up", shape=rect, style=filled];
+603 [class=intent, fillcolor=lightblue, label=Help, shape=rect, style=filled];
+604 [class=intent, fillcolor=lightblue, label="Yes\ please", shape=rect, style=filled];
+605 [class=intent, fillcolor=lightblue, label="Not\ at\ the\ moment", shape=rect, style=filled];
+606 [class=intent, fillcolor=lightblue, label="No\ thanks", shape=rect, style=filled];
+607 [class=intent, fillcolor=lightblue, label=ok, shape=rect, style=filled];
+608 [class=intent, fillcolor=lightblue, label="Yeah\ I\ would\ like\ you\ to\ help\ me\ with\ my\ routine", shape=rect, style=filled];
+609 [class=intent, fillcolor=lightblue, label=Nope, shape=rect, style=filled];
+610 [class=intent, fillcolor=lightblue, label=Nope, shape=rect, style=filled];
+611 [class=intent, fillcolor=lightblue, label=Yes, shape=rect, style=filled];
+612 [class=intent, fillcolor=lightblue, label="my\ breakfast", shape=rect, style=filled];
+613 [class=intent, fillcolor=lightblue, label=no, shape=rect, style=filled];
+614 [class=intent, fillcolor=lightblue, label=Great, shape=rect, style=filled];
+615 [class=intent, fillcolor=lightblue, label="Not\ really", shape=rect, style=filled];
+616 [class=intent, fillcolor=lightblue, label="\/measurement_reminder\{\\"number\\"\:\ \\"8\\"\,\ \\"CARDINAL\\"\:\ \\"8\\"\,\ \\"time\\"\:\ \\"2019\-07\-30T08\:00\:00\.000\+02\:00\\"\}", shape=rect, style=filled];
+617 [class=intent, fillcolor=lightblue, label="No\ thanks", shape=rect, style=filled];
+618 [class=intent, fillcolor=lightblue, label=help, shape=rect, style=filled];
+619 [class=intent, fillcolor=lightblue, label=Yes, shape=rect, style=filled];
+620 [class=intent, fillcolor=lightblue, label="Hey\ I\ want\ to\ join", shape=rect, style=filled];
+621 [class=intent, fillcolor=lightblue, label="Good\ morning\ Sam", shape=rect, style=filled];
+622 [class=intent, fillcolor=lightblue, label="let\'s\ start\ training", shape=rect, style=filled];
+623 [class=intent, fillcolor=lightblue, label="Yes\,\ let\'s\ do\ it\ now", shape=rect, style=filled];
+624 [class=intent, fillcolor=lightblue, label="can\ you\ answer\?", shape=rect, style=filled];
+625 [class=intent, fillcolor=lightblue, label="Get\ my\ measurements", shape=rect, style=filled];
+626 [class=intent, fillcolor=lightblue, label="Yeah\,\ i\ want\ to\ join", shape=rect, style=filled];
+627 [class=intent, fillcolor=lightblue, label="\/confirm_birthdate\{\\"time\\"\:\ \\"1997\-11\-23T00\:00\:00\.000\+01\:00\\"\,\ \\"DATE\\"\:\ \\"23\ November\ 1997\\"\}", shape=rect, style=filled];
+628 [class=intent, fillcolor=lightblue, label="I\ want\ to\ loose\ weight", shape=rect, style=filled];
+629 [class=intent, fillcolor=lightblue, label=Definition, shape=rect, style=filled];
+630 [class=intent, fillcolor=lightblue, label=Yep, shape=rect, style=filled];
+631 [class=intent, fillcolor=lightblue, label="Yes\ i\ would\ like\ to\ get\ diet\ recommendations", shape=rect, style=filled];
+632 [class=intent, fillcolor=lightblue, label="Yes\ i\ would\ like\ to\ get\ diet\ recommendations", shape=rect, style=filled];
+633 [class=intent, fillcolor=lightblue, label="What\ is\ the\ date", shape=rect, style=filled];
+634 [class=intent, fillcolor=lightblue, label="Yes\ I\ would\ like\ a\ routine", shape=rect, style=filled];
+635 [class=intent, fillcolor=lightblue, label="Yes\,\ i\ would\ liek\ to\ join", shape=rect, style=filled];
+636 [class=intent, fillcolor=lightblue, label=Great, shape=rect, style=filled];
+637 [class=intent, fillcolor=lightblue, label="\/confirm_birthdate\{\\"time\\"\:\ \\"1995\-06\-26T00\:00\:00\.000\+02\:00\\"\,\ \\"DATE\\"\:\ \\"June\ 26\ 1995\\"\}", shape=rect, style=filled];
+638 [class=intent, fillcolor=lightblue, label="Yes\ I\ would\ like\ a\ routine", shape=rect, style=filled];
+639 [class=intent, fillcolor=lightblue, label="Yes\,\ please", shape=rect, style=filled];
+640 [class=intent, fillcolor=lightblue, label="Of\ course", shape=rect, style=filled];
+641 [class=intent, fillcolor=lightblue, label="Hey\,\ let\'s\ start\ our\ training\ session", shape=rect, style=filled];
+642 [class=intent, fillcolor=lightblue, label="Yes\ I\ do", shape=rect, style=filled];
+643 [class=intent, fillcolor=lightblue, label="Yes\,\ of\ course", shape=rect, style=filled];
+644 [class=intent, fillcolor=lightblue, label=No, shape=rect, style=filled];
+645 [class=intent, fillcolor=lightblue, label="I\ want\ to\ join", shape=rect, style=filled];
+0 -> 547  [class="", key=0];
+0 -> 548  [class="", key=0];
+0 -> 549  [class="", key=0];
+0 -> 550  [class="", key=0];
+0 -> 551  [class="", key=0];
+0 -> 552  [class="", key=0];
+0 -> 553  [class="", key=0];
+0 -> 554  [class="", key=0];
+0 -> 555  [class="", key=0];
+0 -> 556  [class="", key=0];
+0 -> 557  [class="", key=0];
+0 -> 558  [class="", key=0];
+0 -> 559  [class="", key=0];
+0 -> 560  [class="", key=0];
+0 -> 561  [class="", key=0];
+0 -> 562  [class="", key=0];
+0 -> 563  [class="", key=0];
+0 -> 564  [class="", key=0];
+0 -> 565  [class="", key=0];
+0 -> 566  [class="", key=0];
+1 -> 2  [class="", key=NONE, label=""];
+1 -> 54  [class="", key=NONE, label=""];
+2 -> "-1"  [class="", key=NONE, label=""];
+2 -> 567  [class="", key=0];
+3 -> 2  [class="", key=NONE, label=""];
+9 -> 10  [class="", key=NONE, label=""];
+10 -> "-1"  [class="", key=NONE, label=""];
+10 -> 568  [class="", key=0];
+11 -> "-1"  [class="", key=NONE, label=""];
+12 -> 13  [class="", key=NONE, label=""];
+13 -> "-1"  [class="", key=NONE, label=""];
+13 -> 2  [class="", key=NONE, label=""];
+13 -> 295  [class="", key=NONE, label=""];
+17 -> 18  [class="", key=NONE, label=""];
+17 -> 20  [class="", key=NONE, label=""];
+18 -> "-1"  [class="", key=NONE, label=""];
+18 -> 569  [class="", key=0];
+20 -> 570  [class="", key=0];
+20 -> 571  [class="", key=0];
+21 -> 572  [class="", key=0];
+21 -> 573  [class="", key=0];
+22 -> 574  [class="", key=0];
+22 -> 575  [class="", key=0];
+27 -> "-1"  [class="", key=NONE, label=""];
+28 -> 29  [class="", key=NONE, label=""];
+29 -> "-1"  [class="", key=NONE, label=""];
+29 -> 576  [class="", key=0];
+29 -> 577  [class="", key=0];
+29 -> 578  [class="", key=0];
+29 -> 579  [class="", key=0];
+29 -> 580  [class="", key=0];
+39 -> 40  [class="", key=NONE, label=""];
+40 -> "-1"  [class="", key=NONE, label=""];
+43 -> 44  [class="", key=NONE, label=""];
+44 -> "-1"  [class="", key=NONE, label=""];
+47 -> 48  [class="", key=NONE, label=""];
+47 -> 52  [class="", key=NONE, label=""];
+48 -> "-1"  [class="", key=NONE, label=""];
+49 -> 50  [class="", key=NONE, label=""];
+49 -> 55  [class="", key=NONE, label=""];
+50 -> "-1"  [class="", key=NONE, label=""];
+52 -> "-1"  [class="", key=NONE, label=""];
+54 -> 581  [class="", key=0];
+54 -> 582  [class="", key=0];
+54 -> 583  [class="", key=0];
+54 -> 584  [class="", key=0];
+55 -> 585  [class="", key=0];
+55 -> 586  [class="", key=0];
+55 -> 587  [class="", key=0];
+56 -> 57  [class="", key=NONE, label=""];
+57 -> 58  [class="", key=NONE, label=""];
+58 -> 588  [class="", key=0];
+59 -> 589  [class="", key=0];
+59 -> 590  [class="", key=0];
+59 -> 591  [class="", key=0];
+59 -> 592  [class="", key=0];
+59 -> 593  [class="", key=0];
+60 -> 61  [class="", key=NONE, label=""];
+61 -> 594  [class="", key=0];
+61 -> 595  [class="", key=0];
+61 -> 596  [class="", key=0];
+61 -> 597  [class="", key=0];
+61 -> 598  [class="", key=0];
+62 -> 63  [class="", key=NONE, label=""];
+63 -> 599  [class="", key=0];
+63 -> 600  [class="", key=0];
+63 -> 601  [class="", key=0];
+63 -> 602  [class="", key=0];
+63 -> 603  [class="", key=0];
+64 -> 65  [class="", key=NONE, label=""];
+65 -> 66  [class="", key=NONE, label=""];
+66 -> 604  [class="", key=0];
+66 -> 605  [class="", key=0];
+66 -> 606  [class="", key=0];
+67 -> 68  [class="", key=NONE, label=""];
+68 -> 69  [class="", key=NONE, label=""];
+68 -> 112  [class="", key=NONE, label=""];
+68 -> 286  [class="", key=NONE, label=""];
+69 -> 607  [class="", key=0];
+70 -> 71  [class="", key=NONE, label=""];
+71 -> 72  [class="", key=NONE, label=""];
+72 -> 608  [class="", key=0];
+72 -> 609  [class="", key=0];
+73 -> 610  [class="", key=0];
+73 -> 611  [class="", key=0];
+73 -> 612  [class="", key=0];
+74 -> 75  [class="", key=NONE, label=""];
+74 -> 241  [class="", key=NONE, label=""];
+74 -> 456  [class="", key=NONE, label=""];
+75 -> "-1"  [class="", key=NONE, label=""];
+87 -> 613  [class="", key=0];
+87 -> 614  [class="", key=0];
+87 -> 615  [class="", key=0];
+93 -> 616  [class="", key=0];
+94 -> 75  [class="", key=NONE, label=""];
+112 -> 617  [class="", key=0];
+113 -> 75  [class="", key=NONE, label=""];
+113 -> 241  [class="", key=NONE, label=""];
+140 -> "-1"  [class="", key=NONE, label=""];
+140 -> 618  [class="", key=0];
+140 -> 619  [class="", key=0];
+241 -> 620  [class="", key=0];
+264 -> 621  [class="", key=0];
+264 -> 622  [class="", key=0];
+264 -> 623  [class="", key=0];
+267 -> 624  [class="", key=0];
+267 -> 625  [class="", key=0];
+268 -> 626  [class="", key=0];
+275 -> 627  [class="", key=0];
+278 -> 628  [class="", key=0];
+278 -> 629  [class="", key=0];
+281 -> 630  [class="", key=0];
+285 -> 631  [class="", key=0];
+285 -> 632  [class="", key=0];
+286 -> 633  [class="", key=0];
+295 -> 634  [class="", key=0];
+295 -> 635  [class="", key=0];
+301 -> 636  [class="", key=0];
+302 -> 637  [class="", key=0];
+305 -> 638  [class="", key=0];
+309 -> 639  [class="", key=0];
+309 -> 640  [class="", key=0];
+310 -> 641  [class="", key=0];
+310 -> 642  [class="", key=0];
+337 -> 643  [class="", key=0];
+422 -> 644  [class="", key=0];
+423 -> 645  [class="", key=0];
+424 -> 55  [class="", key=NONE, label=""];
+456 -> "-1"  [class="", key=NONE, label=""];
+464 -> 275  [class="", key=NONE, label=""];
+506 -> 295  [class="", key=NONE, label=""];
+547 -> 1  [class="", key=0];
+548 -> 1  [class="", key=0];
+549 -> 1  [class="", key=0];
+550 -> 1  [class="", key=0];
+551 -> 1  [class="", key=0];
+552 -> 3  [class="", key=0];
+553 -> 3  [class="", key=0];
+554 -> 9  [class="", key=0];
+555 -> 9  [class="", key=0];
+556 -> 9  [class="", key=0];
+557 -> 9  [class="", key=0];
+558 -> 11  [class="", key=0];
+559 -> 12  [class="", key=0];
+560 -> 17  [class="", key=0];
+561 -> 28  [class="", key=0];
+562 -> 28  [class="", key=0];
+563 -> 39  [class="", key=0];
+564 -> 43  [class="", key=0];
+565 -> 47  [class="", key=0];
+566 -> 49  [class="", key=0];
+567 -> "-1"  [class="", key=0];
+568 -> 10  [class="", key=0];
+569 -> 18  [class="", key=0];
+570 -> 21  [class="", key=0];
+571 -> 18  [class="", key=0];
+572 -> 22  [class="", key=0];
+573 -> 27  [class="", key=0];
+574 -> 18  [class="", key=0];
+575 -> 18  [class="", key=0];
+576 -> 22  [class="", key=0];
+577 -> 50  [class="", key=0];
+578 -> 69  [class="", key=0];
+579 -> 10  [class="", key=0];
+580 -> 18  [class="", key=0];
+581 -> 55  [class="", key=0];
+582 -> 140  [class="", key=0];
+583 -> 264  [class="", key=0];
+584 -> 295  [class="", key=0];
+585 -> 56  [class="", key=0];
+586 -> 56  [class="", key=0];
+587 -> 55  [class="", key=0];
+588 -> 59  [class="", key=0];
+589 -> 60  [class="", key=0];
+590 -> 275  [class="", key=0];
+591 -> 301  [class="", key=0];
+592 -> 301  [class="", key=0];
+593 -> 464  [class="", key=0];
+594 -> 62  [class="", key=0];
+595 -> 278  [class="", key=0];
+596 -> 305  [class="", key=0];
+597 -> 305  [class="", key=0];
+598 -> 305  [class="", key=0];
+599 -> 64  [class="", key=0];
+600 -> 87  [class="", key=0];
+601 -> 281  [class="", key=0];
+602 -> 309  [class="", key=0];
+603 -> 309  [class="", key=0];
+604 -> 67  [class="", key=0];
+605 -> 285  [class="", key=0];
+606 -> 112  [class="", key=0];
+607 -> 70  [class="", key=0];
+608 -> 73  [class="", key=0];
+609 -> 75  [class="", key=0];
+610 -> 74  [class="", key=0];
+611 -> 93  [class="", key=0];
+612 -> 93  [class="", key=0];
+613 -> 69  [class="", key=0];
+614 -> 67  [class="", key=0];
+615 -> 112  [class="", key=0];
+616 -> 94  [class="", key=0];
+617 -> 113  [class="", key=0];
+618 -> 506  [class="", key=0];
+619 -> 295  [class="", key=0];
+620 -> 50  [class="", key=0];
+621 -> 264  [class="", key=0];
+622 -> 264  [class="", key=0];
+623 -> 267  [class="", key=0];
+624 -> 268  [class="", key=0];
+625 -> 422  [class="", key=0];
+626 -> 55  [class="", key=0];
+627 -> 60  [class="", key=0];
+628 -> 62  [class="", key=0];
+629 -> 278  [class="", key=0];
+630 -> 64  [class="", key=0];
+631 -> 286  [class="", key=0];
+632 -> 69  [class="", key=0];
+633 -> 285  [class="", key=0];
+634 -> 55  [class="", key=0];
+635 -> 267  [class="", key=0];
+636 -> 302  [class="", key=0];
+637 -> 60  [class="", key=0];
+638 -> 278  [class="", key=0];
+639 -> 310  [class="", key=0];
+640 -> 281  [class="", key=0];
+641 -> 309  [class="", key=0];
+642 -> 337  [class="", key=0];
+643 -> 67  [class="", key=0];
+644 -> 423  [class="", key=0];
+645 -> 424  [class="", key=0];
+}
+`;
+    drawGraph(graph);
+  } else {
+    serveGraph();
+  }
+
+
+</script>
+</body>
+</html>
