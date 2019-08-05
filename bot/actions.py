@@ -295,6 +295,19 @@ class AddExercise(Action):
         return [SlotSet("exercise", exercise)]
 
 
+class SendBodyfatratioImage(Action):
+    def name(self):
+        return "action_send_bodyfatratio_photo"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        user_gender = tracker.get_slot("user_gender")
+        image = f"resources/{user_gender}_body_fat.png"
+        return [SlotSet("exercise", exercise)]
+
+
 class ShowProgress(Action):
     def name(self):
         return "action_show_progress"

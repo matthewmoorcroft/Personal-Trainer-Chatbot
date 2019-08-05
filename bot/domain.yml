@@ -13,6 +13,7 @@ actions:
 - action_show_progress
 - action_start_training
 - action_take_measurements
+- action_send_bodyfatratio_photo
 - utter_already_in
 - utter_ask_bodyfatratio
 - utter_ask_eaten
