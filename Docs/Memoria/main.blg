@@ -1,23 +1,12 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
 The style file: ieeetr.bst
 Database file #1: main.bib
-Warning--I didn't find a database entry for "rfc_7426"
-Warning--I didn't find a database entry for "rfc_6275"
-Warning--I didn't find a database entry for "road_to_sdn"
-Warning--I didn't find a database entry for "new_norm_sdn"
-Warning--I didn't find a database entry for "of_switch_spec"
-Warning--I didn't find a database entry for "of_campus_net"
-Warning--I didn't find a database entry for "rfc_7333"
-Warning--I didn't find a database entry for "locating_user"
-Warning--I didn't find a database entry for "fama"
-Warning--I didn't find a database entry for "dmm_standard_land"
-Warning--I didn't find a database entry for "rfc_5213"
-Warning--I didn't find a database entry for "lte_history"
-Warning--I didn't find a database entry for "lte_wp"
-Warning--I didn't find a database entry for "ni_pxi_wp"
-Warning--I didn't find a database entry for "ni_pxi_whatis"
-Warning--I didn't find a database entry for "ns3_whatis"
-Warning--I didn't find a database entry for "internet_trends"
-Warning--I didn't find a database entry for "5g"
-Warning--I didn't find a database entry for "sdn_dense"
-(There were 19 warnings)
+Repeated entry---line 23 of file main.bib
+ : @misc{ai
+ :         ,
+I'm skipping whatever remains of this entry
+"}" immediately follows an entry type---line 26 of file main.bib
+ :  note = {Available at \url{https://medium.com/@chethankumargn/artificial-intelligence-definition-types-examples-technologies-962ea75c7b9b
+ :                                                                                                                                          }},
+I'm skipping whatever remains of this entry
+(There were 2 error messages)

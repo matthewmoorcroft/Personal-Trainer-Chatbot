@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.20)  23 FEB 2019 12:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.20)  5 AUG 2019 20:23
 entering extended mode
 **./main.tex
 (main.tex
@@ -766,10 +766,10 @@ LaTeX Warning: Unused global option(s):
 
 (main.aux
 
-LaTeX Warning: Label `sec:chap4_host_based_lte' multiply defined.
+LaTeX Warning: Label `sec:chap3_ai' multiply defined.
 
 
-LaTeX Warning: Label `sec:chap4_host_based_lte' multiply defined.
+LaTeX Warning: Label `chap:8' multiply defined.
 
 )
 \openout1 = `main.aux'.
@@ -845,44 +845,52 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ) (chapters/titlepage.tex
-<./images/escudo.jpg, id=67, 338.4645pt x 119.0046pt>
+<./images/escudo.jpg, id=83, 338.4645pt x 119.0046pt>
 File: ./images/escudo.jpg Graphic file (type jpg)
 <use ./images/escudo.jpg>
 Package pdftex.def Info: ./images/escudo.jpg  used on input line 8.
 (pdftex.def)             Requested size: 406.15536pt x 142.80478pt.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 23.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 33.
 
 ("C:\Users\matth\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 23.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 33.
 
 ("C:\Users\matth\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 23.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 33.
 
 
 ("C:\Users\matth\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 23.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 33.
 
 
 ("C:\Users\matth\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 23.
+(Font)              <14.4> on input line 33.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 23.
+(Font)              <10> on input line 33.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 23.
+(Font)              <7> on input line 33.
 
 [1
 
 {C:/Users/matth/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./images/es
-cudo.jpg>]) (chapters/acknowledgments.tex
+cudo.jpg>])pdfTeX warning (ext4): destination with the same identifier (name{pa
+ge.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.109 	\clearpage\null\newpage
+                               [1
+
+
+] (chapters/acknowledgments.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--3
 
  []
@@ -937,266 +945,235 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
  []
 
-)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.111 	\clearpage
-                 {\cleardoublepage} [1
+) [2] [3
 
-] (main.toc) [2
+] (main.toc
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 1.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 1.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 1.
+) [4
 
 
-] (main.lof) [3
+] (main.lof) [5
 
-] (main.lot) (chapters/abstract.tex [4
+] (main.lot) [6
+
+] [7
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 4--5
+(chapters/abstract.tex) [8
+
+] [9
+
+
+] (chapters/chapter1-introduction.tex [10
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 19--22
 
  []
 
-) [5
-
-] (chapters/chapter1-introduction.tex
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 3.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 3.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 3.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 3.
-
-("C:\Users\matth\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmtt.fd"
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--6
-
- []
-
-
-LaTeX Warning: Citation `rfc_7426' on page 6 undefined on input line 7.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--8
-
- []
-
-
-LaTeX Warning: Citation `rfc_6275' on page 6 undefined on input line 9.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--10
-
- []
-
-<./images/crowd_arch.png, id=131, 835.62187pt x 508.90125pt>
-File: ./images/crowd_arch.png Graphic file (type png)
-<use ./images/crowd_arch.png>
-Package pdftex.def Info: ./images/crowd_arch.png  used on input line 16.
-(pdftex.def)             Requested size: 417.8099pt x 254.45pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 22--23
-
- []
-
-[6
-
-
-]) (chapters/chapter2-analysis_of_the_problem.tex [7 <./images/crowd_arch.png>]
-
-
-LaTeX Warning: Citation `internet_trends' on page 8 undefined on input line 3.
-
-
-LaTeX Warning: Citation `5g' on page 8 undefined on input line 3.
-
-
-LaTeX Warning: Citation `fama' on page 8 undefined on input line 3.
-
-<./images/traffic_data.png, id=146, 825.0825pt x 446.41782pt>
-File: ./images/traffic_data.png Graphic file (type png)
-<use ./images/traffic_data.png>
-Package pdftex.def Info: ./images/traffic_data.png  used on input line 8.
-(pdftex.def)             Requested size: 330.02715pt x 178.56395pt.
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 17.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 22.
 ("C:\Users\matth\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omslmr.fd"
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 17.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 22.
 
-[8
-
- <./images/traffic_data.png>]
-
-LaTeX Warning: Citation `sdn_dense' on page 9 undefined on input line 25.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
+Underfull \hbox (badness 10000) in paragraph at lines 28--31
 
  []
 
-) (chapters/chapter3-state_of_the_art.tex [9]
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 37--39
 
-LaTeX Warning: Citation `rfc_7426' on page 10 undefined on input line 5.
+ []
 
+[12]) (chapters/chapter2-analysis_of_the_problem.tex [13]
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
 
-Underfull \hbox (badness 10000) in paragraph at lines 5--6
+ []
+
+<./images/2-new-year-exercise.png, id=183, 466.74374pt x 240.14719pt>
+File: ./images/2-new-year-exercise.png Graphic file (type png)
+<use ./images/2-new-year-exercise.png>
+Package pdftex.def Info: ./images/2-new-year-exercise.png  used on input line 1
+1.
+(pdftex.def)             Requested size: 420.06549pt x 216.13045pt.
+[14
+
+ <./images/2-new-year-exercise.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
+
+ []
+
+<./images/2-new-year-logs.png, id=192, 622.325pt x 634.37pt>
+File: ./images/2-new-year-logs.png Graphic file (type png)
+<use ./images/2-new-year-logs.png>
+Package pdftex.def Info: ./images/2-new-year-logs.png  used on input line 22.
+(pdftex.def)             Requested size: 373.39787pt x 380.62492pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
+
+ []
+
+[15 <./images/2-new-year-logs.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 32--34
+
+ []
+
+[16]) (chapters/chapter3-state_of_the_art.tex [17]
+Underfull \hbox (badness 10000) in paragraph at lines 3--6
+
+ []
+
+<./images/3-mach-chat-trend.png, id=208, 733.23938pt x 285.31593pt>
+File: ./images/3-mach-chat-trend.png Graphic file (type png)
+<use ./images/3-mach-chat-trend.png>
+Package pdftex.def Info: ./images/3-mach-chat-trend.png  used on input line 10.
+
+(pdftex.def)             Requested size: 439.94702pt x 171.19087pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
  []
 
 
-LaTeX Warning: Citation `road_to_sdn' on page 10 undefined on input line 7.
+Underfull \hbox (badness 10000) in paragraph at lines 19--21
 
+ []
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--8
+[18
+
+ <./images/3-mach-chat-trend.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 26--28
 
  []
 
 
-LaTeX Warning: Citation `new_norm_sdn' on page 10 undefined on input line 9.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--10
+Underfull \hbox (badness 10000) in paragraph at lines 38--39
 
  []
 
-<./images/openflowjason.png, id=156, 271.76532pt x 177.66376pt>
-File: ./images/openflowjason.png Graphic file (type png)
-<use ./images/openflowjason.png>
-Package pdftex.def Info: ./images/openflowjason.png  used on input line 16.
-(pdftex.def)             Requested size: 244.58652pt x 159.89589pt.
+<./images/3-ai-areas.jpeg, id=216, 702.625pt x 485.815pt>
+File: ./images/3-ai-areas.jpeg Graphic file (type jpg)
+<use ./images/3-ai-areas.jpeg>
+Package pdftex.def Info: ./images/3-ai-areas.jpeg  used on input line 43.
+(pdftex.def)             Requested size: 351.31163pt x 242.9069pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[10
-
-]
-
-LaTeX Warning: Citation `of_switch_spec' on page 11 undefined on input line 39.
-
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 39--40
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 49--50
 
  []
 
 
-LaTeX Warning: Citation `of_campus_net' on page 11 undefined on input line 41.
-
-<./images/OpenFlowSwitch.png, id=163, 490.83376pt x 398.48875pt>
-File: ./images/OpenFlowSwitch.png Graphic file (type png)
-<use ./images/OpenFlowSwitch.png>
-Package pdftex.def Info: ./images/OpenFlowSwitch.png  used on input line 46.
-(pdftex.def)             Requested size: 269.9594pt x 219.16948pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[11 <./images/openflowjason.png>]
-
-LaTeX Warning: Citation `rfc_7333' on page 12 undefined on input line 71.
-
-[12 <./images/OpenFlowSwitch.png>]
-
-LaTeX Warning: Citation `locating_user' on page 13 undefined on input line 75.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 78--79
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
 
  []
 
 
-LaTeX Warning: Citation `fama' on page 13 undefined on input line 83.
-
-
-LaTeX Warning: Citation `dmm_standard_land' on page 13 undefined on input line 
-90.
-
-[13]
-<./images/mip.png, id=181, 381.67593pt x 353.82187pt>
-File: ./images/mip.png Graphic file (type png)
-<use ./images/mip.png>
-Package pdftex.def Info: ./images/mip.png  used on input line 106.
-(pdftex.def)             Requested size: 114.50366pt x 106.14737pt.
-
-
-LaTeX Warning: Citation `rfc_6275' on page 14 undefined on input line 112.
-
-<./images/pmip.png, id=182, 378.66469pt x 341.02406pt>
-File: ./images/pmip.png Graphic file (type png)
-<use ./images/pmip.png>
-Package pdftex.def Info: ./images/pmip.png  used on input line 123.
-(pdftex.def)             Requested size: 113.60028pt x 102.308pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[14 <./images/mip.png>]
-
-LaTeX Warning: Citation `rfc_5213' on page 15 undefined on input line 129.
-
-
-LaTeX Warning: Citation `lte_history' on page 15 undefined on input line 134.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 134--135
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
 
-<./images/lte_arch.png, id=191, 551.81157pt x 302.63063pt>
-File: ./images/lte_arch.png Graphic file (type png)
-<use ./images/lte_arch.png>
-Package pdftex.def Info: ./images/lte_arch.png  used on input line 141.
-(pdftex.def)             Requested size: 386.26547pt x 211.83998pt.
+[20 <./images/3-ai-areas.jpeg>]
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+ []
 
 
-LaTeX Warning: Citation `lte_wp' on page 15 undefined on input line 147.
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
+
+ []
 
 
-LaTeX Warning: Citation `ni_pxi_wp' on page 15 undefined on input line 159.
+Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
-[15 <./images/pmip.png>]
-<./images/pxi.png, id=198, 387.69844pt x 411.03563pt>
-File: ./images/pxi.png Graphic file (type png)
-<use ./images/pxi.png>
-Package pdftex.def Info: ./images/pxi.png  used on input line 164.
-(pdftex.def)             Requested size: 271.38704pt x 287.72298pt.
+ []
+
+<./images/3-chatbot-stemming.jpg, id=226, 722.7pt x 542.025pt>
+File: ./images/3-chatbot-stemming.jpg Graphic file (type jpg)
+<use ./images/3-chatbot-stemming.jpg>
+Package pdftex.def Info: ./images/3-chatbot-stemming.jpg  used on input line 83
+.
+(pdftex.def)             Requested size: 505.88655pt x 379.4149pt.
+
+Overfull \hbox (62.88655pt too wide) in paragraph at lines 83--84
+ [][] 
+ []
+
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 89--91
+
+ []
 
 
-LaTeX Warning: Citation `ni_pxi_whatis' on page 16 undefined on input line 172.
+Underfull \hbox (badness 10000) in paragraph at lines 96--99
+
+ []
+
+[22 <./images/3-chatbot-stemming.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
+
+ []
 
 
-[16 <./images/lte_arch.png> <./images/pxi.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
 
-LaTeX Warning: Citation `ns3_whatis' on page 17 undefined on input line 177.
+ []
 
-) (chapters/chapter4-solution_proposed.tex [17])
-(chapters/chapter5-planning_and_budget.tex [18
+<./images/3-cha-struct.png, id=237, 602.25pt x 370.38374pt>
+File: ./images/3-cha-struct.png Graphic file (type png)
+<use ./images/3-cha-struct.png>
+Package pdftex.def Info: ./images/3-cha-struct.png  used on input line 117.
+(pdftex.def)             Requested size: 361.35278pt x 222.23195pt.
+) (chapters/chapter4-solution_proposed.tex [23 <./images/3-cha-struct.png>]
+[24]) (chapters/chapter5-planning_and_budget.tex [25
 
 ])
-(chapters/chapter6-conclusions.tex [19
+(chapters/chapter6-socioeconomic_environment.tex [26
 
-]) (chapters/chapter7-summary.tex
-[20
+])
+(chapters/chapter7-conclusions.tex [27
 
-]) (chapters/bibliography.tex (main.bbl [21
+]) (chapters/references.tex (main.bbl
+[28
 
 ]
 bibitemlist
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 7.
+("C:\Users\matth\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmtt.fd"
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Underfull \hbox (badness 7116) in paragraph at lines 4--8
+\T1/lmr/m/n/12 31 Au-gust, 2018.  Avail-able at []$\T1/lmtt/m/n/12 https : / / 
+www . citylab . com / life / 2019 /
+ []
 
-LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-)) (chapters/appendix.tex) [22
+Underfull \hbox (badness 10000) in paragraph at lines 4--8
+\T1/lmtt/m/n/12 01 / do-[]people-[]keep-[]new-[]years-[]resolution-[]fitness-[]
+weight-[]loss-[]data /
+ []
+
+
+Underfull \hbox (badness 2460) in paragraph at lines 15--19
+[]\T1/lmr/m/n/12 C. Ku-mar, ``"ar-ti-fi-cial in-tel-li-gence: Def-i-ni-tion, ty
+pes, ex-am-ples, tech-nolo-
+ []
+
+
+Overfull \hbox (44.64612pt too wide) in paragraph at lines 15--19
+\T1/lmtt/m/n/12 artificial-[]intelligence-[]definition-[]types-[]examples-[]tec
+hnologies-[]962ea75c7b9b$[]\T1/lmr/m/n/12 . 
+ []
+
+)) (chapters/appendix.tex) [29
 
 ]
 \tf@toc=\write5
@@ -1208,45 +1185,40 @@ LaTeX Warning: Empty `thebibliography' environment on input line 3.
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 153.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 153.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 156.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 156.
  (main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 153.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 153.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 156.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 156.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F627BEC330A7E277F5BB0D75938271F2;949.
-
-
-LaTeX Warning: There were undefined references.
+(rerunfilecheck)             Checksum: C052E1445EF91A3697930EF52B9D4636;1142.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 153.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 156.
  ) 
 Here is how much of TeX's memory you used:
- 12437 strings out of 492946
- 188920 string characters out of 3126266
+ 12417 strings out of 492946
+ 188675 string characters out of 3126266
  498463 words of memory out of 3000000
- 16057 multiletter control sequences out of 15000+200000
- 82845 words of font info for 55 fonts, out of 3000000 for 9000
+ 16043 multiletter control sequences out of 15000+200000
+ 76928 words of font info for 53 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,11n,49p,883b,382s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/matth/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-maths
-y.enc}{C:/Users/matth/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-e
-c.enc}<C:/Users/matth/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/l
+ 38i,11n,49p,787b,457s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/matth/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.en
+c}{C:/Users/matth/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-maths
+y.enc}<C:/Users/matth/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/l
 mbx12.pfb><C:/Users/matth/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
 lm/lmcsc10.pfb><C:/Users/matth/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
 blic/lm/lmr12.pfb><C:/Users/matth/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 /public/lm/lmr17.pfb><C:/Users/matth/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
-pe1/public/lm/lmr7.pfb><C:/Users/matth/AppData/Local/Programs/MiKTeX 2.9/fonts/
-type1/public/lm/lmr8.pfb><C:/Users/matth/AppData/Local/Programs/MiKTeX 2.9/font
-s/type1/public/lm/lmri12.pfb><C:/Users/matth/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/public/lm/lmsy10.pfb><C:/Users/matth/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (23 pages, 1105960 bytes).
+pe1/public/lm/lmri12.pfb><C:/Users/matth/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/public/lm/lmsy10.pfb><C:/Users/matth/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/lm/lmtt12.pfb>
+Output written on main.pdf (30 pages, 770031 bytes).
 PDF statistics:
- 288 PDF objects out of 1000 (max. 8388607)
- 67 named destinations out of 1000 (max. 500000)
- 174 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 317 PDF objects out of 1000 (max. 8388607)
+ 65 named destinations out of 1000 (max. 500000)
+ 196 words of extra memory for PDF output out of 10000 (max. 10000000)
 
