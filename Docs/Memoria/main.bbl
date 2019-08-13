@@ -17,4 +17,13 @@ C.~Kumar, ``"artificial intelligence: Definition, types, examples,
 \newblock Available at
   \url{https://medium.com/@chethankumargn/artificial-intelligence-definition-types-examples-technologies-962ea75c7b9b}.
 
+\bibitem{cha-stem}
+H.~Jabeen, ``"stemming and lemmatization in python",'' 23 October, 2018.
+\newblock Available at
+  \url{https://www.datacamp.com/community/tutorials/stemming-lemmatization-python}.
+
+\bibitem{rasa}
+R.~Team, ``"rasa open source".''
+\newblock Available at \url{https://rasa.com/}.
+
 \end{thebibliography}

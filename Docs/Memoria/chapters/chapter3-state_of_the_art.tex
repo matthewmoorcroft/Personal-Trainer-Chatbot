@@ -75,7 +75,7 @@ The Natural Language Processor is the step where the bot does most of the work. 
 	\item {\textbf{Speech to Text:} This is needed only when the message sent from the user is in voice format, such as the virtual assistants solutions provided by Google or Amazon, although this can also be included in applications where voice messages functionality is available.}
 	\item {\textbf{Language Detection:} This is a way of building a multilingual chatbot without the need of building different models for every language. The issue is how to get the translation, there is a well-known API from google that provides this functionality for a price. A way to reduce costs can be to have a cache store the most frequent translations.}
 	\item {\textbf{Tokenizing:} In this step what the bot does is separate the phrases in independent words, it is also important for the bot to understand what each word is, if it is a noun, verb, adjective or an adverb. Also, it must discard all redundant words that don’t provide any additional information.}
-	\item {\textbf{Stemming:} This consists in simplifying the words in the phrase in order to have a much simpler vocabulary for the bot to understand, this is done by eliminating verb conjugations or keeping the stem of the word. In the image below there is a more in detail example of what stemming is.}
+	\item {\textbf{Stemming:} This consists in simplifying the words in the phrase in order to have a much simpler vocabulary for the bot to understand, this is done by eliminating verb conjugations or keeping the stem of the word. In the image below there is a more in detail example of what stemming is.\cite{cha-stem}}
 	
 	\begin{center}
 		\begin{figure}[h!]
@@ -120,11 +120,51 @@ For example, in this project when the user asks to be reminded to take his measu
 	\end{figure}
 \end{center}
 
-\section{Rasa}\label{sec:chap3_rasa}
-Test
+\section{Platforms}\label{sec:chap3_plat}
+
+There are many platforms to build chatbots, with their own features. Below there is a table of the difference between several solutions. In this section we will talk about some of them and what differences each have.\\
+
+
+\begin{table}[h!]
+	\centering
+	\resizebox{\linewidth}{!}{%
+		\begin{tabular}{|c|c|c|c|c|} 
+			\hline
+			\rowcolor[rgb]{0.753,0.753,0.753} Bot Name                                                               & Features                                                                                                                                                                                                                                           & Technical Details                                                                                                                                                                           & License                                                                                                                                  & Channel                                                        \\ 
+			\hline
+			\begin{tabular}[c]{@{}c@{}}IBM Watson \\Conversation Service \end{tabular}                               & \begin{tabular}[c]{@{}c@{}}Has three main components: \\Intents, \\Entities, \\Dialog\\ \\ Analysis, to detect what\\~messages confuse the bot \end{tabular}                                                                                       & \begin{tabular}[c]{@{}c@{}}Built on a neural network \\(one billion Wikipedia words). \end{tabular}                                                                                         & \begin{tabular}[c]{@{}c@{}}Free, priced \\per message,\\ \\ Contact required \\for enterprise \end{tabular}                              & \begin{tabular}[c]{@{}c@{}}Voice\\ Image\\ Text \end{tabular}  \\ 
+			\hline
+			Wit.ai                                                                                                   & \begin{tabular}[c]{@{}c@{}}Home automation\\ \\ Wearables\\ \\ Hardware \end{tabular}                                                                                                                                                              & \begin{tabular}[c]{@{}c@{}}Allows to use:\\ \\ Entities\\ Intents\\ Context\\ Actions \end{tabular}                                                                                         & Free                                                                                                                                     & \begin{tabular}[c]{@{}c@{}}Voice\\ Text \end{tabular}          \\ 
+			\hline
+			Rasa                                                                                                     & \begin{tabular}[c]{@{}c@{}}Interactive Learning\\ \\ Stories \end{tabular}                                                                                                                                                                         & \begin{tabular}[c]{@{}c@{}}Modular Pipeline to \\design what best fits for you \end{tabular}                                                                                                & Open Source                                                                                                                              & Text                                                           \\ 
+			\hline
+			Dialogflow                                                                                               & \begin{tabular}[c]{@{}c@{}}Intuitive Platform\\ \\ Pretrained packages \\from Google\\ \\ Chit Chat built in \end{tabular}                                                                                                                         & \begin{tabular}[c]{@{}c@{}}Neural Network\\ \\ Black box \end{tabular}                                                                                                                      & \begin{tabular}[c]{@{}c@{}}Free\\ Enterprise \end{tabular}                                                                               & \begin{tabular}[c]{@{}c@{}}Voice\\ Text \end{tabular}          \\ 
+			\hline
+			\begin{tabular}[c]{@{}c@{}}Microsoft Language \\Understanding\\~Intelligent Service (LUIS) \end{tabular} & \begin{tabular}[c]{@{}c@{}}All LUIS applications are \\centered around a \\domain-specific topic or\\ content related.\\ \\ Active learning.\\ \\ You can use pre-existing, \\world-class, pre-built \\models from Bing and Cortana. \end{tabular} & \begin{tabular}[c]{@{}c@{}}LUIS offers a set of \\programmatic REST APIs \\that can be used by\\ developers to automate \\the application creation process. \end{tabular}                   & \begin{tabular}[c]{@{}c@{}}Free\\{[}10.000 Transactions]\\Paid\\{[}1,50\$1.000 transactions]\\{[}4,50\$ 1.000transactions]~\end{tabular} & \begin{tabular}[c]{@{}c@{}}Voice\\ Text \end{tabular}          \\ 
+			\hline
+			Pandorabots                                                                                              & \begin{tabular}[c]{@{}c@{}}AIML (Artificial Intelligence \\Markup Language) \\ \\ Includes A.L.I.C.E. \end{tabular}                                                                                                                                & \begin{tabular}[c]{@{}c@{}}The Pandorabots API allows \\you to integrate our bot \\hosting service and\\ \\ natural language \\processing engine into \\your own application. \end{tabular} & \begin{tabular}[c]{@{}c@{}}Free\\Developer [19\$/month]\\Pro [199\$/month]\\~Enterprise [Sales]~ ~~\end{tabular}                         & Text                                                           \\
+			\hline
+		\end{tabular}
+	
+	}
+\label{cha_diff}
+\caption{Differences between different chatbot solutions}
+\end{table}
+ 
+
+\subsection{DialogFlow}\label{sec:chap3_pla_rasa}
 
 
 
+\subsection{Rasa}\label{sec:chap3_pla_dia}
 
+\begin{center}
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.4]{./images/3-rasa-log}
+		\caption{Rasa Logo}
+		\label{rasa_logo}
+	\end{figure}
+\end{center}
 
-
+\cite{rasa}

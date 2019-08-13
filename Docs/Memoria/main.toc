@@ -15,12 +15,14 @@
 \contentsline {subsection}{\numberline {3.2.1}Messaging Platform}{21}{subsection.3.2.1}% 
 \contentsline {subsection}{\numberline {3.2.2}Natural Language Processor}{21}{subsection.3.2.2}% 
 \contentsline {subsection}{\numberline {3.2.3}Profiler}{23}{subsection.3.2.3}% 
-\contentsline {section}{\numberline {3.3}Rasa}{24}{section.3.3}% 
-\contentsline {chapter}{\chapternumberline {4}Solution Proposed}{25}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}Implementation}{25}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}Regulatory Framework}{25}{section.4.2}% 
-\contentsline {subsection}{\numberline {4.2.1}Hardware}{25}{subsection.4.2.1}% 
-\contentsline {chapter}{\chapternumberline {5}Planning and Budget}{26}{chapter.5}% 
-\contentsline {chapter}{\chapternumberline {6}Socioeconomic Environment}{27}{chapter.6}% 
-\contentsline {chapter}{\chapternumberline {7}Conclusions}{28}{chapter.7}% 
-\contentsline {chapter}{References}{29}{chapter*.8}% 
+\contentsline {section}{\numberline {3.3}Platforms}{24}{section.3.3}% 
+\contentsline {subsection}{\numberline {3.3.1}DialogFlow}{24}{subsection.3.3.1}% 
+\contentsline {subsection}{\numberline {3.3.2}Rasa}{24}{subsection.3.3.2}% 
+\contentsline {chapter}{\chapternumberline {4}Solution Proposed}{26}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Implementation}{26}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Regulatory Framework}{26}{section.4.2}% 
+\contentsline {subsection}{\numberline {4.2.1}Hardware}{26}{subsection.4.2.1}% 
+\contentsline {chapter}{\chapternumberline {5}Planning and Budget}{27}{chapter.5}% 
+\contentsline {chapter}{\chapternumberline {6}Socioeconomic Environment}{28}{chapter.6}% 
+\contentsline {chapter}{\chapternumberline {7}Conclusions}{29}{chapter.7}% 
+\contentsline {chapter}{References}{30}{chapter*.10}% 

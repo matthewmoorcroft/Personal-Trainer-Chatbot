@@ -147,7 +147,8 @@ templates:
   utter_already_in:
   - text: You are already a part of the club
   utter_ask_bodyfatratio:
-  - image: resources/{user_gender}_body_fat.png
+  - image: resources/male_body_fat.png
+    image: resources/female_body_fat.png
     text: What is the porcentage of bodyfatratio
   utter_ask_eaten:
   - text: Perfect, have you eaten anything yet?
@@ -196,8 +197,7 @@ templates:
   - text: Great, measurements taken. Now you can add your weight and bodyfatratio
       measurements
   utter_nice_name:
-  - text: So {user_name}, nice name. Let's get started, before anything I'll give
-      you a tour of what we are going to be doing.
+  - text: So {user_name}, nice name. Let's get started, before anything I have to ask for some details.
   utter_no_measurements_selected:
   - text: Sorry, you have chosen not to take any measurements
   utter_not_interested:

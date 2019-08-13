@@ -1,9 +1,7 @@
 ## intent:add_bodyfatratio
-- [19](number) %
-- [21](number) %
-- [12](number) %
 - My new bodyfatratio is [18](number)%
-- [13](number)[13](number:13)%
+- [13](number)%
+- It is [15](number)%
 
 ## intent:add_weight
 - My weight is [87](number) Kg
