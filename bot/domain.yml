@@ -7,13 +7,13 @@ actions:
 - action_confirm_user_wants_diets
 - action_confirm_user_wants_measurements
 - action_confirm_user_wants_routine
+- action_send_bodyfatratio_photo
 - action_set_birthdate
 - action_set_name
 - action_set_reminder
 - action_show_progress
 - action_start_training
 - action_take_measurements
-- action_send_bodyfatratio_photo
 - utter_already_in
 - utter_ask_bodyfatratio
 - utter_ask_eaten
@@ -70,18 +70,19 @@ entities:
 forms:
 - measurement_form
 intents:
-- confirm_table
-- add_weight
+- affirm
 - greet
+- add_bodyfatratio
+- add_weight
+- gender_confirmation
+- training_confirmation
 - deny
+- confirm_birthdate
+- name_confirmation
+- confirm_table
 - help
 - user_wants_to_join
-- confirm_birthdate
-- gender_confirmation
-- affirm
-- name_confirmation
 - start
-- training_confirmation
 - get_measurements
 - chitchat
 - show_my_progress
@@ -89,7 +90,6 @@ intents:
 - meal_eaten
 - new_table
 - start_training
-- add_bodyfatratio
 - goodbye
 - not_interested
 - thanks

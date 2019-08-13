@@ -234,14 +234,14 @@ class Database:
 
             self.conn.commit()
             cur.execute("""SELECT *
-                           FROM core.bodyfatratio
-                           WHERE x = CURRENT_DATE
+                           FROM core.bodyfatratios
+                           WHERE measurement_date = CURRENT_DATE
                            AND user_id = %(user_id)s
                             """, {
                 'user_id': user_id
             })
             if cur.rowcount == 0:
-                cur.execute("""INSERT INTO core.bodyfatratio
+                cur.execute("""INSERT INTO core.bodyfatratios
                                (user_id, bodyfatratio)
                                VALUES(%(user_id)s, %(bodyfatratio)s);
                                 """, {
@@ -249,7 +249,7 @@ class Database:
                     'bodyfatratio': bodyfatratio
                 })
             else:
-                cur.execute("""UPDATE core.bodyfatratio
+                cur.execute("""UPDATE core.bodyfatratios
                                SET bodyfatratio = %(bodyfatratio)s
                                WHERE measurement_date = CURRENT_DATE
                                AND user_id = %(user_id)s

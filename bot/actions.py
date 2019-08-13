@@ -86,21 +86,20 @@ class MeasurementForm(FormAction):
     #         # user will be asked for the slot again
     #         return {"cuisine": None}
     #
-    # def validate_num_people(
-    #     self,
-    #     value: Text,
-    #     dispatcher: CollectingDispatcher,
-    #     tracker: Tracker,
-    #     domain: Dict[Text, Any],
-    # ) -> Optional[Text]:
-    #     """Validate num_people value."""
-    #
-    #     if self.is_int(value) and int(value) > 0:
-    #         return {"num_people": value}
-    #     else:
-    #         dispatcher.utter_template("utter_wrong_num_people", tracker)
-    #         # validation failed, set slot to None
-    #         return {"num_people": None}
+    def validate_bodyfatratio(
+        self,
+        value: Text,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> Optional[Text]:
+        """Validate if one value."""
+
+        try:
+            bodyfr = value[0]
+            return {"bodyfatratio": bodyfr}
+        except:
+            return {"bodyfatratio": value}
     #
     # def validate_outdoor_seating(
     #     self,
@@ -305,7 +304,8 @@ class SendBodyfatratioImage(Action):
 
         user_gender = tracker.get_slot("user_gender")
         image = f"resources/{user_gender}_body_fat.png"
-        return [SlotSet("exercise", exercise)]
+        dispatcher.utter_attachment(image)
+        return []
 
 
 class ShowProgress(Action):
@@ -317,6 +317,9 @@ class ShowProgress(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         dispatcher.utter_message("Working on showing your progress")
+        # db extract weights for every day/month/year
+        # matplotlib image
+        # send image
         return []
 
 

@@ -3,6 +3,7 @@
 - [21](number) %
 - [12](number) %
 - My new bodyfatratio is [18](number)%
+- [13](number)[13](number:13)%
 
 ## intent:add_weight
 - My weight is [87](number) Kg
@@ -10,6 +11,8 @@
 - [83](number) kg
 - [84](number) kg
 - I weigh [84](number) kg
+- I weigh [84](number) kg
+- I weigh [82](number) Kg
 
 ## intent:affirm
 - Yes
@@ -66,6 +69,11 @@
 - Ues
 - Oki Dokie
 - please
+- Yep
+- Yes
+- Yes
+- Yes please
+- Okay!
 
 ## intent:chitchat
 - what is going on here
@@ -107,6 +115,7 @@
 - 23-11-1997
 - [1997-11-23](time:1997-11-23T00:00:00.000+01:00)
 - [1997/11/23](time:1997-11-23T00:00:00.000+01:00)
+- My birthday is on the [26 of June 1995](time:1995-06-26T00:00:00.000+02:00)
 
 ## intent:confirm_table
 - [diet](table_type)
@@ -120,18 +129,6 @@
 - [exercise](table_type)
 - [Exercises](table_type:exercise)
 - [Diets](table_type:diet)
-
-##intent:goodbye
-- See ya
-- Bye
-- Bye Sam
-- Goodbye
-- Nice speaking to you
-- Talk to you later
-- I'm off
-- Take care
-- Bye!
-- Have a nice day
 
 ## intent:deny
 - Not yet
@@ -171,6 +168,7 @@
 - Not right now
 - Maybe later
 - Nope
+- Not yet
 
 ## intent:gender_confirmation
 - /gender_confirmation[{"user_gender": "male"}](user_gender:male)
@@ -190,6 +188,7 @@
 - /gender_confirmation[{"user_gender": "male"}](user_gender:male)
 - /gender_confirmation[{"user_gender": "male"}](user_gender:male)
 - /gender_confirmation[{"user_gender": "male"}](user_gender:male)
+- /gender_confirmation[{"user_gender": "male"}](user_gender:male)
 
 ## intent:get_measurements
 - i would like to take my measurements
@@ -199,6 +198,18 @@
 - I want to measure myself
 - Get my measurements
 - get my measurements
+
+## intent:goodbye
+- See ya
+- Bye
+- Bye Sam
+- Goodbye
+- Nice speaking to you
+- Talk to you later
+- I'm off
+- Take care
+- Bye!
+- Have a nice day
 
 ## intent:greet
 - Good morning
@@ -220,6 +231,7 @@
 - Good evening
 - Hello
 - Hello
+- hey
 
 ## intent:help
 - What can you do
@@ -265,6 +277,7 @@
 - Call me [Matt](PERSON:matt)
 - Call me [matt](PERSON)
 - My name is [Matthew](PERSON:matthew)
+- My name is [pablo](PERSON)
 
 ## intent:new_table
 - i want a new table
@@ -337,6 +350,7 @@
 - [Definition](training_type:definition)
 - I want to [define](training_type:definition) my body
 - I want to [tone](training_type:volume) my body
+- I am looking to [define](training_type:definition) my muscles
 
 ## intent:user_wants_to_join
 - Hey I want to join
@@ -378,6 +392,9 @@
 ## synonym:1999-03-23T00:00:00.000+01:00
 - in March 23 1999
 
+## synonym:2019-06-26T00:00:00.000+02:00
+- June the 26th
+
 ## synonym:2019-07-30T08:00:00.000+02:00
 - 8 am
 
@@ -397,7 +414,11 @@
 - define my muscles
 
 ## synonym:diet
+- Diets
 - diets
+
+## synonym:exercise
+- Exercises
 
 ## synonym:female
 - {"user_gender": "female"}
@@ -423,6 +444,7 @@
 - Muscle gain
 - gain some mass
 - get bigger
+- tone
 - gain some muscle
 
 ## synonym:weight_loss

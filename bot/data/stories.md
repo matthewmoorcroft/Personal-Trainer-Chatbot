@@ -1559,3 +1559,95 @@
     - slot{"user_gender": "male"}
     - slot{"user_id": "1"}
     - utter_dont_understand
+
+## Generated Story -2419908462534895410
+* greet
+    - action_check_profile
+    - slot{"user_exists": false}
+    - slot{"user_name": null}
+    - slot{"measure_user": false}
+    - slot{"user_gender": null}
+    - slot{"user_id": "0"}
+    - utter_unknown
+* affirm
+    - utter_ask_name
+* name_confirmation{"PERSON": "pablo"}
+    - slot{"PERSON": "pablo"}
+    - action_set_name
+    - slot{"user_name": "Pablo"}
+    - utter_nice_name
+    - utter_gender_confirmation
+* gender_confirmation{"user_gender": "male"}
+    - slot{"user_gender": "male"}
+    - utter_birthdate
+* confirm_birthdate{"DATE": "the 26 of June 1995", "time": "1995-06-26T00:00:00.000+02:00"}
+    - slot{"time": "1995-06-26T00:00:00.000+02:00"}
+    - action_set_birthdate
+    - slot{"birthdate": "1995-06-26"}
+    - utter_training_type
+* training_confirmation{"training_type": "definition"}
+    - slot{"training_type": "definition"}
+    - utter_reinforce_objective
+    - utter_do_you_want_routine
+* affirm
+    - action_confirm_user_wants_routine
+    - slot{"wants_routine": true}
+    - utter_reminder_routine
+    - utter_do_you_want_diets
+* affirm
+    - action_confirm_user_wants_diets
+    - slot{"wants_diets": true}
+    - utter_confirm_diets
+    - utter_track_progress
+* affirm
+    - action_confirm_user_wants_measurements
+    - slot{"measure_user": true}
+    - action_add_user
+    - slot{"user_id": 20}
+    - utter_ask_measure_now
+* affirm
+    - utter_ask_eaten
+* deny
+    - measurement_form
+    - form{"name": "measurement_form"}
+    - slot{"requested_slot": "weight"}
+* form: add_weight{"number": "84", "QUANTITY": "84 kg"}
+    - slot{"number": "84"}
+    - form: measurement_form
+    - slot{"weight": "84"}
+    - slot{"requested_slot": "bodyfatratio"}
+* form: add_bodyfatratio{"number": 13, "PERCENT": "13%"}
+    - slot{"number": 13}
+    - form: measurement_form
+    - slot{"bodyfatratio": ["13", 13]}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_welcome
+* add_weight{"number": "82", "QUANTITY": "82 Kg"}
+    - slot{"number": "82"}
+    - action_add_weight
+    - slot{"weight": "82"}
+    - undo
+    - measurement_form
+    - form{"name": "measurement_form"}
+    - slot{"weight": "84"}
+    - slot{"bodyfatratio": ["13", 13]}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - undo
+    - undo
+    - measurement_form
+    - form{"name": "measurement_form"}
+    - slot{"weight": "84"}
+    - slot{"bodyfatratio": ["13", 13]}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - undo
+    - undo
+    - undo
+    - measurement_form
+    - form{"name": "measurement_form"}
+    - slot{"weight": "84"}
+    - slot{"bodyfatratio": ["13", 13]}
+    - form{"name": null}
+    - slot{"requested_slot": null}
