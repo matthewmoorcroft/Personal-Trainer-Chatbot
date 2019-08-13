@@ -148,7 +148,6 @@ templates:
   - text: You are already a part of the club
   utter_ask_bodyfatratio:
   - image: resources/male_body_fat.png
-    image: resources/female_body_fat.png
     text: What is the porcentage of bodyfatratio
   utter_ask_eaten:
   - text: Perfect, have you eaten anything yet?
