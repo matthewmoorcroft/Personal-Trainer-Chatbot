@@ -147,7 +147,7 @@ templates:
   utter_already_in:
   - text: You are already a part of the club
   utter_ask_bodyfatratio:
-  - image: http://localhost:5089/photo?name=male_body_fat.jpg&type=jpeg
+  - image: https://i.imgur.com/nGF1K8f.jpg
     text: What is the porcentage of bodyfatratio
   utter_ask_eaten:
   - text: Perfect, have you eaten anything yet?
