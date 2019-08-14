@@ -141,7 +141,7 @@ class MeasurementForm(FormAction):
         db = Database.get_instance()
         db.add_measurements(user_id, weight, bodyfatratio)
         # utter submit template
-        return []
+        return [SlotSet("weight", None), SlotSet("bodyfatratio", None)]
 
 
 class SetName(Action):
