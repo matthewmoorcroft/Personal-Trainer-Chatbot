@@ -152,11 +152,27 @@ There are many platforms to build chatbots, with their own features. Below there
 \end{table}
  
 
-\subsection{DialogFlow}\label{sec:chap3_pla_rasa}
+\subsection{DialogFlow}\label{sec:chap3_dialog}
 
+Dialogflow is Google’s solution for chatbots. It is a framework that uses Google’s ML expertise and offers the user an attractive and intuitive web design. It let’s the user create a chatbot that can interpret text and voice.\\
+The difference between Dialogflow and Rasa is that the latter gives the developer more freedom when creating the brains of the chatbot, this can be good or bad. For it to be good, it requires lots of data and knowledge in the field. The advantage Dialogflow has over Rasa for less technical people, is that everything done with the NLU Engine is mostly done already, that leaves the developers with teaching the bot how they want it to perform.\cite{dialogflow}\\
 
+The core functionality is composed of several components:\\
+\begin{itemize}
+	\item {\textbf{Events:} These are actions that are taken based on the intent, they depend on what the developer wants to do with the chatbot.}
+	\item {\textbf{Entities:} Like many chatbot frameworks, entities are the information that the bot must extract from a phrase.}
+	\item {\textbf{Context:} In Dialogflow there are two types of context, input context and output context.\\
+			\begin{itemize}
+				\item {Input Context is a required condition that must be set in in order to trigger the intent. An example would be after setting one alarm, the user asks to set another one. If it wasn’t for the previous context the chatbot would have a hard time understanding it.}
+				\item {Output Context is what the intent sets after being triggered for the chatbot to understand what has happened before.}
+			\end{itemize}
+			}
+	\item {\textbf{Intents:} The action the user wants to perform. In Dialogflow all intents are managed with an interface where the developers add the intent it wants predicted and chooses what context, event or entities they want extracted.}
+\end{itemize}
 
-\subsection{Rasa}\label{sec:chap3_pla_dia}
+\clearpage
+
+\subsection{Rasa}\label{sec:chap3_rasa}
 
 \begin{center}
 	\begin{figure}[h!]
@@ -167,4 +183,83 @@ There are many platforms to build chatbots, with their own features. Below there
 	\end{figure}
 \end{center}
 
-\cite{rasa}
+Rasa is an open source platform that offers several tools to build a contextual chatbot, in other words, a bot that can maintain a history of what the user says.\\
+The reason for choosing this platform to build the chatbot is that it is open source, free and has the features required, which are:
+
+\begin{itemize}
+	\item Option to choose a customized pipeline, modifying it to improve the bot’s accuracy.
+	\item Tools to build the chatbot with pretrained entities or custom ones.
+	\item Built in system to maintain the context in a conversation.
+	\item Tool that allows the user to teach the chatbot through conversation.
+	\item Ability to connect to messaging applications.
+	\item Tool to create custom actions to certain intents.
+	\item Ability of using reminders to send messages to user’s at certain times.
+\end{itemize}
+	
+The problem with using this solution is that you are limited by what is available and what functionality you can add, another limitation compared to Dialogflow is that the only support you can get comes from the users, this isn’t to helpful when you need urgent assistance as you have to wait for a user to answer. Even though there is documentation to assist developers when creating the chatbot the documentation lacks many details on how many things are done and. what the best practices are. This depending on how much Rasa grows, might improve over time.\\
+There are two main components in rasa, NLU and CORE, each can work independently if the client’s requirements needs it or they can work together. We will explain how each component works.\cite{rasa}
+
+\subsubsection{NLU}\label{sec:chap3_rasa_nlu}
+
+Rasa NLU is an open-source natural language processing tool for intent classification and entity extraction in chatbots.  From the user’s message it translates it to a JSON data object with the intent predicted and the entities extracted from the message.\\
+
+For example, from the following message it returns the data structure shown below. With intent, search\_restaurant and entities cuisine and location.
+
+\begin{lstlisting}
+message = "I am looking for a Mexican restaurant in the center of town"
+
+response = {
+	"intent": "search_restaurant",
+	"entities": {
+		"cuisine" : "Mexican",
+		"location" : "center"
+	}
+}
+
+\end{lstlisting}
+
+The benefits of Rasa NLU when comparing it to Dialogflow is that you can choose your own pipeline. A pipeline is a series of components that together create the Natural Language Processor. There are components for intent classification, components for entity extraction and preprocessing. Each component sends it’s output to the next output to extract all relevant information from the message, so even though there are several components there will only be one output as shown below.
+
+\begin{center}
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.4]{./images/3-rasa-pipe}
+		\caption{Rasa Pipeline}
+		\label{rasa_pipe}
+	\end{figure}
+\end{center}
+
+There are two main pipelines already built and ready to use with Rasa.
+\begin{itemize}
+	\item {\textbf{pretrained\_embeddings\_spacy:} This pipeline comes with the word vectors, relation between words in a given context, already trained which makes this a very good pipeline for a short training list, less than 1000.}
+	\item {\textbf{supervised\_embeddings:} This is different than the pipeline above in the way that it isn’t pretrained which means that it will create the word vectors based on the dataset available, this is only recommended when a larger dataset is available as it requires a lot of data to interpret it correctly
+		}
+\end{itemize}
+There are custom pipelines, where you create it based on what components the developer wants to have. Adding components for sentiment analysis or different components to classify intents.
+
+\subsubsection{CORE}\label{sec:chap3_rasa_core}
+
+Rasa Core is a dialogue engine used for building virtual assistants, it has several parts that makes treating conversations easier.
+\begin{itemize}
+	\item {\textbf{Stories:} This is the main component of the core, it is a representation of the conversation flow, with intents and actions. This teaches the bot to know what actions to perform depending on what the user says. Below there is an example of how a story looks like.
+	\begin{lstlisting}
+	## story_07715946    <!-- name of the story - just for debugging -->
+	* greet
+	- action_ask_howcanhelp
+	* inform{"location": "rome", "price": "cheap"}  <!-- user utterance, in format intent{entities} -->
+	- action_on_it
+	- action_ask_cuisine
+	* inform{"cuisine": "spanish"}
+	- action_ask_numpeople        <!-- action that the bot should execute -->
+	* inform{"people": "six"}
+	- action_ack_dosearch
+	
+	\end{lstlisting}
+	}
+	\item {\textbf{Slots:} This is the chatbots memory, it is a way of controlling the context of the conversation as the bot can remember what information the user has said previously and guide the user and/or perform some action based on the information.}
+	\item {\textbf{Forms:} A very useful tool that allows the bot to extract information from the user, the difference with setting the slots is that with forms it is quicker to setup for when the bot needs several elements of information as it checks if the user has said any relevant information in the message. For the case, “I want to book a Chinese restaurant for 8” the form will extract “Chinese” and “8” and will only ask the user for the missing information for the booking.}
+	\item {\textbf{Actions:} This is something performed in the background that may be search something in a DB, call an API or setting slots.}
+	\item {\textbf{Interactive learning:} When adding more complexity to the chatbot this becomes a very useful way of training it as the developer maintains a conversation with the bot and teaches it what to do depending on the conversation flow.}
+\end{itemize}
+
+

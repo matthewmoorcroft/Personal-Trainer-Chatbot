@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.20)  6 AUG 2019 14:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.20)  13 AUG 2019 21:30
 entering extended mode
 **./main.tex
 (main.tex
@@ -762,10 +762,10 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 \barlength=\skip193
 
 
-Class memoir Warning: \marginparsep is zero or negative on input line 83.
+Class memoir Warning: \marginparsep is zero or negative on input line 84.
 
 
-Class memoir Warning: \marginparwidth is zero or negative on input line 83.
+Class memoir Warning: \marginparwidth is zero or negative on input line 84.
 
 
 ******************************************************
@@ -801,21 +801,21 @@ LaTeX Warning: Label `chap:8' multiply defined.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 106.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 107.
  ("C:\Users\matth\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -835,7 +835,7 @@ ii"
 \everyMPtoPDFconversion=\toks30
 )
 \AtBeginShipoutBox=\box63
-Package hyperref Info: Link coloring OFF on input line 106.
+Package hyperref Info: Link coloring OFF on input line 107.
 
 ("C:\Users\matth\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.s
 ty"
@@ -849,10 +849,10 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 Redoing nameref's sectioning
 Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 106.
-LaTeX Info: Redefining \ref on input line 106.
-LaTeX Info: Redefining \pageref on input line 106.
-LaTeX Info: Redefining \nameref on input line 106.
+LaTeX Info: Redefining \nameref on input line 107.
+LaTeX Info: Redefining \ref on input line 107.
+LaTeX Info: Redefining \pageref on input line 107.
+LaTeX Info: Redefining \nameref on input line 107.
 (main.out) (main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
@@ -913,7 +913,7 @@ cudo.jpg>])pdfTeX warning (ext4): destination with the same identifier (name{pa
 ge.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.110 	\clearpage\null\newpage
+l.111 	\clearpage\null\newpage
                                [1
 
 
@@ -1024,7 +1024,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--3
 
  []
 
-<./images/2-new-year-exercise.png, id=187, 466.74374pt x 240.14719pt>
+<./images/2-new-year-exercise.png, id=189, 466.74374pt x 240.14719pt>
 File: ./images/2-new-year-exercise.png Graphic file (type png)
 <use ./images/2-new-year-exercise.png>
 Package pdftex.def Info: ./images/2-new-year-exercise.png  used on input line 1
@@ -1037,7 +1037,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
-<./images/2-new-year-logs.png, id=196, 622.325pt x 634.37pt>
+<./images/2-new-year-logs.png, id=198, 622.325pt x 634.37pt>
 File: ./images/2-new-year-logs.png Graphic file (type png)
 <use ./images/2-new-year-logs.png>
 Package pdftex.def Info: ./images/2-new-year-logs.png  used on input line 22.
@@ -1057,7 +1057,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--6
 
  []
 
-<./images/3-mach-chat-trend.png, id=212, 733.23938pt x 285.31593pt>
+<./images/3-mach-chat-trend.png, id=214, 733.23938pt x 285.31593pt>
 File: ./images/3-mach-chat-trend.png Graphic file (type png)
 <use ./images/3-mach-chat-trend.png>
 Package pdftex.def Info: ./images/3-mach-chat-trend.png  used on input line 10.
@@ -1085,7 +1085,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--39
 
  []
 
-<./images/3-ai-areas.jpeg, id=220, 702.625pt x 485.815pt>
+<./images/3-ai-areas.jpeg, id=222, 702.625pt x 485.815pt>
 File: ./images/3-ai-areas.jpeg Graphic file (type jpg)
 <use ./images/3-ai-areas.jpeg>
 Package pdftex.def Info: ./images/3-ai-areas.jpeg  used on input line 43.
@@ -1123,7 +1123,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
  []
 
-<./images/3-chatbot-stemming.jpg, id=231, 722.7pt x 542.025pt>
+<./images/3-chatbot-stemming.jpg, id=233, 722.7pt x 542.025pt>
 File: ./images/3-chatbot-stemming.jpg Graphic file (type jpg)
 <use ./images/3-chatbot-stemming.jpg>
 Package pdftex.def Info: ./images/3-chatbot-stemming.jpg  used on input line 83
@@ -1154,7 +1154,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 112--113
 
  []
 
-<./images/3-cha-struct.png, id=243, 602.25pt x 370.38374pt>
+<./images/3-cha-struct.png, id=245, 602.25pt x 370.38374pt>
 File: ./images/3-cha-struct.png Graphic file (type png)
 <use ./images/3-cha-struct.png>
 Package pdftex.def Info: ./images/3-cha-struct.png  used on input line 117.
@@ -1165,37 +1165,369 @@ Underfull \hbox (badness 10000) in paragraph at lines 125--126
  []
 
 [23 <./images/3-cha-struct.png>]
-<./images/3-rasa-log.png, id=249, 1204.5pt x 632.3625pt>
+Underfull \hbox (badness 10000) in paragraph at lines 157--159
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--162
+
+ []
+
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 164--166
+
+ []
+
+[25]
+<./images/3-rasa-log.png, id=263, 1204.5pt x 632.3625pt>
 File: ./images/3-rasa-log.png Graphic file (type png)
 <use ./images/3-rasa-log.png>
-Package pdftex.def Info: ./images/3-rasa-log.png  used on input line 164.
+Package pdftex.def Info: ./images/3-rasa-log.png  used on input line 180.
 (pdftex.def)             Requested size: 481.79147pt x 252.94052pt.
 
-Overfull \hbox (38.79147pt too wide) in paragraph at lines 164--165
+Overfull \hbox (38.79147pt too wide) in paragraph at lines 180--181
+ [][] 
+ []
+
+[26
+
+ <./images/3-rasa-log.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 204--205
+
+ []
+
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 208.
+
+("C:\Users\matth\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmtt.fd"
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+
+Package xcolor Warning: Incompatible color definition on input line 209.
+
+
+Package xcolor Warning: Incompatible color definition on input line 209.
+
+
+Package xcolor Warning: Incompatible color definition on input line 209.
+
+
+Package xcolor Warning: Incompatible color definition on input line 209.
+
+
+Package xcolor Warning: Incompatible color definition on input line 209.
+
+
+Package xcolor Warning: Incompatible color definition on input line 209.
+
+
+Package xcolor Warning: Incompatible color definition on input line 209.
+
+
+Package xcolor Warning: Incompatible color definition on input line 209.
+
+
+Package xcolor Warning: Incompatible color definition on input line 209.
+
+
+Package xcolor Warning: Incompatible color definition on input line 209.
+
+
+Package xcolor Warning: Incompatible color definition on input line 209.
+
+
+Package xcolor Warning: Incompatible color definition on input line 209.
+
+
+Package xcolor Warning: Incompatible color definition on input line 209.
+
+
+Package xcolor Warning: Incompatible color definition on input line 209.
+
+
+Package xcolor Warning: Incompatible color definition on input line 209.
+
+
+Package xcolor Warning: Incompatible color definition on input line 209.
+
+
+Package xcolor Warning: Incompatible color definition on input line 209.
+
+
+Package xcolor Warning: Incompatible color definition on input line 209.
+
+
+Package xcolor Warning: Incompatible color definition on input line 209.
+
+
+Package xcolor Warning: Incompatible color definition on input line 209.
+
+
+Package xcolor Warning: Incompatible color definition on input line 209.
+
+
+Package xcolor Warning: Incompatible color definition on input line 209.
+
+
+Package xcolor Warning: Incompatible color definition on input line 209.
+
+
+Package xcolor Warning: Incompatible color definition on input line 209.
+
+
+Package xcolor Warning: Incompatible color definition on input line 209.
+
+
+Package xcolor Warning: Incompatible color definition on input line 212.
+
+
+Package xcolor Warning: Incompatible color definition on input line 212.
+
+
+Package xcolor Warning: Incompatible color definition on input line 212.
+
+
+Package xcolor Warning: Incompatible color definition on input line 212.
+
+
+Package xcolor Warning: Incompatible color definition on input line 212.
+
+
+Package xcolor Warning: Incompatible color definition on input line 212.
+
+
+Package xcolor Warning: Incompatible color definition on input line 212.
+
+
+Package xcolor Warning: Incompatible color definition on input line 213.
+
+
+Package xcolor Warning: Incompatible color definition on input line 213.
+
+
+Package xcolor Warning: Incompatible color definition on input line 213.
+
+
+Package xcolor Warning: Incompatible color definition on input line 213.
+
+
+Package xcolor Warning: Incompatible color definition on input line 214.
+
+
+Package xcolor Warning: Incompatible color definition on input line 214.
+
+
+Package xcolor Warning: Incompatible color definition on input line 214.
+
+
+Package xcolor Warning: Incompatible color definition on input line 214.
+
+
+Package xcolor Warning: Incompatible color definition on input line 214.
+
+
+Package xcolor Warning: Incompatible color definition on input line 214.
+
+
+Package xcolor Warning: Incompatible color definition on input line 214.
+
+
+Package xcolor Warning: Incompatible color definition on input line 215.
+
+
+Package xcolor Warning: Incompatible color definition on input line 215.
+
+
+Package xcolor Warning: Incompatible color definition on input line 215.
+
+
+Package xcolor Warning: Incompatible color definition on input line 215.
+
+
+Package xcolor Warning: Incompatible color definition on input line 215.
+
+
+Package xcolor Warning: Incompatible color definition on input line 215.
+
+
+Package xcolor Warning: Incompatible color definition on input line 215.
+
+<./images/3-rasa-pipe.png, id=270, 1206.5075pt x 828.09375pt>
+File: ./images/3-rasa-pipe.png Graphic file (type png)
+<use ./images/3-rasa-pipe.png>
+Package pdftex.def Info: ./images/3-rasa-pipe.png  used on input line 226.
+(pdftex.def)             Requested size: 482.59445pt x 331.23163pt.
+
+Overfull \hbox (39.59445pt too wide) in paragraph at lines 226--227
  [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (chapters/chapter4-solution_proposed.tex [24] [25 <./images/3-rasa-log.png (P
-NG copy)>]) (chapters/chapter5-planning_and_budget.tex [26
+[27]
+
+Package xcolor Warning: Incompatible color definition on input line 246.
+
+
+Package xcolor Warning: Incompatible color definition on input line 246.
+
+
+Package xcolor Warning: Incompatible color definition on input line 246.
+
+
+Package xcolor Warning: Incompatible color definition on input line 246.
+
+
+Package xcolor Warning: Incompatible color definition on input line 246.
+
+
+Package xcolor Warning: Incompatible color definition on input line 246.
+
+
+Package xcolor Warning: Incompatible color definition on input line 246.
+
+
+Package xcolor Warning: Incompatible color definition on input line 246.
+
+
+Package xcolor Warning: Incompatible color definition on input line 246.
+
+
+Package xcolor Warning: Incompatible color definition on input line 246.
+
+
+Package xcolor Warning: Incompatible color definition on input line 246.
+
+
+Package xcolor Warning: Incompatible color definition on input line 246.
+
+
+Package xcolor Warning: Incompatible color definition on input line 246.
+
+
+Package xcolor Warning: Incompatible color definition on input line 246.
+
+
+Package xcolor Warning: Incompatible color definition on input line 246.
+
+
+Package xcolor Warning: Incompatible color definition on input line 246.
+
+
+Package xcolor Warning: Incompatible color definition on input line 246.
+
+
+Package xcolor Warning: Incompatible color definition on input line 246.
+
+
+Package xcolor Warning: Incompatible color definition on input line 246.
+
+
+Package xcolor Warning: Incompatible color definition on input line 246.
+
+
+Package xcolor Warning: Incompatible color definition on input line 246.
+
+
+Package xcolor Warning: Incompatible color definition on input line 246.
+
+
+Package xcolor Warning: Incompatible color definition on input line 246.
+
+
+Package xcolor Warning: Incompatible color definition on input line 246.
+
+
+Package xcolor Warning: Incompatible color definition on input line 246.
+
+
+Package xcolor Warning: Incompatible color definition on input line 249.
+
+
+Package xcolor Warning: Incompatible color definition on input line 249.
+
+
+Package xcolor Warning: Incompatible color definition on input line 249.
+
+
+Package xcolor Warning: Incompatible color definition on input line 249.
+
+
+Package xcolor Warning: Incompatible color definition on input line 249.
+
+
+Package xcolor Warning: Incompatible color definition on input line 249.
+
+
+Package xcolor Warning: Incompatible color definition on input line 249.
+
+
+Package xcolor Warning: Incompatible color definition on input line 249.
+
+
+Package xcolor Warning: Incompatible color definition on input line 249.
+
+
+Package xcolor Warning: Incompatible color definition on input line 249.
+
+
+Package xcolor Warning: Incompatible color definition on input line 249.
+
+
+Package xcolor Warning: Incompatible color definition on input line 249.
+
+
+Package xcolor Warning: Incompatible color definition on input line 252.
+
+
+Package xcolor Warning: Incompatible color definition on input line 252.
+
+
+Package xcolor Warning: Incompatible color definition on input line 252.
+
+
+Package xcolor Warning: Incompatible color definition on input line 252.
+
+
+Package xcolor Warning: Incompatible color definition on input line 252.
+
+
+Package xcolor Warning: Incompatible color definition on input line 252.
+
+
+Package xcolor Warning: Incompatible color definition on input line 254.
+
+
+Package xcolor Warning: Incompatible color definition on input line 254.
+
+
+Package xcolor Warning: Incompatible color definition on input line 254.
+
+
+Package xcolor Warning: Incompatible color definition on input line 254.
+
+
+Package xcolor Warning: Incompatible color definition on input line 254.
+
+
+Package xcolor Warning: Incompatible color definition on input line 254.
+
+[28 <./images/3-rasa-pipe.png>]) (chapters/chapter4-solution_proposed.tex
+[29]) (chapters/chapter5-planning_and_budget.tex [30
 
 ])
-(chapters/chapter6-socioeconomic_environment.tex [27
+(chapters/chapter6-socioeconomic_environment.tex [31
 
 ])
-(chapters/chapter7-conclusions.tex [28
+(chapters/chapter7-conclusions.tex [32
 
 ]) (chapters/references.tex (main.bbl
-[29
+[33
 
 ]
 bibitemlist
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 7.
-("C:\Users\matth\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmtt.fd"
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
+
 Underfull \hbox (badness 7116) in paragraph at lines 4--8
 \T1/lmr/m/n/12 31 Au-gust, 2018.  Avail-able at []$\T1/lmtt/m/n/12 https : / / 
 www . citylab . com / life / 2019 /
@@ -1208,9 +1540,9 @@ weight-[]loss-[]data /
  []
 
 
-Underfull \hbox (badness 2460) in paragraph at lines 15--19
-[]\T1/lmr/m/n/12 C. Ku-mar, ``"ar-ti-fi-cial in-tel-li-gence: Def-i-ni-tion, ty
-pes, ex-am-ples, tech-nolo-
+Underfull \hbox (badness 2662) in paragraph at lines 15--19
+[]\T1/lmr/m/n/12 C. Ku-mar, ``Ar-ti-fi-cial in-tel-li-gence: Def-i-ni-tion, typ
+es, ex-am-ples, tech-nolo-
  []
 
 
@@ -1221,8 +1553,8 @@ hnologies-[]962ea75c7b9b$[]\T1/lmr/m/n/12 .
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 21--24
-[]\T1/lmr/m/n/12 H. Jabeen, ``"stem-ming and lemma-ti-za-tion in python",'' 23 
-Oc-to-ber,
+[]\T1/lmr/m/n/12 H. Jabeen, ``Stem-ming and lemma-ti-za-tion in python,'' 23 Oc
+-to-ber,
  []
 
 
@@ -1231,7 +1563,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--24
 mp . com / community / tutorials /
  []
 
-)) (chapters/appendix.tex) [30
+)) (chapters/appendix.tex) [34
 
 ]
 \tf@toc=\write5
@@ -1243,27 +1575,27 @@ mp . com / community / tutorials /
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 157.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 157.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 158.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 158.
  (main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 157.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 157.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 158.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 158.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: EBE65075232D9A804632B44CCF7166D6;1148.
+(rerunfilecheck)             Checksum: FB94EC27253E19090FC54DED9405C04D;1148.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 157.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 158.
  ) 
 Here is how much of TeX's memory you used:
- 12890 strings out of 492946
- 194438 string characters out of 3126266
+ 13270 strings out of 492946
+ 197848 string characters out of 3126266
  510463 words of memory out of 3000000
- 16498 multiletter control sequences out of 15000+200000
- 76928 words of font info for 53 fonts, out of 3000000 for 9000
+ 16846 multiletter control sequences out of 15000+200000
+ 80237 words of font info for 55 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,17n,49p,810b,457s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,17n,49p,810b,1168s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/matth/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.en
 c}{C:/Users/matth/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-maths
 y.enc}<C:/Users/matth/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/l
@@ -1273,10 +1605,11 @@ blic/lm/lmr12.pfb><C:/Users/matth/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 /public/lm/lmr17.pfb><C:/Users/matth/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
 pe1/public/lm/lmri12.pfb><C:/Users/matth/AppData/Local/Programs/MiKTeX 2.9/font
 s/type1/public/lm/lmsy10.pfb><C:/Users/matth/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/public/lm/lmtt12.pfb>
-Output written on main.pdf (31 pages, 860590 bytes).
+fonts/type1/public/lm/lmtt10.pfb><C:/Users/matth/AppData/Local/Programs/MiKTeX 
+2.9/fonts/type1/public/lm/lmtt12.pfb>
+Output written on main.pdf (35 pages, 947764 bytes).
 PDF statistics:
- 337 PDF objects out of 1000 (max. 8388607)
- 72 named destinations out of 1000 (max. 500000)
- 201 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 393 PDF objects out of 1000 (max. 8388607)
+ 101 named destinations out of 1000 (max. 500000)
+ 206 words of extra memory for PDF output out of 10000 (max. 10000000)
 

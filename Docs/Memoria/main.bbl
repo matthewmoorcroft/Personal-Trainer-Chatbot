@@ -1,29 +1,33 @@
 \begin{thebibliography}{1}
 
 \bibitem{newyear}
-L.~Poon, ``"the rise and fall of new year’s fitness resolutions, in 5
-  charts",'' 31 August, 2018.
+L.~Poon, ``The rise and fall of new year’s fitness resolutions, in 5
+  charts,'' 31 August, 2018.
 \newblock Available at
   \url{https://www.citylab.com/life/2019/01/do-people-keep-new-years-resolution-fitness-weight-loss-data/579388/}.
 
 \bibitem{newyear_logs}
-T.~Nwazor, ``"4 reasons people quit on fitness goals",'' December, 2017.
+T.~Nwazor, ``4 reasons people quit on fitness goals,'' December, 2017.
 \newblock Available at
   \url{https://www.huffpost.com/entry/4-reasons-people-quit-on_b_10396016}.
 
 \bibitem{ai}
-C.~Kumar, ``"artificial intelligence: Definition, types, examples,
-  technologies",'' December, 2017.
+C.~Kumar, ``Artificial intelligence: Definition, types, examples,
+  technologies,'' December, 2017.
 \newblock Available at
   \url{https://medium.com/@chethankumargn/artificial-intelligence-definition-types-examples-technologies-962ea75c7b9b}.
 
 \bibitem{cha-stem}
-H.~Jabeen, ``"stemming and lemmatization in python",'' 23 October, 2018.
+H.~Jabeen, ``Stemming and lemmatization in python,'' 23 October, 2018.
 \newblock Available at
   \url{https://www.datacamp.com/community/tutorials/stemming-lemmatization-python}.
 
+\bibitem{dialogflow}
+D.~Team, ``Dialogflow.''
+\newblock Available at \url{https://dialogflow.com/}.
+
 \bibitem{rasa}
-R.~Team, ``"rasa open source".''
+R.~Team, ``Rasa open source.''
 \newblock Available at \url{https://rasa.com/}.
 
 \end{thebibliography}
