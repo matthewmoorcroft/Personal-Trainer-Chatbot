@@ -173,7 +173,7 @@ class GiveNewTable(Action):
             #                           image="http://40.118.95.153:5089/photo?name=exercise_routine.png&type=png")
             dispatcher.utter_template("utter_give_new_table", tracker)
         else:
-            dispatcher.utter_template("utter_give_new_table", tracker
+            dispatcher.utter_template("utter_give_new_table", tracker)
             # dispatcher.utter_attachment(
             #     "http://40.118.95.153:5089/photo?name=nutrition_diet.jpg&type=jpeg")
             # dispatcher.utter_template("utter_give_new_table", tracker)
@@ -222,12 +222,12 @@ class SetBirthdate(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        birthdate=tracker.get_slot("time")[0:10]
-        year=int(tracker.get_slot("time")[0:4])
+        birthdate = tracker.get_slot("time")[0:10]
+        year = int(tracker.get_slot("time")[0:4])
 
-        now=datetime.datetime.now()
-        current_year=int(now.year)
-        year_difference=current_year - year
+        now = datetime.datetime.now()
+        current_year = int(now.year)
+        year_difference = current_year - year
         if year_difference < 3:
             return []
 
@@ -242,16 +242,16 @@ class AddUser(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        user_name=tracker.get_slot("user_name")
-        birthdate=tracker.get_slot("birthdate")
-        user_gender=tracker.get_slot("user_gender")
-        telegram_id=tracker.sender_id
-        training_type=tracker.get_slot("training_type")
-        measure_user=tracker.get_slot("measure_user")
+        user_name = tracker.get_slot("user_name")
+        birthdate = tracker.get_slot("birthdate")
+        user_gender = tracker.get_slot("user_gender")
+        telegram_id = tracker.sender_id
+        training_type = tracker.get_slot("training_type")
+        measure_user = tracker.get_slot("measure_user")
 
-        db=Database.get_instance()
+        db = Database.get_instance()
         db.add_user(telegram_id, user_name, birthdate, user_gender, training_type, measure_user)
-        user_id=db.get_user_id(telegram_id)
+        user_id = db.get_user_id(telegram_id)
         return [SlotSet("user_id", user_id)]
 
 
@@ -263,16 +263,16 @@ class UpdateUser(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        user_name=tracker.get_slot("user_name")
-        birthdate=tracker.get_slot("birthdate")
-        user_gender=tracker.get_slot("user_gender")
-        telegram_id=tracker.sender_id
-        training_type=tracker.get_slot("training_type")
-        measure_user=tracker.get_slot("measure_user")
+        user_name = tracker.get_slot("user_name")
+        birthdate = tracker.get_slot("birthdate")
+        user_gender = tracker.get_slot("user_gender")
+        telegram_id = tracker.sender_id
+        training_type = tracker.get_slot("training_type")
+        measure_user = tracker.get_slot("measure_user")
 
-        db=Database.get_instance()
+        db = Database.get_instance()
         db.update_user(telegram_id, user_name, birthdate, user_gender, training_type, measure_user)
-        user_id=db.get_user_id(telegram_id)
+        user_id = db.get_user_id(telegram_id)
         return [SlotSet("user_id", user_id)]
 
 
@@ -284,8 +284,8 @@ class CheckProfile(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        db=Database.get_instance()
-        user_exists, user_id, user_name, user_gender, measure_user=db.check_user_exists(
+        db = Database.get_instance()
+        user_exists, user_id, user_name, user_gender, measure_user = db.check_user_exists(
             tracker.sender_id)
         return [SlotSet("user_exists", user_exists),
                 SlotSet("user_name", user_name),
@@ -302,7 +302,7 @@ class AddWeight(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        weight=tracker.get_slot("number")
+        weight = tracker.get_slot("number")
         return [SlotSet("weight", weight)]
 
 
@@ -314,7 +314,7 @@ class AddExercise(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        exercise=tracker.get_slot("number")
+        exercise = tracker.get_slot("number")
         return [SlotSet("exercise", exercise)]
 
 
@@ -326,8 +326,8 @@ class SendBodyfatratioImage(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        user_gender=tracker.get_slot("user_gender")
-        image=f"resources/{user_gender}_body_fat.png"
+        user_gender = tracker.get_slot("user_gender")
+        image = f"resources/{user_gender}_body_fat.png"
         dispatcher.utter_attachment(image)
         return []
 
@@ -406,10 +406,10 @@ class GetMeasurements(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        name=tracker.get_slot("user_name")
-        rand_response=self.responses[random.randrange(len(self.responses))]
+        name = tracker.get_slot("user_name")
+        rand_response = self.responses[random.randrange(len(self.responses))]
 
-        response=rand_response.replace("{user_name}", name)
+        response = rand_response.replace("{user_name}", name)
 
         dispatcher.utter_message(response)
 
