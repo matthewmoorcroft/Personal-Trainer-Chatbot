@@ -335,8 +335,8 @@ class ShowProgress(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        dispatcher.utter_template("utter_show_progress", tracker,
-                                  image="http://40.118.95.153:5089/photo?name=weight_bfr&type=png")
+        dispatcher.utter_attachment("http://40.118.95.153:5089/photo?name=weight_bfr.png&type=png")
+        dispatcher.utter_template("utter_show_progress", tracker)
 
         # db extract weights for every day/month/year
         # matplotlib image
