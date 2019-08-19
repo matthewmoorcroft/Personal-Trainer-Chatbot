@@ -275,6 +275,31 @@ class Database:
             print(e)
             return json.dumps({'result': "Error: Failed to add measurements"})
 
+    def extract_progress(user_id):
+        try:
+            cur = self.conn.cursor()
+
+            cur.execute("""SELECT measurement_date, weight,
+                           FROM core.weights
+                           WHERE id = %(user_id)s ORDER BY measurement_date ASC
+                            """, {
+                'user_id': user_id
+            })
+
+            row = cur.fetchone()
+
+            if cur.rowcount == 0:
+                cur.close()
+                return 0
+            else:
+                cur.close()
+                return row[0]
+
+        except Exception as e:
+
+            print(e)
+            return 0
+
     def delete_user(self, user_id):
 
         cur = self.conn.cursor()

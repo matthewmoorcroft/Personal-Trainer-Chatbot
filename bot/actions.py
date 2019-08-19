@@ -317,6 +317,9 @@ class ShowProgress(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         dispatcher.utter_message("Working on showing your progress")
+        dispatcher.utter_template("utter_show_progress", tracker,
+                                  image="http://40.118.95.153:5089/photo?name=weight_bfr.png&type=png")
+
         # db extract weights for every day/month/year
         # matplotlib image
         # send image

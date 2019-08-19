@@ -226,3 +226,5 @@ templates:
   - text: That will be all for now {user_name}
   utter_your_welcome:
   - text: You are welcome
+  utter_show_progress:
+  - text: {user_name}, here is a graph that shows your progress the last 12 months.
