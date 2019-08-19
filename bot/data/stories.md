@@ -229,7 +229,7 @@
   - slot{"user_gender": "male"}
   - slot{"measure_user": true}
   - slot{"user_id": "1"}
-  - utter_give_new_table
+  - action_give_new_table
 * thanks
   - utter_your_welcome
 
@@ -248,7 +248,7 @@
   - utter_table_type
 * confirm_table{"table_type": "diet"}
   - slot{"table_type":"diet"}
-  - utter_give_new_table
+  - action_give_new_table
 * thanks
     - utter_your_welcome
 * goodbye
@@ -286,7 +286,7 @@
     - slot{"user_gender": "male"}
     - slot{"measure_user": true}
     - slot{"user_id": "1"}
-    - utter_give_new_table
+    - action_give_new_table
 
 ## New diet table Unknown
 * new_table{"table_type": "diet"}
@@ -306,7 +306,7 @@
     - utter_table_type
 * new_table{"table_type": "diet"}
     - slot{"table_type": "diet"}
-    - utter_give_new_table
+    - action_give_new_table
 
 ## New exercise table Unknown without slot
 * new_table
@@ -1117,10 +1117,10 @@
     - utter_greet
 * confirm_table{"table_type": "exercise"}
     - slot{"table_type": "exercise"}
-    - utter_give_new_table
+    - action_give_new_table
 * new_table{"table_type": "diet"}
     - slot{"table_type": "diet"}
-    - utter_give_new_table
+    - action_give_new_table
 * thanks
     - utter_welcome
 
@@ -1137,7 +1137,7 @@
     - utter_table_type
 * new_table{"table_type": "diet"}
     - slot{"table_type": "diet"}
-    - utter_give_new_table
+    - action_give_new_table
 
 ## Generated Story -1133157421296206477
 * greet
@@ -1656,3 +1656,54 @@
     - slot{"requested_slot": null}
     - utter_measurements_taken
     - utter_welcome
+
+## Generated Story -5653403974401559365
+* greet
+    - action_check_profile
+    - slot{"user_exists": true}
+    - slot{"user_name": "Test"}
+    - slot{"measure_user": true}
+    - slot{"user_gender": "male"}
+    - slot{"user_id": "24"}
+    - utter_greet
+* show_my_progress
+    - action_show_progress
+
+## Generated Story 2891627600794298253
+* show_my_progress
+    - action_check_profile
+    - slot{"user_exists": true}
+    - slot{"user_name": "Test"}
+    - slot{"measure_user": true}
+    - slot{"user_gender": "male"}
+    - slot{"user_id": "24"}
+    - action_show_progress
+* new_table{"table_type": "exercise"}
+    - slot{"table_type": "exercise"}
+    - action_give_new_table
+
+## Generated Story -1312745178599623837
+* new_table{"table_type": "diet"}
+    - slot{"table_type": "diet"}
+    - action_check_profile
+    - slot{"user_exists": true}
+    - slot{"user_name": "Test"}
+    - slot{"measure_user": true}
+    - slot{"user_gender": "male"}
+    - slot{"user_id": "24"}
+    - action_give_new_table
+    - slot{"table_type": null}
+
+## Generated Story -7064794287057163275
+* new_table
+    - action_check_profile
+    - slot{"user_exists": true}
+    - slot{"user_name": "Test"}
+    - slot{"measure_user": true}
+    - slot{"user_gender": "male"}
+    - slot{"user_id": "24"}
+    - utter_table_type
+* confirm_table{"table_type": "diet"}
+    - slot{"table_type": "diet"}
+    - action_give_new_table
+    - slot{"table_type": null}

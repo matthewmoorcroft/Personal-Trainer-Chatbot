@@ -7,6 +7,7 @@ actions:
 - action_confirm_user_wants_diets
 - action_confirm_user_wants_measurements
 - action_confirm_user_wants_routine
+- action_give_new_table
 - action_send_bodyfatratio_photo
 - action_set_birthdate
 - action_set_name
@@ -40,6 +41,7 @@ actions:
 - utter_reinforce_objective
 - utter_reminder_measurement
 - utter_reminder_routine
+- utter_show_progress
 - utter_slots_values
 - utter_table_type
 - utter_track_progress
@@ -70,9 +72,12 @@ entities:
 forms:
 - measurement_form
 intents:
+- confirm_table
+- new_table
+- show_my_progress
+- greet
 - add_bodyfatratio
 - add_weight
-- greet
 - get_measurements
 - affirm
 - gender_confirmation
@@ -80,15 +85,12 @@ intents:
 - deny
 - confirm_birthdate
 - name_confirmation
-- confirm_table
 - help
 - user_wants_to_join
 - start
 - chitchat
-- show_my_progress
 - measurement_reminder
 - meal_eaten
-- new_table
 - start_training
 - goodbye
 - not_interested
@@ -211,6 +213,8 @@ templates:
       as you haven't eaten yet
   utter_reminder_routine:
   - text: Perfect, every month I will provide a routine for you to follow.
+  utter_show_progress:
+  - text: '{user_name}, here is a graph that shows your progress the last 12 months.'
   utter_slots_values:
   - text: "I am going to add these measurements:\n - weight: {weight}\n - bodyfatratio:{bodyfatratio}"
   utter_table_type:
@@ -226,5 +230,3 @@ templates:
   - text: That will be all for now {user_name}
   utter_your_welcome:
   - text: You are welcome
-  utter_show_progress:
-  - text: {user_name}, here is a graph that shows your progress the last 12 months.

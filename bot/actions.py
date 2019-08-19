@@ -157,6 +157,25 @@ class SetName(Action):
         return [SlotSet("user_name", user_name)]
 
 
+class GiveNewTable(Action):
+    def name(self):
+        return "action_give_new_table"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        table_type = tracker.get_slot("table_type")
+        if table_type == "exercise":
+            dispatcher.utter_template("utter_give_new_table", tracker,
+                                      image="http://40.118.95.153:5089/photo?name=exercise_routine.png&type=png")
+        else:
+            dispatcher.utter_template("utter_give_new_table", tracker,
+                                      image="http://40.118.95.153:5089/photo?name=nutrition_diet.jpg&type=jpeg")
+
+        return [SlotSet("table_type", None)]
+
+
 class ConfirmUserWantsRoutine(Action):
     def name(self):
         return "action_confirm_user_wants_routine"
@@ -316,7 +335,6 @@ class ShowProgress(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        dispatcher.utter_message("Working on showing your progress")
         dispatcher.utter_template("utter_show_progress", tracker,
                                   image="http://40.118.95.153:5089/photo?name=weight_bfr.png&type=png")
 

@@ -2,7 +2,7 @@
 - My new bodyfatratio is [18](number)%
 - [13](number)%
 - It is [15](number)%
-- [16](number)[16](number:16)%
+- [16](number)[16](number)%
 
 ## intent:add_weight
 - My weight is [87](number) Kg
@@ -129,6 +129,7 @@
 - [exercise](table_type)
 - [Exercises](table_type:exercise)
 - [Diets](table_type:diet)
+- A [diet](table_type) table
 
 ## intent:deny
 - Not yet
@@ -234,6 +235,7 @@
 - Hello
 - hey
 - hey
+- Hello
 
 ## intent:help
 - What can you do
@@ -296,12 +298,17 @@
 - Give me a new table
 - Can I get an [exercise](table_type) table too?
 - I would like a [diet](table_type) table
+- Give me a new [exercise](table_type) table
+- Give me a new [diet](table_type) table
+- Give me a new table
 
 ## intent:show_my_progress
 - Sam, show me how I am doing
 - What is my progress in the last 6 months
 - How much weight have I lost
 - what is my bodyfatratio
+- Show me my progress
+- Show my progress
 
 ## intent:start
 - /start
