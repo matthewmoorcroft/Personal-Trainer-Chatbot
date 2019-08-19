@@ -367,6 +367,33 @@
     - slot{"measure_user": "false"}
     - utter_no_measurements_selected
 
+    ## Generated Story 201719396436076367
+    * greet
+        - action_check_profile
+        - slot{"user_exists": true}
+        - slot{"user_name": "Test"}
+        - slot{"measure_user": true}
+        - slot{"user_gender": "male"}
+        - slot{"user_id": "24"}
+        - utter_greet
+    * get_measurements
+        - measurement_form
+        - form{"name": "measurement_form"}
+        - slot{"requested_slot": "weight"}
+    * form: add_weight{"number": "84", "QUANTITY": "84 kg"}
+        - slot{"number": "84"}
+        - form: measurement_form
+        - slot{"weight": "84"}
+        - slot{"requested_slot": "bodyfatratio"}
+    * form: add_bodyfatratio{"number": 16, "PERCENT": "16%"}
+        - slot{"number": 16}
+        - form: measurement_form
+        - slot{"bodyfatratio": "16"}
+        - slot{"weight": null}
+        - slot{"bodyfatratio": null}
+        - form{"name": null}
+        - slot{"requested_slot": null}
+        - utter_measurements_taken
 
 ## New user Happy Path
 * greet
@@ -419,6 +446,7 @@
     - measurement_form
     - form{"name": "measurement_form"}
     - form{"name": null}
+    - utter_measurements_taken
     - utter_welcome
 
 ## New user Happy Path II
@@ -577,6 +605,7 @@
     - slot{"bodyfatratio": "19"}
     - form{"name": null}
     - slot{"requested_slot": null}
+    - utter_measurements_taken
     - utter_welcome
 
 ## Don't want to join
@@ -653,6 +682,7 @@
     - slot{"bodyfatratio": ["19", "19"]}
     - form{"name": null}
     - slot{"requested_slot": null}
+    - utter_measurements_taken
     - utter_welcome
 
 ## New user 2
@@ -882,6 +912,7 @@
     - slot{"bodyfatratio": "12"}
     - form{"name": null}
     - slot{"requested_slot": null}
+    - utter_measurements_taken
     - utter_welcome
 
 ## New user 6
@@ -1520,6 +1551,7 @@
     - slot{"bodyfatratio": ["19", "19"]}
     - form{"name": null}
     - slot{"requested_slot": null}
+    - utter_measurements_taken
     - utter_welcome
 
 ## Generated Story 724132224463034230
@@ -1622,4 +1654,5 @@
     - slot{"bodyfatratio": ["13", 13]}
     - form{"name": null}
     - slot{"requested_slot": null}
+    - utter_measurements_taken
     - utter_welcome

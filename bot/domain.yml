@@ -70,10 +70,11 @@ entities:
 forms:
 - measurement_form
 intents:
-- affirm
-- greet
 - add_bodyfatratio
 - add_weight
+- greet
+- get_measurements
+- affirm
 - gender_confirmation
 - training_confirmation
 - deny
@@ -83,7 +84,6 @@ intents:
 - help
 - user_wants_to_join
 - start
-- get_measurements
 - chitchat
 - show_my_progress
 - measurement_reminder
@@ -147,7 +147,7 @@ templates:
   utter_already_in:
   - text: You are already a part of the club
   utter_ask_bodyfatratio:
-  - image: https://i.imgur.com/nGF1K8f.jpg
+  - image: http://40.118.95.153:5089/photo?name=male_body_fat.jpg&type=jpeg
     text: What is the porcentage of bodyfatratio
   utter_ask_eaten:
   - text: Perfect, have you eaten anything yet?
@@ -193,10 +193,10 @@ templates:
   utter_greet:
   - text: Hey {user_name}! Tell me what you need.
   utter_measurements_taken:
-  - text: Great, measurements taken. Now you can add your weight and bodyfatratio
-      measurements
+  - text: Great, measurements taken. Add again your measurements tommorrow.
   utter_nice_name:
-  - text: So {user_name}, nice name. Let's get started, before anything I have to ask for some details.
+  - text: So {user_name}, nice name. Let's get started, before anything I have to
+      ask for some details.
   utter_no_measurements_selected:
   - text: Sorry, you have chosen not to take any measurements
   utter_not_interested:

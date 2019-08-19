@@ -2,6 +2,7 @@
 - My new bodyfatratio is [18](number)%
 - [13](number)%
 - It is [15](number)%
+- [16](number)[16](number:16)%
 
 ## intent:add_weight
 - My weight is [87](number) Kg
@@ -11,6 +12,7 @@
 - I weigh [84](number) kg
 - I weigh [84](number) kg
 - I weigh [82](number) Kg
+- [84](number) kg
 
 ## intent:affirm
 - Yes
@@ -196,6 +198,7 @@
 - I want to measure myself
 - Get my measurements
 - get my measurements
+- take my measurements
 
 ## intent:goodbye
 - See ya
@@ -229,6 +232,7 @@
 - Good evening
 - Hello
 - Hello
+- hey
 - hey
 
 ## intent:help
@@ -381,6 +385,7 @@
 ## synonym:1995-06-26T00:00:00.000+02:00
 - June 26 1995
 - 1995-06-26
+- 26 of June 1995
 
 ## synonym:1997-11-23T00:00:00.000+01:00
 - 23 November 1997
