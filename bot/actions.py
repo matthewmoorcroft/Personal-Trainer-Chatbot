@@ -167,9 +167,10 @@ class GiveNewTable(Action):
 
         table_type = tracker.get_slot("table_type")
         if table_type == "exercise":
-            dispatcher.utter_attachment(
-                "http://40.118.95.153:5089/photo?name=exercise_routine.png&type=png")
-            dispatcher.utter_template("utter_give_new_table", tracker)
+            # dispatcher.utter_attachment(
+                # "http://40.118.95.153:5089/photo?name=exercise_routine.png&type=png")
+            dispatcher.utter_template("utter_give_new_table", tracker, False,
+                                      image="http://40.118.95.153:5089/photo?name=exercise_routine.png&type=png")
         else:
             dispatcher.utter_attachment(
                 "http://40.118.95.153:5089/photo?name=nutrition_diet.jpg&type=jpeg")
