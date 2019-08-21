@@ -100,6 +100,21 @@ class MeasurementForm(FormAction):
             return {"bodyfatratio": bodyfr}
         except:
             return {"bodyfatratio": value}
+
+    def validate_weight(
+        self,
+        value: Text,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> Optional[Text]:
+        """Validate if one value."""
+
+        user_gender = tracker.get_slot("user_gender")
+        name = f"{user_gender}_body_fat.jpg"
+        send_photo(name, tracker.sender_id)
+
+        return {"weight": value}
     #
     # def validate_outdoor_seating(
     #     self,
