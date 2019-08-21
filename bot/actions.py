@@ -15,7 +15,7 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
 
 from connections.database import Database
-
+from connections.telegram import send_photo
 import random
 import datetime
 
@@ -324,6 +324,7 @@ class SendBodyfatratioImage(Action):
 
         user_gender = tracker.get_slot("user_gender")
         image = f"resources/{user_gender}_body_fat.png"
+
         dispatcher.utter_attachment(image)
         return []
 
@@ -335,9 +336,8 @@ class ShowProgress(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-        dispatcher.utter_template("utter_show_progress", tracker, False,
-                                  image="http://40.118.95.153:5089/photo?name=weight_bfr.png&type=png")
+        send_photo("weight_bfr.png", tracker.get_slot("telegram_id"))
+        dispatcher.utter_template("utter_show_progress", tracker)
 
         # db extract weights for every day/month/year
         # matplotlib image

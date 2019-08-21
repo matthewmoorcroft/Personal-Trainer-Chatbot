@@ -57,7 +57,7 @@ digraph  {
 146 [class=intent, fillcolor=lightblue, label="\/new_table", shape=rect, style=filled];
 147 [class=intent, fillcolor=lightblue, label="\/greet", shape=rect, style=filled];
 148 [class=intent, fillcolor=lightblue, label="\/start", shape=rect, style=filled];
-149 [class="intent active", fillcolor=lightblue, label="Show\ my\ progress", shape=rect, style=filled];
+149 [class="intent active", fillcolor=lightblue, label="Show\ me\ my\ progress", shape=rect, style=filled];
 150 [class=intent, fillcolor=lightblue, label="\/start_training", shape=rect, style=filled];
 151 [class=intent, fillcolor=lightblue, label="\/get_measurements", shape=rect, style=filled];
 152 [class=intent, fillcolor=lightblue, label="\/user_wants_to_join", shape=rect, style=filled];
