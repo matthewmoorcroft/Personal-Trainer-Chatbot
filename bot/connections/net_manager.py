@@ -20,4 +20,4 @@ def send_message(answer, telegram_id):
 def send_photo(name, telegram_id):
     token = f"{BOT_ID}:{BOT_TOKEN}"
     bot = Bot(token)
-    bot.send_photo(chat_id=telegram_id, photo=open("../resources/"+name, 'rb'))
+    bot.send_photo(chat_id=telegram_id, photo=open("resources/"+name, 'rb'))

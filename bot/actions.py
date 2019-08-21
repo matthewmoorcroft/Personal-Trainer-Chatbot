@@ -15,7 +15,7 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
 
 from connections.database import Database
-from connections.telegram import send_photo
+from connections.net_manager import send_photo
 import random
 import datetime
 
@@ -168,11 +168,11 @@ class GiveNewTable(Action):
         table_type = tracker.get_slot("table_type")
         if table_type == "exercise":
 
-            dispatcher.utter_template("utter_give_new_table", tracker,
-                                      image="http://40.118.95.153:5089/photo?name=exercise_routine.png&type=png")
+            dispatcher.utter_template("utter_give_new_table", tracker)
+            send_photo("exercise_routine.png", tracker.sender_id)
         else:
-            dispatcher.utter_template("utter_give_new_table", tracker,
-                                      image="http://40.118.95.153:5089/photo?name=nutrition_diet.jpg&type=jpeg")
+            dispatcher.utter_template("utter_give_new_table", tracker)
+            send_photo("nutrition_diet.jpg", tracker.sender_id)
 
         return [SlotSet("table_type", None)]
 
@@ -323,9 +323,9 @@ class SendBodyfatratioImage(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         user_gender = tracker.get_slot("user_gender")
-        image = f"resources/{user_gender}_body_fat.png"
+        name = f"{user_gender}_body_fat.png"
 
-        dispatcher.utter_attachment(image)
+        send_photo(name, tracker.sender_id)
         return []
 
 
@@ -336,7 +336,7 @@ class ShowProgress(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        send_photo("weight_bfr.png", tracker.get_slot("telegram_id"))
+        send_photo("weight_bfr.png", tracker.sender_id)
         dispatcher.utter_template("utter_show_progress", tracker)
 
         # db extract weights for every day/month/year
