@@ -226,6 +226,6 @@ templates:
   utter_unknown:
   - text: Sorry I don't know who you are. Do you want to join the club?
   utter_welcome:
-  - text: That will be all for now {user_name}
+  - text: That will be all for now {user_name}, if you want to know what I can do for you just ask for help.
   utter_your_welcome:
   - text: You are welcome
