@@ -24,6 +24,15 @@ action_endpoint:
 #    db: <number of your database within redis, e.g. 0>
 #    password: <password used for authentication>
 
+
+tracker_store:
+    type: SQL
+    dialect: "postresql"  # the dialect used to interact with the db
+    url: "postgresql://localhost:5432"  # (optional) host of the sql db
+    db: "pt"  # path to your db
+    username:  "matthewmoorcroft"
+    password:  "1245788956"
+
 #tracker_store:
 #    type: mongod
 #    url: <url to your mongo instance, e.g. mongodb://localhost:27017>

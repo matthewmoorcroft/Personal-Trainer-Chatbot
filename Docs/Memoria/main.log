@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.20)  13 AUG 2019 21:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.20)  25 AUG 2019 20:26
 entering extended mode
 **./main.tex
 (main.tex
@@ -796,6 +796,9 @@ LaTeX Warning: Unused global option(s):
 LaTeX Warning: Label `sec:chap3_ai' multiply defined.
 
 
+LaTeX Warning: Label `sec:chap3_db' multiply defined.
+
+
 LaTeX Warning: Label `chap:8' multiply defined.
 
 )
@@ -872,7 +875,7 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ) (chapters/titlepage.tex
-<./images/escudo.jpg, id=83, 338.4645pt x 119.0046pt>
+<./images/escudo.jpg, id=107, 338.4645pt x 119.0046pt>
 File: ./images/escudo.jpg Graphic file (type jpg)
 <use ./images/escudo.jpg>
 Package pdftex.def Info: ./images/escudo.jpg  used on input line 8.
@@ -1024,7 +1027,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--3
 
  []
 
-<./images/2-new-year-exercise.png, id=189, 466.74374pt x 240.14719pt>
+<./images/2-new-year-exercise.png, id=223, 466.74374pt x 240.14719pt>
 File: ./images/2-new-year-exercise.png Graphic file (type png)
 <use ./images/2-new-year-exercise.png>
 Package pdftex.def Info: ./images/2-new-year-exercise.png  used on input line 1
@@ -1037,7 +1040,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
-<./images/2-new-year-logs.png, id=198, 622.325pt x 634.37pt>
+<./images/2-new-year-logs.png, id=232, 622.325pt x 634.37pt>
 File: ./images/2-new-year-logs.png Graphic file (type png)
 <use ./images/2-new-year-logs.png>
 Package pdftex.def Info: ./images/2-new-year-logs.png  used on input line 22.
@@ -1052,12 +1055,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--34
 
  []
 
-[16]) (chapters/chapter3-state_of_the_art.tex [17]
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
+
+ []
+
+<./images/2-bot-micr-dis.png, id=245, 961.5925pt x 474.77374pt>
+File: ./images/2-bot-micr-dis.png Graphic file (type png)
+<use ./images/2-bot-micr-dis.png>
+Package pdftex.def Info: ./images/2-bot-micr-dis.png  used on input line 61.
+(pdftex.def)             Requested size: 384.63019pt x 189.90613pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
+
+ []
+
+[17 <./images/2-bot-micr-dis.png (PNG copy)>]
+<./images/2-priv-first.png, id=254, 714.67pt x 1138.2525pt>
+File: ./images/2-priv-first.png Graphic file (type png)
+<use ./images/2-priv-first.png>
+Package pdftex.def Info: ./images/2-priv-first.png  used on input line 87.
+(pdftex.def)             Requested size: 142.93146pt x 227.64647pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--99
+
+ []
+
+[18 <./images/2-priv-first.png (PNG copy)>])
+Underfull \hbox (badness 10000) in paragraph at lines 100--141
+
+ []
+
+(chapters/chapter3-state_of_the_art.tex [19]
 Underfull \hbox (badness 10000) in paragraph at lines 3--6
 
  []
 
-<./images/3-mach-chat-trend.png, id=214, 733.23938pt x 285.31593pt>
+<./images/3-mach-chat-trend.png, id=269, 733.23938pt x 285.31593pt>
 File: ./images/3-mach-chat-trend.png Graphic file (type png)
 <use ./images/3-mach-chat-trend.png>
 Package pdftex.def Info: ./images/3-mach-chat-trend.png  used on input line 10.
@@ -1073,7 +1107,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--21
 
  []
 
-[18
+[20
 
  <./images/3-mach-chat-trend.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 26--28
@@ -1085,7 +1119,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--39
 
  []
 
-<./images/3-ai-areas.jpeg, id=222, 702.625pt x 485.815pt>
+<./images/3-ai-areas.jpeg, id=276, 702.625pt x 485.815pt>
 File: ./images/3-ai-areas.jpeg Graphic file (type jpg)
 <use ./images/3-ai-areas.jpeg>
 Package pdftex.def Info: ./images/3-ai-areas.jpeg  used on input line 43.
@@ -1093,7 +1127,7 @@ Package pdftex.def Info: ./images/3-ai-areas.jpeg  used on input line 43.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[19]
+[21]
 Underfull \hbox (badness 10000) in paragraph at lines 49--50
 
  []
@@ -1104,199 +1138,198 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--54
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--65
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
  []
 
-[20 <./images/3-ai-areas.jpeg>]
-Underfull \hbox (badness 10000) in paragraph at lines 66--67
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 69--70
+[22 <./images/3-ai-areas.jpeg>]
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
 
  []
 
-<./images/3-chatbot-stemming.jpg, id=233, 722.7pt x 542.025pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--74
+
+ []
+
+[23]
+<./images/3-chatbot-stemming.jpg, id=293, 722.7pt x 542.025pt>
 File: ./images/3-chatbot-stemming.jpg Graphic file (type jpg)
 <use ./images/3-chatbot-stemming.jpg>
-Package pdftex.def Info: ./images/3-chatbot-stemming.jpg  used on input line 83
+Package pdftex.def Info: ./images/3-chatbot-stemming.jpg  used on input line 84
 .
 (pdftex.def)             Requested size: 505.88655pt x 379.4149pt.
 
-Overfull \hbox (62.88655pt too wide) in paragraph at lines 83--84
+Overfull \hbox (62.88655pt too wide) in paragraph at lines 84--85
  [][] 
  []
 
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 89--91
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--92
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--99
+Underfull \hbox (badness 10000) in paragraph at lines 97--100
 
  []
 
-[22 <./images/3-chatbot-stemming.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 110--111
+[24 <./images/3-chatbot-stemming.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--113
+Underfull \hbox (badness 10000) in paragraph at lines 113--114
 
  []
 
-<./images/3-cha-struct.png, id=245, 602.25pt x 370.38374pt>
+<./images/3-cha-struct.png, id=300, 602.25pt x 370.38374pt>
 File: ./images/3-cha-struct.png Graphic file (type png)
 <use ./images/3-cha-struct.png>
-Package pdftex.def Info: ./images/3-cha-struct.png  used on input line 117.
+Package pdftex.def Info: ./images/3-cha-struct.png  used on input line 118.
 (pdftex.def)             Requested size: 361.35278pt x 222.23195pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--126
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
 
  []
 
-[23 <./images/3-cha-struct.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 157--159
 
- []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--162
-
- []
-
-[24]
-Underfull \hbox (badness 10000) in paragraph at lines 164--166
+Underfull \hbox (badness 10000) in paragraph at lines 158--160
 
  []
 
 [25]
-<./images/3-rasa-log.png, id=263, 1204.5pt x 632.3625pt>
+
+LaTeX Warning: Text page 26 contains only floats.
+
+[26 <./images/3-cha-struct.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 161--163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--167
+
+ []
+
+[27]
+<./images/3-rasa-log.png, id=317, 1204.5pt x 632.3625pt>
 File: ./images/3-rasa-log.png Graphic file (type png)
 <use ./images/3-rasa-log.png>
-Package pdftex.def Info: ./images/3-rasa-log.png  used on input line 180.
+Package pdftex.def Info: ./images/3-rasa-log.png  used on input line 181.
 (pdftex.def)             Requested size: 481.79147pt x 252.94052pt.
 
-Overfull \hbox (38.79147pt too wide) in paragraph at lines 180--181
+Overfull \hbox (38.79147pt too wide) in paragraph at lines 181--182
  [][] 
  []
 
-[26
+[28
 
  <./images/3-rasa-log.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 204--205
+Underfull \hbox (badness 10000) in paragraph at lines 205--206
 
  []
 
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 208.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 209.
 
 ("C:\Users\matth\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 
-Package xcolor Warning: Incompatible color definition on input line 209.
+Package xcolor Warning: Incompatible color definition on input line 210.
 
 
-Package xcolor Warning: Incompatible color definition on input line 209.
+Package xcolor Warning: Incompatible color definition on input line 210.
 
 
-Package xcolor Warning: Incompatible color definition on input line 209.
+Package xcolor Warning: Incompatible color definition on input line 210.
 
 
-Package xcolor Warning: Incompatible color definition on input line 209.
+Package xcolor Warning: Incompatible color definition on input line 210.
 
 
-Package xcolor Warning: Incompatible color definition on input line 209.
+Package xcolor Warning: Incompatible color definition on input line 210.
 
 
-Package xcolor Warning: Incompatible color definition on input line 209.
+Package xcolor Warning: Incompatible color definition on input line 210.
 
 
-Package xcolor Warning: Incompatible color definition on input line 209.
+Package xcolor Warning: Incompatible color definition on input line 210.
 
 
-Package xcolor Warning: Incompatible color definition on input line 209.
+Package xcolor Warning: Incompatible color definition on input line 210.
 
 
-Package xcolor Warning: Incompatible color definition on input line 209.
+Package xcolor Warning: Incompatible color definition on input line 210.
 
 
-Package xcolor Warning: Incompatible color definition on input line 209.
+Package xcolor Warning: Incompatible color definition on input line 210.
 
 
-Package xcolor Warning: Incompatible color definition on input line 209.
+Package xcolor Warning: Incompatible color definition on input line 210.
 
 
-Package xcolor Warning: Incompatible color definition on input line 209.
+Package xcolor Warning: Incompatible color definition on input line 210.
 
 
-Package xcolor Warning: Incompatible color definition on input line 209.
+Package xcolor Warning: Incompatible color definition on input line 210.
 
 
-Package xcolor Warning: Incompatible color definition on input line 209.
+Package xcolor Warning: Incompatible color definition on input line 210.
 
 
-Package xcolor Warning: Incompatible color definition on input line 209.
+Package xcolor Warning: Incompatible color definition on input line 210.
 
 
-Package xcolor Warning: Incompatible color definition on input line 209.
+Package xcolor Warning: Incompatible color definition on input line 210.
 
 
-Package xcolor Warning: Incompatible color definition on input line 209.
+Package xcolor Warning: Incompatible color definition on input line 210.
 
 
-Package xcolor Warning: Incompatible color definition on input line 209.
+Package xcolor Warning: Incompatible color definition on input line 210.
 
 
-Package xcolor Warning: Incompatible color definition on input line 209.
+Package xcolor Warning: Incompatible color definition on input line 210.
 
 
-Package xcolor Warning: Incompatible color definition on input line 209.
+Package xcolor Warning: Incompatible color definition on input line 210.
 
 
-Package xcolor Warning: Incompatible color definition on input line 209.
+Package xcolor Warning: Incompatible color definition on input line 210.
 
 
-Package xcolor Warning: Incompatible color definition on input line 209.
+Package xcolor Warning: Incompatible color definition on input line 210.
 
 
-Package xcolor Warning: Incompatible color definition on input line 209.
+Package xcolor Warning: Incompatible color definition on input line 210.
 
 
-Package xcolor Warning: Incompatible color definition on input line 209.
+Package xcolor Warning: Incompatible color definition on input line 210.
 
 
-Package xcolor Warning: Incompatible color definition on input line 209.
+Package xcolor Warning: Incompatible color definition on input line 210.
 
 
-Package xcolor Warning: Incompatible color definition on input line 212.
+Package xcolor Warning: Incompatible color definition on input line 213.
 
 
-Package xcolor Warning: Incompatible color definition on input line 212.
+Package xcolor Warning: Incompatible color definition on input line 213.
 
 
-Package xcolor Warning: Incompatible color definition on input line 212.
-
-
-Package xcolor Warning: Incompatible color definition on input line 212.
-
-
-Package xcolor Warning: Incompatible color definition on input line 212.
-
-
-Package xcolor Warning: Incompatible color definition on input line 212.
-
-
-Package xcolor Warning: Incompatible color definition on input line 212.
+Package xcolor Warning: Incompatible color definition on input line 213.
 
 
 Package xcolor Warning: Incompatible color definition on input line 213.
@@ -1323,15 +1356,6 @@ Package xcolor Warning: Incompatible color definition on input line 214.
 Package xcolor Warning: Incompatible color definition on input line 214.
 
 
-Package xcolor Warning: Incompatible color definition on input line 214.
-
-
-Package xcolor Warning: Incompatible color definition on input line 214.
-
-
-Package xcolor Warning: Incompatible color definition on input line 214.
-
-
 Package xcolor Warning: Incompatible color definition on input line 215.
 
 
@@ -1352,178 +1376,199 @@ Package xcolor Warning: Incompatible color definition on input line 215.
 
 Package xcolor Warning: Incompatible color definition on input line 215.
 
-<./images/3-rasa-pipe.png, id=270, 1206.5075pt x 828.09375pt>
+
+Package xcolor Warning: Incompatible color definition on input line 216.
+
+
+Package xcolor Warning: Incompatible color definition on input line 216.
+
+
+Package xcolor Warning: Incompatible color definition on input line 216.
+
+
+Package xcolor Warning: Incompatible color definition on input line 216.
+
+
+Package xcolor Warning: Incompatible color definition on input line 216.
+
+
+Package xcolor Warning: Incompatible color definition on input line 216.
+
+
+Package xcolor Warning: Incompatible color definition on input line 216.
+
+<./images/3-rasa-pipe.png, id=324, 1206.5075pt x 828.09375pt>
 File: ./images/3-rasa-pipe.png Graphic file (type png)
 <use ./images/3-rasa-pipe.png>
-Package pdftex.def Info: ./images/3-rasa-pipe.png  used on input line 226.
+Package pdftex.def Info: ./images/3-rasa-pipe.png  used on input line 227.
 (pdftex.def)             Requested size: 482.59445pt x 331.23163pt.
 
-Overfull \hbox (39.59445pt too wide) in paragraph at lines 226--227
+Overfull \hbox (39.59445pt too wide) in paragraph at lines 227--228
  [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[27]
+[29]
 
-Package xcolor Warning: Incompatible color definition on input line 246.
+Package xcolor Warning: Incompatible color definition on input line 247.
 
 
-Package xcolor Warning: Incompatible color definition on input line 246.
+Package xcolor Warning: Incompatible color definition on input line 247.
 
 
-Package xcolor Warning: Incompatible color definition on input line 246.
+Package xcolor Warning: Incompatible color definition on input line 247.
 
 
-Package xcolor Warning: Incompatible color definition on input line 246.
+Package xcolor Warning: Incompatible color definition on input line 247.
 
 
-Package xcolor Warning: Incompatible color definition on input line 246.
+Package xcolor Warning: Incompatible color definition on input line 247.
 
 
-Package xcolor Warning: Incompatible color definition on input line 246.
+Package xcolor Warning: Incompatible color definition on input line 247.
 
 
-Package xcolor Warning: Incompatible color definition on input line 246.
+Package xcolor Warning: Incompatible color definition on input line 247.
 
 
-Package xcolor Warning: Incompatible color definition on input line 246.
+Package xcolor Warning: Incompatible color definition on input line 247.
 
 
-Package xcolor Warning: Incompatible color definition on input line 246.
+Package xcolor Warning: Incompatible color definition on input line 247.
 
 
-Package xcolor Warning: Incompatible color definition on input line 246.
+Package xcolor Warning: Incompatible color definition on input line 247.
 
 
-Package xcolor Warning: Incompatible color definition on input line 246.
+Package xcolor Warning: Incompatible color definition on input line 247.
 
 
-Package xcolor Warning: Incompatible color definition on input line 246.
+Package xcolor Warning: Incompatible color definition on input line 247.
 
 
-Package xcolor Warning: Incompatible color definition on input line 246.
+Package xcolor Warning: Incompatible color definition on input line 247.
 
 
-Package xcolor Warning: Incompatible color definition on input line 246.
+Package xcolor Warning: Incompatible color definition on input line 247.
 
 
-Package xcolor Warning: Incompatible color definition on input line 246.
+Package xcolor Warning: Incompatible color definition on input line 247.
 
 
-Package xcolor Warning: Incompatible color definition on input line 246.
+Package xcolor Warning: Incompatible color definition on input line 247.
 
 
-Package xcolor Warning: Incompatible color definition on input line 246.
+Package xcolor Warning: Incompatible color definition on input line 247.
 
 
-Package xcolor Warning: Incompatible color definition on input line 246.
+Package xcolor Warning: Incompatible color definition on input line 247.
 
 
-Package xcolor Warning: Incompatible color definition on input line 246.
+Package xcolor Warning: Incompatible color definition on input line 247.
 
 
-Package xcolor Warning: Incompatible color definition on input line 246.
+Package xcolor Warning: Incompatible color definition on input line 247.
 
 
-Package xcolor Warning: Incompatible color definition on input line 246.
+Package xcolor Warning: Incompatible color definition on input line 247.
 
 
-Package xcolor Warning: Incompatible color definition on input line 246.
+Package xcolor Warning: Incompatible color definition on input line 247.
 
 
-Package xcolor Warning: Incompatible color definition on input line 246.
+Package xcolor Warning: Incompatible color definition on input line 247.
 
 
-Package xcolor Warning: Incompatible color definition on input line 246.
+Package xcolor Warning: Incompatible color definition on input line 247.
 
 
-Package xcolor Warning: Incompatible color definition on input line 246.
+Package xcolor Warning: Incompatible color definition on input line 247.
 
 
-Package xcolor Warning: Incompatible color definition on input line 249.
+Package xcolor Warning: Incompatible color definition on input line 250.
 
 
-Package xcolor Warning: Incompatible color definition on input line 249.
+Package xcolor Warning: Incompatible color definition on input line 250.
 
 
-Package xcolor Warning: Incompatible color definition on input line 249.
+Package xcolor Warning: Incompatible color definition on input line 250.
 
 
-Package xcolor Warning: Incompatible color definition on input line 249.
+Package xcolor Warning: Incompatible color definition on input line 250.
 
 
-Package xcolor Warning: Incompatible color definition on input line 249.
+Package xcolor Warning: Incompatible color definition on input line 250.
 
 
-Package xcolor Warning: Incompatible color definition on input line 249.
+Package xcolor Warning: Incompatible color definition on input line 250.
 
 
-Package xcolor Warning: Incompatible color definition on input line 249.
+Package xcolor Warning: Incompatible color definition on input line 250.
 
 
-Package xcolor Warning: Incompatible color definition on input line 249.
+Package xcolor Warning: Incompatible color definition on input line 250.
 
 
-Package xcolor Warning: Incompatible color definition on input line 249.
+Package xcolor Warning: Incompatible color definition on input line 250.
 
 
-Package xcolor Warning: Incompatible color definition on input line 249.
+Package xcolor Warning: Incompatible color definition on input line 250.
 
 
-Package xcolor Warning: Incompatible color definition on input line 249.
+Package xcolor Warning: Incompatible color definition on input line 250.
 
 
-Package xcolor Warning: Incompatible color definition on input line 249.
+Package xcolor Warning: Incompatible color definition on input line 250.
 
 
-Package xcolor Warning: Incompatible color definition on input line 252.
+Package xcolor Warning: Incompatible color definition on input line 253.
 
 
-Package xcolor Warning: Incompatible color definition on input line 252.
+Package xcolor Warning: Incompatible color definition on input line 253.
 
 
-Package xcolor Warning: Incompatible color definition on input line 252.
+Package xcolor Warning: Incompatible color definition on input line 253.
 
 
-Package xcolor Warning: Incompatible color definition on input line 252.
+Package xcolor Warning: Incompatible color definition on input line 253.
 
 
-Package xcolor Warning: Incompatible color definition on input line 252.
+Package xcolor Warning: Incompatible color definition on input line 253.
 
 
-Package xcolor Warning: Incompatible color definition on input line 252.
+Package xcolor Warning: Incompatible color definition on input line 253.
 
 
-Package xcolor Warning: Incompatible color definition on input line 254.
+Package xcolor Warning: Incompatible color definition on input line 255.
 
 
-Package xcolor Warning: Incompatible color definition on input line 254.
+Package xcolor Warning: Incompatible color definition on input line 255.
 
 
-Package xcolor Warning: Incompatible color definition on input line 254.
+Package xcolor Warning: Incompatible color definition on input line 255.
 
 
-Package xcolor Warning: Incompatible color definition on input line 254.
+Package xcolor Warning: Incompatible color definition on input line 255.
 
 
-Package xcolor Warning: Incompatible color definition on input line 254.
+Package xcolor Warning: Incompatible color definition on input line 255.
 
 
-Package xcolor Warning: Incompatible color definition on input line 254.
+Package xcolor Warning: Incompatible color definition on input line 255.
 
-[28 <./images/3-rasa-pipe.png>]) (chapters/chapter4-solution_proposed.tex
-[29]) (chapters/chapter5-planning_and_budget.tex [30
+[30 <./images/3-rasa-pipe.png>]) (chapters/chapter4-solution_proposed.tex
+[31]) (chapters/chapter5-planning_and_budget.tex [32
 
 ])
-(chapters/chapter6-socioeconomic_environment.tex [31
+(chapters/chapter6-socioeconomic_environment.tex [33
 
 ])
-(chapters/chapter7-conclusions.tex [32
+(chapters/chapter7-conclusions.tex [34
 
 ]) (chapters/references.tex (main.bbl
-[33
+[35
 
 ]
 bibitemlist
@@ -1540,30 +1585,48 @@ weight-[]loss-[]data /
  []
 
 
-Underfull \hbox (badness 2662) in paragraph at lines 15--19
+Underfull \hbox (badness 10000) in paragraph at lines 19--23
+[]\T1/lmr/m/n/12 H. Hor-ton, ``Mi-crosoft deletes 'teen girl' ai af-ter it be-c
+ame a
+ []
+
+
+Underfull \hbox (badness 8075) in paragraph at lines 19--23
+\T1/lmr/m/n/12 hitler-loving sex robot within 24 hours,'' 24 March, 2016.  Avai
+l-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--23
+\T1/lmr/m/n/12 able at []$\T1/lmtt/m/n/12 https : / / www . telegraph . co . uk
+ / technology / 2016 / 03 / 24 /
+ []
+
+
+Underfull \hbox (badness 2662) in paragraph at lines 30--34
 []\T1/lmr/m/n/12 C. Ku-mar, ``Ar-ti-fi-cial in-tel-li-gence: Def-i-ni-tion, typ
 es, ex-am-ples, tech-nolo-
  []
 
 
-Overfull \hbox (44.64612pt too wide) in paragraph at lines 15--19
+Overfull \hbox (44.64612pt too wide) in paragraph at lines 30--34
 \T1/lmtt/m/n/12 artificial-[]intelligence-[]definition-[]types-[]examples-[]tec
 hnologies-[]962ea75c7b9b$[]\T1/lmr/m/n/12 . 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--24
+Underfull \hbox (badness 10000) in paragraph at lines 36--39
 []\T1/lmr/m/n/12 H. Jabeen, ``Stem-ming and lemma-ti-za-tion in python,'' 23 Oc
 -to-ber,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--24
+Underfull \hbox (badness 10000) in paragraph at lines 36--39
 \T1/lmr/m/n/12 2018.  Avail-able at []$\T1/lmtt/m/n/12 https : / / www . dataca
 mp . com / community / tutorials /
  []
 
-)) (chapters/appendix.tex) [34
+)) (chapters/appendix.tex) [36
 
 ]
 \tf@toc=\write5
@@ -1581,7 +1644,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 158.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 158.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 158.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: FB94EC27253E19090FC54DED9405C04D;1148.
+(rerunfilecheck)             Checksum: B4FDA1DB96213624B17EDC14F13C2049;1514.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1589,13 +1652,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 158.
  ) 
 Here is how much of TeX's memory you used:
- 13270 strings out of 492946
- 197848 string characters out of 3126266
- 510463 words of memory out of 3000000
- 16846 multiletter control sequences out of 15000+200000
+ 13327 strings out of 492946
+ 198818 string characters out of 3126266
+ 514463 words of memory out of 3000000
+ 16879 multiletter control sequences out of 15000+200000
  80237 words of font info for 55 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,17n,49p,810b,1168s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,17n,49p,814b,1168s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/matth/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.en
 c}{C:/Users/matth/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-maths
 y.enc}<C:/Users/matth/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/l
@@ -1607,9 +1670,9 @@ pe1/public/lm/lmri12.pfb><C:/Users/matth/AppData/Local/Programs/MiKTeX 2.9/font
 s/type1/public/lm/lmsy10.pfb><C:/Users/matth/AppData/Local/Programs/MiKTeX 2.9/
 fonts/type1/public/lm/lmtt10.pfb><C:/Users/matth/AppData/Local/Programs/MiKTeX 
 2.9/fonts/type1/public/lm/lmtt12.pfb>
-Output written on main.pdf (35 pages, 947764 bytes).
+Output written on main.pdf (37 pages, 1422910 bytes).
 PDF statistics:
- 393 PDF objects out of 1000 (max. 8388607)
- 101 named destinations out of 1000 (max. 500000)
- 206 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 466 PDF objects out of 1000 (max. 8388607)
+ 123 named destinations out of 1000 (max. 500000)
+ 264 words of extra memory for PDF output out of 10000 (max. 10000000)
 

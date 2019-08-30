@@ -7,24 +7,39 @@
 \contentsline {subsection}{\numberline {1.3.2}Development}{11}{subsection.1.3.2}% 
 \contentsline {section}{\numberline {1.4}Resources Used}{12}{section.1.4}% 
 \contentsline {section}{\numberline {1.5}Memory Structure}{13}{section.1.5}% 
-\contentsline {chapter}{\chapternumberline {2}Analysis Of The Problem}{14}{chapter.2}% 
+\contentsline {chapter}{\chapternumberline {2}Analysis of the Problem}{14}{chapter.2}% 
 \contentsline {section}{\numberline {2.1}Objectives}{16}{section.2.1}% 
-\contentsline {chapter}{\chapternumberline {3}State of the Art}{18}{chapter.3}% 
-\contentsline {section}{\numberline {3.1}Artificial Intelligence}{19}{section.3.1}% 
-\contentsline {section}{\numberline {3.2}Chatbots}{21}{section.3.2}% 
-\contentsline {subsection}{\numberline {3.2.1}Messaging Platform}{21}{subsection.3.2.1}% 
-\contentsline {subsection}{\numberline {3.2.2}Natural Language Processor}{21}{subsection.3.2.2}% 
-\contentsline {subsection}{\numberline {3.2.3}Profiler}{23}{subsection.3.2.3}% 
-\contentsline {section}{\numberline {3.3}Platforms}{24}{section.3.3}% 
-\contentsline {subsection}{\numberline {3.3.1}DialogFlow}{24}{subsection.3.3.1}% 
-\contentsline {subsection}{\numberline {3.3.2}Rasa}{26}{subsection.3.3.2}% 
-\contentsline {subsubsection}{NLU}{27}{section*.10}% 
-\contentsline {subsubsection}{CORE}{28}{section*.12}% 
-\contentsline {chapter}{\chapternumberline {4}Solution Proposed}{30}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}Implementation}{30}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}Regulatory Framework}{30}{section.4.2}% 
-\contentsline {subsection}{\numberline {4.2.1}Hardware}{30}{subsection.4.2.1}% 
-\contentsline {chapter}{\chapternumberline {5}Planning and Budget}{31}{chapter.5}% 
-\contentsline {chapter}{\chapternumberline {6}Socioeconomic Environment}{32}{chapter.6}% 
-\contentsline {chapter}{\chapternumberline {7}Conclusions}{33}{chapter.7}% 
-\contentsline {chapter}{References}{34}{chapter*.13}% 
+\contentsline {section}{\numberline {2.2}Regulatory Framework}{17}{section.2.2}% 
+\contentsline {subsection}{\numberline {2.2.1}Ethical Risks}{17}{subsection.2.2.1}% 
+\contentsline {subsection}{\numberline {2.2.2}GDPR}{18}{subsection.2.2.2}% 
+\contentsline {subsection}{\numberline {2.2.3}Future Regulations}{19}{subsection.2.2.3}% 
+\contentsline {chapter}{\chapternumberline {3}State of the Art}{20}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Artificial Intelligence}{21}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}Programming Languages}{23}{section.3.2}% 
+\contentsline {section}{\numberline {3.3}Chatbots}{23}{section.3.3}% 
+\contentsline {subsection}{\numberline {3.3.1}Messaging Platform}{23}{subsection.3.3.1}% 
+\contentsline {subsection}{\numberline {3.3.2}Natural Language Processor}{23}{subsection.3.3.2}% 
+\contentsline {subsection}{\numberline {3.3.3}Profiler}{25}{subsection.3.3.3}% 
+\contentsline {section}{\numberline {3.4}Chatbot Platforms}{25}{section.3.4}% 
+\contentsline {subsection}{\numberline {3.4.1}DialogFlow}{25}{subsection.3.4.1}% 
+\contentsline {subsection}{\numberline {3.4.2}Rasa}{28}{subsection.3.4.2}% 
+\contentsline {subsubsection}{NLU}{29}{section*.12}% 
+\contentsline {subsubsection}{CORE}{30}{section*.14}% 
+\contentsline {section}{\numberline {3.5}Database}{31}{section.3.5}% 
+\contentsline {section}{\numberline {3.6}Cloud Services}{31}{section.3.6}% 
+\contentsline {chapter}{\chapternumberline {4}Solution Proposed}{32}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Design}{32}{section.4.1}% 
+\contentsline {subsection}{\numberline {4.1.1}Original Design}{32}{subsection.4.1.1}% 
+\contentsline {subsubsection}{MVC}{32}{section*.15}% 
+\contentsline {subsection}{\numberline {4.1.2}Final Design}{32}{subsection.4.1.2}% 
+\contentsline {section}{\numberline {4.2}Resources used}{32}{section.4.2}% 
+\contentsline {subsection}{\numberline {4.2.1}Frontend}{32}{subsection.4.2.1}% 
+\contentsline {subsection}{\numberline {4.2.2}Backend}{32}{subsection.4.2.2}% 
+\contentsline {subsubsection}{Hardware}{32}{section*.16}% 
+\contentsline {subsubsection}{Software}{32}{section*.17}% 
+\contentsline {section}{\numberline {4.3}Implementation}{32}{section.4.3}% 
+\contentsline {section}{\numberline {4.4}Testing}{32}{section.4.4}% 
+\contentsline {chapter}{\chapternumberline {5}Planning and Budget}{33}{chapter.5}% 
+\contentsline {chapter}{\chapternumberline {6}Socioeconomic Environment}{34}{chapter.6}% 
+\contentsline {chapter}{\chapternumberline {7}Conclusions}{35}{chapter.7}% 
+\contentsline {chapter}{References}{36}{chapter*.18}% 
