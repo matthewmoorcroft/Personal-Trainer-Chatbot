@@ -28,10 +28,10 @@ action_endpoint:
 tracker_store:
     type: SQL
     dialect: "postresql"  # the dialect used to interact with the db
-    url: "postgresql://localhost:5432/pt"  # (optional) host of the sql db
+    url: "localhost:5432/pt"  # (optional) host of the sql db
     db: "postgres.pt"  # path to your db
     username:  "matthewmoorcroft"
-    password:  1245788956
+    password:  "1245788956"
 
 #tracker_store:
 #    type: mongod
