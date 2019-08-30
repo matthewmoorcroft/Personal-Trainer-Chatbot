@@ -27,7 +27,7 @@ action_endpoint:
 
 tracker_store:
     type: SQL
-    dialect: "postresql"  # the dialect used to interact with the db
+    dialect: "postgresql"  # the dialect used to interact with the db
     url: "localhost"  # (optional) host of the sql db
     db: "pt"  # path to your db
     username:  "matthewmoorcroft"
