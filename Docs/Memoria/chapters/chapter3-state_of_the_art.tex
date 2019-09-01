@@ -128,7 +128,7 @@ There are many platforms to build chatbots, with their own features. Below there
 
 \begin{table}[h!]
 	\centering
-	\resizebox{\linewidth}{!}{%
+	\resizebox{\linewidth}{!}{
 		\begin{tabular}{|c|c|c|c|c|} 
 			\hline
 			\rowcolor[rgb]{0.753,0.753,0.753} Bot Name                                                               & Features                                                                                                                                                                                                                                           & Technical Details                                                                                                                                                                           & License                                                                                                                                  & Channel                                                        \\ 
@@ -263,9 +263,227 @@ Rasa Core is a dialogue engine used for building virtual assistants, it has seve
 	\item {\textbf{Interactive learning:} When adding more complexity to the chatbot this becomes a very useful way of training it as the developer maintains a conversation with the bot and teaches it what to do depending on the conversation flow.}
 \end{itemize}
 
-\section{Database}\label{sec:chap3_db}
+\section{Databases}\label{sec:chap3_db}
 
-\section{RaspberryPie}\label{sec:chap3_rasp}
-	
+Databases are key parts of software development, used basically in every application out there. What they provide is the functionality of storing data relevant to the service the application provides. In the case of a bank, databases may store information on a person’s bank account or credit rating. The structuring and managements of databases has become a major area in the development of software. Where its design is key for scalability, security and maintenance.
+
+\subsection{Evolution}\label{sec:chap3_db_evo}
+
+Before databases where used, all data relevant to a company had to be stored in paper, when the company is small or the data it has to store is minimal it isn’t a big problem, but rarely this is the case and companies have to store large amount of data on paper where the security and management of these files becomes a tedious one, as to search for something specific a person has to look over lot’s of data, another issue is that if a fire broke out all the history of an entity would be wiped out. Databases provided a solution to this problem by digitalizing the company’s data. The earliest database systems where the hierarchical and network models.
+
+\begin{itemize}
+	\item {\textbf{Hierarchical model:} It organizes data in a tree like structure, this model was created in the 1960’s. It is an easy to understand model as it simulates an enterprise structure. Even though the model was created in the 1960’s it is still in use in some applications to this date. You can see this model in use in a computers file system. The problem with this model is that every time a record wanted to be accessed the whole tree had to be traversed.
+	\begin{center}
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[scale=0.32]{./images/3-hierarchical-model}
+			\caption{Hierarchical Model}
+			\label{hier_model}
+		\end{figure}
+	\end{center}
+	}
+	\item {\textbf{Network model:} In 1969 a new model was announced that solved some of the limitations from the hierarchical model, which is that each node can be related with another node from the tree even if it isn’t from the same branch. Even if this model offered improvements it wasn’t massively used as IBM continued developing its products with the hierarchical model.
+	\begin{center}
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[scale=0.4]{./images/3-network-model}
+			\caption{Network Model}
+			\label{net_model}
+		\end{figure}
+	\end{center}
+	}
+	\item {\textbf{Relational model:} This model was easier to understand, and the programming interface was better. The problem was that when this model came to light, at the same time as the network model, it couldn’t be used due to limiting computer power, this in the 1980s was overcome by breakthroughs in the computing industry.\\
+	This model differs from the other two models as it uses tables to store data, this data can be related with other tables making it a very attractive solution and making it easier to maintain.\\
+	There are three ways of relating data in this model:
+	\begin{itemize}
+		\item {One-to-One}
+		\item {One-to-Many}
+		\item {Many-to-Many}
+	\end{itemize}
+	\begin{center}
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[scale=0.25]{./images/3-relational-model}
+			\caption{Relational Model}
+			\label{rel_model}
+		\end{figure}
+	\end{center}
+	The language this model used is called Structured Query Language (SQL), there are several variations to this language depending on the application being used. Soon this became the standard and started being used in enterprise environments. In the mid-1990s a revolution in the development came about and new open sourced software with no cost for the developer started getting traction and with it the open source project of MySQL, which first version was developed by a Swedish company. The fact it was free, lowered the entry barrier for new developments.
+	}
+	\item {\textbf{NoSQL:} In 1998 a new term was created, NoSQL that categorized all databases that didn’t follow the same language as the most common relational databases. They came about with the internet boom, this was because a shift was coming around and more and more data was being ingested by the database. SQL databases have a harder time scaling up, with more demand in internet traffic and speed becoming the focus on the server-side, new ways of storing data had to be developed. It focuses more in simplicity and maintenance as it is easier to add new fields to existing data. 
+	\begin{center}
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[scale=0.3]{./images/3-nosql}
+			\caption{SQL vs NoSQL}
+			\label{nosql}
+		\end{figure}
+	\end{center}
+	Big Data has played a major role in the last few years, with storage prices in decline and the affordability of storing large amounts of data, has allowed scientists to analyze data to extract relevant information. This data is not only structured, created using applications or employees, it is data that can be extracted from unstructured sources. This can be comments from people on a product or if a media campaign is causing any impact. This information is highly valuable and that is why companies are so invested in it.\cite{db-hist}
+	}
+\end{itemize}
+\clearpage
+\subsection{Solutions}\label{sec:chap3_db_sol}
+In this section we will expand on some of the solutions available for SQL and NoSQL databases.
+
+\subsubsection{NoSQL}\label{sec:chap3_db_nosql}
+This are some of the solutions for NoSQL databases, there is also on-premises or cloud databases that can be used.
+
+\begin{table}[h!]
+	\centering
+	\resizebox{\linewidth}{!}{
+		\begin{tabular}{|l|l|}
+			\hline
+			\rowcolor[HTML]{C0C0C0} 
+			Name            & Description                                                                                                                                                                                                         \\ \hline
+			\rowcolor[HTML]{96FFFB} 
+			\multicolumn{2}{|c|}{\cellcolor[HTML]{96FFFB}On-Premise}                                                                                                                                                                              \\ \hline
+			MongoDB         & \begin{tabular}[c]{@{}l@{}}Most\\ popular database, uses json-like documents to store data, which makes it much\\ more expressive.\end{tabular}                                                                     \\ \hline
+			Redis           & \begin{tabular}[c]{@{}l@{}}An open-source, distributed database that uses key-value to store\\   data which makes it very fast to extract data.\end{tabular}                                                        \\ \hline
+			Cassandra       & \begin{tabular}[c]{@{}l@{}}Open-source database created by Facebook with the focus on scalability\\   and high availability.\end{tabular}                                                                           \\ \hline
+			\rowcolor[HTML]{96FFFB} 
+			\multicolumn{2}{|c|}{\cellcolor[HTML]{96FFFB}Cloud}                                                                                                                                                                                   \\ \hline
+			\rowcolor[HTML]{9B9B9B} 
+			\multicolumn{2}{|c|}{\cellcolor[HTML]{9B9B9B}AWS}                                                                                                                                                                                     \\ \hline
+			DynamoDB        & \begin{tabular}[c]{@{}l@{}}Key-value and document database that offers high scalability with database\\   management automated.\end{tabular}                                                                        \\ \hline
+			DocumentDB      & \begin{tabular}[c]{@{}l@{}}Compatible with MongoDB, offers high performance, it has the compute\\   and storage elements separated to have more flexibility on scaling the\\   database.\end{tabular}               \\ \hline
+			\rowcolor[HTML]{9B9B9B} 
+			\multicolumn{2}{|c|}{\cellcolor[HTML]{9B9B9B}Microsoft Azure}                                                                                                                                                                         \\ \hline
+			CosmosDB        & \begin{tabular}[c]{@{}l@{}}Azure solution that allows the use of different NoSQL models with the\\   functionality of scaling dynamically across the globe.\end{tabular}                                            \\ \hline
+			\rowcolor[HTML]{9B9B9B} 
+			\multicolumn{2}{|c|}{\cellcolor[HTML]{9B9B9B}Google Cloud}                                                                                                                                                                            \\ \hline
+			Bigtable        & \begin{tabular}[c]{@{}l@{}}A very low latency solution that like other solutions focuses mainly\\   on scalability and availability. Allows easy integration with big data tools.\end{tabular}                      \\ \hline
+			Cloud Firestore & \begin{tabular}[c]{@{}l@{}}Offers high availability with data replication, more expensive solution\\   than Bigtable, the main difference is that it offers better functionality for\\   transactions.\end{tabular} \\ \hline
+	\end{tabular}}
+	\label{nosql_tab}
+	\caption{NoSQL Solutions}
+\end{table}
+
+
+
+\clearpage
+\subsubsection{SQL}\label{sec:chap3_db_sql}
+There are solutions both for on premises and cloud, some use the same language while others offer their own language.
+
+\begin{table}[h!]
+	\centering
+	\resizebox{\linewidth}{!}{
+		\begin{tabular}{|l|l|}
+			\hline
+			\rowcolor[HTML]{C0C0C0} 
+			Name               & Description                                                                                                                                                                                           \\ \hline
+			\rowcolor[HTML]{96FFFB} 
+			\multicolumn{2}{|c|}{\cellcolor[HTML]{96FFFB}On-Premise}                                                                                                                                                                   \\ \hline
+			MySQL              & \begin{tabular}[c]{@{}l@{}}The\\ most popular open-source SQL database.\end{tabular}                                                                                                                  \\ \hline
+			PostgreSQL         & \begin{tabular}[c]{@{}l@{}}Focused more on the enterprise side, it offers higher extensibility than\\   MySQL.\end{tabular}                                                                           \\ \hline
+			Oracle             & \begin{tabular}[c]{@{}l@{}}Offers the full service, but comes at a high price, used more by big enterprises\\   that can’t risk security mismanagement.\end{tabular}                                  \\ \hline
+			\rowcolor[HTML]{96FFFB} 
+			\multicolumn{2}{|c|}{\cellcolor[HTML]{96FFFB}Cloud}                                                                                                                                                                        \\ \hline
+			\rowcolor[HTML]{9B9B9B} 
+			\multicolumn{2}{|c|}{\cellcolor[HTML]{9B9B9B}AWS}                                                                                                                                                                          \\ \hline
+			RDS                & \begin{tabular}[c]{@{}l@{}}Amazons own relational database solution, it offers a platform available\\   with different database engines such as MySQL, PostgreSQL, Oracle and many more.\end{tabular} \\ \hline
+			Aurora             & A database engine that focuses on a higher throughput and scalability.                                                                                                                                \\ \hline
+			\rowcolor[HTML]{9B9B9B} 
+			\multicolumn{2}{|c|}{\cellcolor[HTML]{9B9B9B}Microsoft Azure}                                                                                                                                                              \\ \hline
+			Azure SQL Database & Their own proprietary solution for a cloud database.                                                                                                                                                  \\ \hline
+			Azure Database     & A solution compatible with existing SQL engines such as MySQL or PostgreSQL.                                                                                                                          \\ \hline
+			\rowcolor[HTML]{9B9B9B} 
+			\multicolumn{2}{|c|}{\cellcolor[HTML]{9B9B9B}Google Cloud}                                                                                                                                                                 \\ \hline
+			Cloud SQL          & \begin{tabular}[c]{@{}l@{}}A google platform to use with database engines such as PostgreSQL or\\   MySQL.\end{tabular}                                                                               \\ \hline
+			Cloud Spanner      & Solution that combines SQL elements with NoSQL.                                                                                                                                                       \\ \hline
+	\end{tabular}}
+	\label{sql_tab}
+	\caption{SQL Solutions}
+\end{table}
+
+
+\section{Raspberry Pi}\label{sec:chap3_rasp}
+A raspberry pi is a small single board computer with very low power consumption. Although limited in computing power its processor is still capable of running many programs and with recent models the hardware as gotten more powerful while maintaining its low price.\\
+
+\begin{center}
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.32]{./images/3-rasp-4}
+		\caption{Raspberry Pi 4B}
+		\label{rasp}
+	\end{figure}
+\end{center}
+
+The raspberry pi has an ARM architecture processor which even though it benefits the pc on its low power requirements, it has compatibility issues with some software that is built for the x86 x64 processors.
+
+The raspberry pi has many uses and as an affordable pc, here is a list of some examples to show the potential this device has, the limit to what you can do with a low powered computer are up to the developer’s imagination.
+
+\begin{itemize}
+	\item {\textbf{Media center:} You can configure the raspberry pi to act as a place to store or load films to watch on the users tv.}
+	\item {\textbf{Retro gaming machine:} It can be used to remember old retro games by using the raspberry pi as an emulator for old games.}
+	\item {\textbf{Game streaming:} Another option is using it as a device for games, streaming from the pc to the tv.}
+	\item {\textbf{Security camera:} As it has an IO interface the developer can add modules like cameras and us it for surveillance to keep a house safe or check on the baby.}
+	\item {\textbf{Home automation:} Having access to the local network the raspberry pi can be used as the brains of the house and use it to check data on the temperature, turn the heating on and plenty more.}
+	\item {\textbf{Server:} The raspberry pi can also be used as a server, although limited in computing power it still has capability to be used for projects or as a development server.}
+\end{itemize}
+
+\subsection{Clusters}\label{sec:chap3_clusters}
+A cluster is a set of computers that are tightly or loosely connected to work with each other, it acts like a single system, using the different computers to balance the load or for specific tasks.\\
+For more intense projects these clusters may be required, the advantage the raspberry pi has is that its affordable price and small size factor the developer can build a powerful system with them. It can be used to balance the load on a web server. It can also be used as a mini supercomputer by supporting large amounts of cores and a large amount of RAM memory.
+
 \section{Cloud Services}\label{sec:chap3_cloud}
 
+Originally every company that wanted to manage their data and applications had to have a on-premises server to manage it, this required technical people having to be hired for the maintenance and upgrades the server required, when a company’s business model isn’t related to servers this becomes a burden. Another issue this causes is if not enough money is invested on this the availability of the server would be bad, and if it had to offer services in different countries latency becomes an issue.\\
+
+Cloud computing offers a solution to these issues, a company can custom select what type of system they need to build their infrastructure, this can adapt to the companies needs in relation to processing power or storage space, this means that if a company focuses in the storage and transfer business they can build an infrastructure that focuses more on capacity, transfer speed and storage speed, compared to another company that works with artificial intelligence that may need a more powerful computer and less storage  space. This becomes available thanks to the improvements on virtualization.
+
+\subsection{Virtualization}\label{sec:chap3_vir}
+
+\begin{center}
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=1]{./images/3-cloud-vir}
+		\caption{Virtualization System}
+		\label{cloud_vir}
+	\end{figure}
+\end{center}
+
+Virtualization is a technique that separates the physical layer from the service level, this allows that a computer with certain resources have several virtual operating systems on top with different resources allocated. This offers many benefits in relation to cloud computing.
+
+\begin{itemize}
+	\item{Dynamic allocation of resources}
+	\item{Lower costs of infrastructure}
+	\item{Rapid scalability and remote access}
+	\item{Multiple parallel OS}
+	\item{Pay for time resources used}
+\end{itemize}
+
+There are different types of virtualization for different parts of the computer:
+
+\begin{itemize}
+	\item{\textbf{Storage virtualization:} This allows several servers storage as a single system, this virtualization allows it to be redundant as it offers tools for data replication and recovery, so if a server fails or a hard drive gets damaged the data remains intact.}
+	\item{\textbf{Desktop virtualization:} This virtualization allows the user of the virtual system to access it remotely without knowing in what machine the OS is located.}
+	\item{\textbf{Network virtualization:} The ability to create virtual networks to connect different elements in the data center allows different services to be able to communicate with each other.}
+	\item{\textbf{Application virtualization:} With this type of virtualization different versions of a same application can coexist and allows an application to run without being installed in the traditional way or be supported by an OS.}
+\end{itemize}
+
+\subsection{Providers}\label{sec:chap3_prov}
+
+\begin{itemize}
+	\item{\textbf{AWS:} Amazon Web Services launched on 2006 and pioneered the business model for on-demand cloud computing, it has the highest market share of all the providers available. It offers a very large selection of products to choose from, making it better to create a well-defined architecture. AWS focuses more in the public cloud making enterprises with their own data center hard to interoperate with AWS.}
+	\item{\textbf{Google Cloud:} The underdog in the competition between AWS and Microsoft Azure, it doesn’t have an enterprise focus which makes it harder to attract enterprise clients. It provides services with deep learning and machine learning which google cloud has leading technology.}
+	\item{\textbf{Microsoft Azure:} A close competitor from Amazon Web Services, with years of experience and close relations with many enterprises Microsoft Azure offers what these clients want, that is to operate Azure functionality mixed with their own data center, allowing for a hybrid cloud.}
+\end{itemize}
+
+\section{Testing}\label{sec:chap3_test}
+
+Testing is an essential part of software development which allows code to be bug free, even though it may seem tedious at the beginning in the long run it pays off and other developers will appreciate a built testing infrastructure.\\
+There are several types of testing:\cite{testing}
+
+\begin{itemize}
+	\item {\textbf{Unit tests:} These are the lowest level of testing, where individual methods and functions are tested to verify that they are working correctly. Unit tests are easy to automate and are quite common in continuous integration, where in every new build it verifies that anything previous is working correctly.}
+	\item {\textbf{Integration tests:} These tests are higher level where different modules or services work well with each other. The complication of running these tests is that it requires certain parts of the application to be running.}
+	\item {\textbf{Functional tests:} Focusing more on the business requirements, these tests only are interested in the result not the middle steps between starting the action and the result. It differentiates from integration testing is that integration tests are only interested in checking if the system works and functional testing is more interested in verifying that the result is correct.}
+	\item {\textbf{End-to-end tests:} End-to-end testing simulates user behavior to test if the flows of the application are working correctly. It is a very high level of testing and it is more complicated to automate due to needing interaction directly with the application, this interaction if automated needs to be maintained because any update on the interface of the application can render the test useless.}
+	\item {\textbf{Performance testing:} This type of tests is very important to have when building big applications as it provides relevant information on how scalable the application is and if any significant latency or crashes are noticed.}
+	\item {\textbf{Smoke testing:} Like functional tests but less expensive, just to verify the main systems are operational, if the deployment is functional then more expensive tests can be run.}
+\end{itemize}
+
+\subsection{Automation}\label{sec:chap3_auto}
+
+Having a person run the tests above is possible but it would be very expensive, counter-productive and a very boring job as they must run every time a deployment or a new feature is added. To automate the tests programmatically the developer needs a testing framework that suits the application. These frameworks are dependent of the programming language used. Even though this automation allows to execute tests to verify the application the next step is to whenever the developer chooses to deploy the application, the tests run automatically before deploying, this is called continuous integration.

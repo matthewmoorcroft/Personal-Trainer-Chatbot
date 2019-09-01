@@ -25,21 +25,31 @@
 \contentsline {subsection}{\numberline {3.4.2}Rasa}{28}{subsection.3.4.2}% 
 \contentsline {subsubsection}{NLU}{29}{section*.12}% 
 \contentsline {subsubsection}{CORE}{30}{section*.14}% 
-\contentsline {section}{\numberline {3.5}Database}{31}{section.3.5}% 
-\contentsline {section}{\numberline {3.6}Cloud Services}{31}{section.3.6}% 
-\contentsline {chapter}{\chapternumberline {4}Solution Proposed}{32}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}Design}{32}{section.4.1}% 
-\contentsline {subsection}{\numberline {4.1.1}Original Design}{32}{subsection.4.1.1}% 
-\contentsline {subsubsection}{MVC}{32}{section*.15}% 
-\contentsline {subsection}{\numberline {4.1.2}Final Design}{32}{subsection.4.1.2}% 
-\contentsline {section}{\numberline {4.2}Resources used}{32}{section.4.2}% 
-\contentsline {subsection}{\numberline {4.2.1}Frontend}{32}{subsection.4.2.1}% 
-\contentsline {subsection}{\numberline {4.2.2}Backend}{32}{subsection.4.2.2}% 
-\contentsline {subsubsection}{Hardware}{32}{section*.16}% 
-\contentsline {subsubsection}{Software}{32}{section*.17}% 
-\contentsline {section}{\numberline {4.3}Implementation}{32}{section.4.3}% 
-\contentsline {section}{\numberline {4.4}Testing}{32}{section.4.4}% 
-\contentsline {chapter}{\chapternumberline {5}Planning and Budget}{33}{chapter.5}% 
-\contentsline {chapter}{\chapternumberline {6}Socioeconomic Environment}{34}{chapter.6}% 
-\contentsline {chapter}{\chapternumberline {7}Conclusions}{35}{chapter.7}% 
-\contentsline {chapter}{References}{36}{chapter*.18}% 
+\contentsline {section}{\numberline {3.5}Databases}{31}{section.3.5}% 
+\contentsline {subsection}{\numberline {3.5.1}Evolution}{31}{subsection.3.5.1}% 
+\contentsline {subsection}{\numberline {3.5.2}Solutions}{35}{subsection.3.5.2}% 
+\contentsline {subsubsection}{NoSQL}{35}{section*.19}% 
+\contentsline {subsubsection}{SQL}{36}{section*.21}% 
+\contentsline {section}{\numberline {3.6}Raspberry Pi}{36}{section.3.6}% 
+\contentsline {subsection}{\numberline {3.6.1}Clusters}{37}{subsection.3.6.1}% 
+\contentsline {section}{\numberline {3.7}Cloud Services}{37}{section.3.7}% 
+\contentsline {subsection}{\numberline {3.7.1}Virtualization}{38}{subsection.3.7.1}% 
+\contentsline {subsection}{\numberline {3.7.2}Providers}{39}{subsection.3.7.2}% 
+\contentsline {section}{\numberline {3.8}Testing}{39}{section.3.8}% 
+\contentsline {subsection}{\numberline {3.8.1}Automation}{40}{subsection.3.8.1}% 
+\contentsline {chapter}{\chapternumberline {4}Solution Proposed}{41}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Design}{41}{section.4.1}% 
+\contentsline {subsection}{\numberline {4.1.1}Original Design}{41}{subsection.4.1.1}% 
+\contentsline {subsubsection}{MVC}{41}{section*.25}% 
+\contentsline {subsection}{\numberline {4.1.2}Final Design}{41}{subsection.4.1.2}% 
+\contentsline {section}{\numberline {4.2}Resources Used}{41}{section.4.2}% 
+\contentsline {subsection}{\numberline {4.2.1}Frontend}{41}{subsection.4.2.1}% 
+\contentsline {subsection}{\numberline {4.2.2}Backend}{41}{subsection.4.2.2}% 
+\contentsline {subsubsection}{Hardware}{41}{section*.26}% 
+\contentsline {subsubsection}{Software}{41}{section*.27}% 
+\contentsline {section}{\numberline {4.3}Implementation}{41}{section.4.3}% 
+\contentsline {section}{\numberline {4.4}Testing}{41}{section.4.4}% 
+\contentsline {chapter}{\chapternumberline {5}Planning and Budget}{42}{chapter.5}% 
+\contentsline {chapter}{\chapternumberline {6}Socioeconomic Environment}{43}{chapter.6}% 
+\contentsline {chapter}{\chapternumberline {7}Conclusions}{44}{chapter.7}% 
+\contentsline {chapter}{References}{45}{chapter*.28}% 

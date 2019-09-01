@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{newyear}
 L.~Poon, ``The rise and fall of new year’s fitness resolutions, in 5
@@ -11,15 +11,15 @@ T.~Nwazor, ``4 reasons people quit on fitness goals,'' December, 2017.
 \newblock Available at
   \url{https://www.huffpost.com/entry/4-reasons-people-quit-on_b_10396016}.
 
-\bibitem{reg-fr-gdpr}
-E.~GDPR.ORG, ``Gdpr.''
-\newblock Available at \url{https://eugdpr.org/}.
-
 \bibitem{micro-dis-bot}
 H.~Horton, ``Microsoft deletes 'teen girl' ai after it became a hitler-loving
   sex robot within 24 hours,'' 24 March, 2016.
 \newblock Available at
   \url{https://www.telegraph.co.uk/technology/2016/03/24/microsofts-teen-girl-ai-turns-into-a-hitler-loving-sex-robot-wit/}.
+
+\bibitem{reg-fr-gdpr}
+E.~GDPR.ORG, ``Gdpr.''
+\newblock Available at \url{https://eugdpr.org/}.
 
 \bibitem{eth-bot}
 S.~Worswick, ``Ethics and chatbots,'' 19 July, 2018.
@@ -44,5 +44,15 @@ D.~Team, ``Dialogflow.''
 \bibitem{rasa}
 R.~Team, ``Rasa open source.''
 \newblock Available at \url{https://rasa.com/}.
+
+\bibitem{db-hist}
+R.~Polding, ``Databases: Evolution and change,'' 31 August, 2018.
+\newblock Available at
+  \url{https://medium.com/@rpolding/databases-evolution-and-change-29b8abe9df3e}.
+
+\bibitem{testing}
+S.~Pittet, ``The different types of software testing.''
+\newblock Available at
+  \url{https://www.atlassian.com/continuous-delivery/software-testing/types-of-software-testing}.
 
 \end{thebibliography}

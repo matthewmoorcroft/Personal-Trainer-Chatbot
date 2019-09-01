@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.20)  25 AUG 2019 20:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.20)  1 SEP 2019 19:49
 entering extended mode
 **./main.tex
 (main.tex
@@ -796,9 +796,6 @@ LaTeX Warning: Unused global option(s):
 LaTeX Warning: Label `sec:chap3_ai' multiply defined.
 
 
-LaTeX Warning: Label `sec:chap3_db' multiply defined.
-
-
 LaTeX Warning: Label `chap:8' multiply defined.
 
 )
@@ -875,7 +872,7 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ) (chapters/titlepage.tex
-<./images/escudo.jpg, id=107, 338.4645pt x 119.0046pt>
+<./images/escudo.jpg, id=115, 338.4645pt x 119.0046pt>
 File: ./images/escudo.jpg Graphic file (type jpg)
 <use ./images/escudo.jpg>
 Package pdftex.def Info: ./images/escudo.jpg  used on input line 8.
@@ -1027,7 +1024,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--3
 
  []
 
-<./images/2-new-year-exercise.png, id=223, 466.74374pt x 240.14719pt>
+<./images/2-new-year-exercise.png, id=249, 466.74374pt x 240.14719pt>
 File: ./images/2-new-year-exercise.png Graphic file (type png)
 <use ./images/2-new-year-exercise.png>
 Package pdftex.def Info: ./images/2-new-year-exercise.png  used on input line 1
@@ -1040,7 +1037,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
-<./images/2-new-year-logs.png, id=232, 622.325pt x 634.37pt>
+<./images/2-new-year-logs.png, id=258, 622.325pt x 634.37pt>
 File: ./images/2-new-year-logs.png Graphic file (type png)
 <use ./images/2-new-year-logs.png>
 Package pdftex.def Info: ./images/2-new-year-logs.png  used on input line 22.
@@ -1060,7 +1057,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--55
 
  []
 
-<./images/2-bot-micr-dis.png, id=245, 961.5925pt x 474.77374pt>
+<./images/2-bot-micr-dis.png, id=271, 961.5925pt x 474.77374pt>
 File: ./images/2-bot-micr-dis.png Graphic file (type png)
 <use ./images/2-bot-micr-dis.png>
 Package pdftex.def Info: ./images/2-bot-micr-dis.png  used on input line 61.
@@ -1071,7 +1068,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--70
  []
 
 [17 <./images/2-bot-micr-dis.png (PNG copy)>]
-<./images/2-priv-first.png, id=254, 714.67pt x 1138.2525pt>
+<./images/2-priv-first.png, id=280, 714.67pt x 1138.2525pt>
 File: ./images/2-priv-first.png Graphic file (type png)
 <use ./images/2-priv-first.png>
 Package pdftex.def Info: ./images/2-priv-first.png  used on input line 87.
@@ -1091,7 +1088,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--6
 
  []
 
-<./images/3-mach-chat-trend.png, id=269, 733.23938pt x 285.31593pt>
+<./images/3-mach-chat-trend.png, id=295, 733.23938pt x 285.31593pt>
 File: ./images/3-mach-chat-trend.png Graphic file (type png)
 <use ./images/3-mach-chat-trend.png>
 Package pdftex.def Info: ./images/3-mach-chat-trend.png  used on input line 10.
@@ -1119,7 +1116,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--39
 
  []
 
-<./images/3-ai-areas.jpeg, id=276, 702.625pt x 485.815pt>
+<./images/3-ai-areas.jpeg, id=302, 702.625pt x 485.815pt>
 File: ./images/3-ai-areas.jpeg Graphic file (type jpg)
 <use ./images/3-ai-areas.jpeg>
 Package pdftex.def Info: ./images/3-ai-areas.jpeg  used on input line 43.
@@ -1158,7 +1155,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--74
  []
 
 [23]
-<./images/3-chatbot-stemming.jpg, id=293, 722.7pt x 542.025pt>
+<./images/3-chatbot-stemming.jpg, id=319, 722.7pt x 542.025pt>
 File: ./images/3-chatbot-stemming.jpg Graphic file (type jpg)
 <use ./images/3-chatbot-stemming.jpg>
 Package pdftex.def Info: ./images/3-chatbot-stemming.jpg  used on input line 84
@@ -1189,7 +1186,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 113--114
 
  []
 
-<./images/3-cha-struct.png, id=300, 602.25pt x 370.38374pt>
+<./images/3-cha-struct.png, id=326, 602.25pt x 370.38374pt>
 File: ./images/3-cha-struct.png Graphic file (type png)
 <use ./images/3-cha-struct.png>
 Package pdftex.def Info: ./images/3-cha-struct.png  used on input line 118.
@@ -1210,11 +1207,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 158--160
 
  []
 
-[25]
-
-LaTeX Warning: Text page 26 contains only floats.
-
-[26 <./images/3-cha-struct.png>]
+[25] [26 <./images/3-cha-struct.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 161--163
 
  []
@@ -1225,7 +1218,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 165--167
  []
 
 [27]
-<./images/3-rasa-log.png, id=317, 1204.5pt x 632.3625pt>
+<./images/3-rasa-log.png, id=343, 1204.5pt x 632.3625pt>
 File: ./images/3-rasa-log.png Graphic file (type png)
 <use ./images/3-rasa-log.png>
 Package pdftex.def Info: ./images/3-rasa-log.png  used on input line 181.
@@ -1397,7 +1390,7 @@ Package xcolor Warning: Incompatible color definition on input line 216.
 
 Package xcolor Warning: Incompatible color definition on input line 216.
 
-<./images/3-rasa-pipe.png, id=324, 1206.5075pt x 828.09375pt>
+<./images/3-rasa-pipe.png, id=350, 1206.5075pt x 828.09375pt>
 File: ./images/3-rasa-pipe.png Graphic file (type png)
 <use ./images/3-rasa-pipe.png>
 Package pdftex.def Info: ./images/3-rasa-pipe.png  used on input line 227.
@@ -1558,22 +1551,93 @@ Package xcolor Warning: Incompatible color definition on input line 255.
 
 Package xcolor Warning: Incompatible color definition on input line 255.
 
-[30 <./images/3-rasa-pipe.png>]) (chapters/chapter4-solution_proposed.tex
-[31]) (chapters/chapter5-planning_and_budget.tex [32
+[30 <./images/3-rasa-pipe.png>]
+<./images/3-hierarchical-model.png, id=386, 1302.8675pt x 659.46375pt>
+File: ./images/3-hierarchical-model.png Graphic file (type png)
+<use ./images/3-hierarchical-model.png>
+Package pdftex.def Info: ./images/3-hierarchical-model.png  used on input line 
+279.
+(pdftex.def)             Requested size: 416.92612pt x 211.0327pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[31]
+<./images/3-network-model.png, id=392, 1111.15125pt x 557.08125pt>
+File: ./images/3-network-model.png Graphic file (type png)
+<use ./images/3-network-model.png>
+Package pdftex.def Info: ./images/3-network-model.png  used on input line 289.
+(pdftex.def)             Requested size: 444.45262pt x 222.82855pt.
+
+Overfull \hbox (1.45262pt too wide) in paragraph at lines 289--290
+ [][] 
+ []
+
+[32 <./images/3-hierarchical-model.png (PNG copy)> <./images/3-network-model.pn
+g (PNG copy)>]
+<./images/3-relational-model.png, id=397, 1706.375pt x 1058.95625pt>
+File: ./images/3-relational-model.png Graphic file (type png)
+<use ./images/3-relational-model.png>
+Package pdftex.def Info: ./images/3-relational-model.png  used on input line 30
+6.
+(pdftex.def)             Requested size: 426.59271pt x 264.73842pt.
+<./images/3-nosql.png, id=398, 1419.3025pt x 809.0225pt>
+File: ./images/3-nosql.png Graphic file (type png)
+<use ./images/3-nosql.png>
+Package pdftex.def Info: ./images/3-nosql.png  used on input line 317.
+(pdftex.def)             Requested size: 425.79404pt x 242.70862pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[33 <./images/3-relational-model.png (PNG copy)>] [34 <./images/3-nosql.png (PN
+G copy)>] [35
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 401--402
+
+ []
+
+<./images/3-rasp-4.jpg, id=415, 803.0pt x 546.04pt>
+File: ./images/3-rasp-4.jpg Graphic file (type jpg)
+<use ./images/3-rasp-4.jpg>
+Package pdftex.def Info: ./images/3-rasp-4.jpg  used on input line 406.
+(pdftex.def)             Requested size: 256.96526pt x 174.73636pt.
+[36
+
+ <./images/3-rasp-4.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 431--432
+
+ []
+
+[37]
+<./images/3-cloud-vir.jpg, id=427, 225.84375pt x 225.84375pt>
+File: ./images/3-cloud-vir.jpg Graphic file (type jpg)
+<use ./images/3-cloud-vir.jpg>
+Package pdftex.def Info: ./images/3-cloud-vir.jpg  used on input line 440.
+(pdftex.def)             Requested size: 225.84319pt x 225.84319pt.
+ [38 <./images/3-cloud-vir.jpg>]
+Overfull \hbox (2.06482pt too wide) in paragraph at lines 468--469
+\T1/lmr/m/n/12 for on-demand cloud com-put-ing, it has the high-est mar-ket sha
+re of all the providers
+ []
+
+[39]) (chapters/chapter4-solution_proposed.tex [40])
+(chapters/chapter5-planning_and_budget.tex [41
 
 ])
-(chapters/chapter6-socioeconomic_environment.tex [33
+(chapters/chapter6-socioeconomic_environment.tex [42
 
 ])
-(chapters/chapter7-conclusions.tex [34
+(chapters/chapter7-conclusions.tex [43
 
 ]) (chapters/references.tex (main.bbl
-[35
+[44
 
 ]
 bibitemlist
 
-Underfull \hbox (badness 7116) in paragraph at lines 4--8
+Underfull \hbox (badness 5189) in paragraph at lines 4--8
 \T1/lmr/m/n/12 31 Au-gust, 2018.  Avail-able at []$\T1/lmtt/m/n/12 https : / / 
 www . citylab . com / life / 2019 /
  []
@@ -1585,31 +1649,31 @@ weight-[]loss-[]data /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--23
+Underfull \hbox (badness 10000) in paragraph at lines 15--19
 []\T1/lmr/m/n/12 H. Hor-ton, ``Mi-crosoft deletes 'teen girl' ai af-ter it be-c
 ame a
  []
 
 
-Underfull \hbox (badness 8075) in paragraph at lines 19--23
+Underfull \hbox (badness 6708) in paragraph at lines 15--19
 \T1/lmr/m/n/12 hitler-loving sex robot within 24 hours,'' 24 March, 2016.  Avai
 l-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--23
+Underfull \hbox (badness 10000) in paragraph at lines 15--19
 \T1/lmr/m/n/12 able at []$\T1/lmtt/m/n/12 https : / / www . telegraph . co . uk
  / technology / 2016 / 03 / 24 /
  []
 
 
-Underfull \hbox (badness 2662) in paragraph at lines 30--34
+Underfull \hbox (badness 1867) in paragraph at lines 30--34
 []\T1/lmr/m/n/12 C. Ku-mar, ``Ar-ti-fi-cial in-tel-li-gence: Def-i-ni-tion, typ
 es, ex-am-ples, tech-nolo-
  []
 
 
-Overfull \hbox (44.64612pt too wide) in paragraph at lines 30--34
+Overfull \hbox (50.5211pt too wide) in paragraph at lines 30--34
 \T1/lmtt/m/n/12 artificial-[]intelligence-[]definition-[]types-[]examples-[]tec
 hnologies-[]962ea75c7b9b$[]\T1/lmr/m/n/12 . 
  []
@@ -1626,7 +1690,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--39
 mp . com / community / tutorials /
  []
 
-)) (chapters/appendix.tex) [36
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--52
+[]\T1/lmr/m/n/12 R. Pold-ing, ``Databases: Evo-lu-tion and change,'' 31 Au-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--52
+\T1/lmr/m/n/12 gust, 2018.  Avail-able at []$\T1/lmtt/m/n/12 https : / / medium
+ . com / @rpolding /
+ []
+
+
+Underfull \hbox (badness 7649) in paragraph at lines 54--57
+[]\T1/lmr/m/n/12 S. Pit-tet, ``The dif-fer-ent types of soft-ware test-ing.''  
+Avail-able at
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--57
+[]$\T1/lmtt/m/n/12 https : / / www . atlassian . com / continuous-[]delivery / 
+software-[]testing /
+ []
+
+)) (chapters/appendix.tex) [45
 
 ]
 \tf@toc=\write5
@@ -1644,7 +1731,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 158.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 158.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 158.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B4FDA1DB96213624B17EDC14F13C2049;1514.
+(rerunfilecheck)             Checksum: F749F4809F035E468637BDB8BF5DB97C;1630.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1652,10 +1739,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 158.
  ) 
 Here is how much of TeX's memory you used:
- 13327 strings out of 492946
- 198818 string characters out of 3126266
+ 13409 strings out of 492946
+ 200336 string characters out of 3126266
  514463 words of memory out of 3000000
- 16879 multiletter control sequences out of 15000+200000
+ 16926 multiletter control sequences out of 15000+200000
  80237 words of font info for 55 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,17n,49p,814b,1168s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1670,9 +1757,9 @@ pe1/public/lm/lmri12.pfb><C:/Users/matth/AppData/Local/Programs/MiKTeX 2.9/font
 s/type1/public/lm/lmsy10.pfb><C:/Users/matth/AppData/Local/Programs/MiKTeX 2.9/
 fonts/type1/public/lm/lmtt10.pfb><C:/Users/matth/AppData/Local/Programs/MiKTeX 
 2.9/fonts/type1/public/lm/lmtt12.pfb>
-Output written on main.pdf (37 pages, 1422910 bytes).
+Output written on main.pdf (46 pages, 2298087 bytes).
 PDF statistics:
- 466 PDF objects out of 1000 (max. 8388607)
- 123 named destinations out of 1000 (max. 500000)
- 264 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 557 PDF objects out of 1000 (max. 8388607)
+ 152 named destinations out of 1000 (max. 500000)
+ 310 words of extra memory for PDF output out of 10000 (max. 10000000)
 
