@@ -38,18 +38,38 @@
 \contentsline {section}{\numberline {3.8}Testing}{39}{section.3.8}% 
 \contentsline {subsection}{\numberline {3.8.1}Automation}{40}{subsection.3.8.1}% 
 \contentsline {chapter}{\chapternumberline {4}Solution Proposed}{41}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}Design}{41}{section.4.1}% 
-\contentsline {subsection}{\numberline {4.1.1}Original Design}{41}{subsection.4.1.1}% 
-\contentsline {subsubsection}{MVC}{41}{section*.25}% 
-\contentsline {subsection}{\numberline {4.1.2}Final Design}{41}{subsection.4.1.2}% 
-\contentsline {section}{\numberline {4.2}Resources Used}{41}{section.4.2}% 
-\contentsline {subsection}{\numberline {4.2.1}Frontend}{41}{subsection.4.2.1}% 
-\contentsline {subsection}{\numberline {4.2.2}Backend}{41}{subsection.4.2.2}% 
-\contentsline {subsubsection}{Hardware}{41}{section*.26}% 
-\contentsline {subsubsection}{Software}{41}{section*.27}% 
-\contentsline {section}{\numberline {4.3}Implementation}{41}{section.4.3}% 
-\contentsline {section}{\numberline {4.4}Testing}{41}{section.4.4}% 
-\contentsline {chapter}{\chapternumberline {5}Planning and Budget}{42}{chapter.5}% 
-\contentsline {chapter}{\chapternumberline {6}Socioeconomic Environment}{43}{chapter.6}% 
-\contentsline {chapter}{\chapternumberline {7}Conclusions}{44}{chapter.7}% 
-\contentsline {chapter}{References}{45}{chapter*.28}% 
+\contentsline {section}{\numberline {4.1}Description}{41}{section.4.1}% 
+\contentsline {subsection}{\numberline {4.1.1}Reason for Building the Application}{43}{subsection.4.1.1}% 
+\contentsline {section}{\numberline {4.2}Design}{47}{section.4.2}% 
+\contentsline {subsection}{\numberline {4.2.1}Original Design: Frontend}{48}{subsection.4.2.1}% 
+\contentsline {subsubsection}{Webhook}{49}{section*.38}% 
+\contentsline {subsection}{\numberline {4.2.2}Original Design: Backend}{49}{subsection.4.2.2}% 
+\contentsline {subsubsection}{Context Manager}{51}{section*.40}% 
+\contentsline {subsubsection}{Activity Manager}{53}{section*.42}% 
+\contentsline {subsubsection}{Scalability}{53}{section*.43}% 
+\contentsline {subsection}{\numberline {4.2.3}Final Design: Frontend}{54}{subsection.4.2.3}% 
+\contentsline {subsection}{\numberline {4.2.4}Final Design: Backend}{54}{subsection.4.2.4}% 
+\contentsline {subsubsection}{Activity Manager}{55}{section*.46}% 
+\contentsline {subsubsection}{Story Manager}{55}{section*.47}% 
+\contentsline {subsection}{\numberline {4.2.5}Database}{55}{subsection.4.2.5}% 
+\contentsline {section}{\numberline {4.3}Resources Used}{56}{section.4.3}% 
+\contentsline {subsection}{\numberline {4.3.1}Hardware Resources}{56}{subsection.4.3.1}% 
+\contentsline {subsection}{\numberline {4.3.2}Software Resources}{56}{subsection.4.3.2}% 
+\contentsline {section}{\numberline {4.4}Implementation}{56}{section.4.4}% 
+\contentsline {subsection}{\numberline {4.4.1}Original Implementation}{56}{subsection.4.4.1}% 
+\contentsline {subsubsection}{Webhook}{56}{section*.49}% 
+\contentsline {subsubsection}{Controller}{57}{section*.50}% 
+\contentsline {subsubsection}{Context Manager}{58}{section*.51}% 
+\contentsline {subsection}{\numberline {4.4.2}Final Implementation}{60}{subsection.4.4.2}% 
+\contentsline {subsubsection}{Raspberry Pi to Azure}{60}{section*.52}% 
+\contentsline {subsubsection}{Config}{60}{section*.53}% 
+\contentsline {subsubsection}{Custom Actions}{61}{section*.54}% 
+\contentsline {subsubsection}{Conversation Logs}{63}{section*.55}% 
+\contentsline {section}{\numberline {4.5}Testing}{63}{section.4.5}% 
+\contentsline {subsection}{\numberline {4.5.1}Unit Tests}{63}{subsection.4.5.1}% 
+\contentsline {subsection}{\numberline {4.5.2}Integration Tests}{64}{subsection.4.5.2}% 
+\contentsline {subsection}{\numberline {4.5.3}End-to-end Tests}{64}{subsection.4.5.3}% 
+\contentsline {chapter}{\chapternumberline {5}Planning and Budget}{65}{chapter.5}% 
+\contentsline {chapter}{\chapternumberline {6}Socioeconomic Environment}{66}{chapter.6}% 
+\contentsline {chapter}{\chapternumberline {7}Conclusions}{67}{chapter.7}% 
+\contentsline {chapter}{References}{68}{chapter*.56}% 
