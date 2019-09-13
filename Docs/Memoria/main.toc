@@ -64,12 +64,14 @@
 \contentsline {subsubsection}{Raspberry Pi to Azure}{60}{section*.52}% 
 \contentsline {subsubsection}{Config}{60}{section*.53}% 
 \contentsline {subsubsection}{Custom Actions}{61}{section*.54}% 
-\contentsline {subsubsection}{Conversation Logs}{63}{section*.55}% 
+\contentsline {subsubsection}{Conversation Logs}{62}{section*.55}% 
 \contentsline {section}{\numberline {4.5}Testing}{63}{section.4.5}% 
 \contentsline {subsection}{\numberline {4.5.1}Unit Tests}{63}{subsection.4.5.1}% 
 \contentsline {subsection}{\numberline {4.5.2}Integration Tests}{64}{subsection.4.5.2}% 
 \contentsline {subsection}{\numberline {4.5.3}End-to-end Tests}{64}{subsection.4.5.3}% 
 \contentsline {chapter}{\chapternumberline {5}Planning and Budget}{65}{chapter.5}% 
-\contentsline {chapter}{\chapternumberline {6}Socioeconomic Environment}{66}{chapter.6}% 
-\contentsline {chapter}{\chapternumberline {7}Conclusions}{67}{chapter.7}% 
-\contentsline {chapter}{References}{68}{chapter*.56}% 
+\contentsline {section}{\numberline {5.1}Planning}{65}{section.5.1}% 
+\contentsline {subsection}{\numberline {5.1.1}Original Design}{65}{subsection.5.1.1}% 
+\contentsline {chapter}{\chapternumberline {6}Socioeconomic Environment}{67}{chapter.6}% 
+\contentsline {chapter}{\chapternumberline {7}Conclusions}{68}{chapter.7}% 
+\contentsline {chapter}{References}{69}{chapter*.56}% 

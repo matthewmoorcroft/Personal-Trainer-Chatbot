@@ -1,1 +1,52 @@
 \chapter{Planning and Budget}\label{chap:8}
+\section{Planning}\label{sec:chap5_plan}
+\subsection{Original Design}\label{sec:chap5_plan_ori}
+The original plan was to develop the whole project in 5 months, spend two weeks designing and thinking on the objective of the application. The following steps are explained in the Gantt graph\\
+
+
+\begin{landscape}
+	
+
+\begin{ganttchart}[
+	canvas/.append style={fill=none, draw=black!5, line width=.75pt},
+	hgrid style/.style={draw=black!5, line width=.75pt},
+	vgrid={*1{draw=black!5, line width=.75pt}},
+	title/.style={draw=none, fill=none},
+	title label font=\bfseries\footnotesize,
+	title label node/.append style={below=1pt},
+	include title in canvas=false,
+	bar label font=\mdseries\small\color{black!70},
+	bar label node/.append style={left=2cm},
+	y unit chart=0.9cm,
+	bar/.append style={draw=none, fill=barblue},
+	bar progress label font=\mdseries\footnotesize\color{black!70},
+	group/.append style={draw=none, fill=groupblue},
+	group left shift=0,
+	group right shift=0,
+	group height=.5,
+	group peaks tip position=0,
+	group label node/.append style={left=.6cm},
+	group progress label font=\bfseries\small,
+	]{1}{25}
+	\gantttitle[
+	title label node/.append style={below left=1pt and 0pt}
+	]{SEMANAS:\quad1}{1}
+	\gantttitlelist{2,...,25}{1} \\
+	\ganttgroup{Project design}{1}{2} \\
+	\ganttbar{Use cases}{1}{1} \\
+	\ganttbar{Viability analysis}{1}{2} \\
+	\ganttbar{State of the art analysis}{1}{2} \\
+	\ganttbar{Choose what resources to use}{2}{2} \\
+	\ganttbar{System design}{2}{2} \\[grid]
+	\ganttgroup{Project development}{2}{16} \\
+	\ganttbar{Tests}{2}{3} \\
+	\ganttbar{Webhook}{3}{4} \\
+	\ganttbar{Controller}{4}{6} \\
+	\ganttbar{Context manager}{7}{11} \\
+	\ganttbar{Activity manager}{11}{16} \\[grid]
+	\ganttgroup{Process Documentation}{2}{20} \\
+	\ganttbar{Memory redaction}{2}{17} \\
+	\ganttbar{Presentation}{18}{20}
+	\end{ganttchart}
+
+\end{landscape}
