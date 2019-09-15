@@ -16,6 +16,7 @@ from rasa_sdk.forms import FormAction
 
 from connections.database import Database
 from connections.net_manager import send_photo
+from model.plotter import plot_progress
 import random
 import datetime
 
@@ -355,8 +356,12 @@ class ShowProgress(Action):
         dispatcher.utter_template("utter_show_progress", tracker)
 
         # db extract weights for every day/month/year
-        # matplotlib image
-        # send image
+        user_id = tracker.get_slot("user_id")
+        db = Database.get_instance()
+        weights = db.get_weights(user_id)
+        bodyfatratios = db.get_bodyfatratios(user_id)
+        plot_progress(user_id, tracker.sender_id, weights, bodyfatratios)
+        # analyze user
         return []
 
 

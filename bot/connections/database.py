@@ -173,6 +173,74 @@ class Database:
             print(e)
             return json.dumps({'result': "Error: Failed to add user"})
 
+    def get_weights(self, user_id):
+
+        try:
+            cur = self.conn.cursor()
+
+            cur.execute("""SELECT
+                            date_part('month', weights.measurement_date)
+                            as month,
+                            avg(weight)
+                            as average_weight
+                        FROM
+                            core.weights
+                        WHERE
+                            user_id =  %(user_id)s
+                        AND
+                            date_part('year', weights.measurement_date)
+                            = date_part('year', NOW())
+                        GROUP BY
+                            date_part('month', weights.measurement_date)
+                        """, {
+                'user_id': user_id
+            })
+
+            rows = cur.fetchall()
+            cur.close()
+
+            weights = {}
+            for row in rows:
+                weights[int(row[0])] = row[1]
+            return weights
+        except Exception as e:
+            traceback.print_exc()
+            print(e)
+
+    def get_bodyfatratios(self, user_id):
+
+        try:
+            cur = self.conn.cursor()
+
+            cur.execute("""SELECT
+                            date_part('month', bodyfatratios.measurement_date)
+                            as month,
+                            avg(bodyfatratio)
+                            as average_bodyfatratio
+                        FROM
+                            core.bodyfatratios
+                        WHERE
+                            user_id =  %(user_id)s
+                        AND
+                            date_part('year', bodyfatratios.measurement_date)
+                            = date_part('year', NOW())
+                        GROUP BY
+                            date_part('month', bodyfatratios.measurement_date)
+                        """, {
+                'user_id': user_id
+            })
+
+            rows = cur.fetchall()
+            cur.close()
+
+            bodyfatratios = {}
+            for row in rows:
+                bodyfatratios[int(row[0])] = row[1]
+            return bodyfatratios
+        except Exception as e:
+            traceback.print_exc()
+            print(e)
+
     def update_user(self, telegram_id, user_name, birthdate, user_gender, training_type, measure_user):
 
         try:
