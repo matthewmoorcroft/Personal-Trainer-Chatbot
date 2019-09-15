@@ -1,8 +1,7 @@
 \chapter{Planning and Budget}\label{chap:8}
 \section{Planning}\label{sec:chap5_plan}
 \subsection{Original Design}\label{sec:chap5_plan_ori}
-The original plan was to develop the whole project in 5 months, spend two weeks designing and thinking on the objective of the application. The following steps are explained in the Gantt graph\\
-
+The original plan was to develop the whole project in five months in two different stages and documenting the whole process, the first stage was programmed to las two weeks designing and thinking on the objective of the application and making sure that the idea is viable before writing a line of code with a form sent to possible users. The next stage was the development step, first creating the tests that will confirm the application works correctly, this was predicted to last two weeks. The following steps can be seen in the Gantt graph on the next page.\\
 
 \begin{landscape}
 	
@@ -30,7 +29,7 @@ The original plan was to develop the whole project in 5 months, spend two weeks 
 	]{1}{25}
 	\gantttitle[
 	title label node/.append style={below left=1pt and 0pt}
-	]{SEMANAS:\quad1}{1}
+	]{WEEKS:\quad1}{1}
 	\gantttitlelist{2,...,25}{1} \\
 	\ganttgroup{Project design}{1}{2} \\
 	\ganttbar{Use cases}{1}{1} \\
@@ -50,3 +49,84 @@ The original plan was to develop the whole project in 5 months, spend two weeks 
 	\end{ganttchart}
 
 \end{landscape}
+
+\subsection{Final Design}\label{sec:chap5_plan_fin}
+
+%\begin{landscape}
+	After the five months of development, due to external factors the project was seriously delayed and a redesign had to be done as the complexity of the context manager in the original design made it unviable to deliver for this year. This made it necessary to rethink how to adapt the project to reach the target of September for delivery. The following Gantt graph is the new planning preparation for the project. It was much shorter than the previous plan as most of the steps were done already.\\
+	
+	\begin{ganttchart}[
+		canvas/.append style={fill=none, draw=black!5, line width=.75pt},
+		hgrid style/.style={draw=black!5, line width=.75pt},
+		vgrid={*1{draw=black!5, line width=.75pt}},
+		title/.style={draw=none, fill=none},
+		title label font=\bfseries\footnotesize,
+		title label node/.append style={below=1pt},
+		include title in canvas=false,
+		bar label font=\mdseries\small\color{black!70},
+		bar label node/.append style={left=2cm},
+		y unit chart=0.9cm,
+		bar/.append style={draw=none, fill=barblue},
+		bar progress label font=\mdseries\footnotesize\color{black!70},
+		group/.append style={draw=none, fill=groupblue},
+		group left shift=0,
+		group right shift=0,
+		group height=.5,
+		group peaks tip position=0,
+		group label node/.append style={left=.6cm},
+		group progress label font=\bfseries\small,
+		]{1}{16}
+		\gantttitle[
+		title label node/.append style={below left=1pt and 0pt}
+		]{WEEKS:\quad1}{1}
+		\gantttitlelist{2,...,16}{1} \\
+		\ganttgroup{Project design}{1}{2} \\
+		\ganttbar{Change resources}{1}{2} \\
+		\ganttbar{New system design}{2}{2} \\[grid]
+		\ganttgroup{Project development}{3}{12} \\
+		\ganttbar{Pipeline design}{3}{4} \\
+		\ganttbar{Story elaboration}{4}{6} \\
+		\ganttbar{Custom activities}{7}{10} \\
+		\ganttbar{Activity manager}{10}{12} \\[grid]
+		\ganttgroup{Process Documentation}{2}{16} \\
+		\ganttbar{Memory redaction}{2}{14} \\
+		\ganttbar{Presentation}{15}{16}
+	\end{ganttchart}
+	
+\section{Budget}\label{sec:chap5_budg}
+
+\begin{table}
+	\centering
+	\resizebox{\linewidth}{!}{
+	\begin{tabular}{|l|l|l|l|l|l|l|} 
+		\hline
+		\multicolumn{7}{|c|}{{\cellcolor[rgb]{0.502,1,1}}Hardware}                                                                                                \\ 
+		\hline
+		\rowcolor[rgb]{0.753,0.753,0.753} Name                          & Cost      & Units    & Duration  & \% use in project & Amortization & Chargeable cost   \\ 
+		\hline
+		Laptop                                                          & 699 \euro     & 1        & 9         & 100 \%            & 48           & 131,07 \euro          \\ 
+		\hline
+		Raspberry Pi                                                    & 35 \euro      & 1        & 5         & 55,55 \%         & 48           & 3,65 \euro            \\ 
+		\hline
+		\multicolumn{5}{|r|}{{\cellcolor{cyan}}Total}                                                                          & \multicolumn{2}{l|}{}            \\ 
+		\hline
+		\multicolumn{7}{|c|}{{\cellcolor[rgb]{0.502,1,1}}Software}                                                                                                \\ 
+		\hline
+		\rowcolor[rgb]{0.753,0.753,0.753} Name                          & Cost      & Units    & Duration  & \% use in project & Amortization & Chargeable cost   \\ 
+		\hline
+		\begin{tabular}[c]{@{}l@{}}Azure virtual \\machine\end{tabular} &           & 1        & 4         & 44,45 \%          & -            &                   \\ 
+		\hline
+		\multicolumn{5}{|r|}{{\cellcolor{cyan}}Total}                                                                          & \multicolumn{2}{l|}{}            \\ 
+		\hline
+		\multicolumn{7}{|c|}{{\cellcolor[rgb]{0.502,1,1}}Human Resources}                                                                                         \\ 
+		\hline
+		\rowcolor[rgb]{0.753,0.753,0.753} Name~                         & Surname   & Category & Cost/Hour & Total hours       & \multicolumn{2}{l|}{Total cost}  \\ 
+		\hline
+		Matthew                                                         & Moorcroft & Analyst  & /hour   &                   &              &                   \\ 
+		\hline
+		\multicolumn{5}{|r|}{{\cellcolor{cyan}}Total}                                                                          & \multicolumn{2}{l|}{}            \\
+		\hline
+	\end{tabular}}
+	\label{costs}
+	\caption{Budget}
+\end{table}
