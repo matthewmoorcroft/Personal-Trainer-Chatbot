@@ -1,4 +1,4 @@
-\chapter{State of the Art}\label{sec:chap:2}
+\chapter{Technologies}\label{sec:chap:2}
 
 For the last 40 years society has been living the third industrial revolution, better known as the digital age. Telecommunications and technological innovations are transforming the way people live and work, one way these innovations have impacted society is by allowing users to connect cheaper and quicker internationally, making it easier to share ideas than ever before. 
 The ever-growing number of bots assisting humans has allowed companies to automate more and more, relieving people from the most boring of jobs, this has resulted in a higher demand for higher educated workers specially in computer science and other engineering areas. 
@@ -58,8 +58,6 @@ For this project the main areas that were used from AI are Machine Learning and 
 		\end{itemize}
 			}
 \end{itemize}
-
-\section{Programming Languages}\label{sec:chap3_prog_lang}
 
 \section{Chatbots}\label{sec:chap3_ai}
 A chatbot is a software based on AI that simulates a human conversation with a user. This is done through messaging applications such as Telegram, Facebook, websites or company’s messaging software.\\
@@ -121,7 +119,7 @@ For example, in this project when the user asks to be reminded to take his measu
 	\end{figure}
 \end{center}
 
-\section{Chatbot Platforms}\label{sec:chap3_plat}
+\subsection{Chatbot Platforms}\label{sec:chap3_plat}
 
 There are many platforms to build chatbots, with their own features. Below there is a table of the difference between several solutions. In this section we will talk about some of them and what differences each have.\\
 
@@ -153,7 +151,7 @@ There are many platforms to build chatbots, with their own features. Below there
 \end{table}
  
 
-\subsection{DialogFlow}\label{sec:chap3_dialog}
+\subsubsection{DialogFlow}\label{sec:chap3_dialog}
 
 Dialogflow is Google’s solution for chatbots. It is a framework that uses Google’s ML expertise and offers the user an attractive and intuitive web design. It let’s the user create a chatbot that can interpret text and voice.\\
 The difference between Dialogflow and Rasa is that the latter gives the developer more freedom when creating the brains of the chatbot, this can be good or bad. For it to be good, it requires lots of data and knowledge in the field. The advantage Dialogflow has over Rasa for less technical people, is that everything done with the NLU Engine is mostly done already, that leaves the developers with teaching the bot how they want it to perform.\cite{dialogflow}\\
@@ -171,9 +169,8 @@ The core functionality is composed of several components:\\
 	\item {\textbf{Intents:} The action the user wants to perform. In Dialogflow all intents are managed with an interface where the developers add the intent it wants predicted and chooses what context, event or entities they want extracted.}
 \end{itemize}
 
-\clearpage
 
-\subsection{Rasa}\label{sec:chap3_rasa}
+\subsubsection{Rasa}\label{sec:chap3_rasa}
 
 \begin{center}
 	\begin{figure}[h!]
@@ -198,9 +195,9 @@ The reason for choosing this platform to build the chatbot is that it is open so
 \end{itemize}
 	
 The problem with using this solution is that you are limited by what is available and what functionality you can add, another limitation compared to Dialogflow is that the only support you can get comes from the users, this isn’t to helpful when you need urgent assistance as you have to wait for a user to answer. Even though there is documentation to assist developers when creating the chatbot the documentation lacks many details on how many things are done and. what the best practices are. This depending on how much Rasa grows, might improve over time.\\
-There are two main components in rasa, NLU and CORE, each can work independently if the client’s requirements needs it or they can work together. We will explain how each component works.\cite{rasa}
+There are two main components in rasa, NLU and CORE, each can work independently if the client’s requirements needs it or they can work together. We will explain how each component works.\cite{rasa}\\
 
-\subsubsection{NLU}\label{sec:chap3_rasa_nlu}
+\textbf{\underline{NLU}}\\
 
 Rasa NLU is an open-source natural language processing tool for intent classification and entity extraction in chatbots.  From the user’s message it translates it to a JSON data object with the intent predicted and the entities extracted from the message.\\
 
@@ -236,9 +233,9 @@ There are two main pipelines already built and ready to use with Rasa.
 	\item {\textbf{supervised\_embeddings:} This is different than the pipeline above in the way that it isn’t pretrained which means that it will create the word vectors based on the dataset available, this is only recommended when a larger dataset is available as it requires a lot of data to interpret it correctly
 		}
 \end{itemize}
-There are custom pipelines, where you create it based on what components the developer wants to have. Adding components for sentiment analysis or different components to classify intents.
+There are custom pipelines, where you create it based on what components the developer wants to have. Adding components for sentiment analysis or different components to classify intents.\\
 
-\subsubsection{CORE}\label{sec:chap3_rasa_core}
+\textbf{\underline{CORE}}\\
 
 Rasa Core is a dialogue engine used for building virtual assistants, it has several parts that makes treating conversations easier.
 \begin{itemize}
@@ -273,11 +270,11 @@ Before databases where used, all data relevant to a company had to be stored in 
 
 \begin{itemize}
 	\item {\textbf{Hierarchical model:} It organizes data in a tree like structure, this model was created in the 1960’s. It is an easy to understand model as it simulates an enterprise structure. Even though the model was created in the 1960’s it is still in use in some applications to this date. You can see this model in use in a computers file system. The problem with this model is that every time a record wanted to be accessed the whole tree had to be traversed.
-	\clearpage
+
 	\begin{center}
 		\begin{figure}[h!]
 			\centering
-			\includegraphics[scale=0.32]{./images/3-hierarchical-model}
+			\includegraphics[scale=0.22]{./images/3-hierarchical-model}
 			\caption{Hierarchical Model}
 			\label{hier_model}
 		\end{figure}
@@ -288,7 +285,7 @@ Before databases where used, all data relevant to a company had to be stored in 
 	\begin{center}
 		\begin{figure}[h!]
 			\centering
-			\includegraphics[scale=0.4]{./images/3-network-model}
+			\includegraphics[scale=0.25]{./images/3-network-model}
 			\caption{Network Model}
 			\label{net_model}
 		\end{figure}
@@ -305,7 +302,7 @@ Before databases where used, all data relevant to a company had to be stored in 
 	\begin{center}
 		\begin{figure}[h!]
 			\centering
-			\includegraphics[scale=0.25]{./images/3-relational-model}
+			\includegraphics[scale=0.20]{./images/3-relational-model}
 			\caption{Relational Model}
 			\label{rel_model}
 		\end{figure}
@@ -316,7 +313,7 @@ Before databases where used, all data relevant to a company had to be stored in 
 	\begin{center}
 		\begin{figure}[h!]
 			\centering
-			\includegraphics[scale=0.3]{./images/3-nosql}
+			\includegraphics[scale=0.25]{./images/3-nosql}
 			\caption{SQL vs NoSQL}
 			\label{nosql}
 		\end{figure}

@@ -33,117 +33,10 @@ The objective of this system is to create a simple way of tracking your progress
 	\item{\textbf{Team meetings:} This functionality focuses on the social part of training, where users can arrange team matches between the users in what interest them more, even if the user’s interests are outdoor training or cycling teams, where they can arrange a route up a mountain, this will provide a community feeling in the application.}
 \end{itemize}
 
-\subsection{Reason for Building the Application}\label{sec:chap4_reas_app}
 
-To prove that the application has a market opportunity an inquire was made to a group of people with over 200 people, the results where interesting as will be explained below. The language of the form is in Spanish as the public inquired live in Spain.\\
 
-As shown below most of the users filling the form are from age 16 to 25, this gives context to some of the answers given afterwards, in this case generational mentality plays an important role as different age groups may have a different opinion on gym training. In this case the target group even though available for every age group is more focused on people in those age limits as they are the most common at gyms, the least informed and the more friendly with technology they are.
-
-\begin{center}
-	\begin{figure}[h!]
-		\centering
-		\includegraphics[scale=1]{./images/4-age}
-		\caption{Survey: Age}
-		\label{4_age}
-	\end{figure}
-\end{center}
-
-In the case of gender, the pool has been varied with close to 50\% of each gender, this with the age group gives a general perception of what people think of the questions asked.
-
-\begin{center}
-	\begin{figure}[h!]
-		\centering
-		\includegraphics[scale=0.25]{./images/4-genero}
-		\caption{Survey: Gender}
-		\label{4_genero}
-	\end{figure}
-\end{center}
-
-The following graph starts to show some interesting results, we can see that 30\% of the people asked don’t do any type of training and a sum of 24,1\% only train one to two times a week, this isn’t unexpected but that is over 50\% of people that train below the recommended amount weekly.
-
-\begin{center}
-	\begin{figure}[h!]
-		\centering
-		\includegraphics[scale=1]{./images/4-exe-freq}
-		\caption{Survey: Gym Frequency}
-		\label{4_exe_freq}
-	\end{figure}
-\end{center}
-
-In the next graph the conclusions we can extract is that from the people that did the survey 30,7\% follow their own knowledge when going to the gym, this is something that is very frequent in gyms and it is the main source of dropouts as many people that follow what they know don’t actually have the required knowledge to do so. Another point we can extract from here is that 11,4\% use tables while training, this could provide a potential group to focus the bot to. The inconvenient part of information we can extract is that people don’t usually use applications when they train, so in order to reach the audience, the bot must seem as human as possible.
-
-\begin{center}
-	\begin{figure}[h!]
-		\centering
-		\includegraphics[scale=1]{./images/4-train-type}
-		\caption{Survey: Training Type}
-		\label{4_train_type}
-	\end{figure}
-\end{center}
-
-The following pie represents if a personal trainer would motivate a user to go to the gym more often, this was surprising, as over 50\% would be motivated to go to the gym if they had a personal trainer guiding them and 34,2\% would maybe feel motivated to do so, after analyzing the previous graphs we consider that there is a market for a personal trainer application.
-
-\begin{center}
-	\begin{figure}[h!]
-		\centering
-		\includegraphics[scale=1]{./images/4-if-trainer}
-		\caption{Survey: Having a Trainer}
-		\label{4_if_trainer}
-	\end{figure}
-\end{center}
-
-In the chart below we can extract some conclusions from the data, we think that 64\% of users change in some way the way they eat when they start training, but most don’t follow a strict diet. This is an important factor when developing the bot as the functionality for the recommended diets can be adapted to provide diets which tries to follow the most common eating habits of the user and slowly transition to a stricter diet, this will make users less prone to not following it.
-
-\begin{center}
-	\begin{figure}[h!]
-		\centering
-		\includegraphics[scale=1]{./images/4-change-diet}
-		\caption{Survey: Diet Change}
-		\label{4_change_diet}
-	\end{figure}
-\end{center}
-
-This graph follows up with the previous one and supports the conclusion extracted, that users rather have someone assisting with what meals to recommend the user with 84,6\% that would follow a diet recommended to them.
-
-\begin{center}
-	\begin{figure}[h!]
-		\centering
-		\includegraphics[scale=1]{./images/4-diet-rec}
-		\caption{Survey: Diet Recommendation}
-		\label{4_diet_rec}
-	\end{figure}
-\end{center}
-
-The same as the previous chart in relation to exercises, the public is open and prefer someone guiding them to reach their objectives, in this case regarding exercises. This has to do with people using their own knowledge to train as compared to this graph some of the people that followed their own knowledge would rather have some one recommend what exercises to do.
-
-\begin{center}
-	\begin{figure}[h!]
-		\centering
-		\includegraphics[scale=0.25]{./images/4-rec-exe}
-		\caption{Survey: Exercise Recommendation}
-		\label{4_rec_exe}
-	\end{figure}
-\end{center}
-
-The most important chart of all is regarding our application, which is if these recommendations where given by a chatbot, if they would still follow it. Some curious points can be extracted from this pie, which are that most people would rather hire a professional trainer, what this tells us is that many people still prefer human contact over having a bot telling them what recommendations to follow, another point which links to a previous graph where we talked about how people train is that only 4.1\% have personal trainers, the reason being that hiring a personal trainer is costly so considering that and the fact that 35,1\% of people would follow those recommendations gives the application a large market to focus to, but also implies that the chatbot must try and simulate a human being as good as possible.
-
-\begin{center}
-	\begin{figure}[h!]
-		\centering
-		\includegraphics[scale=1]{./images/4-bot-trainer}
-		\caption{Survey: Bot Trainer}
-		\label{4_bot_trainer}
-	\end{figure}
-\end{center}
-
-\section{Design}\label{sec:chap4_design}
-
-In this project we find that there has been two different designs, the original design was developed in a way to make the system homemade, without depending on an external platform which even though it provides a base where to start developing it limits the control the developer has in adding new functionality.\\
-
-The second and final design does use an open source platform as the base to start developing, this had to be done because of the complexity related in developing the proprietary solution in relation to the time available to develop it. Further down the memory the reason for changing the design will be explained in more detail.
-
-\subsection{Original Design: Frontend}\label{sec:chap4_ori_des_front}
-
+\section{Design}\label{sec:chap4_ori_des_front}
+\subsection{Frontend}\label{sec:chap4_ori_des_back}
 \begin{center}
 	\begin{figure}[h!]
 		\centering
@@ -170,12 +63,12 @@ Following a model view controller architecture, the project uses as the view par
 	\item{\textbf{Webhook:} It provides a way of creating a bridge between Telegram servers and the Raspberry Pi to reduce stress at the network as Telegram automatically sends messages to the server instead of relying on the Raspberry Pi, polling Telegram servers.}
 \end{itemize} 
 
-\subsubsection{Webhook}\label{sec:chap4_ori_webhook}
+\subsection{Webhook}\label{sec:chap4_ori_webhook}
 
 After analyzing options to get the messages from Telegram, it was decided for this design to have a webhook instead of polling the server. A webhook is the bridge for communicating with the Raspberry Pi allowing to relieve the network from redundant traffic. The way a webhook works is like a web server which Telegram calls it whenever a message is received from a user. Whenever the webhook receives the message, it stores it in the database where the bot can check if anything new has arrived, this allows to transfer the stress from the network to the pc which reduces latency when receiving messages as polling a server takes longer than polling a database.
 
-\subsection{Original Design: Backend}\label{sec:chap4_ori_des_back}
-
+\subsection{Backend}\label{sec:chap4_ori_des_back}
+\subsubsection{Original Design}\label{sec:chap4_ori_des_back}
 As the frontend was mostly managed by Telegram there wasn’t much to design except the webhook to support the message delivery.\\
 
 For the backend we find the controller and the model for the bot. The way this two were designed is in that the controller was the communicator, were it managed the database where it extracted the user’s data two give back to the functions that performed the tasks. The first thing the controller does when getting a message from the database is authenticate the user, this is done with the telegram id sent from telegram, this id is unique to each user which makes it secure to identity fraud, at least from the applications end.\\
@@ -191,9 +84,9 @@ Below is the original flow for a message sent by the user to the bot, the design
 	\end{figure}
 \end{center}
 
-The flow follows starts once the message is grabbed from the database, the first thing is to verify that Sam is talking to a user from the platform, the idea is that the user doesn’t belong to the platform Sam offers to join the club. The complex part of the application was the context engine side of it.
+The flow follows starts once the message is grabbed from the database, the first thing is to verify that Sam is talking to a user from the platform, the idea is that the user doesn’t belong to the platform Sam offers to join the club. The complex part of the application was the context engine side of it.\\
 
-\subsubsection{Context Manager}\label{sec:chap4_ori_cont_man}
+\textbf{\underline{Context Manager}}\label{sec:chap4_ori_cont_man}\\
 
 The context engine is an engine which objective is to give the bot context from the user, this gives intelligence to the bot as it can remember what has been talked before. It also has the function of extracting data from what the user’s message. The following flow shows how it is intended to work. These are the main design objectives when creating the context engine.
 \begin{itemize}
@@ -220,10 +113,13 @@ The context engine is an engine which objective is to give the bot context from 
 \end{center}
 
 \clearpage
-\subsubsection{Activity Manager}\label{sec:chap4_ori_act_man}
-The activity engine is the one in charge of performing the tasks required for the bot to be functional, the design is simple but the complexity in this manager is the functionality the developer wants Sam to have. The design for this is that it must be simple to add new functionality and not have to change to much code. The idea is to use the flows we talked about in the context manager section, in these flows if the context requires an activity to have the name of such activity in the JSON file and execute it in the activity manager.
+\textbf{\underline{Activity Manager}}\label{sec:chap4_ori_act_man}\\
 
-\subsubsection{Scalability}\label{sec:chap4_ori_scale}
+The activity engine is the one in charge of performing the tasks required for the bot to be functional, the design is simple but the complexity in this manager is the functionality the developer wants Sam to have. The design for this is that it must be simple to add new functionality and not have to change to much code. The idea is to use the flows we talked about in the context manager section, in these flows if the context requires an activity to have the name of such activity in the JSON file and execute it in the activity manager.\\
+
+
+\textbf{\underline{Scalability}}\label{sec:chap4_ori_scale}\\
+
 An important requirement for Sam is for him to be scalable, to reach this objective the architecture is designed in modules so that if a certain part of the application is receiving a higher level of stress to be able to scale it independently. This is done by having two masters, one for the activities and one for the context manager, these when launched by themselves act as a normal manager, but when several are launched acts as a load balancer.
 
 \begin{center}
@@ -235,11 +131,7 @@ An important requirement for Sam is for him to be scalable, to reach this object
 	\end{figure}
 \end{center}
 
-\subsection{Final Design: Frontend}\label{sec:chap4_fin_des_fron}
-
-For the final design the frontend only received some changes, the new design, as the original, still uses Telegram as the chat platform. One aspect that changed was the webhook, which for the revised version comes integrated with Rasa, so it doesn’t make any sense to develop it.
-
-\subsection{Final Design: Backend}\label{sec:chap4_fin_des_fron}
+\subsection{Final Design}\label{sec:chap4_fin_des_fron}
 
 As everything is designed following some rules, the changes the backend can have is limited to what Rasa offers.
 
@@ -263,11 +155,11 @@ The steps this new backend follows is different.
 	\item {The response is sent back to the user.\cite{rasa-arch}}
 \end{enumerate}
 
-\subsubsection{Activity Manager}\label{sec:chap4_fin_act}
+\textbf{\underline{Activity Manager}}\label{sec:chap4_fin_act}\\
 
-The activity manager has been changed because of the implementation of rasa, the way it has been designed is with what is called custom actions, which is similar in the way it was intended in the original design, but differs in the way it interacts with the data as it uses the database in conjunction with the Tracker from rasa which stores all the data extracted from the conversation.
+The activity manager has been changed because of the implementation of rasa, the way it has been designed is with what is called custom actions, which is similar in the way it was intended in the original design, but differs in the way it interacts with the data as it uses the database in conjunction with the Tracker from rasa which stores all the data extracted from the conversation.\\
 
-\subsubsection{Story Manager}\label{sec:chap4_fin_stor}
+\textbf{\underline{Story Manager}}\label{sec:chap4_fin_stor}\\
 
 The way that Rasa manages conversational chatbots is with the creation of stories. The stories are basically the flow of how the conversation is going to work as explained in section \ref{sec:chap3_rasa_core} in the state-of-the-art chapter. The advantage of this design compared to the original one is that it manages better deviations from the happy path, which is the correct way of completing a story. The disadvantage is that it requires a lot of training conversations for the bot to perform as intended, the design in the original had more restricted paths, so it was harder for the user to deviate from the original flow.
 
@@ -286,9 +178,12 @@ The database remained the same for both designs as both required access to the s
 
 The language to manage the database has been PostgreSQL as the team has had more experience developing in that language and the possibility of having more extensions than MySQL may offer a better option to have in the future.
 
-\section{Resources Used}\label{sec:chap4_res_used}
 
-\subsection{Hardware Resources}\label{sec:chap4_hard_res}
+
+\section{Implementation}\label{sec:chap4_impl}
+\subsection{Resources Used}\label{sec:chap4_res_used}
+
+\subsubsection{Hardware Resources}\label{sec:chap4_hard_res}
 
 \begin{itemize}
 	\item{Raspberry Pi to act as the server of the application, the brains of the chatbot, for more information check section \ref{sec:chap3_rasp}}
@@ -297,7 +192,7 @@ The language to manage the database has been PostgreSQL as the team has had more
 	\item{Laptop to develop the code and manage the server.}
 \end{itemize}
 
-\subsection{Software Resources}\label{sec:chap4_res_back}
+\subsubsection{Software Resources}\label{sec:chap4_res_back}
 
 \begin{itemize}
 	\item {Python programming language}
@@ -308,7 +203,6 @@ The language to manage the database has been PostgreSQL as the team has had more
 	\item {PostgreSQL as the SQL language to query the database, for more information check section \ref{sec:chap3_db}}
 \end{itemize}
 
-\section{Implementation}\label{sec:chap4_impl}
 \subsection{Original Implementation}\label{sec:chap4_ori_imp}
 \subsubsection{Webhook}\label{sec:chap4_ori_imp_web}
 

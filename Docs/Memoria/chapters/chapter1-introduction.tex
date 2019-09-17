@@ -10,6 +10,115 @@ Thanks to the access we have now to smartphones and social platforms the integra
 \section{Motivation}\label{sec:chap1_moti}
 The motivation to develop this project comes from the time-consuming activity of preparing a time table with what muscles and exercises to train and the forgetful way of tracking a person’s progress when going to the gym, for this reason, with the knowledge acquired over the years and the technology available this project came to life. It is not only a project to finish the degree it is a project that after giving it in will still be worked on over time to add more functionality and make it a truly useful application that can be used by users outside the University environment. This will be more of a proof of concept to verify the viability of further developing and investing the time to add more functionality.
 
+\subsection{Survey}\label{sec:chap1_reas_app}
+
+To prove that the application has a market opportunity an inquire was made to a group of people with over 200 people, the results where interesting as will be explained below. The language of the form is in Spanish as the public inquired live in Spain.\\
+
+As shown below most of the users filling the form are from age 16 to 25, this gives context to some of the answers given afterwards, in this case generational mentality plays an important role as different age groups may have a different opinion on gym training. In this case the target group even though available for every age group is more focused on people in those age limits as they are the most common at gyms, the least informed and the more friendly with technology they are.
+
+\begin{center}
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=1]{./images/4-age}
+		\caption{Survey: Age}
+		\label{4_age}
+	\end{figure}
+\end{center}
+
+In the case of gender, the pool has been varied with close to 50\% of each gender, this with the age group gives a general perception of what people think of the questions asked.
+
+\begin{center}
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.25]{./images/4-genero}
+		\caption{Survey: Gender}
+		\label{4_genero}
+	\end{figure}
+\end{center}
+
+The following graph starts to show some interesting results, we can see that 30\% of the people asked don’t do any type of training and a sum of 24,1\% only train one to two times a week, this isn’t unexpected but that is over 50\% of people that train below the recommended amount weekly.
+
+\begin{center}
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=1]{./images/4-exe-freq}
+		\caption{Survey: Gym Frequency}
+		\label{4_exe_freq}
+	\end{figure}
+\end{center}
+
+In the next graph the conclusions we can extract is that from the people that did the survey 30,7\% follow their own knowledge when going to the gym, this is something that is very frequent in gyms and it is the main source of dropouts as many people that follow what they know don’t actually have the required knowledge to do so. Another point we can extract from here is that 11,4\% use tables while training, this could provide a potential group to focus the bot to. The inconvenient part of information we can extract is that people don’t usually use applications when they train, so in order to reach the audience, the bot must seem as human as possible.
+
+\begin{center}
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=1]{./images/4-train-type}
+		\caption{Survey: Training Type}
+		\label{4_train_type}
+	\end{figure}
+\end{center}
+
+The following pie represents if a personal trainer would motivate a user to go to the gym more often, this was surprising, as over 50\% would be motivated to go to the gym if they had a personal trainer guiding them and 34,2\% would maybe feel motivated to do so, after analyzing the previous graphs we consider that there is a market for a personal trainer application.
+
+\begin{center}
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=1]{./images/4-if-trainer}
+		\caption{Survey: Having a Trainer}
+		\label{4_if_trainer}
+	\end{figure}
+\end{center}
+
+In the chart below we can extract some conclusions from the data, we think that 64\% of users change in some way the way they eat when they start training, but most don’t follow a strict diet. This is an important factor when developing the bot as the functionality for the recommended diets can be adapted to provide diets which tries to follow the most common eating habits of the user and slowly transition to a stricter diet, this will make users less prone to not following it.
+
+\begin{center}
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=1]{./images/4-change-diet}
+		\caption{Survey: Diet Change}
+		\label{4_change_diet}
+	\end{figure}
+\end{center}
+
+This graph follows up with the previous one and supports the conclusion extracted, that users rather have someone assisting with what meals to recommend the user with 84,6\% that would follow a diet recommended to them.
+
+\begin{center}
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=1]{./images/4-diet-rec}
+		\caption{Survey: Diet Recommendation}
+		\label{4_diet_rec}
+	\end{figure}
+\end{center}
+
+The same as the previous chart in relation to exercises, the public is open and prefer someone guiding them to reach their objectives, in this case regarding exercises. This has to do with people using their own knowledge to train as compared to this graph some of the people that followed their own knowledge would rather have some one recommend what exercises to do.
+
+\begin{center}
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.25]{./images/4-rec-exe}
+		\caption{Survey: Exercise Recommendation}
+		\label{4_rec_exe}
+	\end{figure}
+\end{center}
+
+The most important chart of all is regarding our application, which is if these recommendations where given by a chatbot, if they would still follow it. Some curious points can be extracted from this pie, which are that most people would rather hire a professional trainer, what this tells us is that many people still prefer human contact over having a bot telling them what recommendations to follow, another point which links to a previous graph where we talked about how people train is that only 4.1\% have personal trainers, the reason being that hiring a personal trainer is costly so considering that and the fact that 35,1\% of people would follow those recommendations gives the application a large market to focus to, but also implies that the chatbot must try and simulate a human being as good as possible.
+
+\begin{center}
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=1]{./images/4-bot-trainer}
+		\caption{Survey: Bot Trainer}
+		\label{4_bot_trainer}
+	\end{figure}
+\end{center}
+
+\section{Design}\label{sec:chap4_design}
+
+In this project we find that there has been two different designs, the original design was developed in a way to make the system homemade, without depending on an external platform which even though it provides a base where to start developing it limits the control the developer has in adding new functionality.\\
+
+The second and final design does use an open source platform as the base to start developing, this had to be done because of the complexity related in developing the proprietary solution in relation to the time available to develop it. Further down the memory the reason for changing the design will be explained in more detail.
+
 \section{Development Stages}\label{sec:chap1_dev-stag}
 The project has gone though several makeovers due to the time constraint to develop the chatbot. 
 \subsection{Planification}\label{sec:chap1_plan}

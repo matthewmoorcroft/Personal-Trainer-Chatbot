@@ -2,80 +2,73 @@
 \contentsline {chapter}{\chapternumberline {1}Introduction}{10}{chapter.1}% 
 \contentsline {section}{\numberline {1.1}Background}{10}{section.1.1}% 
 \contentsline {section}{\numberline {1.2}Motivation}{11}{section.1.2}% 
-\contentsline {section}{\numberline {1.3}Development Stages}{11}{section.1.3}% 
-\contentsline {subsection}{\numberline {1.3.1}Planification}{11}{subsection.1.3.1}% 
-\contentsline {subsection}{\numberline {1.3.2}Development}{11}{subsection.1.3.2}% 
-\contentsline {section}{\numberline {1.4}Resources Used}{12}{section.1.4}% 
-\contentsline {section}{\numberline {1.5}Memory Structure}{13}{section.1.5}% 
-\contentsline {chapter}{\chapternumberline {2}Context}{14}{chapter.2}% 
-\contentsline {section}{\numberline {2.1}Objectives}{16}{section.2.1}% 
-\contentsline {section}{\numberline {2.2}Socioeconomic Environment}{17}{section.2.2}% 
-\contentsline {subsection}{\numberline {2.2.1}Social Impact}{17}{subsection.2.2.1}% 
-\contentsline {subsection}{\numberline {2.2.2}Economic Impact}{17}{subsection.2.2.2}% 
-\contentsline {section}{\numberline {2.3}Regulatory Framework}{18}{section.2.3}% 
-\contentsline {subsection}{\numberline {2.3.1}Ethical Risks}{19}{subsection.2.3.1}% 
-\contentsline {subsection}{\numberline {2.3.2}GDPR}{19}{subsection.2.3.2}% 
-\contentsline {subsection}{\numberline {2.3.3}Future Regulations}{20}{subsection.2.3.3}% 
-\contentsline {chapter}{\chapternumberline {3}State of the Art}{22}{chapter.3}% 
-\contentsline {section}{\numberline {3.1}Artificial Intelligence}{23}{section.3.1}% 
-\contentsline {section}{\numberline {3.2}Programming Languages}{25}{section.3.2}% 
-\contentsline {section}{\numberline {3.3}Chatbots}{25}{section.3.3}% 
-\contentsline {subsection}{\numberline {3.3.1}Messaging Platform}{25}{subsection.3.3.1}% 
-\contentsline {subsection}{\numberline {3.3.2}Natural Language Processor}{25}{subsection.3.3.2}% 
-\contentsline {subsection}{\numberline {3.3.3}Profiler}{27}{subsection.3.3.3}% 
-\contentsline {section}{\numberline {3.4}Chatbot Platforms}{27}{section.3.4}% 
-\contentsline {subsection}{\numberline {3.4.1}DialogFlow}{27}{subsection.3.4.1}% 
-\contentsline {subsection}{\numberline {3.4.2}Rasa}{30}{subsection.3.4.2}% 
-\contentsline {subsubsection}{NLU}{31}{section*.13}% 
-\contentsline {subsubsection}{CORE}{31}{section*.15}% 
-\contentsline {section}{\numberline {3.5}Databases}{33}{section.3.5}% 
-\contentsline {subsection}{\numberline {3.5.1}Evolution}{33}{subsection.3.5.1}% 
-\contentsline {subsection}{\numberline {3.5.2}Solutions}{37}{subsection.3.5.2}% 
-\contentsline {subsubsection}{NoSQL}{37}{section*.20}% 
-\contentsline {subsubsection}{SQL}{38}{section*.22}% 
-\contentsline {section}{\numberline {3.6}Raspberry Pi}{38}{section.3.6}% 
-\contentsline {subsection}{\numberline {3.6.1}Clusters}{39}{subsection.3.6.1}% 
-\contentsline {section}{\numberline {3.7}Cloud Services}{39}{section.3.7}% 
-\contentsline {subsection}{\numberline {3.7.1}Virtualization}{40}{subsection.3.7.1}% 
-\contentsline {subsection}{\numberline {3.7.2}Providers}{41}{subsection.3.7.2}% 
-\contentsline {section}{\numberline {3.8}Testing}{41}{section.3.8}% 
-\contentsline {subsection}{\numberline {3.8.1}Automation}{42}{subsection.3.8.1}% 
-\contentsline {chapter}{\chapternumberline {4}Solution Proposed}{43}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}Description}{43}{section.4.1}% 
-\contentsline {subsection}{\numberline {4.1.1}Reason for Building the Application}{45}{subsection.4.1.1}% 
+\contentsline {subsection}{\numberline {1.2.1}Survey}{11}{subsection.1.2.1}% 
+\contentsline {section}{\numberline {1.3}Design}{15}{section.1.3}% 
+\contentsline {section}{\numberline {1.4}Development Stages}{16}{section.1.4}% 
+\contentsline {subsection}{\numberline {1.4.1}Planification}{16}{subsection.1.4.1}% 
+\contentsline {subsection}{\numberline {1.4.2}Development}{16}{subsection.1.4.2}% 
+\contentsline {section}{\numberline {1.5}Resources Used}{17}{section.1.5}% 
+\contentsline {section}{\numberline {1.6}Memory Structure}{17}{section.1.6}% 
+\contentsline {chapter}{\chapternumberline {2}Context}{19}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Objectives}{21}{section.2.1}% 
+\contentsline {section}{\numberline {2.2}Socioeconomic Environment}{22}{section.2.2}% 
+\contentsline {subsection}{\numberline {2.2.1}Social Impact}{22}{subsection.2.2.1}% 
+\contentsline {subsection}{\numberline {2.2.2}Economic Impact}{22}{subsection.2.2.2}% 
+\contentsline {section}{\numberline {2.3}Regulatory Framework}{23}{section.2.3}% 
+\contentsline {subsection}{\numberline {2.3.1}Ethical Risks}{24}{subsection.2.3.1}% 
+\contentsline {subsection}{\numberline {2.3.2}GDPR}{24}{subsection.2.3.2}% 
+\contentsline {subsection}{\numberline {2.3.3}Future Regulations}{25}{subsection.2.3.3}% 
+\contentsline {chapter}{\chapternumberline {3}Technologies}{27}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Artificial Intelligence}{28}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}Chatbots}{30}{section.3.2}% 
+\contentsline {subsection}{\numberline {3.2.1}Messaging Platform}{30}{subsection.3.2.1}% 
+\contentsline {subsection}{\numberline {3.2.2}Natural Language Processor}{30}{subsection.3.2.2}% 
+\contentsline {subsection}{\numberline {3.2.3}Profiler}{32}{subsection.3.2.3}% 
+\contentsline {subsection}{\numberline {3.2.4}Chatbot Platforms}{33}{subsection.3.2.4}% 
+\contentsline {subsubsection}{DialogFlow}{33}{section*.21}% 
+\contentsline {subsubsection}{Rasa}{34}{section*.22}% 
+\contentsline {section}{\numberline {3.3}Databases}{37}{section.3.3}% 
+\contentsline {subsection}{\numberline {3.3.1}Evolution}{37}{subsection.3.3.1}% 
+\contentsline {subsection}{\numberline {3.3.2}Solutions}{41}{subsection.3.3.2}% 
+\contentsline {subsubsection}{NoSQL}{41}{section*.29}% 
+\contentsline {subsubsection}{SQL}{42}{section*.31}% 
+\contentsline {section}{\numberline {3.4}Raspberry Pi}{42}{section.3.4}% 
+\contentsline {subsection}{\numberline {3.4.1}Clusters}{43}{subsection.3.4.1}% 
+\contentsline {section}{\numberline {3.5}Cloud Services}{43}{section.3.5}% 
+\contentsline {subsection}{\numberline {3.5.1}Virtualization}{44}{subsection.3.5.1}% 
+\contentsline {subsection}{\numberline {3.5.2}Providers}{45}{subsection.3.5.2}% 
+\contentsline {section}{\numberline {3.6}Testing}{45}{section.3.6}% 
+\contentsline {subsection}{\numberline {3.6.1}Automation}{46}{subsection.3.6.1}% 
+\contentsline {chapter}{\chapternumberline {4}Solution Proposed}{47}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Description}{47}{section.4.1}% 
 \contentsline {section}{\numberline {4.2}Design}{49}{section.4.2}% 
-\contentsline {subsection}{\numberline {4.2.1}Original Design: Frontend}{50}{subsection.4.2.1}% 
-\contentsline {subsubsection}{Webhook}{51}{section*.39}% 
-\contentsline {subsection}{\numberline {4.2.2}Original Design: Backend}{51}{subsection.4.2.2}% 
-\contentsline {subsubsection}{Context Manager}{53}{section*.41}% 
-\contentsline {subsubsection}{Activity Manager}{55}{section*.43}% 
-\contentsline {subsubsection}{Scalability}{55}{section*.44}% 
-\contentsline {subsection}{\numberline {4.2.3}Final Design: Frontend}{56}{subsection.4.2.3}% 
-\contentsline {subsection}{\numberline {4.2.4}Final Design: Backend}{56}{subsection.4.2.4}% 
-\contentsline {subsubsection}{Activity Manager}{57}{section*.47}% 
-\contentsline {subsubsection}{Story Manager}{57}{section*.48}% 
-\contentsline {subsection}{\numberline {4.2.5}Database}{57}{subsection.4.2.5}% 
-\contentsline {section}{\numberline {4.3}Resources Used}{58}{section.4.3}% 
-\contentsline {subsection}{\numberline {4.3.1}Hardware Resources}{58}{subsection.4.3.1}% 
-\contentsline {subsection}{\numberline {4.3.2}Software Resources}{58}{subsection.4.3.2}% 
-\contentsline {section}{\numberline {4.4}Implementation}{58}{section.4.4}% 
-\contentsline {subsection}{\numberline {4.4.1}Original Implementation}{58}{subsection.4.4.1}% 
-\contentsline {subsubsection}{Webhook}{58}{section*.50}% 
-\contentsline {subsubsection}{Controller}{59}{section*.51}% 
-\contentsline {subsubsection}{Context Manager}{60}{section*.52}% 
-\contentsline {subsection}{\numberline {4.4.2}Final Implementation}{62}{subsection.4.4.2}% 
-\contentsline {subsubsection}{Raspberry Pi to Azure}{62}{section*.53}% 
-\contentsline {subsubsection}{Config}{62}{section*.54}% 
-\contentsline {subsubsection}{Custom Actions}{63}{section*.55}% 
-\contentsline {subsubsection}{Conversation Logs}{65}{section*.56}% 
-\contentsline {section}{\numberline {4.5}Testing}{65}{section.4.5}% 
-\contentsline {subsection}{\numberline {4.5.1}Unit Tests}{65}{subsection.4.5.1}% 
-\contentsline {subsection}{\numberline {4.5.2}Integration Tests}{66}{subsection.4.5.2}% 
-\contentsline {subsection}{\numberline {4.5.3}End-to-end Tests}{66}{subsection.4.5.3}% 
-\contentsline {chapter}{\chapternumberline {5}Planning and Budget}{67}{chapter.5}% 
-\contentsline {section}{\numberline {5.1}Planning}{67}{section.5.1}% 
-\contentsline {subsection}{\numberline {5.1.1}Original Design}{67}{subsection.5.1.1}% 
-\contentsline {subsection}{\numberline {5.1.2}Final Design}{69}{subsection.5.1.2}% 
-\contentsline {section}{\numberline {5.2}Budget}{69}{section.5.2}% 
-\contentsline {chapter}{\chapternumberline {6}Conclusions}{71}{chapter.6}% 
-\contentsline {chapter}{References}{72}{chapter*.58}% 
+\contentsline {subsection}{\numberline {4.2.1}Frontend}{49}{subsection.4.2.1}% 
+\contentsline {subsection}{\numberline {4.2.2}Webhook}{50}{subsection.4.2.2}% 
+\contentsline {subsection}{\numberline {4.2.3}Backend}{51}{subsection.4.2.3}% 
+\contentsline {subsubsection}{Original Design}{51}{section*.39}% 
+\contentsline {subsection}{\numberline {4.2.4}Final Design}{55}{subsection.4.2.4}% 
+\contentsline {subsection}{\numberline {4.2.5}Database}{56}{subsection.4.2.5}% 
+\contentsline {section}{\numberline {4.3}Implementation}{57}{section.4.3}% 
+\contentsline {subsection}{\numberline {4.3.1}Resources Used}{57}{subsection.4.3.1}% 
+\contentsline {subsubsection}{Hardware Resources}{57}{section*.45}% 
+\contentsline {subsubsection}{Software Resources}{57}{section*.46}% 
+\contentsline {subsection}{\numberline {4.3.2}Original Implementation}{57}{subsection.4.3.2}% 
+\contentsline {subsubsection}{Webhook}{57}{section*.47}% 
+\contentsline {subsubsection}{Controller}{58}{section*.48}% 
+\contentsline {subsubsection}{Context Manager}{59}{section*.49}% 
+\contentsline {subsection}{\numberline {4.3.3}Final Implementation}{60}{subsection.4.3.3}% 
+\contentsline {subsubsection}{Raspberry Pi to Azure}{61}{section*.50}% 
+\contentsline {subsubsection}{Config}{61}{section*.51}% 
+\contentsline {subsubsection}{Custom Actions}{62}{section*.52}% 
+\contentsline {subsubsection}{Conversation Logs}{63}{section*.53}% 
+\contentsline {section}{\numberline {4.4}Testing}{64}{section.4.4}% 
+\contentsline {subsection}{\numberline {4.4.1}Unit Tests}{64}{subsection.4.4.1}% 
+\contentsline {subsection}{\numberline {4.4.2}Integration Tests}{65}{subsection.4.4.2}% 
+\contentsline {subsection}{\numberline {4.4.3}End-to-end Tests}{65}{subsection.4.4.3}% 
+\contentsline {chapter}{\chapternumberline {5}Planning and Budget}{66}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Planning}{66}{section.5.1}% 
+\contentsline {subsection}{\numberline {5.1.1}Original Design}{66}{subsection.5.1.1}% 
+\contentsline {subsection}{\numberline {5.1.2}Final Design}{68}{subsection.5.1.2}% 
+\contentsline {section}{\numberline {5.2}Budget}{68}{section.5.2}% 
+\contentsline {chapter}{\chapternumberline {6}Conclusions}{70}{chapter.6}% 
+\contentsline {chapter}{References}{71}{chapter*.55}% 
