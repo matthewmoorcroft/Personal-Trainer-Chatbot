@@ -49,8 +49,6 @@ class Database:
 
             print(e)
             return 0
-    
-    
 
     def check_user_exists(self, telegram_id):
         try:
@@ -68,7 +66,7 @@ class Database:
 
             # Local
             # return False, 0, None, None, False
-            # return True, "24", "Test", "male", True
+            return True, "27", "Test", "male", True
             ##
             row = cur.fetchone()
 
@@ -181,7 +179,7 @@ class Database:
 
             cur.execute("""SELECT training_type
                            FROM core.users
-                           WHERE user_id = %(user_id)s
+                           WHERE id = %(user_id)s
                             """, {
                 'user_id': user_id
             })

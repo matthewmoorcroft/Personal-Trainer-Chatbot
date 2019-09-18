@@ -55,7 +55,6 @@ def verify_enough_data_to_analyse(data):
 
     for pos, item in enumerate(data):
         if item is not None:
-            print(item)
             value_i = item
             pos_i = pos
             break
@@ -66,7 +65,6 @@ def verify_enough_data_to_analyse(data):
 
     for pos, item in enumerate(data):
         if item is not None:
-            print(item)
             value_f = item
             pos_f = pos
             break
@@ -88,10 +86,10 @@ def get_progress_info(user_id, telegram_id, user_name, training_type, user_gende
     # bfr = [23, 22, 21, 20, 19, 19, 18, 18, 17, 16, 15, 14]
     bfr = [None, None, None, None, None, None, None, None, None, None, None, None]
 
-    for key, item in enumerate(weights):
+    for key, item in weights.items():
         weight[int(key)-1] = float(item)
 
-    for key, item in enumerate(bodyfatratios):
+    for key, item in bodyfatratios.items():
         bfr[int(key)-1] = float(item)
 
     do_analyse_weights, weight_i, weight_f = verify_enough_data_to_analyse(weight)

@@ -353,7 +353,7 @@ class ShowProgress(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        
+
         user_id = tracker.get_slot("user_id")
         user_gender = tracker.get_slot("user_gender")
         user_name = tracker.get_slot("user_name")
@@ -362,17 +362,18 @@ class ShowProgress(Action):
 
         training_type = tracker.get_slot("training_type")
         if training_type is None:
+            print("test")
             training_type = db.get_training_type(user_id)
 
-
         # db extract weights for every day/month/year
-        
+
         weights = db.get_weights(user_id)
         bodyfatratios = db.get_bodyfatratios(user_id)
-        msg, do_routine = get_progress_info(user_id, tracker.sender_id, user_name, training_type, user_gender, weights, bodyfatratios)
+        msg, do_routine = get_progress_info(
+            user_id, tracker.sender_id, user_name, training_type, user_gender, weights, bodyfatratios)
         dispatcher.utter_message(msg)
         plot_progress(user_id, tracker.sender_id, weights, bodyfatratios)
-        
+
         if do_routine:
             msg = "Here is the exercise table"
             dispatcher.message(msg)

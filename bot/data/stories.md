@@ -8,6 +8,16 @@
     - slot{"user_id": "1"}
     - utter_greet
 
+## Unknown user
+* greet
+    - action_check_profile
+    - slot{"user_exists": false}
+    - slot{"user_name": null}
+    - slot{"measure_user": false}
+    - slot{"user_gender": null}
+    - slot{"user_id": 0}
+    - utter_unknown
+    
 ## Known user
 * user_wants_to_join
     - action_check_profile
@@ -1425,52 +1435,6 @@
     - form{"name": null}
     - slot{"requested_slot": null}
     - utter_welcome
-
-## Generated Story 1164266183754180747
-* greet
-    - action_check_profile
-    - slot{"user_exists": false}
-    - slot{"user_name": null}
-    - slot{"measure_user": false}
-    - slot{"user_gender": null}
-    - slot{"user_id": 0}
-    - utter_unknown
-* start{"ORG": "Ues"}
-    - rewind
-* affirm
-    - utter_ask_name
-* name_confirmation{"PERSON": "Matthew"}
-    - slot{"PERSON": "Matthew"}
-    - action_set_name
-    - slot{"user_name": "Matthew"}
-    - utter_nice_name
-    - utter_gender_confirmation
-* gender_confirmation{"user_gender": "male"}
-    - slot{"user_gender": "male"}
-    - utter_birthdate
-* confirm_birthdate{"DATE": "November 23", "time": "2019-11-23T00:00:00.000+01:00"}
-    - slot{"time": "2019-11-23T00:00:00.000+01:00"}
-    - action_set_birthdate
-    - utter_birthdate_correction
-* confirm_birthdate{"time": "1997-11-23T00:00:00.000+01:00", "DATE": "23 November 1997"}
-    - slot{"time": "1997-11-23T00:00:00.000+01:00"}
-    - action_set_birthdate
-    - slot{"birthdate": "1997-11-23"}
-    - utter_training_type
-* training_confirmation{"training_type": "definition"}
-    - slot{"training_type": "definition"}
-    - utter_reinforce_objective
-    - utter_do_you_want_routine
-* deny
-    - utter_do_you_want_diets
-* deny
-    - utter_track_progress
-* deny
-    - action_add_user
-    - slot{"user_id": 0}
-    - utter_welcome
-* user_wants_to_join
-    - utter_already_in
 
 ## Generated Story 8527159365261095012
 * greet
