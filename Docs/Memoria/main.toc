@@ -3,7 +3,7 @@
 \contentsline {section}{\numberline {1.1}Background}{10}{section.1.1}% 
 \contentsline {section}{\numberline {1.2}Motivation}{11}{section.1.2}% 
 \contentsline {subsection}{\numberline {1.2.1}Survey}{11}{subsection.1.2.1}% 
-\contentsline {section}{\numberline {1.3}Design}{15}{section.1.3}% 
+\contentsline {section}{\numberline {1.3}Two Designs}{15}{section.1.3}% 
 \contentsline {section}{\numberline {1.4}Development Stages}{16}{section.1.4}% 
 \contentsline {subsection}{\numberline {1.4.1}Planification}{16}{subsection.1.4.1}% 
 \contentsline {subsection}{\numberline {1.4.2}Development}{16}{subsection.1.4.2}% 
@@ -55,20 +55,18 @@
 \contentsline {subsection}{\numberline {4.3.2}Original Implementation}{57}{subsection.4.3.2}% 
 \contentsline {subsubsection}{Webhook}{57}{section*.47}% 
 \contentsline {subsubsection}{Controller}{58}{section*.48}% 
-\contentsline {subsubsection}{Context Manager}{59}{section*.49}% 
+\contentsline {subsubsection}{Context Manager}{58}{section*.49}% 
 \contentsline {subsection}{\numberline {4.3.3}Final Implementation}{60}{subsection.4.3.3}% 
-\contentsline {subsubsection}{Raspberry Pi to Azure}{61}{section*.50}% 
+\contentsline {subsubsection}{Raspberry Pi to Azure}{60}{section*.50}% 
 \contentsline {subsubsection}{Config}{61}{section*.51}% 
 \contentsline {subsubsection}{Custom Actions}{62}{section*.52}% 
 \contentsline {subsubsection}{Conversation Logs}{63}{section*.53}% 
-\contentsline {section}{\numberline {4.4}Testing}{64}{section.4.4}% 
+\contentsline {section}{\numberline {4.4}Testing}{63}{section.4.4}% 
 \contentsline {subsection}{\numberline {4.4.1}Unit Tests}{64}{subsection.4.4.1}% 
 \contentsline {subsection}{\numberline {4.4.2}Integration Tests}{65}{subsection.4.4.2}% 
 \contentsline {subsection}{\numberline {4.4.3}End-to-end Tests}{65}{subsection.4.4.3}% 
 \contentsline {chapter}{\chapternumberline {5}Planning and Budget}{66}{chapter.5}% 
 \contentsline {section}{\numberline {5.1}Planning}{66}{section.5.1}% 
-\contentsline {subsection}{\numberline {5.1.1}Original Design}{66}{subsection.5.1.1}% 
-\contentsline {subsection}{\numberline {5.1.2}Final Design}{68}{subsection.5.1.2}% 
 \contentsline {section}{\numberline {5.2}Budget}{68}{section.5.2}% 
-\contentsline {chapter}{\chapternumberline {6}Conclusions}{70}{chapter.6}% 
-\contentsline {chapter}{References}{71}{chapter*.55}% 
+\contentsline {chapter}{\chapternumberline {6}Conclusions}{69}{chapter.6}% 
+\contentsline {chapter}{References}{70}{chapter*.55}% 

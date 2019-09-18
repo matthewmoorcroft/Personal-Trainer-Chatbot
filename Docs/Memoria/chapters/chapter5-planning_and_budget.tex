@@ -1,7 +1,10 @@
 \chapter{Planning and Budget}\label{chap:8}
 \section{Planning}\label{sec:chap5_plan}
-\subsection{Original Design}\label{sec:chap5_plan_ori}
-The original plan was to develop the whole project in five months in two different stages and documenting the whole process, the first stage was programmed to las two weeks designing and thinking on the objective of the application and making sure that the idea is viable before writing a line of code with a form sent to possible users. The next stage was the development step, first creating the tests that will confirm the application works correctly, this was predicted to last two weeks. The following steps can be seen in the Gantt graph on the next page.\\
+The original plan was to develop the whole project in five months in two different stages and documenting the whole process, the first stage was programmed to las two weeks designing and thinking on the objective of the application and making sure that the idea is viable before writing a line of code with a form sent to possible users. The next stage was the development step, first creating the tests that will confirm the application works correctly, this stage was predicted to last 4 months. The following steps can be seen in the Gantt graph on the next page.\\
+
+After the five months of development, due to external factors, the project was seriously delayed and a redesign had to be done as the complexity of the context manager in the original design made it unviable to deliver for this year. This made it necessary to rethink how to adapt the project to reach the target of September for delivery. In order to reach the objective an extension on the different parts of the project have to be done, this included two more weeks of planning and preparation, twelve more weeks of development where the new configuration and implementation was completed, the rest of the extension was filling out the documentation with the new design.\\
+
+Even though this was a setback to the project, it allowed gaining experience in how the perception of time in completing tasks has to be refined in order to avoid overextending a project and having inefficiencies.
 
 \begin{landscape}
 	
@@ -50,83 +53,94 @@ The original plan was to develop the whole project in five months in two differe
 
 \end{landscape}
 
-\subsection{Final Design}\label{sec:chap5_plan_fin}
 
-%\begin{landscape}
-	After the five months of development, due to external factors the project was seriously delayed and a redesign had to be done as the complexity of the context manager in the original design made it unviable to deliver for this year. This made it necessary to rethink how to adapt the project to reach the target of September for delivery. The following Gantt graph is the new planning preparation for the project. It was much shorter than the previous plan as most of the steps were done already.\\
 	
-	\begin{ganttchart}[
-		canvas/.append style={fill=none, draw=black!5, line width=.75pt},
-		hgrid style/.style={draw=black!5, line width=.75pt},
-		vgrid={*1{draw=black!5, line width=.75pt}},
-		title/.style={draw=none, fill=none},
-		title label font=\bfseries\footnotesize,
-		title label node/.append style={below=1pt},
-		include title in canvas=false,
-		bar label font=\mdseries\small\color{black!70},
-		bar label node/.append style={left=2cm},
-		y unit chart=0.9cm,
-		bar/.append style={draw=none, fill=barblue},
-		bar progress label font=\mdseries\footnotesize\color{black!70},
-		group/.append style={draw=none, fill=groupblue},
-		group left shift=0,
-		group right shift=0,
-		group height=.5,
-		group peaks tip position=0,
-		group label node/.append style={left=.6cm},
-		group progress label font=\bfseries\small,
-		]{1}{16}
-		\gantttitle[
-		title label node/.append style={below left=1pt and 0pt}
-		]{WEEKS:\quad1}{1}
-		\gantttitlelist{2,...,16}{1} \\
-		\ganttgroup{Project design}{1}{2} \\
-		\ganttbar{Change resources}{1}{2} \\
-		\ganttbar{New system design}{2}{2} \\[grid]
-		\ganttgroup{Project development}{3}{12} \\
-		\ganttbar{Pipeline design}{3}{4} \\
-		\ganttbar{Story elaboration}{4}{6} \\
-		\ganttbar{Custom activities}{7}{10} \\
-		\ganttbar{Activity manager}{10}{12} \\[grid]
-		\ganttgroup{Process Documentation}{2}{16} \\
-		\ganttbar{Memory redaction}{2}{14} \\
-		\ganttbar{Presentation}{15}{16}
-	\end{ganttchart}
+%	\begin{ganttchart}[
+%		canvas/.append style={fill=none, draw=black!5, line width=.75pt},
+%		hgrid style/.style={draw=black!5, line width=.75pt},
+%		vgrid={*1{draw=black!5, line width=.75pt}},
+%		title/.style={draw=none, fill=none},
+%		title label font=\bfseries\footnotesize,
+%		title label node/.append style={below=1pt},
+%		include title in canvas=false,
+%		bar label font=\mdseries\small\color{black!70},
+%		bar label node/.append style={left=2cm},
+%		y unit chart=0.9cm,
+%		bar/.append style={draw=none, fill=barblue},
+%		bar progress label font=\mdseries\footnotesize\color{black!70},
+%		group/.append style={draw=none, fill=groupblue},
+%		group left shift=0,
+%		group right shift=0,
+%		group height=.5,
+%		group peaks tip position=0,
+%		group label node/.append style={left=.6cm},
+%		group progress label font=\bfseries\small,
+%		]{1}{16}
+%		\gantttitle[
+%		title label node/.append style={below left=1pt and 0pt}
+%		]{WEEKS:\quad1}{1}
+%		\gantttitlelist{2,...,16}{1} \\
+%		\ganttgroup{Project design}{1}{2} \\
+%		\ganttbar{Change resources}{1}{2} \\
+%		\ganttbar{New system design}{2}{2} \\[grid]
+%		\ganttgroup{Project development}{3}{12} \\
+%		\ganttbar{Pipeline design}{3}{4} \\
+%		\ganttbar{Story elaboration}{4}{6} \\
+%		\ganttbar{Custom activities}{7}{10} \\
+%		\ganttbar{Activity manager}{10}{12} \\[grid]
+%		\ganttgroup{Process Documentation}{2}{16} \\
+%		\ganttbar{Memory redaction}{2}{14} \\
+%		\ganttbar{Presentation}{15}{16}
+%	\end{ganttchart}
 	
 \section{Budget}\label{sec:chap5_budg}
 
-\begin{table}
+In this section, we will explain the budget for the project, which contains the resources used when developing the project. Below is a table with all the details about the cost for the hardware, software and human resources.\\
+
+\begin{table}[h!]
 	\centering
 	\resizebox{\linewidth}{!}{
 	\begin{tabular}{|l|l|l|l|l|l|l|} 
 		\hline
-		\multicolumn{7}{|c|}{{\cellcolor[rgb]{0.502,1,1}}Hardware}                                                                                                \\ 
+		\multicolumn{7}{|c|}{{\cellcolor[rgb]{0.502,1,1}}Hardware}                                                                                                                              \\ 
 		\hline
-		\rowcolor[rgb]{0.753,0.753,0.753} Name                          & Cost      & Units    & Duration  & \% use in project & Amortization & Chargeable cost   \\ 
+		\rowcolor[rgb]{0.753,0.753,0.753} Name                           & Cost                       & Units & Duration                 & \% use in project & Amortization & Chargeable cost   \\ 
 		\hline
-		Laptop                                                          & 699 \euro     & 1        & 9         & 100 \%            & 48           & 131,07 \euro          \\ 
+		Laptop                                                           & 699 \euro                      & 1     & 9                        & 100 \%            & 48           & 131,07 \euro          \\ 
 		\hline
-		Raspberry Pi                                                    & 35 \euro      & 1        & 5         & 55,55 \%         & 48           & 3,65 \euro            \\ 
+		Raspberry Pi                                                     & 35 \euro                       & 1     & 5                        & 55,55 \%          & 48           & 3,65 \euro            \\ 
 		\hline
-		\multicolumn{5}{|r|}{{\cellcolor{cyan}}Total}                                                                          & \multicolumn{2}{l|}{}            \\ 
+		Smartphone                                                       & 560 \euro                      & 1     & 9                        & 100\%             & 36           & 140 \euro             \\ 
 		\hline
-		\multicolumn{7}{|c|}{{\cellcolor[rgb]{0.502,1,1}}Software}                                                                                                \\ 
+		\multicolumn{5}{|r|}{{\cellcolor[rgb]{0,0.682,0.937}}Total:}                                                                                          & \multicolumn{2}{l|}{274,72 \euro}    \\ 
 		\hline
-		\rowcolor[rgb]{0.753,0.753,0.753} Name                          & Cost      & Units    & Duration  & \% use in project & Amortization & Chargeable cost   \\ 
+		\multicolumn{7}{|c|}{{\cellcolor[rgb]{0.502,1,1}}Software}                                                                                                                              \\ 
 		\hline
-		\begin{tabular}[c]{@{}l@{}}Azure virtual \\machine\end{tabular} &           & 1        & 4         & 44,45 \%          & -            &                   \\ 
+		\rowcolor[rgb]{0.753,0.753,0.753} Name                           & Cost                       & Units & Duration                 & \% use in project & \multicolumn{2}{l|}{Total cost}  \\ 
 		\hline
-		\multicolumn{5}{|r|}{{\cellcolor{cyan}}Total}                                                                          & \multicolumn{2}{l|}{}            \\ 
+		\begin{tabular}[c]{@{}l@{}}Azure virtual \\machine \end{tabular} & \textasciitilde{}10 \euro/month & 1     & 4                        & 44,45 \%          & \multicolumn{2}{l|}{40 \euro}        \\ 
 		\hline
-		\multicolumn{7}{|c|}{{\cellcolor[rgb]{0.502,1,1}}Human Resources}                                                                                         \\ 
+		\multicolumn{5}{|r|}{{\cellcolor[rgb]{0,0.682,0.937}}Total:}                                                                                          & \multicolumn{2}{l|}{40 \euro}        \\ 
 		\hline
-		\rowcolor[rgb]{0.753,0.753,0.753} Name~                         & Surname   & Category & Cost/Hour & Total hours       & \multicolumn{2}{l|}{Total cost}  \\ 
+		\multicolumn{7}{|c|}{{\cellcolor[rgb]{0.502,1,1}}Human Resources}                                                                                                                       \\ 
 		\hline
-		Matthew                                                         & Moorcroft & Analyst  & /hour   &                   &              &                   \\ 
+		\rowcolor[rgb]{0.753,0.753,0.753} \multicolumn{2}{|l|}{Category}                              & \multicolumn{2}{l|}{~ Cost/Hour} & Total hours       & \multicolumn{2}{l|}{Total cost}  \\ 
 		\hline
-		\multicolumn{5}{|r|}{{\cellcolor{cyan}}Total}                                                                          & \multicolumn{2}{l|}{}            \\
+		\multicolumn{2}{|l|}{Developer}                                                               & \multicolumn{2}{l|}{40 \euro/hour}   & 792               & \multicolumn{2}{l|}{31.680 \euro}     \\ 
 		\hline
+		\multicolumn{2}{|l|}{Project Manager}                                                         & \multicolumn{2}{l|}{60 \euro/hour}   & 144               & \multicolumn{2}{l|}{8.640 \euro}      \\ 
+		\hline
+		\multicolumn{5}{|r|}{{\cellcolor[rgb]{0,0.682,0.937}}Total:}                                                                                          & \multicolumn{2}{l|}{40.320 \euro}     \\
+		\hline
+		\multicolumn{5}{|r|}{{\cellcolor[rgb]{0.749,0.749,0.749}}Max Total:}                                                                                 & \multicolumn{2}{l|}{40.634,72 \euro}  \\
+		\hline
+		\multicolumn{5}{|r|}{{\cellcolor[rgb]{0.749,0.749,0.749}}Max Total:}                                                                                 & \multicolumn{2}{l|}{40.634,72 \euro}  \\ 
+		\hline\hline
+		\multicolumn{5}{||r|}{{\cellcolor{yellow}}Total + Tax (21\%):}                                                                                       & \multicolumn{2}{l|}{49.268,02 \euro}  \\
+		\hline\hline
 	\end{tabular}}
 	\label{costs}
 	\caption{Budget}
 \end{table}
+
+To give some context to the different parts of the table we will explain them further. The reason the cost for the Azure Machine is relative is because it has a pricing system based on pay what you use, meaning that depending on how much you use the resources the pricing varies, in the case of this project the virtual machine was used only when required to minimize costs.
