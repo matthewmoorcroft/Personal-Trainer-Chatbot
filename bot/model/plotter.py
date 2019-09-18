@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import seaborn as sns
+# import seaborn as sns
 from datetime import date
 from connections.net_manager import send_photo
 import os
