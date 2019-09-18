@@ -17,7 +17,7 @@
     - slot{"user_gender": null}
     - slot{"user_id": 0}
     - utter_unknown
-    
+
 ## Known user
 * user_wants_to_join
     - action_check_profile
@@ -993,6 +993,16 @@
     - utter_ask_measure_now
 * deny
     - utter_welcome
+
+## Show progress
+* show_my_progress
+    - action_check_profile
+    - slot{"user_id": "27"}
+    - slot{"user_gender": "male"}
+    - slot{"measure_user": true}
+    - slot{"user_name": "Test"}
+    - slot{"user_exists": true}
+    - action_show_progress
 
 ## Generated Story 4998284128767635694
 * start_training

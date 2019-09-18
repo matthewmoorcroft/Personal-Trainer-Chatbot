@@ -309,6 +309,7 @@
 - what is my bodyfatratio
 - Show me my progress
 - Show my progress
+- Show me my progress
 
 ## intent:start
 - /start
