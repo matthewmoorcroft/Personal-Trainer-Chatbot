@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 from datetime import date
 from connections.net_manager import send_photo
 import os
-import pandas
 # create data
 
 
