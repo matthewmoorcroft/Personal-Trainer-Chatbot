@@ -362,7 +362,6 @@ class ShowProgress(Action):
 
         training_type = tracker.get_slot("training_type")
         if training_type is None:
-            print("test")
             training_type = db.get_training_type(user_id)
 
         # db extract weights for every day/month/year
