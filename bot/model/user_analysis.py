@@ -7,16 +7,15 @@ def analyse_volume_performance(user_name, user_gender, weight_rate, bfr_rate):
     new_routine = False
 
     if weight_rate > 0 and bfr_rate < 0:
-        msg = f"""{user_name} after analysing your data I have seen 
+        msg = f"""{user_name} after analysing your data I have seen
                 you are gaining volume and improving your body to fat ratio, keep the nice work going"""
     else:
-        msg = f"""{user_name} after reviewing your data I think we should consider changing strategy, 
+        msg = f"""{user_name} after reviewing your data I think we should consider changing strategy,
                 we are not reaching out objectives, let's try a different strategy and see if this works best."""
         new_routine = True
 
     return msg, new_routine
-        
-    
+
 
 def analyse_weight_loss_performance(user_name, user_gender, weight_rate, bfr_rate):
     """ Conditions for weight loss improvement
@@ -24,29 +23,31 @@ def analyse_weight_loss_performance(user_name, user_gender, weight_rate, bfr_rat
         Body fat ratio ⬇
     """
     if weight_rate < 0 and bfr_rate < 0:
-        msg = f"""{user_name} after analysing your data I am very happy to see 
+        msg = f"""{user_name} after analysing your data I am very happy to see
                 you are loosing weight and improving your body to fat ratio, keep the nice work going"""
     else:
-        msg = f"""{user_name} after reviewing your data I think we should consider changing strategy, 
+        msg = f"""{user_name} after reviewing your data I think we should consider changing strategy,
                 we are not reaching out objectives, let's try a different strategy and see if this works best."""
         new_routine = True
-    
+
     return msg, new_routine
+
 
 def analyse_definition_performance(user_name, user_gender, weight_rate, bfr_rate):
     """ Conditions for definition improvement
         Weight ⬆⬇
         Body fat ratio ⬇
     """
-    if bfr_rate < 0 and weight_rate > (-2) :
-        msg = f"""{user_name} after analysing your data I have seen you are improving your body to fat 
+    if bfr_rate < 0 and weight_rate > (-2):
+        msg = f"""{user_name} after analysing your data I have seen you are improving your body to fat
                 ratio balancing it well with your weight, keep the nice work going"""
     else:
-        msg = f"""{user_name} after reviewing your data I think we should consider changing strategy, 
+        msg = f"""{user_name} after reviewing your data I think we should consider changing strategy,
                 we are not reaching out objectives, let's try a different strategy and see if this works best."""
         new_routine = True
 
     return msg, new_routine
+
 
 def verify_enough_data_to_analyse(data):
     value_i = None
@@ -79,6 +80,7 @@ def verify_enough_data_to_analyse(data):
     else:
         return False, None, None
 
+
 def get_progress_info(user_id, telegram_id, user_name, training_type, user_gender, weights, bodyfatratios):
 
     weight = [None, None, None, None, None, None, None, None, None, None, None, None]
@@ -86,13 +88,11 @@ def get_progress_info(user_id, telegram_id, user_name, training_type, user_gende
     # bfr = [23, 22, 21, 20, 19, 19, 18, 18, 17, 16, 15, 14]
     bfr = [None, None, None, None, None, None, None, None, None, None, None, None]
 
-
-    for key, item in weights.items():
+    for key, item in enumerate(weights):
         weight[int(key)-1] = float(item)
 
-    for key, item in bodyfatratios.items():
+    for key, item in enumerate(bodyfatratios):
         bfr[int(key)-1] = float(item)
-
 
     do_analyse_weights, weight_i, weight_f = verify_enough_data_to_analyse(weight)
     do_analyse_bfr, bfr_i, bfr_f = verify_enough_data_to_analyse(bfr)
@@ -102,15 +102,19 @@ def get_progress_info(user_id, telegram_id, user_name, training_type, user_gende
 
     if do_analyse_bfr and do_analyse_weights:
         if training_type == "volume":
-            perf_msg, new_routine = analyse_volume_performance(user_name, user_gender, weight_rate, bfr_rate)
+            perf_msg, new_routine = analyse_volume_performance(
+                user_name, user_gender, weight_rate, bfr_rate)
         elif training_type == "weight_loss":
-            perf_msg, new_routine = analyse_weight_loss_performance(user_name, user_gender, weight_rate, bfr_rate)
+            perf_msg, new_routine = analyse_weight_loss_performance(
+                user_name, user_gender, weight_rate, bfr_rate)
         else:
-            perf_msg, new_routine = analyse_definition_performance(user_name, user_gender, weight_rate, bfr_rate)
+            perf_msg, new_routine = analyse_definition_performance(
+                user_name, user_gender, weight_rate, bfr_rate)
 
         return perf_msg, new_routine
-    
-    perf_msg = f"{user_name} I don't have enough information to get a conclusion on your results, here is a graph so you can check how you are doing."
+
+    perf_msg = f"""{user_name} I don't have enough information to get a
+                conclusion on your results, here is a graph so you can
+                check how you are doing."""
 
     return perf_msg, False
-        
