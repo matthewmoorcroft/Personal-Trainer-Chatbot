@@ -17,6 +17,7 @@ from rasa_sdk.forms import FormAction
 from connections.database import Database
 from connections.net_manager import send_photo
 from model.plotter import plot_progress
+from model.user_analysis import get_progress_info
 import random
 import datetime
 
@@ -352,15 +353,33 @@ class ShowProgress(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        send_photo("weight_bfr.png", tracker.sender_id)
-        dispatcher.utter_template("utter_show_progress", tracker)
+        
+        user_id = tracker.get_slot("user_id")
+        user_gender = tracker.get_slot("user_gender")
+        user_name = tracker.get_slot("user_name")
+
+        db = Database.get_instance()
+
+        training_type = tracker.get_slot("training_type")
+        if training_type is None:
+            training_type = db.get_training_type(user_id)
+
 
         # db extract weights for every day/month/year
-        user_id = tracker.get_slot("user_id")
-        db = Database.get_instance()
+        
         weights = db.get_weights(user_id)
         bodyfatratios = db.get_bodyfatratios(user_id)
+        msg, do_routine = get_progress_info(user_id, tracker.sender_id, user_name, training_type, user_gender, weights, bodyfatratios)
+        dispatcher.utter_message(msg)
         plot_progress(user_id, tracker.sender_id, weights, bodyfatratios)
+        
+        if do_routine:
+            msg = "Here is the exercise table"
+            dispatcher.message(msg)
+            send_photo("exercise_routine.png", tracker.sender_id)
+            msg = "And here is the diet table"
+            dispatcher.message(msg)
+            send_photo("nutrition_diet.jpg", tracker.sender_id)
         # analyze user
         return []
 

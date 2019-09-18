@@ -20,14 +20,10 @@ def plot_progress(user_id, telegram_id, weights, bodyfatratios):
     bfr = [None, None, None, None, None, None, None, None, None, None, None, None]
 
     for key, item in weights.items():
-        weight[int(key)-1] = int(item)
+        weight[int(key)-1] = float(item)
 
-    # for id, val in enumerate(weight):
-    #     if val is None and id != 0:
-    #         try:
-    #             w = (weight[index(w-1)]+weight[index(w+1)])/2
     for key, item in bodyfatratios.items():
-        bfr[int(key)-1] = int(item)
+        bfr[int(key)-1] = float(item)
 
     weight_filter = list(filter(None, weight))
     weight_min = int(min(weight_filter)/10)*10

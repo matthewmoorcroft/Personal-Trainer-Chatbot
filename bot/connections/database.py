@@ -49,6 +49,8 @@ class Database:
 
             print(e)
             return 0
+    
+    
 
     def check_user_exists(self, telegram_id):
         try:
@@ -172,6 +174,31 @@ class Database:
 
             print(e)
             return json.dumps({'result': "Error: Failed to add user"})
+
+    def get_training_type(self, user_id):
+        try:
+            cur = self.conn.cursor()
+
+            cur.execute("""SELECT training_type
+                           FROM core.users
+                           WHERE user_id = %(user_id)s
+                            """, {
+                'user_id': user_id
+            })
+
+            row = cur.fetchone()
+
+            if cur.rowcount == 0:
+                cur.close()
+                return 0
+            else:
+                cur.close()
+                return row[0]
+
+        except Exception as e:
+
+            print(e)
+            return 0
 
     def get_weights(self, user_id):
 
