@@ -370,7 +370,7 @@ class ShowProgress(Action):
         bodyfatratios = db.get_bodyfatratios(user_id)
 
         if weights == {} or bodyfatratios == {}:
-            msg = "Sorry, {user_name}, I don't have any data from you to show any progress, start adding your measurements for me to see if our workout is working"
+            msg = f"Sorry, {user_name}, I don't have any data from you to show any progress, start adding your measurements for me to see if our workout is working"
             dispatcher.message(msg)
             return []
         msg, do_routine = get_progress_info(
