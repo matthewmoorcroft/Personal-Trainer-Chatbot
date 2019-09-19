@@ -1,11 +1,16 @@
 from connections.database import Database
 # from model.plotter import plot_progress
+from model.user_analysis import get_progress_info
 
+# db = Database.get_instance()
+# weights = db.get_weights(27)
+# bodyfatratios = db.get_bodyfatratios('27')
+# print(weights)
 
-db = Database.get_instance()
-weights = db.get_weights(27)
-bodyfatratios = db.get_bodyfatratios('27')
-print(weights)
+test_1 = {}
+test_2 = {}
+
+get_progress_info("27", "2", "Matt", "volume", "male", test_1, test_2)
 # plot_progress('27', '375033117', weights, bodyfatratios)
 
 # test = [85, None, None, None, None, None, None, None, None, None, None, 84]

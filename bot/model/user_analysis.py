@@ -80,6 +80,7 @@ def get_progress_info(user_id, telegram_id, user_name, training_type, user_gende
     # bfr = [23, 22, 21, 20, 19, 19, 18, 18, 17, 16, 15, 14]
     bfr = [None, None, None, None, None, None, None, None, None, None, None, None]
 
+    
     for key, item in weights.items():
         weight[int(key)-1] = float(item)
 
