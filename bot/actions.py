@@ -371,7 +371,7 @@ class ShowProgress(Action):
 
         if weights == {} or bodyfatratios == {}:
             msg = f"Sorry, {user_name}, I don't have any data from you to show any progress, start adding your measurements for me to see if our workout is working"
-            dispatcher.message(msg)
+            dispatcher.utter_message(msg)
             return []
         msg, do_routine = get_progress_info(
             user_id, tracker.sender_id, user_name, training_type, user_gender, weights, bodyfatratios)
@@ -380,10 +380,10 @@ class ShowProgress(Action):
 
         if do_routine:
             msg = "Here is the exercise table"
-            dispatcher.message(msg)
+            dispatcher.utter_message(msg)
             send_photo("exercise_routine.png", tracker.sender_id)
             msg = "And here is the diet table"
-            dispatcher.message(msg)
+            dispatcher.utter_message(msg)
             send_photo("nutrition_diet.jpg", tracker.sender_id)
         # analyze user
         return []
