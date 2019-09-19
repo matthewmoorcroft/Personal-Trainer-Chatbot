@@ -67,7 +67,7 @@ def verify_enough_data_to_analyse(data):
 
     res = pos_f - pos_i
 
-    if res > 3:
+    if res > 0:
         return True, value_i, value_f
     else:
         return False, None, None
