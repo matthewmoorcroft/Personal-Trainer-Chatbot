@@ -208,9 +208,9 @@ The language to manage the database has been PostgreSQL as the team has had more
 
 To develop the webhook first we had to prepare the Raspberry Pi to be able to act as a web server, as it was connected at home some management to the router had to be made in order to allow inbound traffic for HTTPS as this is the standard Telegram requires for the webhook to work. For it to be secure it was also required to create the certificates needed for SSL. These certificates where created with OpenSSL. Another issue that had to be solved in order for the webhook to work is have a domain name, the reason this is needed is because the network provider gives IP’s dynamically which caused Telegram to lose the connection whenever the IP’s was reset, initially a method was developed to automatically detect whenever the IP had changed, this was a very hacky way of solving the problem which resulted in some issues where the algorithm failed to update the SSL certificates which resulted in data loss and required human intervention to fix. To solve this problem a dynamic domain name provider by the name of \url{www.noip.com} provided a free DNS service which automatically updated the DNS whenever the IP had changed.\\
 
-Once the Raspberry  Pi was set, it needed to have the web server running in order for it to work, below is the code for the API Rest that Telegram has to use in order to send the message to the server, has you can see once the message from Telegram is received it is stored in the database, this code can be expanded to support multiple platforms.
+Once the Raspberry  Pi was set, it needed to have the web server running in order for it to work, below is the code for the API Rest that Telegram has to use in order to send the message to the server, has you can see once the message from Telegram is received it is stored in the database, this code can be expanded to support multiple platforms. Below is the code for this webhook.
 
-\begin{lstlisting}[language=Python]
+\begin{lstlisting}[language=Python,caption={Webhook Code},captionpos=b]
 from flask import Flask,request,abort
 import json
 import psycopg2
@@ -256,7 +256,9 @@ When implementing the context manager, it was decided to create one predetermine
 	\item {The different classifiers then predict what intent it is and take a vote on what intent it is, after that the result and probability that the prediction is correct is sent back to the user.}
 \end{enumerate}
 
-\begin{lstlisting}[language=Python]
+Here is the code for the classifier that analyses the users data.
+
+\begin{lstlisting}[language=Python,caption={Classifier},captionpos=b]
 
 def classify(data):
 	if "text" not in data:
@@ -352,7 +354,9 @@ The config file for Rasa is where the developer designs how the bot is going to 
 	\item {Finally, the DuclingHTTPExtractor that is also an addition to the predefined pipeline, the reason to add this to the implementation is that it provides good entity extraction for time entities such as birthdays.}
 \end{enumerate}
 
-\begin{lstlisting}
+Below is the pipeline for the core of the NLU module for Rasa.
+
+\begin{lstlisting}[caption={Rasa Pipeline},captionpos=b]
 
 language: en
 pipeline:
@@ -393,7 +397,7 @@ This is where the all Sam’s functionality is stored, whenever it is required t
 An example of this custom action is whenever a user speaks with the bot, it first has to run the action of checking if the user actually is part of the application.\\
 For this story:
 
-\begin{lstlisting}
+\begin{lstlisting}[caption={Known User Story},captionpos=b]
 
 ## Known user
 * greet
@@ -410,7 +414,7 @@ For this story:
 
 Whenever the bot detects that the user is greeting him the first thing to do figure out who that user is, this is done with “action\_check\_profile” which does the following.
 
-\begin{lstlisting}[language=Python]
+\begin{lstlisting}[language=Python,caption={Custom Action for Checking Users Profile},captionpos=b]
 
 class CheckProfile(Action):
 	def name(self):
@@ -430,7 +434,7 @@ class CheckProfile(Action):
 
 The database action queries the database for the relevant data, as you can see the action sets the corresponding sets, these are required to give Sam the context of who the user is, in the case that the user doesn’t exist, Sam knows to follow a different story.
 
-\begin{lstlisting}
+\begin{lstlisting}[caption={Unknown User Story},captionpos=b]
 
 ## Unknown user
 * greet
@@ -458,7 +462,7 @@ The way the original implementation was test-driven which means that that everyt
 
 Tests where created for every new module of the bot before starting implementation, initially as it may seem obvious the tests failed as no code was written yet, the objective was to create tests that prove that the method was working and then create the method for it to pass the test. An example of this is the classifier test shown previously in this chapter, check section  \ref{sec:chap4_ori_imp_manager}.
 
-\begin{lstlisting}[language=Python]
+\begin{lstlisting}[language=Python,caption={Test for Classifier},captionpos=b]
 
 class TestClassifier(unittest.TestCase):
 

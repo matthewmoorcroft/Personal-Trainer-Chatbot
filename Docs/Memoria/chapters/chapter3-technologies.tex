@@ -1,7 +1,9 @@
 \chapter{Technologies}\label{sec:chap:2}
 
-For the last 40 years society has been living the third industrial revolution, better known as the digital age. Telecommunications and technological innovations are transforming the way people live and work, one way these innovations have impacted society is by allowing users to connect cheaper and quicker internationally, making it easier to share ideas than ever before. 
-The ever-growing number of bots assisting humans has allowed companies to automate more and more, relieving people from the most boring of jobs, this has resulted in a higher demand for higher educated workers specially in computer science and other engineering areas. 
+For the last 40 years society has been living the third industrial revolution, better known as the digital age. Telecommunications and technological innovations are transforming the way people live and work, one way these innovations have impacted society, is by allowing users to connect with each other internationally, making it easier to share ideas than ever before. \\
+
+The ever-growing number of bots assisting humans has allowed companies to automate more and more, relieving people from the most boring of jobs, this has resulted in a higher demand for higher educated workers specially in computer science and other engineering areas.\\
+
 As you can see in the graph below, people are becoming more interested in these areas. This helps further develop these technologies as the more people interested, the more ideas are shared and more progress is done.\\
 
 \begin{center}
@@ -79,7 +81,7 @@ The Natural Language Processor is the step where the bot does most of the work. 
 	\begin{center}
 		\begin{figure}[h!]
 			\centering
-			\includegraphics[scale=0.7]{./images/3-chatbot-stemming}
+			\includegraphics[scale=0.6]{./images/3-chatbot-stemming}
 			\caption{Stemming Examples}
 			\label{cha_stem}
 		\end{figure}
@@ -203,7 +205,7 @@ Rasa NLU is an open-source natural language processing tool for intent classific
 
 For example, from the following message it returns the data structure shown below. With intent, search\_restaurant and entities cuisine and location.
 
-\begin{lstlisting}
+\begin{lstlisting}[caption={NLU example},captionpos=b]
 message = "I am looking for a Mexican restaurant in the center of town"
 
 response = {
@@ -221,7 +223,7 @@ The benefits of Rasa NLU when comparing it to Dialogflow is that you can choose 
 \begin{center}
 	\begin{figure}[h!]
 		\centering
-		\includegraphics[scale=0.4]{./images/3-rasa-pipe}
+		\includegraphics[scale=0.35]{./images/3-rasa-pipe}
 		\caption{Rasa Pipeline}
 		\label{rasa_pipe}
 	\end{figure}
@@ -240,7 +242,8 @@ There are custom pipelines, where you create it based on what components the dev
 Rasa Core is a dialogue engine used for building virtual assistants, it has several parts that makes treating conversations easier.
 \begin{itemize}
 	\item {\textbf{Stories:} This is the main component of the core, it is a representation of the conversation flow, with intents and actions. This teaches the bot to know what actions to perform depending on what the user says. Below there is an example of how a story looks like.
-	\begin{lstlisting}
+		
+	\begin{lstlisting}[caption={Story Example},captionpos=b]
 	## story_07715946    <!-- name of the story - just for debugging -->
 	* greet
 	- action_ask_howcanhelp
@@ -312,8 +315,8 @@ Before databases where used, all data relevant to a company had to be stored in 
 	\item {\textbf{NoSQL:} In 1998 a new term was created, NoSQL that categorized all databases that didn’t follow the same language as the most common relational databases. They came about with the internet boom, this was because a shift was coming around and more and more data was being ingested by the database. SQL databases have a harder time scaling up, with more demand in internet traffic and speed becoming the focus on the server-side, new ways of storing data had to be developed. It focuses more in simplicity and maintenance as it is easier to add new fields to existing data. 
 	\begin{center}
 		\begin{figure}[h!]
-			\centering
-			\includegraphics[scale=0.25]{./images/3-nosql}
+			\centering	
+			\includegraphics[scale=0.31]{./images/3-nosql}
 			\caption{SQL vs NoSQL}
 			\label{nosql}
 		\end{figure}
