@@ -99,48 +99,56 @@ In this section, we will explain the budget for the project, which contains the 
 
 \begin{table}[h!]
 	\centering
+	\setlength{\arrayrulewidth}{1.5pt}
 	\resizebox{\linewidth}{!}{
-	\begin{tabular}{|l|l|l|l|l|l|l|} 
+	\begin{tabular}{|r|r|r|r|r|r|r|} 
 		\hline
 		\multicolumn{7}{|c|}{{\cellcolor[rgb]{0.502,1,1}}Hardware}                                                                                                                              \\ 
 		\hline
-		\rowcolor[rgb]{0.753,0.753,0.753} Name                           & Cost                       & Units & Duration                 & \% use in project & Amortization & Chargeable cost   \\ 
+		\rowcolor[rgb]{0.753,0.753,0.753} \multicolumn{1}{|l|}{Name}                           &  \multicolumn{1}{l|}{Cost}                       &  \multicolumn{1}{l|}{Units} &  \multicolumn{1}{l|}{Duration(months)}                 &  \multicolumn{1}{l|}{\% use in project} &  \multicolumn{1}{l|}{Amortization(months)} &  \multicolumn{1}{l|}{Chargeable cost}   \\ 
 		\hline
-		Laptop                                                           & 699 \euro                      & 1     & 9                        & 100 \%            & 48           & 131,07 \euro          \\ 
+		
+		 \multicolumn{1}{|l|}{Laptop}                                                           & 699 \euro                      & 1     & 9                        & 100 \%            & 48           & 131,07 \euro          \\ 
 		\hline
-		Raspberry Pi                                                     & 35 \euro                       & 1     & 5                        & 55,55 \%          & 48           & 3,65 \euro            \\ 
+		 \multicolumn{1}{|l|}{Raspberry Pi}                                                     & 35 \euro                       & 1     & 5                        & 55,55 \%          & 48           & 3,65 \euro            \\ 
 		\hline
-		Smartphone                                                       & 560 \euro                      & 1     & 9                        & 100\%             & 36           & 140 \euro             \\ 
+		 \multicolumn{1}{|l|}{Smartphone}                                                       & 560 \euro                      & 1     & 9                        & 100\%             & 36           & 140 \euro             \\ 
 		\hline
-		\multicolumn{5}{|r|}{{\cellcolor[rgb]{0,0.682,0.937}}Total:}                                                                                          & \multicolumn{2}{l|}{274,72 \euro}    \\ 
+		\multicolumn{5}{|r|}{{\cellcolor[rgb]{0,0.682,0.937}}Total:}                                                                                          & \multicolumn{2}{r|}{274,72 \euro}    \\ 
 		\hline
 		\multicolumn{7}{|c|}{{\cellcolor[rgb]{0.502,1,1}}Software}                                                                                                                              \\ 
 		\hline
-		\rowcolor[rgb]{0.753,0.753,0.753} Name                           & Cost                       & Units & Duration                 & \% use in project & \multicolumn{2}{l|}{Total cost}  \\ 
+		\rowcolor[rgb]{0.753,0.753,0.753} \multicolumn{1}{|l|}{Name}                           & \multicolumn{1}{l|}{Cost}                       & \multicolumn{1}{l|}{Units} & \multicolumn{1}{l|}{Duration}                 & \multicolumn{1}{l|}{\% use in project} & \multicolumn{2}{l|}{Total cost}  \\ 
 		\hline
-		\begin{tabular}[c]{@{}l@{}}Azure virtual \\machine \end{tabular} & \textasciitilde{}10 \euro/month & 1     & 4                        & 44,45 \%          & \multicolumn{2}{l|}{40 \euro}        \\ 
+		\begin{tabular}[l]{@{}l@{}} Azure virtual \\machine \end{tabular} & \textasciitilde{}10 \euro/month & 1     & 4                        & 44,45 \%          & \multicolumn{2}{r|}{40 \euro}        \\ 
 		\hline
-		\multicolumn{5}{|r|}{{\cellcolor[rgb]{0,0.682,0.937}}Total:}                                                                                          & \multicolumn{2}{l|}{40 \euro}        \\ 
+		\multicolumn{5}{|r|}{{\cellcolor[rgb]{0,0.682,0.937}}Total:}                                                                                          & \multicolumn{2}{r|}{40 \euro}        \\ 
 		\hline
 		\multicolumn{7}{|c|}{{\cellcolor[rgb]{0.502,1,1}}Human Resources}                                                                                                                       \\ 
 		\hline
 		\rowcolor[rgb]{0.753,0.753,0.753} \multicolumn{2}{|l|}{Category}                              & \multicolumn{2}{l|}{~ Cost/Hour} & Total hours       & \multicolumn{2}{l|}{Total cost}  \\ 
 		\hline
-		\multicolumn{2}{|l|}{Developer}                                                               & \multicolumn{2}{l|}{40 \euro/hour}   & 792               & \multicolumn{2}{l|}{31.680 \euro}     \\ 
+		\multicolumn{2}{|l|}{Developer}                                                               & \multicolumn{2}{r|}{40 \euro/hour}   &  \multicolumn{1}{r|}{792}               & \multicolumn{2}{r|}{31.680 \euro}     \\ 
 		\hline
-		\multicolumn{2}{|l|}{Project Manager}                                                         & \multicolumn{2}{l|}{60 \euro/hour}   & 144               & \multicolumn{2}{l|}{8.640 \euro}      \\ 
+		\multicolumn{2}{|l|}{Project Manager}                                                         & \multicolumn{2}{r|}{60 \euro/hour}   &  \multicolumn{1}{r|}{144}               & \multicolumn{2}{r|}{8.640 \euro}      \\ 
 		\hline
-		\multicolumn{5}{|r|}{{\cellcolor[rgb]{0,0.682,0.937}}Total:}                                                                                          & \multicolumn{2}{l|}{40.320 \euro}     \\
+		\multicolumn{5}{|r|}{{\cellcolor[rgb]{0,0.682,0.937}}Total:}                                                                                          & \multicolumn{2}{r|}{40.320 \euro}     \\
 		\hline
-		\multicolumn{5}{|r|}{{\cellcolor[rgb]{0.749,0.749,0.749}}Max Total:}                                                                                 & \multicolumn{2}{l|}{40.634,72 \euro}  \\
+		\multicolumn{5}{| r|}{{\cellcolor[rgb]{0.749,0.749,0.749}}Max Total:}                                                                                 & \multicolumn{2}{r|}{40.634,72 \euro}  \\
+		\hline                                  
 		\hline
-		\multicolumn{5}{|r|}{{\cellcolor[rgb]{0.749,0.749,0.749}}Max Total:}                                                                                 & \multicolumn{2}{l|}{40.634,72 \euro}  \\ 
-		\hline\hline
-		\multicolumn{5}{||r|}{{\cellcolor{yellow}}Total + Tax (21\%):}                                                                                       & \multicolumn{2}{l|}{49.268,02 \euro}  \\
-		\hline\hline
+		\multicolumn{5}{|r|}{{\cellcolor{yellow}}Total + Tax (21\%):}                                                                                       & \multicolumn{2}{r|}{49.268,02 \euro}  \\
+		\hline
 	\end{tabular}}
 	\label{costs}
 	\caption{Budget}
 \end{table}
 
-To give some context to the different parts of the table we will explain them further. The reason the cost for the Azure Machine is relative is because it has a pricing system based on pay what you use, meaning that depending on how much you use the resources the pricing varies, in the case of this project the virtual machine was used only when required to minimize costs.
+To give some context to the different parts of the table we will explain them further. Starting with the hardware the resources needed where a laptop for the development, the smartphone to test the app and the Raspberry Pi for the server, the reason for using the Raspberry Pi 55,5\% of the projects is due to the change in design mid project to use instead the Azure Virtual Machine as the new Server. The cost for the hardware is based on the cost of the product, and the amortization based on the average lifespan of these products.\\
+
+For the software, the only software used was the virtual machine from azure. The reason the cost for the Azure Machine is relative is that it has a pricing system based on paying what you use, meaning that depending on how much you use the resources the pricing varies. For this project the price of usage at the moment of writing this memory has been 40 \euro \space as virtual machine was used only when required to minimize costs.\\
+
+The human resources used in the project were where most of the budget of the project went to, the hourly rate is based on similar projects done and by the knowledge of people in the industry. The developer works 4 hours a day in average on the project for the length of the project considering only working days. For the project manager he works only 5,5 days out of the 22 working days in a month, to control that the project is on track and make adjustments to it.\\
+
+Based on all these costs the total budget for the project is FORTY NINE THOUSAND TWO HUNDRED NINETY EIGHT AND TWO CENTS EUROS.
+ in the case of this project the virtual machine was used only when required to minimize costs.
