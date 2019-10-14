@@ -60,7 +60,7 @@ def plot_progress(user_id, telegram_id, weights, bodyfatratios):
 
     fig.tight_layout()  # otherwise the right y-label is slightly clipped
     today = date.today()
-    name = user_id+str(today)+".png"
+    name = str(user_id)+str(today)+".png"
 
     plt.savefig("resources/" + name)
     send_photo(name, telegram_id)
