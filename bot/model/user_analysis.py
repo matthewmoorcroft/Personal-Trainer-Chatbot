@@ -9,7 +9,7 @@ def analyse_volume_performance(user_name, user_gender, weight_rate, bfr_rate):
     if weight_rate > 0 and bfr_rate < 0:
         msg = f"""{user_name} after analysing your data I have seen you are gaining volume and improving your body to fat ratio, keep the nice work going"""
     else:
-        msg = f"""{user_name} after reviewing your data I think we should consider changing strategy, we are not reaching out objectives, let's try a different strategy and see if this works best."""
+        msg = f"""{user_name} after reviewing your data I think we should consider changing strategy, we are not reaching our objectives, let's try a different strategy and see if this works best."""
         new_routine = True
 
     return msg, new_routine
@@ -23,7 +23,7 @@ def analyse_weight_loss_performance(user_name, user_gender, weight_rate, bfr_rat
     if weight_rate < 0 and bfr_rate < 0:
         msg = f"""{user_name} after analysing your data I am very happy to see you are loosing weight and improving your body to fat ratio, keep the nice work going"""
     else:
-        msg = f"""{user_name} after reviewing your data I think we should consider changing strategy, we are not reaching out objectives, let's try a different strategy and see if this works best."""
+        msg = f"""{user_name} after reviewing your data I think we should consider changing strategy, we are not reaching our objectives, let's try a different strategy and see if this works best."""
         new_routine = True
 
     return msg, new_routine
@@ -37,7 +37,7 @@ def analyse_definition_performance(user_name, user_gender, weight_rate, bfr_rate
     if bfr_rate < 0 and weight_rate > (-2):
         msg = f"""{user_name} after analysing your data I have seen you are improving your body to fat ratio balancing it well with your weight, keep the nice work going"""
     else:
-        msg = f"""{user_name} after reviewing your data I think we should consider changing strategy, we are not reaching out objectives, let's try a different strategy and see if this works best."""
+        msg = f"""{user_name} after reviewing your data I think we should consider changing strategy, we are not reaching our objectives, let's try a different strategy and see if this works best."""
         new_routine = True
 
     return msg, new_routine
@@ -80,7 +80,6 @@ def get_progress_info(user_id, telegram_id, user_name, training_type, user_gende
     # bfr = [23, 22, 21, 20, 19, 19, 18, 18, 17, 16, 15, 14]
     bfr = [None, None, None, None, None, None, None, None, None, None, None, None]
 
-    
     for key, item in weights.items():
         weight[int(key)-1] = float(item)
 
