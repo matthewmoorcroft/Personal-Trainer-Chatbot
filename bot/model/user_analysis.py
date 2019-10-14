@@ -20,6 +20,7 @@ def analyse_weight_loss_performance(user_name, user_gender, weight_rate, bfr_rat
         Weight ⬇
         Body fat ratio ⬇
     """
+    new_routine = False
     if weight_rate < 0 and bfr_rate < 0:
         msg = f"""{user_name} after analysing your data I am very happy to see you are loosing weight and improving your body to fat ratio, keep the nice work going"""
     else:
@@ -34,6 +35,8 @@ def analyse_definition_performance(user_name, user_gender, weight_rate, bfr_rate
         Weight ⬆⬇
         Body fat ratio ⬇
     """
+    new_routine = False
+
     if bfr_rate < 0 and weight_rate > (-2):
         msg = f"""{user_name} after analysing your data I have seen you are improving your body to fat ratio balancing it well with your weight, keep the nice work going"""
     else:
